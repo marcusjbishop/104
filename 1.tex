@@ -2,9 +2,8 @@
 \usepackage{booktabs}
 \title{\S1 The nature of probability}
 \begin{abstract}
-Notes on the first section of Math 104
+Introduction to probability, empirical probability, Law of large numbers
 \end{abstract}
-\outcome{Notion of empirial probability, introduction to geneteics}
 \begin{document}
 \maketitle
 \begin{enumerate}
@@ -52,10 +51,11 @@ or $E=\left\{\left(1,2\right),\left(2,1\right),\ldots\right\}$
 \end{example}
 
 \begin{example}
-Examples of more abstract events:
+More abstract events:
 \begin{enumerate}
-\item $E:$ I will be in a car accident in the next year
+\item $E:$ An insurance customer will be in a car accident in the next year
 \item $E:$ It rains tomorrow
+\item $E:$ Coop will be out of kale when I arrive
 \end{enumerate}
 Not obvious what experiments are in these cases
 \end{example}
@@ -70,19 +70,25 @@ a number between $0$ and $1$
 \item If $P\left(E\right)=1$ then $E$ will occur
 \item If $P\left(E\right)=\frac{1}{2}$ then $E$ 
 as likely to occur as not occur
+\item Since $0\le P\left(E\right)\le 1$ can also express
+$P\left(E\right)$ as percent
+\item Common with weather: {\em $30\%$ chance of rain tomorrow}
 \item $P\left(E\right)$ calculated either {\em theoretically}
 or {\em empirically}
+\item Theoretical probability the subject of \S2 and remainder of course
 \end{enumerate}
-
 
 \item{\bf Empirical probability}
 \begin{enumerate}
-\item To calculate $P\left(E\right)$ empirically
+\item To calculate $P\left(E\right)$ {\em empirically}
 repeat experiment several times, recording how
 many times $E$ occured
 \item Then $P\left(E\right)=
 \frac{\text{Number of times $E$ occured}}
 {\text{Number of repititions of experiment}}$
+\item $\frac{\text{Number of times $E$ occured}}
+{\text{Number of repititions of experiment}}$ also called
+{\em relative frequency of~$E$}
 \end{enumerate}
 
 \begin{question}
@@ -120,6 +126,14 @@ visits Priceline
 \begin{solution}\answer{\frac{15,000,000}{101,250,000}}\end{solution}
 \end{parts}
 \end{question}
+
+\begin{remark}
+\begin{enumerate}
+\item Empirical probability na\"ive
+\item Results vary each time $P\left(E\right)$ calculated
+\item Theoretical probability better, but not always possible to calculate
+\end{enumerate}
+\end{remark}
 
 \end{enumerate}
 \end{document}
