@@ -83,11 +83,12 @@ or {\em empirically}
 \item To calculate $P\left(E\right)$ {\em empirically}
 repeat experiment several times, recording how
 many times $E$ occured
+\item Each repitition of experiment called a {\em trial}
 \item Then $P\left(E\right)=
 \frac{\text{Number of times $E$ occured}}
-{\text{Number of repititions of experiment}}$
+{\text{Number of trials}}$
 \item $\frac{\text{Number of times $E$ occured}}
-{\text{Number of repititions of experiment}}$ also called
+{\text{Number of trials}}$ also called
 {\em relative frequency of~$E$}
 \end{enumerate}
 
@@ -132,8 +133,30 @@ visits Priceline
 \item Empirical probability na\"ive
 \item Results vary each time $P\left(E\right)$ calculated
 \item Theoretical probability better, but not always possible to calculate
+\item However, empirical probability improves
+as number of trials increases
 \end{enumerate}
 \end{remark}
+
+\begin{theorem}[Law of Large Numbers]
+As number of trials increases, empirical probability
+approaches theoretical probability
+\end{theorem}
+
+\begin{example}
+\begin{enumerate}
+\item Experiment: flip coin
+\item $E:$ coin shows heads
+\item Table gives $P\left(E\right)$ with different numbers of trails:
+\end{enumerate}
+\begin{center}\begin{tabular}{rrr}
+Number trials&Number heads&Relative frequency\\\toprule
+10&4&0.4\\
+100&45&0.45\\
+1000&546&0.546\\
+10,000&4852&.4852\\
+100,000&49,770&0.4977
+\end{tabular}\end{center}
 
 \end{enumerate}
 \end{document}
