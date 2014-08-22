@@ -2,25 +2,21 @@
 \usepackage{booktabs}
 \title{\S1 The nature of probability}
 \begin{abstract}
-Introduction to probability, empirical probability, Law of large numbers
+Introduction to probability, empirical probability, Law of Large Numbers
 \end{abstract}
 \begin{document}
 \maketitle
-\begin{enumerate}
 
-\item{\bf Basics.}
-\begin{enumerate}
-\item Probability arose in 17th century
-\item Measures likelihood of future events
-\end{enumerate}
-
-\item{\bf Terminology.}
+\section{Terminology}
 \begin{enumerate}
 \item An {\em experiment} a controlled operation,
 generally in future
 \item Possible results of experiment called {\em outcomes}
 \item An {\em event} a set of outcomes of an experiment
 \item Events the basic object of study in probability
+\item Can also think of an event as incident in future
+that will either happen or not
+\item Aim: to measure the likelihood of an event
 \end{enumerate}
 
 \begin{example}
@@ -29,7 +25,7 @@ generally in future
 \item Possible outcomes: 1, 2, 3, 4, 5, 6
 \item Examples of events:
 \begin{enumerate}
-\item Die shows even number, or $E=\left\{2,4,6\right\}$
+\item Die shows even number on top face, or $E=\left\{2,4,6\right\}$
 \item Die shows odd number, or $E=\left\{1,3,5\right\}$
 \item Die shows 5, or $E=\left\{5\right\}$
 \end{enumerate}
@@ -53,14 +49,14 @@ or $E=\left\{\left(1,2\right),\left(2,1\right),\ldots\right\}$
 \begin{example}
 More abstract events:
 \begin{enumerate}
-\item $E:$ An insurance customer will be in a car accident in the next year
 \item $E:$ It rains tomorrow
-\item $E:$ Coop will be out of kale when I arrive
+\item $E:$ Co-op will be out of kale when I arrive
+\item $E:$ An insurance customer will be in a car accident in the next year
 \end{enumerate}
 Not obvious what experiments are in these cases
 \end{example}
 
-\item{\bf Probability}
+\subsection{Probability}
 \begin{enumerate}
 \item {\em Probability of event $E$}, denoted by $P\left(E\right)$,
 a number between $0$ and $1$
@@ -78,7 +74,7 @@ or {\em empirically}
 \item Theoretical probability the subject of \S2 and remainder of course
 \end{enumerate}
 
-\item{\bf Empirical probability}
+\section{Empirical probability}
 \begin{enumerate}
 \item To calculate $P\left(E\right)$ {\em empirically}
 repeat experiment several times, recording how
@@ -90,6 +86,7 @@ many times $E$ occurred
 \item $\frac{\text{Number of times $E$ occurred}}
 {\text{Number of trials}}$ also called
 {\em relative frequency of~$E$}
+\item Idea: consolidate two numbers into one
 \end{enumerate}
 
 \begin{question}
@@ -103,7 +100,7 @@ many times $E$ occurred
 \end{enumerate}
 \begin{solution} Since H occurs $6$ times
 and experiment repeated $10$ times
-$P\left(E\right)=\answer{\frac{5}{10}=\frac{1}{2}}$
+$P\left(E\right)=\answer{\frac{6}{10}=\frac{3}{5}}$
 \end{solution}
 \end{question}
 
@@ -160,5 +157,26 @@ Number trials&Number heads&Relative frequency\\\toprule
 \end{enumerate}
 \end{example}
 
+\section{Application: Mendelian genetics}
+\begin{enumerate}
+\item Mendel crossed pea plants with (pure) yellow peas
+with plants with (pure) green peas
+\item Offspring all yellow (not pure)
+\item However, crossing offspring resulted in 
+6022 yellow and 2001 green
+\item So probability that randomly chosen second generation plant green
+$\frac{6022}{6022+2001}=\frac{6022}{8023}\approx 0.75$
+\item Similarly Mendel crossed (pure) round peas with (pure) wrinkled peas
+\item Offspring all round (not pure)
+\item However, in second generation 5474 round and 1850 wrinkled
+\item So probability that randomly chosen second generation plant round
+$\frac{5474}{7324}\approx 0.75$
+\item Appearance of $0.75$ twice can't be coincidence!
+\item Mendel's results led scientists to discover mechanism
+\item Namely, each plant has two genes controlling color, one
+from mother, one from father
+\item If both or one gene yellow, then plant is yellow
+\item But if both genes green, then plan green
 \end{enumerate}
+
 \end{document}
