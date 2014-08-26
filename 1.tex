@@ -1,64 +1,82 @@
-\documentclass{ximera}
-\usepackage{booktabs}
-\title{\S1 The nature of probability}
-\begin{abstract}
-Introduction to probability, empirical probability, Law of Large Numbers
-\end{abstract}
+\documentclass[handout]{beamer}
+\everymath{\displaystyle}
+\mode<presentation>
+{\usetheme{Warsaw}\setbeamercovered{dynamic}}
+\usecolortheme{crane}
+\usepackage{beamerfoils}
+\pgfdeclareimage[height=1in]{university-logo}{ISULogo}
+\logo{\pgfuseimage{university-logo}}
+\setbeamertemplate{navigation symbols}{}
+\title[\S1]{Section 1\\The nature of probability}
+\author{Dr Marcus Bishop}
+\subject{Math 104}
+\beamerdefaultoverlayspecification{<+->}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{impact}{Impact}
+\newtheorem{notation}{Notation}
 \begin{document}
-\maketitle
+\begin{frame}\titlepage\end{frame}
+\LogoOff
 
 \section{Terminology}
-\begin{enumerate}
-\item An {\em experiment} a controlled operation,
+\begin{frame}{Terminology}
+\begin{itemize}
+\item An \alert{experiment} a controlled operation,
 generally in future
-\item Possible results of experiment called {\em outcomes}
-\item An {\em event} a set of outcomes of an experiment
+\item Possible results of experiment called \alert{outcomes}
+\item An \alert{event} a set of outcomes of an experiment
 \item Events the basic object of study in probability
 \item Can also think of an event as incident in future
 that will either happen or not
 \item Aim: to measure the likelihood of an event
-\end{enumerate}
+\end{itemize}
+\end{frame}
 
-\begin{example}
-\begin{enumerate}
+\begin{frame}{Example}
+\begin{itemize}
 \item Rolling a die an experiment
 \item Possible outcomes: 1, 2, 3, 4, 5, 6
 \item Examples of events:
-\begin{enumerate}
+\begin{itemize}
 \item Die shows even number, or $E=\left\{2,4,6\right\}$
 \item Die shows odd number, or $E=\left\{1,3,5\right\}$
 \item Die shows 5, or $E=\left\{5\right\}$
-\end{enumerate}
-\end{enumerate}
-\end{example}
+\end{itemize}
+\end{itemize}
+\end{frame}
 
-\begin{example}
-\begin{enumerate}
-\item Rolling {\em two} dice an experiment
+\begin{frame}{Example}
+\begin{itemize}
+\item Rolling \alert{two} dice an experiment
 \item Possible outcomes: $\left(1,1\right),\left(1,2\right),\ldots$
 \item Examples of events:
-\begin{enumerate}
+\begin{itemize}
 \item Both dice show even number, or $E=\left\{\left(2,2\right),
 \left(2,4\right),\ldots\right\}$
 \item One die shows even number and one shows odd number,
 or $E=\left\{\left(1,2\right),\left(2,1\right),\ldots\right\}$
-\end{enumerate}
-\end{enumerate}
-\end{example}
+\end{itemize}
+\end{itemize}
+\end{frame}
 
-\begin{example}
-More abstract events:
-\begin{enumerate}
+\begin{frame}{Example}
+\begin{itemize}
+\item Ultimately interested in more abstract events:
+\begin{itemize}
 \item $E:$ It rains tomorrow
 \item $E:$ Co-op will be out of kale when I arrive
 \item $E:$ An insurance customer will be in a car accident in the next year
-\end{enumerate}
-Not obvious what experiments are in these cases
-\end{example}
+\end{itemize}
+\item Not obvious what experiments are in these cases
+\item Math~104 focuses on simpler events
+\end{itemize}
+\end{frame}
 
-\subsection{Probability}
-\begin{enumerate}
-\item {\em Probability of event $E$}, denoted by $P\left(E\right)$,
+\section{Probability}
+\begin{frame}{Probability}
+\begin{itemize}
+\item \alert{Probability of event $E$}, denoted by $P\left(E\right)$,
 a number between $0$ and $1$
 \item $P\left(E\right)$ measures likelihood that $E$ occurs
 \item The greater $P\left(E\right)$, the more likely $E$ to occur
@@ -68,85 +86,85 @@ a number between $0$ and $1$
 as likely to occur as not occur
 \item Since $0\le P\left(E\right)\le 1$ can also express
 $P\left(E\right)$ as percent
-\item Common with weather: {\em $30\%$ chance of rain tomorrow}
-\item $P\left(E\right)$ calculated either {\em theoretically}
-or {\em empirically}
+\item Common with weather: \alert{$30\%$ chance of rain tomorrow}
+\item $P\left(E\right)$ calculated either \alert{theoretically}
+or \alert{empirically}
 \item Theoretical probability the subject of \S2 and remainder of course
-\end{enumerate}
+\item Involves systemetically studying all posssible outcomes of experiment
+\end{itemize}
+\end{frame}
 
 \section{Empirical probability}
-\begin{enumerate}
-\item To calculate $P\left(E\right)$ {\em empirically}
+\begin{frame}{Empirical probability}
+\begin{itemize}
+\item To calculate $P\left(E\right)$ \alert{empirically}
 repeat experiment several times, recording how
 many times $E$ occurred
-\item Each repetition of experiment called a {\em trial}
+\item Each repetition of experiment called a \alert{trial}
 \item Then $P\left(E\right)=
 \frac{\text{Number of times $E$ occurred}}
 {\text{Number of trials}}$
 \item $\frac{\text{Number of times $E$ occurred}}
 {\text{Number of trials}}$ also called
-{\em relative frequency of~$E$}
+\alert{relative frequency of~$E$}
 \item Idea: consolidate two numbers into one
-\end{enumerate}
+\end{itemize}
+\end{frame}
 
-\begin{question}
-\begin{enumerate}
+\begin{frame}{Example}
+\begin{itemize}
 \item Experiment: flip coin and observe side facing up
 \item Possible outcomes: heads, tails
 \item $E:$ event that coin shows heads
 \item Repeat experiment ten times
 \item Results: H,T,H,H,T,H,H,T,T,H
-\item Calculate $P\left(E\right)$ empirically
-\end{enumerate}
-\begin{solution} Since H occurs $6$ times
+\item Want to calculate $P\left(E\right)$ empirically
+\item Since H occurs $6$ times
 and experiment repeated $10$ times
-$P\left(E\right)=\answer{\frac{6}{10}=\frac{3}{5}}$
-\end{solution}
-\end{question}
+$P\left(E\right)=\frac{6}{10}=\frac{3}{5}$
+\end{itemize}
+\end{frame}
 
-\begin{question}(Exercise 16)
-Table shows number of visitors to travel websites in October 2010
+\begin{frame}{Exercise 16}
+Table shows number of visitors to travel websites in October~2010
 \begin{center}\begin{tabular}{cr}
-Website&Visitors\\\toprule
+Website&Visitors\\\hline
 Trip Advisor&24,000,000\\
 Yahoo! Travel&23,250,000\\
 Expedia&23,000,000\\
 Travelocity&16,000,000\\
-Priceline&15,000,000\\\midrule
+Priceline&15,000,000\\\hline
 Totals&101,250,000
 \end{tabular}\end{center}
-\begin{parts}
-\item Calculate probability that next visitor
-visits Expedia
-\begin{solution}\answer{\frac{23,000,000}{101,250,000}}\end{solution}
-\item Calculate probability that next visitor
-visits Priceline 
-\begin{solution}\answer{\frac{15,000,000}{101,250,000}}\end{solution}
-\end{parts}
-\end{question}
+\begin{itemize}
+\item Calculate probability that next visitor visits Expedia
+\item $\frac{23,000,000}{101,250,000}$
+\item Calculate probability that next visitor visits Priceline 
+\item $\frac{15,000,000}{101,250,000}$
+\end{itemize}
+\end{frame}
 
-\begin{remark}
-\begin{enumerate}
+\begin{frame}{Remarks}
+\begin{itemize}
 \item Empirical probability na\"ive
 \item Results vary each time $P\left(E\right)$ calculated
 \item Theoretical probability better, but not always possible to calculate
 \item However, empirical probability improves
 as number of trials increases
-\end{enumerate}
-\end{remark}
-
+\end{itemize}
 \begin{theorem}[Law of Large Numbers]
 As number of trials increases, empirical probability
 approaches theoretical probability
 \end{theorem}
+\end{frame}
 
-\begin{example}
-\begin{enumerate}
+\begin{frame}{Example}
+\begin{itemize}
 \item Experiment: flip coin
 \item $E:$ coin shows heads
 \item Table gives $P\left(E\right)$ with different numbers of trails:
 \begin{center}\begin{tabular}{rrr}
-Number trials&Number heads&$P\left(E\right)$\\\toprule
+Number trials&Number heads&$P\left(E\right)$\\\hline
 10&4&0.4\\
 100&45&0.45\\
 1000&546&0.546\\
@@ -154,11 +172,12 @@ Number trials&Number heads&$P\left(E\right)$\\\toprule
 100,000&49,770&0.4977
 \end{tabular}\end{center}
 \item Note that relative frequencies approach $0.5$
-\end{enumerate}
-\end{example}
+\end{itemize}
+\end{frame}
 
-\section{Application: Mendelian genetics}
-\begin{enumerate}
+\section{Mendelian genetics}
+\begin{frame}{Application: Mendelian Genetics}
+\begin{itemize}
 \item Mendel crossed pea plants with (pure) yellow peas
 with plants with (pure) green peas
 \item Offspring all yellow (not pure)
@@ -166,17 +185,26 @@ with plants with (pure) green peas
 6022 yellow and 2001 green
 \item So probability that randomly chosen second generation plant green
 $\frac{6022}{6022+2001}=\frac{6022}{8023}\approx 0.75$
+\end{itemize}
+\end{frame}
+\begin{frame}
+\begin{itemize}
 \item Similarly Mendel crossed (pure) round peas with (pure) wrinkled peas
 \item Offspring all round (not pure)
 \item However, in second generation 5474 round and 1850 wrinkled
 \item So probability that randomly chosen second generation plant round
 $\frac{5474}{7324}\approx 0.75$
+\end{itemize}
+\end{frame}
+\begin{frame}
+\begin{itemize}
 \item Appearance of $0.75$ twice can't be coincidence!
 \item Mendel's results led scientists to discover mechanism
 \item Namely, each plant has two genes controlling color, one
 from mother, one from father
 \item If one or both genes yellow, then plant is yellow
 \item But if both genes green, then plant green
-\end{enumerate}
+\end{itemize}
+\end{frame}
 
 \end{document}
