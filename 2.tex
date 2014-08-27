@@ -103,21 +103,23 @@ of event $E$ given by
 \begin{itemize}
 \item Experiment: roll a die
 \item $E$: Die shows $5$
-\item $P\left(E\right)=\frac{1}{6}$
+\item $P\left(E\right)=\frac{1}{6}$ since six outcomes possible,
+only one of which $5$
 \end{itemize}
 \end{example}
 \begin{example}
 \begin{itemize}
 \item Experiment: flip a coin
 \item $E$: Die shows heads
-\item $P\left(E\right)=\frac{1}{2}$
+\item $P\left(E\right)=\frac{1}{2}$ since two outcomes possible,
+only one of which heads
 \end{itemize}
 \end{example}
 \end{frame}
 
 \begin{frame}{Example}
 \begin{itemize}
-\item Experiment: roll two dice and add
+\item Experiment: roll two dice and add results
 \item $E$: Sum is $2$
 \item So $E=\left\{\left(1,1\right)\right\}$
 \item $P\left(E\right)=\frac{1}{36}$
@@ -129,13 +131,39 @@ of event $E$ given by
 \end{itemize}
 \begin{remark}
 \begin{itemize}
-\item Finding the number of outcomes and number of outcomes in $E$
+\item Finding the total number of outcomes, number of outcomes in $E$
 generally involves \alert{listing} all the outcomes
 \item Can be tedious
 \item Would be more convenient to avoid listing outcomes, see \S5, \S6, \S8,
 \S9, \S10, \S11
 \end{itemize}
 \end{remark}
+\end{frame}
+
+\begin{frame}{Playing cards}
+\includegraphics[scale=.15]{cards}
+\begin{itemize}
+\item Suits: $\spadesuit,\diamondsuit,\heartsuit,\spadesuit$
+\item Colors: red, black
+\item Values: $A,2,3,4,5,6,7,8,9,10,J,Q,K$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Card Examples}
+\begin{itemize}
+\item Randomly selected card chosen
+\item Calculate\dots
+\item $P\left\{4\right\}\only<+->{=\frac{4}{52}}
+\only<+->{=\frac{1}{13}}
+\only<+->{=P\left\{5\right\}=P\left\{\text{Jack}\right\}=\cdots}$
+\item $P\left\{\text{not $4$}\right\}\only<+->{=\frac{48}{52}}$
+\item $P\left\{\heartsuit\right\}
+\only<+->{=\frac{13}{52}}\only<+->{=\frac{1}{13}}
+\only<+->{=P\left\{\spadesuit\right\}
+=P\left\{\diamondsuit\right\}
+=P\left\{\clubsuit\right\}}$
+
+\end{itemize}
 \end{frame}
 
 \end{document}
