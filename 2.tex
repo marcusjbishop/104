@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer}
+\documentclass{beamer}
 \everymath{\displaystyle}
 \mode<presentation>
 {\usetheme{Warsaw}\setbeamercovered{dynamic}}
@@ -153,16 +153,18 @@ generally involves \alert{listing} all the outcomes
 \begin{itemize}
 \item Randomly selected card chosen
 \item Calculate\dots
-\item $P\left\{4\right\}\only<+->{=\frac{4}{52}}
+\item $P\left\{A\right\}\only<+->{=\frac{4}{52}}
 \only<+->{=\frac{1}{13}}
-\only<+->{=P\left\{5\right\}=P\left\{\text{Jack}\right\}=\cdots}$
-\item $P\left\{\text{not $4$}\right\}\only<+->{=\frac{48}{52}}$
+\only<+->{=P\left\{2\right\}=P\left\{3\right\}
+=\cdots=P\left\{\text{King}\right\}}$
+\item Could also argue that there are $13$ values, each equally likely
+\item $P\left\{\text{not $4$}\right\}\only<+->{=\frac{48}{52}=\frac{12}{13}}$
 \item $P\left\{\heartsuit\right\}
-\only<+->{=\frac{13}{52}}\only<+->{=\frac{1}{13}}
+\only<+->{=\frac{13}{52}}\only<+->{=\frac{1}{4}}
 \only<+->{=P\left\{\spadesuit\right\}
 =P\left\{\diamondsuit\right\}
 =P\left\{\clubsuit\right\}}$
-
+\item Could also argue that there are four suits, each equally likely
 \end{itemize}
 \end{frame}
 
