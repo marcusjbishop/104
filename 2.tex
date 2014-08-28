@@ -1,4 +1,5 @@
 \documentclass[handout]{beamer}
+\usepackage{multicol}
 \everymath{\displaystyle}
 \mode<presentation>
 {\usetheme{Warsaw}\setbeamercovered{dynamic}}
@@ -15,6 +16,7 @@
 \newtheorem{remark}{Remark}
 \newtheorem{impact}{Impact}
 \newtheorem{notation}{Notation}
+\usepackage{arev}
 \begin{document}
 \begin{frame}\titlepage\end{frame}
 \LogoOff
@@ -94,7 +96,7 @@ Rolling two dice and adding&No
 \end{frame}
 
 \begin{frame}{Theoretical probability}
-\begin{definition} The \alert{[theoretical] probability} $P\left(E\right)$
+\begin{definition} The \alert{theoretical probability}
 of event $E$ given by
 \[P\left(E\right)
 =\frac{\text{Number of outcomes in $E$}}{\text{Number of possible outcomes}}\]
@@ -103,16 +105,19 @@ of event $E$ given by
 \begin{itemize}
 \item Experiment: roll a die
 \item $E$: Die shows $5$
-\item $P\left(E\right)=\frac{1}{6}$ since six outcomes possible,
-only one of which $5$
+\item Only one of possible outcomes $1,2,3,4,5,6$ is $5$
+\item So $P\left(E\right)=\frac{1}{6}$
 \end{itemize}
 \end{example}
+\end{frame}
+
+\begin{frame}
 \begin{example}
 \begin{itemize}
-\item Experiment: flip a coin
-\item $E$: Die shows heads
-\item $P\left(E\right)=\frac{1}{2}$ since two outcomes possible,
-only one of which heads
+\item Experiment: flip coin
+\item $E$: Coin shows heads
+\item Only one of possible outcomes heads,tails is heads
+\item $P\left(E\right)=\frac{1}{2}$
 \end{itemize}
 \end{example}
 \end{frame}
@@ -140,31 +145,85 @@ generally involves \alert{listing} all the outcomes
 \end{remark}
 \end{frame}
 
-\begin{frame}{Playing cards}
-\includegraphics[scale=.15]{cards}
+\begin{frame}{Technical details}
 \begin{itemize}
-\item Suits: $\spadesuit,\diamondsuit,\heartsuit,\spadesuit$
-\item Colors: red, black
-\item Values: $A,2,3,4,5,6,7,8,9,10,J,Q,K$
+\item Recall that if $E$ \alert{must} occur, then $P\left(E\right)=1$
+\item Now suppose $E,F$ events such that \alert{one} of $E,F$
+must occur, \alert{but not both}
+\item Then $1=P\left(E\right)+P\left(F\right)$
+\begin{example}
+\begin{itemize}
+\item Experiment: flip coin
+\item $E$: heads facing up
+\item $F$: tails facing up
+\item Then $P\left(E\right)+P\left(F\right)=\frac{1}{2}+\frac{1}{2}=1$
+\end{itemize}
+\end{example}
+\item If $E,F$ as above, then $E$ also denoted \alert{not $F$}
+and $F$ denoted \alert{not $E$}
+\item Then $P\left(E\right)+P\left(\text{not $E$}\right)=1$
+for any event $E$
+\item Thus \alert{$P\left(\text{not $E$}\right)=1-P\left(E\right)$}
+for any event $E$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{example}
+\begin{itemize}
+\item Experiment: roll die
+\item $E$: dice shows $5$, or $E=\left\{5\right\}$
+\item not $E=\left\{1,2,3,4,6\right\}$
+\item So $P\left(\text{not $E$}\right)
+\only<+->{=P\left\{1,2,3,4,6\right\}}
+\only<+->{=\frac{5}{6}}$
+\item But easier to calculate 
+$P\left(\text{not $E$}\right)=1-P\left(E\right)
+\only<+->{=1-\frac{1}{5}}
+\only<+->{=\frac{5}{6}}$
+\end{itemize}
+\end{example}
+\begin{example}
+\begin{itemize}
+\item Suppose $P\left(E\right)=0.2$
+\item Calculate $P\left(\text{not $E$}\right)$
+\item $P\left(\text{not $E$}\right)
+\only<+->{=1-P\left(E\right)}
+\only<+->{=1-0.2}\only<+->{=0.8}$
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}{Playing cards}
+\includegraphics[scale=.34]{cards}
+\begin{itemize}
+\item Suits: $\clubsuit,\spadesuit,\alert{\vardiamond},\alert{\varheart}$
+(club, spade, diamond, heart)
+\item Colors: \alert{red}, black
+\item Values: $\text{Ace},2,3,4,5,6,7,8,9,10,\text{Jack},\text{Queen},\text{King}$
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Card Examples}
 \begin{itemize}
-\item Randomly selected card chosen
-\item Calculate\dots
-\item $P\left\{A\right\}\only<+->{=\frac{4}{52}}
+\item If randomly selected card chosen, calculate\dots
+\item $P\left\{\text{Ace}\right\}\only<+->{=\frac{4}{52}}
 \only<+->{=\frac{1}{13}}
 \only<+->{=P\left\{2\right\}=P\left\{3\right\}
 =\cdots=P\left\{\text{King}\right\}}$
 \item Could also argue that there are $13$ values, each equally likely
-\item $P\left\{\text{not $4$}\right\}\only<+->{=\frac{48}{52}=\frac{12}{13}}$
-\item $P\left\{\heartsuit\right\}
+\item $P\left\{\text{not $4$}\right\}\only<+->{=\frac{48}{52}
+\only<+->{=\frac{12}{13}}}$
+\item $P\left\{\alert{\varheart}\right\}
 \only<+->{=\frac{13}{52}}\only<+->{=\frac{1}{4}}
 \only<+->{=P\left\{\spadesuit\right\}
-=P\left\{\diamondsuit\right\}
+=P\left\{\alert{\vardiamond}\right\}
 =P\left\{\clubsuit\right\}}$
 \item Could also argue that there are four suits, each equally likely
+\item A \alert{picture card} a Jack, Queen, or King
+\item $P\left(\text{picture card}\right)
+\only<+->{=\frac{12}{52}}
+\only<+->{=\frac{3}{13}}$
 \end{itemize}
 \end{frame}
 
