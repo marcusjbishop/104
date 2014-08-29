@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer}
+\documentclass{beamer}
 \usepackage{multicol}
 \everymath{\displaystyle}
 \mode<presentation>
@@ -104,8 +104,8 @@ of event $E$ given by
 \begin{example}
 \begin{itemize}
 \item Experiment: roll a die
-\item $E$: Die shows $5$
-\item Only one of possible outcomes $1,2,3,4,5,6$ is $5$
+\item $E$: Die shows $5$, or $E=\left\{5\right\}$
+\item Possible outcomes $\left\{1,2,3,4,5,6\right\}$
 \item So $P\left(E\right)=\frac{1}{6}$
 \end{itemize}
 \end{example}
@@ -115,8 +115,8 @@ of event $E$ given by
 \begin{example}
 \begin{itemize}
 \item Experiment: flip coin
-\item $E$: Coin shows heads
-\item Only one of possible outcomes heads,tails is heads
+\item $E$: Coin shows heads, or $E=\left\{H\right\}$
+\item Possible outcomes $\left\{H,T\right\}$
 \item $P\left(E\right)=\frac{1}{2}$
 \end{itemize}
 \end{example}
@@ -136,7 +136,7 @@ of event $E$ given by
 \end{itemize}
 \begin{remark}
 \begin{itemize}
-\item Finding the total number of outcomes, number of outcomes in $E$
+\item Finding the total number of outcomes
 generally involves \alert{listing} all the outcomes
 \item Can be tedious
 \item Would be more convenient to avoid listing outcomes, see \S5, \S6, \S8,
@@ -151,6 +151,27 @@ generally involves \alert{listing} all the outcomes
 \item Now suppose $E,F$ events such that \alert{one} of $E,F$
 must occur, \alert{but not both}
 \item Then $1=P\left(E\right)+P\left(F\right)$
+\end{itemize}
+\begin{proof}
+\begin{itemize}
+\item $F$ contains all the outcomes not in $E$ (and vice-versa)
+\item[]
+\begin{align*}
+P\left(E\right)+P\left(F\right)
+\only<+->{
+&=\frac{\text{outcomes in $E$}}{\text{outcomes}}
++\frac{\text{outcomes in $F$}}{\text{outcomes}}\\}
+\only<+->{
+&=\frac{\text{outcomes in $E$}+
+\text{outcomes in $F$}}{\text{outcomes}}\\}
+\only<+->{
+&=\frac{\text{outcomes}}{\text{outcomes}}=1}
+\end{align*}
+\end{itemize}
+\end{proof}
+\end{frame}
+
+\begin{frame}
 \begin{example}
 \begin{itemize}
 \item Experiment: flip coin
@@ -159,7 +180,10 @@ must occur, \alert{but not both}
 \item Then $P\left(E\right)+P\left(F\right)=\frac{1}{2}+\frac{1}{2}=1$
 \end{itemize}
 \end{example}
-\item If $E,F$ as above, then $E$ also denoted \alert{not $F$}
+\begin{itemize}
+\item Suppose $E,F$ events such that \alert{one} of $E,F$
+must occur, \alert{but not both}
+\item Then $E$ also denoted \alert{not $F$}
 and $F$ denoted \alert{not $E$}
 \item Then $P\left(E\right)+P\left(\text{not $E$}\right)=1$
 for any event $E$
