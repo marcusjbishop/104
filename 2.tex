@@ -273,11 +273,13 @@ does \alert{not} have Cystic Fibrosis
 \item First letter listed in genotype
 inherited from father, second from mother
 \begin{example}
-An inividual with genotype $cC$ inherited
+An individual with genotype $cC$ inherited
 $c$ from father and $C$ from mother
 \end{example}
-\item Child receives one gene of Father's genotype,
-each with probability $\frac{1}{2}$, similarly for Mother's
+\item Child receives one gene from Father's genotype,
+both with probability $\frac{1}{2}$
+\item Similarly child receives one gene from Mother's genotype,
+both with probability $\frac{1}{2}$
 \end{itemize}
 \end{frame}
 
@@ -293,6 +295,7 @@ C&cC&CC\\
 C&cC&CC
 \end{array}\]
 \item Columns correspond with Father's genes, rows with Mother's
+\item Entries give possible child genotypes, each equally likely
 \item Note that \alert{none} of possible child genotypes is $cc$
 \item So $0$ the probability that child has Cystic Fibrosis
 \end{itemize}
@@ -301,20 +304,35 @@ C&cC&CC
 \begin{frame}{Example}
 \begin{itemize}
 \item Suppose Father and Mother both have genotype~$cC$
-\item Note that neither has Cystic Fibrosis
 \item Calculate probability that child will have Cystic Fibrosis
-\item Organize information in \alert{Punnett square}:
+\item[]
 \[\begin{array}{c|cc}
 &c&C\\\hline
-C&cC&CC\\
-C&cC&CC
+c&cc&cC\\
+C&Cc&CC
 \end{array}\]
-\item Columns correspond with Father's genes, rows with Mother's
-\item Note that \alert{none} of possible child genotypes is $cc$
-\item So $0$ the probability that child has Cystic Fibrosis
+\item One of four possible genotypes is $cc$
+\item So $\frac{1}{4}$ the probability that child has Cystic Fibrosis
 \end{itemize}
+\begin{remark}
+\begin{itemize}
+\item Question does \alert{not} ask for probability that
+both parents have $cC$
+\item That probability must be very small, else more
+people would have Cystic Fibrosis
+\end{itemize}
+\end{remark}
 \end{frame}
 
-
+\begin{frame}{Spinner}
+\includegraphics[scale=.30]{Spinner}
+\begin{itemize}
+\item Calculate probability that spinner stops in blue region
+\item Since eight wedges equally likely and two are blue,
+$\frac{2}{8}=\frac{1}{4}$ the probability 
+\item Calculate probability that spinner stops in blue region
+\item Three wedges green, so $\frac{3}{8}$ the probability
+\end{itemize}
+\end{frame}
 
 \end{document}
