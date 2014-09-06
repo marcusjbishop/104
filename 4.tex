@@ -1,0 +1,108 @@
+\documentclass[handout]{beamer}
+\usepackage{multicol}
+\everymath{\displaystyle}
+\mode<presentation>
+{\usetheme{Warsaw}\setbeamercovered{dynamic}}
+\usecolortheme{crane}
+\usepackage{beamerfoils}
+\pgfdeclareimage[height=1in]{university-logo}{ISULogo}
+\logo{\pgfuseimage{university-logo}}
+\setbeamertemplate{navigation symbols}{}
+\title[\S4]{Section 3\\Expectation}
+\author{Dr Marcus Bishop}
+\subject{Math 104}
+\beamerdefaultoverlayspecification{<+->}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{impact}{Impact}
+\newtheorem{notation}{Notation}
+\usepackage{arev}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+\LogoOff
+
+\begin{frame}{Numerical outcomes}
+Section deals with experiments
+that have \alert{numerical outcomes}
+\begin{example}
+Following experiments have numerical outcomes
+\begin{itemize}
+\item Number of minutes I wait in line at Hy-Vee
+\item Number of olives in jar
+\item Number of minutes it takes randomly selected
+student to complete quiz
+\end{itemize}
+\end{example}
+\begin{example}
+Following experiments don't have numerical outcomes
+\begin{itemize}
+\item Flipping coin
+\item Color of shirt I'm wearing today
+\item Day of week my package from Amazon arrives
+\item Rolling die
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}{Expectation}
+\begin{remark}
+\begin{itemize}
+\item Outcomes $1,2,3,4,5,6$ of rolling die \alert{are} indeed numbers
+\item However, they have no significance as numbers
+\item Outcomes could be replaced with colors, letters, etc.
+\end{itemize}
+\end{remark}
+\begin{definition}
+\begin{itemize}
+\item Suppose experiment has outcomes $E_1,E_2,\ldots$
+\item $P_i=P\left(E_1\right)$
+\item $P_2=P\left(E_2\right),\ldots$
+\item Then
+\[P_1E_1+P_2E_2+\cdots\]
+the \alert{expectation} of experiment
+\end{itemize}
+\end{definition}
+\end{frame}
+
+\begin{frame}{Multiple choice strategy (Example 2)}
+\begin{itemize}
+\item Suppose multiple choice question has five answer choices
+\item $2$~points for a correct response
+\item $-1/2$~point for incorrect response
+\item $0$~points for not answering
+\item Should you guess if you don't know answer?
+\item Outcomes:
+\begin{itemize}
+\item $2$ occurs with probability $1/5$ when correct answer chosen
+\item $-1/2$ occurs with probability $4/5$ when incorrect answer chosen
+\end{itemize}
+\item So $2\cdot\frac{1}{5}+\left(-\frac{1}{2}\right)\frac{4}{5}
+\only<+->{=\frac{2}{5}-\frac{4}{10}}
+\only<+->{=\frac{4}{10}-\frac{4}{10}}
+\only<+->{=0}$ the expectation
+\item Conclusion: guessing doesn't hurt \alert{in this case}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Suppose multiple choice question has five answer choices
+\item \alert{$1$~point} for a correct response
+\item $-1/2$~point for incorrect response
+\item $0$~points for not answering
+\item Should you guess if you don't know answer?
+\item Outcomes:
+\begin{itemize}
+\item $1$ occurs with probability $1/5$ when correct answer chosen
+\item $-1/2$ occurs with probability $4/5$ when incorrect answer chosen
+\end{itemize}
+\item So $1\cdot\frac{1}{5}+\left(-\frac{1}{2}\right)\frac{4}{5}
+\only<+->{=\frac{1}{5}-\frac{4}{10}}
+\only<+->{=\frac{1}{5}-\frac{2}{5}}
+\only<+->{=-\frac{1}{5}}$ the expectation
+\item Conclusion: guessing a bad idea!
+\end{itemize}
+\end{frame}
+
+
+\end{document}
