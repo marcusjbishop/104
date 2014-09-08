@@ -39,7 +39,7 @@ student to complete quiz
 
 \begin{frame}
 \begin{example}
-Following experiments don't have numerical outcomes
+Following experiments \alert{don't} have numerical outcomes
 \begin{itemize}
 \item Flipping coin
 \item Color of shirt randomly selected student wearing today
@@ -62,7 +62,7 @@ determines \alert{number} of spaces to advance
 \begin{definition}
 \begin{itemize}
 \item Suppose experiment has outcomes $E_1,E_2,\ldots$
-\item $P_i=P\left(E_1\right)$
+\item $P_1=P\left(E_1\right)$
 \item $P_2=P\left(E_2\right),\ldots$
 \item Then
 \[P_1E_1+P_2E_2+\cdots\]
@@ -71,13 +71,33 @@ the \alert{expectation} of experiment
 \end{definition}
 \begin{remark}
 \begin{itemize}
-\item Expectation of experiment gives
-expected value of experiment \alert{in long run}
+\item Expectation gives
+\alert{expected value} of experiment \alert{in long run}
 \item Does not give the exact value we expect
 next time experiment repeated
 \item Expectation used in same way averages used
 \end{itemize}
 \end{remark}
+\end{frame}
+
+\begin{frame}{Time to take quiz}
+\begin{itemize}
+\item Time it took calculus students to complete quiz
+shown in table:
+\[\begin{array}{r|ccc}
+\text{Time in minutes}&5&8&40\\\hline
+\text{Number of students}&25&13&2
+\end{array}\]
+\item So average time
+\[\frac{5\left(25\right)+8\left(13\right)+40\left(2\right)}{40}
+\only<+->{=\frac{309}{40}}
+\only<+->{\approx 7.73}\]
+\item But observe that
+\[\frac{5\left(25\right)+8\left(13\right)+40\left(2\right)}{40}
+=5\left(\frac{25}{40}\right)+8\left(\frac{13}{40}\right)
++40\left(\frac{2}{40}\right)\]
+\item So average and expectation coincide in this example
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Multiple choice strategy (Example 2)}
