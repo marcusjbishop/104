@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage{multicol}
 \everymath{\displaystyle}
 \mode<presentation>
@@ -158,6 +158,25 @@ shown in table:
 \item $46\left(\frac{2}{100}\right)+\left(-4\right)
 \left(\frac{98}{100}\right)
 \only<+->{=-3}$
+\end{itemize}
+\end{frame}
+
+%XXX Insert fairness slides here
+\begin{frame}{Calculating fair price}
+\begin{itemize}
+\item But there's an easier way to calculate fair price
+\item First calculate expected proceeds of (possibly unfair) game
+\item If expected proceeds \alert{negative} then
+\[\text{fair price}=\text{expectated proceeds}+\text{cost to play}\]
+\item Formula obviates having to solve for fair price
+\begin{example}
+\begin{itemize}
+\item Original senario: 100~tickets, $\$2$ each, $\$50$ prizze
+\item $-\$1.50$ the expected proceeds
+\item So $2+\left(-1.50\right)=-.50$ the fair price
+\item Agrees with algebra calculation above
+\end{itemize}
+\end{example}
 \end{itemize}
 \end{frame}
 
