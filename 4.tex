@@ -161,4 +161,40 @@ shown in table:
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Fair price}
+\begin{itemize}
+\item Ignoring fact that event a charity, what would be \alert{fair}
+ticket price?
+\begin{definition}
+An experiment called \alert{fair} if zero its expectation
+\end{definition}
+\item Can figure out fair price $F$ by setting expection equal to zero:
+\begin{align*}
+0&=\left(50-F\right)\left(\frac{1}{100}\right)
+-F\left(\frac{99}{100}\right)\\
+\only<+->{&=50-F-99F\\}
+\only<+->{\iff 100F&=50\\}
+\only<+->{\iff F&=\frac{50}{100}=0.50}
+\end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item So $\$0.50$ the fair price
+\item Check by calculating expection:
+\[49.50\left(0.01\right)-.50\left(.99\right)=0\]
+\item Expectation from point of view of charity:
+\[-50+100\left(0.50\right)=0\]
+\item Note that only one outcome:
+\begin{itemize}
+\item Someone wins with probability $1$
+\item Charity pays this person $\$50$ and collects $100\left(0.50\right)
+=\$50$ in ticket money
+\end{itemize}
+\item So $\$0.50$ tickets also \alert{fair} to charity
+\item Generally \alert{fair} not a good business model!
+\end{itemize}
+\end{frame}
+
 \end{document}
