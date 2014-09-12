@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage{multicol}
 \everymath{\displaystyle}
 \mode<presentation>
@@ -284,15 +284,17 @@ pays player $11$ times bet
 
 \begin{frame}{Rule for roulette payouts} 
 \begin{itemize}
-\item In general, casino pays $\frac{36}{n}-1$ times
-bet when ball lands on any number in bet, where $n$
-the number of numbers in bet
+\item In general, players can bet on $n$
+chosen numbers for any $n$
+\item (Chosen numbers subject to arrangement of layout)
+\item Casino pays $\frac{36}{n}-1$ times
+bet if ball lands on one of chosen numbers
 \item For example,
 \[\begin{array}{l|c|l}
 n&\frac{36}{n}-1&\text{Name}\\\hline
 1&35&\text{straight up}\\
 3&11&\text{street}\\
-18&1&\text{red}
+18&1&\text{red, black, even, odd}
 \end{array}\]
 \end{itemize}
 \end{frame}
@@ -316,17 +318,57 @@ n&\frac{36}{n}-1&\text{Name}\\\hline
 \item Insurance company offers \alert{ten year life
 insurance policy}:
 \begin{itemize}
-\item Customer pays company $\$1200$ (the \alert{premium})
+\item Customer pays company $\$1500$ (the \alert{premium})
 \item If customer dies during the ten years
-(the \alert{term} of the policy) company pays customer's estate
+(the \alert{term}) company pays customer's estate
 $\$40,000$ but keeps premium
 \item If customer survives ten years, company pays customer
 nothing and keeps premium
 \end{itemize}
 \item Suppose $0.97$ the
 probability that 30~year old male lives to age $40$ (or longer)
+\item Morbid as it sounds, calculating such probabilities
+the goal of \alert{actuarial science}
 \item Calculate expected proceeds of company
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item $1500\left(.97\right)+\left(1500-40000\right)\left(.03\right)
+\only<+->{=300}$
+\item Instead of $\$1500$ calculate \alert{minimum}
+premium $P$ such that company profits in long run
+\item[]
+\begin{align*}
+P\left(.97\right)+\left(P-40000\right)\left(.03\right)&>0\\
+.97P+.03P-40000\left(.03\right)&>0\\
+P&>40000\left(.03\right)=1200
+\end{align*}
+\item So for any $P>1200$ company expects to profit
+\item Indeed, $300$ the expectation when $P=1500$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Lawsuit (Exercise 50)}
+\begin{itemize}
+\item Client considering bringing lawsuit against a chemical company
+\item Her lawyer estimates $70\%$ chance she wins $\$60,000$
+\item $10\%$ chance she wins nothing
+\item $20\%$ chance she loses case, pays $\$30,000$ in legal fees
+\item Calculate expected gain or loss if client proceeds with case
+\item $60000\left(0.7\right)
++0\left(0.1\right)-30000\left(0.2\right)
+\only<+->{36000}$
+\end{itemize}
+\begin{remark}
+\begin{itemize}
+\item Experiment has \alert{three} outcomes, unlike previous examples
+\item Expectation gives net proceeds \alert{on long run}
+\item However, in lawsuit example, experiment only run once,
+so expectation not helpful here
+\end{itemize}
+\end{remark}
 \end{frame}
 
 \end{document}
