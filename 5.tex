@@ -68,9 +68,15 @@ one of paper, rock, scissors
 \end{xy}\]
 \begin{itemize}
 \item Experiment: randomly select marble from bag
-containing blue, green, red marbles, replace marble,
-select another
+containing one each of blue, green, red,
+\alert{replace marble}, select another
 \item Nine possible outcomes
+\item $P\left\{\text{two blues}\right\}
+\only<+->{=1/9}$
+\item $P\left\{\text{at least one blue}\right\}
+\only<+->{=5/9}$
+\item Outcomes with at least one blue:
+$BB,BG,BR,GB,RB$
 \end{itemize}
 \end{frame}
 
@@ -94,8 +100,46 @@ select another
 \item Experiment: randomly select marble from bag
 then select another \alert{without replacing} first
 \item Six possible outcomes
+\item $P\left\{\text{two blues}\right\}
+\only<+->{=0}$
+\item $P\left\{\text{at least one blue}\right\}
+\only<+->{=4/6=2/3}$
+\item Outcomes with at least one blue:
+$BG,BR,GB,RB$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\[\begin{xy}<1cm,0cm>:
+(0,0)="0";
+(-3,-1)="-31";
+(0,-1)="01";
+(3,-1)="31";
+"0";"-31"*+!D{B}**\dir{-};
+"0";"01"*+!D{G}**\dir{-};
+"0";"31"*+!D{R}**\dir{-};
+"-31";(-3,-2)*{G}**\dir{-};
+"-31";(-2,-2)*{R}**\dir{-};
+"01";(-1,-2)*{B}**\dir{-};
+"01";(1,-2)*{R}**\dir{-};
+"31";(2,-2)*{B}**\dir{-};
+"31";(3,-2)*{G}**\dir{-};
+\end{xy}\]
+\begin{itemize}
 \item Experiment essentially equivalent to simply
 selecting two marbles from bag
+\item Outcomes of selecting two balls:
+\begin{equation}\label{RGBWithout}
+\left\{B,G\right\},\left\{B,R\right\},\left\{G,R\right\}
+\end{equation}
+\item Outcomes of choosing one after another without replacement:
+\begin{equation}\label{RGBWith}
+BG,BR,GB,GR,RB,RG
+\end{equation}
+\item Each set in (\ref{RGBWithout}) appears in
+(\ref{RGBWith}) \alert{twice}
+\item Order of marble listing irrelevant in
+(\ref{RGBWithout}), matters in (\ref{RGBWith})
 \end{itemize}
 \end{frame}
 
