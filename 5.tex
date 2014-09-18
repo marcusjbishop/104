@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -22,24 +22,82 @@
 \begin{frame}\titlepage\end{frame}
 \LogoOff
 
-\begin{frame}{Coin toss and rock-paper-scissors}
+\begin{frame}{Coin toss and paper-rock-scissors}
 \begin{itemize}
-\item Experiment: toss coin and randomly choose
-one of rock, paper, scissors
+\item Experiment: toss coin \alert{and} randomly choose
+one of paper, rock, scissors
 \item Can enumerate possible outcomes using tree
 \[\begin{xy}<1cm,0cm>:
 (0,0)="0";
 (-2,-1)="-21";
 (2,-1)="21";
-"0";"-21"*+!D{T}**\dir{-};
-"0";"21"*+!D{H}**\dir{-};
-"-21";(-3,-2)*{R}**\dir{-};
-"-21";(-2,-2)*{P}**\dir{-};
+"0";"-21"*+!D{H}**\dir{-};
+"0";"21"*+!D{T}**\dir{-};
+"-21";(-3,-2)*{P}**\dir{-};
+"-21";(-2,-2)*{R}**\dir{-};
 "-21";(-1,-2)*{S}**\dir{-};
-"21";(1,-2)*{R}**\dir{-};
-"21";(2,-2)*{P}**\dir{-};
+"21";(1,-2)*{P}**\dir{-};
+"21";(2,-2)*{R}**\dir{-};
 "21";(3,-2)*{S}**\dir{-};
 \end{xy}\]
+\item Possible outcomes correspond with paths from root to leaves
+\item Can read outcome by reading letters along path:
+\[HP,HR,HS,TP,TR,TS\]
+\item Outcomes appear in alphabetical order
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Marble draw with replacement}
+\[\begin{xy}<1cm,0cm>:
+(0,0)="0";
+(-3,-1)="-31";
+(0,-1)="01";
+(3,-1)="31";
+"0";"-31"*+!D{B}**\dir{-};
+"0";"01"*+!D{G}**\dir{-};
+"0";"31"*+!D{R}**\dir{-};
+"-31";(-4,-2)*{B}**\dir{-};
+"-31";(-3,-2)*{G}**\dir{-};
+"-31";(-2,-2)*{R}**\dir{-};
+"01";(-1,-2)*{B}**\dir{-};
+"01";(0,-2)*{G}**\dir{-};
+"01";(1,-2)*{R}**\dir{-};
+"31";(2,-2)*{B}**\dir{-};
+"31";(3,-2)*{G}**\dir{-};
+"31";(4,-2)*{R}**\dir{-};
+\end{xy}\]
+\begin{itemize}
+\item Experiment: randomly select marble from bag
+containing blue, green, red marbles, replace marble,
+select another
+\item Nine possible outcomes
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Marble draw without replacement}
+\[\begin{xy}<1cm,0cm>:
+(0,0)="0";
+(-3,-1)="-31";
+(0,-1)="01";
+(3,-1)="31";
+"0";"-31"*+!D{B}**\dir{-};
+"0";"01"*+!D{G}**\dir{-};
+"0";"31"*+!D{R}**\dir{-};
+"-31";(-3,-2)*{G}**\dir{-};
+"-31";(-2,-2)*{R}**\dir{-};
+"01";(-1,-2)*{B}**\dir{-};
+"01";(1,-2)*{R}**\dir{-};
+"31";(2,-2)*{B}**\dir{-};
+"31";(3,-2)*{G}**\dir{-};
+\end{xy}\]
+\begin{itemize}
+\item Experiment: randomly select marble from bag
+then select another \alert{without replacing} first
+\item Six possible outcomes
+\item Experiment essentially equivalent to simply
+selecting two marbles from bag
+\end{itemize}
+\end{frame}
+
+
 \end{document}
