@@ -1,0 +1,45 @@
+\documentclass{beamer}
+\usepackage{multicol}
+\usepackage{xy}
+\everymath{\displaystyle}
+\mode<presentation>
+{\usetheme{Warsaw}\setbeamercovered{dynamic}}
+\usecolortheme{crane}
+\usepackage{beamerfoils}
+\pgfdeclareimage[height=1in]{university-logo}{ISULogo}
+\logo{\pgfuseimage{university-logo}}
+\setbeamertemplate{navigation symbols}{}
+\title[\S5]{Section 5\\Tree diagrams}
+\author{Dr Marcus Bishop}
+\subject{Math 104}
+\beamerdefaultoverlayspecification{<+->}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{impact}{Impact}
+\newtheorem{notation}{Notation}
+\usepackage{arev}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+\LogoOff
+
+\begin{frame}{Coin toss and rock-paper-scissors}
+\begin{itemize}
+\item Experiment: toss coin and randomly choose
+one of rock, paper, scissors
+\item Can enumerate possible outcomes using tree
+\[\begin{xy}<1cm,0cm>:
+(0,0)="0";
+(-2,-1)="-21";
+(2,-1)="21";
+"0";"-21"*+!D{T}**\dir{-};
+"0";"21"*+!D{H}**\dir{-};
+"-21";(-3,-2)*{R}**\dir{-};
+"-21";(-2,-2)*{P}**\dir{-};
+"-21";(-1,-2)*{S}**\dir{-};
+"21";(1,-2)*{R}**\dir{-};
+"21";(2,-2)*{P}**\dir{-};
+"21";(3,-2)*{S}**\dir{-};
+\end{xy}\]
+\end{itemize}
+\end{frame}
+\end{document}
