@@ -143,5 +143,72 @@ BG,BR,GB,GR,RB,RG
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Observations}
+\begin{itemize}
+\item $6=2\cdot 3$ possible outcomes in coin/paper/rock/scissors example:
+\[\begin{xy}<.75cm,0cm>:
+(0,0)="0";
+(-2,-1)="-21";
+(2,-1)="21";
+"0";"-21"*+!D{H}**\dir{-};
+"0";"21"*+!D{T}**\dir{-};
+"-21";(-3,-2)*{P}**\dir{-};
+"-21";(-2,-2)*{R}**\dir{-};
+"-21";(-1,-2)*{S}**\dir{-};
+"21";(1,-2)*{P}**\dir{-};
+"21";(2,-2)*{R}**\dir{-};
+"21";(3,-2)*{S}**\dir{-};
+\end{xy}\]
+\item Reason: tree has two \alert{identical} branches, each with three leaves
+\item $9=3\cdot 3$ outcomes in replaced marble example:
+\[\begin{xy}<.75cm,0cm>:
+(0,0)="0";
+(-3,-1)="-31";
+(0,-1)="01";
+(3,-1)="31";
+"0";"-31"*+!D{B}**\dir{-};
+"0";"01"*+!D{G}**\dir{-};
+"0";"31"*+!D{R}**\dir{-};
+"-31";(-4,-2)*{B}**\dir{-};
+"-31";(-3,-2)*{G}**\dir{-};
+"-31";(-2,-2)*{R}**\dir{-};
+"01";(-1,-2)*{B}**\dir{-};
+"01";(0,-2)*{G}**\dir{-};
+"01";(1,-2)*{R}**\dir{-};
+"31";(2,-2)*{B}**\dir{-};
+"31";(3,-2)*{G}**\dir{-};
+"31";(4,-2)*{R}**\dir{-};
+\end{xy}\]
+\item Reason: tree has three \alert{identical} branches,
+each with three leaves
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Counting principle}
+\begin{lemma}[Counting Principle]
+If an experiment consists of two parts, first
+part has $m$ outcomes, second part
+has $n$ outcomes, then experiment
+has $mn$ outcomes
+\end{lemma}
+\begin{definition}
+\begin{itemize}
+\item Set of all possible outcomes of experiment called
+its \alert{sample space}
+\item Each possible outcome of experiment called
+a \alert{sample point}
+\end{itemize}
+\end{definition}
+\end{frame}
+
+\begin{frame}{Example}
+\begin{itemize}
+\item Experiment: flip two coins
+\item First coin has two outcomes, $H,T$
+\item Second coin has two outcomes, $H,T$
+\item Thus $2\cdot 2=4$ possible outcomes
+\item To construct sample space, use tree diagram:
+\end{itemize}
+\end{frame}
 
 \end{document}
