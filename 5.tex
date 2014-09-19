@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer}
+\documentclass{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -22,7 +22,7 @@
 \begin{frame}\titlepage\end{frame}
 \LogoOff
 
-\begin{frame}{Coin toss and paper-rock-scissors}
+\begin{frame}{Coin toss and paper/rock/scissors}
 \begin{itemize}
 \item Experiment: toss coin \alert{and} randomly choose
 one of paper, rock, scissors
@@ -68,8 +68,8 @@ one of paper, rock, scissors
 \end{xy}\]
 \begin{itemize}
 \item Experiment: randomly select marble from bag
-containing one each of blue, green, red,
-\alert{replace marble}, select another
+containing one each of blue, green, red;
+\alert{replace marble}; select another
 \item Nine possible outcomes
 \item $P\left\{\text{two blues}\right\}
 \only<+->{=1/9}$
@@ -97,7 +97,7 @@ $BB,BG,BR,GB,RB$
 "31";(3,-2)*{G}**\dir{-};
 \end{xy}\]
 \begin{itemize}
-\item Experiment: randomly select marble from bag
+\item Experiment: randomly select marble from bag;
 then select another \alert{without replacing} first
 \item Six possible outcomes
 \item $P\left\{\text{two blues}\right\}
@@ -126,7 +126,7 @@ $BG,BR,GB,RB$
 "31";(3,-2)*{G}**\dir{-};
 \end{xy}\]
 \begin{itemize}
-\item Experiment essentially equivalent to simply
+\item Experiment \alert{essentially} equivalent to simply
 selecting two marbles from bag
 \item Outcomes of selecting two balls:
 \begin{equation}\label{RGBWithout}
@@ -186,7 +186,7 @@ each with three leaves
 
 \begin{frame}{Counting principle}
 \begin{lemma}[Counting Principle]
-If an experiment consists of two parts, first
+If an experiment has two parts, first
 part has $m$ outcomes, second part
 has $n$ outcomes, then experiment
 has $mn$ outcomes
@@ -204,8 +204,8 @@ a \alert{sample point}
 \begin{frame}{Example}
 \begin{itemize}
 \item Experiment: flip two coins
-\item First coin has two outcomes, $H,T$
-\item Second coin has two outcomes, $H,T$
+\item First flip has two outcomes: $H,T$
+\item Second flip has two outcomes: $H,T$
 \item Thus $2\cdot 2=4$ possible outcomes
 \item To construct sample space, use tree diagram:
 \[\begin{xy}<.75cm,0cm>:
@@ -222,12 +222,13 @@ a \alert{sample point}
 \item So $\left\{HH,HT,TH,TT\right\}$ the sample space
 \item If only \alert{number} of sample points needed,
 should use counting principle rather than constructing tree
+\item \dots particularly if number of sample points large
 \end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Replacement}
 \begin{itemize}
-\item Since same outcome can occur on both coin
+\item Since same outcomes can occur on both coin
 tosses, we say that experiment performed \alert{with replacement}
 by analogy with marble example
 \item In any replacement experiment with two identical parts,
@@ -290,6 +291,24 @@ in first selection
 \end{itemize}
 \item So not necessary to construct tree to determine
 number of outcomes
+\item However, tree helpful for answering questions, like
+$P\left\{\text{at least one blue}\right\}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item But how to calculate
+$P\left\{\text{at least one blue}\right\}$
+without tree?
+\item Observe that blue can only occur in first
+or second selection, but not both
+\item If first ball blue, second ball can have any color
+\item Since only remain two colors, can happen in two ways,
+namely $BG,BR$
+\item If second ball blue, then first must have been green or red
+\item So $GB,RB$ the only possibilities
+\item So four altogether
 \end{itemize}
 \end{frame}
 
