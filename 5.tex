@@ -208,6 +208,88 @@ a \alert{sample point}
 \item Second coin has two outcomes, $H,T$
 \item Thus $2\cdot 2=4$ possible outcomes
 \item To construct sample space, use tree diagram:
+\[\begin{xy}<.75cm,0cm>:
+(0,0)="0";
+(-2,-1)="-21";
+(2,-1)="21";
+"0";"-21"*+!D{H}**\dir{-};
+"0";"21"*+!D{T}**\dir{-};
+"-21";(-3,-2)*{H}**\dir{-};
+"-21";(-1,-2)*{T}**\dir{-};
+"21";(1,-2)*{H}**\dir{-};
+"21";(3,-2)*{T}**\dir{-};
+\end{xy}\]
+\item So $\left\{HH,HT,TH,TT\right\}$ the sample space
+\item If only \alert{number} of sample points needed,
+should use counting principle rather than constructing tree
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Since same outcome can occur on both coin
+tosses, we say that experiment performed \alert{with replacement}
+by analogy with marble example
+\item In any replacement experiment with two identical parts,
+root of tree looks like all branches:
+\[\begin{xy}<.75cm,0cm>:
+(0,0)="0";
+(-2,-1)="-21";
+(2,-1)="21";
+"0";"-21"*+!D{H}**\dir{-};
+"0";"21"*+!D{T}**\dir{-};
+"-21";(-3,-2)*{H}**\dir{-};
+"-21";(-1,-2)*{T}**\dir{-};
+"21";(1,-2)*{H}**\dir{-};
+"21";(3,-2)*{T}**\dir{-};
+\end{xy}\]
+\item Not true in experiment \alert{without replacement}:
+\[\begin{xy}<1cm,0cm>:
+(0,0)="0";
+(-3,-1)="-31";
+(0,-1)="01";
+(3,-1)="31";
+"0";"-31"*+!D{B}**\dir{-};
+"0";"01"*+!D{G}**\dir{-};
+"0";"31"*+!D{R}**\dir{-};
+"-31";(-3,-2)*{G}**\dir{-};
+"-31";(-2,-2)*{R}**\dir{-};
+"01";(-1,-2)*{B}**\dir{-};
+"01";(1,-2)*{R}**\dir{-};
+"31";(2,-2)*{B}**\dir{-};
+"31";(3,-2)*{G}**\dir{-};
+\end{xy}\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item However, observe that each branch has two leaves:
+\[\begin{xy}<1cm,0cm>:
+(0,0)="0";
+(-3,-1)="-31";
+(0,-1)="01";
+(3,-1)="31";
+"0";"-31"*+!D{B}**\dir{-};
+"0";"01"*+!D{G}**\dir{-};
+"0";"31"*+!D{R}**\dir{-};
+"-31";(-3,-2)*{G}**\dir{-};
+"-31";(-2,-2)*{R}**\dir{-};
+"01";(-1,-2)*{B}**\dir{-};
+"01";(1,-2)*{R}**\dir{-};
+"31";(2,-2)*{B}**\dir{-};
+"31";(3,-2)*{G}**\dir{-};
+\end{xy}\]
+\item Leaves correspond with marble \alert{not chosen}
+in first selection
+\item So Counting Principle still applies:
+\begin{itemize}
+\item Three ways to choose first marble
+\item \alert{Two} ways to choose second marble, since only two remain
+\item Thus $3\cdot 2=6$ possible outcomes
+\end{itemize}
+\item So not necessary to construct tree to determine
+number of outcomes
 \end{itemize}
 \end{frame}
 
