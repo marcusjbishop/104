@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -312,6 +312,25 @@ namely $BG,BR$
 \end{itemize}
 \end{frame}
 
+\begin{frame}{More on raffle example}
+\begin{itemize}
+\item (Slide to be moved to \S4)
+\item (Slide inspired by conversation with T. Jager)
+\item Marching band sells $500$ raffle tickets for $\$3$
+\item One ticket holder randomly selected to receive $\$150$
+\item Find fair ticket price
+\item Can calculate as usual:
+\[E=147\left(\frac{1}{500}\right)-3\left(\frac{499}{500}\right)=-2.70\]
+so $3-2.70=.30$ the fair price
+\item Jager's idea to view situation from point of view
+of band rather than ticket holder
+\item Observe that if expectation zero for ticket holder,
+then expectation also zero for band
+\item Thus revenue from tickets must be $\$150$
+\item So ticket price must be $\frac{150}{500}=0.30$
+\end{itemize}
+\end{frame}
+
 \begin{frame}{Apartment complex (Exercise 21)}
 \begin{itemize}
 \item Apartments in complex can have 1, 2, or 3 bedrooms
@@ -326,6 +345,7 @@ namely $BG,BR$
 "0";"1"*+!D{1}**\dir{-};
 "0";"2"*+!D{2}**\dir{-};
 "0";"3"*+!D{3}**\dir{-};
+(-2,-3)*+!D{\text{Bed:}};
 \end{xy}\]}
 \only<5>{
 \[\begin{xy}<.5cm,0cm>:
@@ -354,6 +374,8 @@ namely $BG,BR$
 "3";"31"*+!D{F}**\dir{-};
 "3";"32"*+!D{H}**\dir{-};
 "3";"33"*+!D{B}**\dir{-};
+(-2,-3)*+!D{\text{Bed:}};
+(-2,-6)*+!D{\text{Feature:}};
 \end{xy}\]}
 \only<6>{
 \[\begin{xy}<.5cm,0cm>:
@@ -584,8 +606,8 @@ of bedroom choices times number of bathroom choices
 \begin{itemize}
 \item How many have 2 bathrooms?
 \only<+->{$9$}
-\item No need to redraw tree:
-$9=3\cdot 3$, number of bedroom choices times
+\item No need to count or redraw tree:
+\item$ 9=3\cdot 3$, number of bedroom choices times
 number of feature choices
 \end{itemize}
 \[\begin{xy}<.5cm,0cm>:
@@ -633,6 +655,137 @@ number of feature choices
 "33";(16,-9)*+!D{1}**\dir{-};
 "33";(17,-9)*+!D{2}**\dir{-};
 \end{xy}\]
+\end{frame}
+
+\begin{frame}{Apartments with restrictions}
+\begin{itemize}
+\item Now suppose one-bedrooms apartments with
+two bathrooms not available
+\item Also, apartments with balcony and one
+bathroom not available
+\end{itemize}
+\[\begin{xy}<.5cm,0cm>:
+(8.5,0)="0";
+(2.5,-3)="1";
+(8.5,-3)="2";
+(14.5,-3)="3";
+"0";"1"*+!D{1}**\dir{-};
+"0";"2"*+!D{2}**\dir{-};
+"0";"3"*+!D{3}**\dir{-};
+(.5,-6)="11";
+(2.5,-6)="12";
+(4.5,-6)="13";
+(6.5,-6)="21";
+(8.5,-6)="22";
+(10.5,-6)="23";
+(12.5,-6)="31";
+(14.5,-6)="32";
+(16.5,-6)="33";
+"1";"11"*+!D{F}**\dir{-};
+"1";"12"*+!D{H}**\dir{-};
+"2";"21"*+!D{F}**\dir{-};
+"2";"22"*+!D{H}**\dir{-};
+"2";"23"*+!D{B}**\dir{-};
+"3";"31"*+!D{F}**\dir{-};
+"3";"32"*+!D{H}**\dir{-};
+"3";"33"*+!D{B}**\dir{-};
+"11";(0,-9)*+!D{1}**\dir{-};
+"12";(2,-9)*+!D{1}**\dir{-};
+"21";(6,-9)*+!D{1}**\dir{-};
+"21";(7,-9)*+!D{2}**\dir{-};
+"22";(8,-9)*+!D{1}**\dir{-};
+"22";(9,-9)*+!D{2}**\dir{-};
+%"23";(10,-9)*+!D{1}**\dir{-};
+"23";(11,-9)*+!D{2}**\dir{-};
+"31";(12,-9)*+!D{1}**\dir{-};
+"31";(13,-9)*+!D{2}**\dir{-};
+"32";(14,-9)*+!D{1}**\dir{-};
+"32";(15,-9)*+!D{2}**\dir{-};
+%"33";(16,-9)*+!D{1}**\dir{-};
+"33";(17,-9)*+!D{2}**\dir{-};
+\end{xy}\]
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item How many choices?
+\only<+->{$12$}
+\item How many with hardwood floor?
+\only<+->{$5$}
+\item How many with two bedrooms?
+\only<+->{$5$}
+\item Note that tree essential here!
+\end{itemize}
+\[\begin{xy}<.5cm,0cm>:
+(8.5,0)="0";
+(2.5,-3)="1";
+(8.5,-3)="2";
+(14.5,-3)="3";
+"0";"1"*+!D{1}**\dir{-};
+"0";"2"*+!D{2}**\dir{-};
+"0";"3"*+!D{3}**\dir{-};
+(.5,-6)="11";
+(2.5,-6)="12";
+(4.5,-6)="13";
+(6.5,-6)="21";
+(8.5,-6)="22";
+(10.5,-6)="23";
+(12.5,-6)="31";
+(14.5,-6)="32";
+(16.5,-6)="33";
+"1";"11"*+!D{F}**\dir{-};
+"1";"12"*+!D{H}**\dir{-};
+"2";"21"*+!D{F}**\dir{-};
+"2";"22"*+!D{H}**\dir{-};
+"2";"23"*+!D{B}**\dir{-};
+"3";"31"*+!D{F}**\dir{-};
+"3";"32"*+!D{H}**\dir{-};
+"3";"33"*+!D{B}**\dir{-};
+"11";(0,-9)*+!D{1}**\dir{-};
+"12";(2,-9)*+!D{1}**\dir{-};
+"21";(6,-9)*+!D{1}**\dir{-};
+"21";(7,-9)*+!D{2}**\dir{-};
+"22";(8,-9)*+!D{1}**\dir{-};
+"22";(9,-9)*+!D{2}**\dir{-};
+%"23";(10,-9)*+!D{1}**\dir{-};
+"23";(11,-9)*+!D{2}**\dir{-};
+"31";(12,-9)*+!D{1}**\dir{-};
+"31";(13,-9)*+!D{2}**\dir{-};
+"32";(14,-9)*+!D{1}**\dir{-};
+"32";(15,-9)*+!D{2}**\dir{-};
+%"33";(16,-9)*+!D{1}**\dir{-};
+"33";(17,-9)*+!D{2}**\dir{-};
+\end{xy}\]
+\end{frame}
+
+\begin{frame}{Thumbtacks (Exercise 28)}
+\begin{multicols}{2}
+\begin{itemize}
+\item Experiment: drop two thumbtacks; observe number
+landing point up ($U$) or down ($D$)
+\item
+\[\begin{xy}<1cm,0cm>:
+(0,0)="0";
+(-1,-1)="1";
+(1,-1)="2";
+"0";"1"*+!D{U}**\dir{-};
+"0";"2"*+!D{D}**\dir{-};
+"1";(-1.5,-2)*+!D{U}**\dir{-};
+"1";(-.5,-2)*+!D{D}**\dir{-};
+"2";(.5,-2)*+!D{U}**\dir{-};
+"2";(1.5,-2)*+!D{D}**\dir{-};
+\end{xy}\]
+\item Is $UU$ as likely as $DD$?
+\item Can calculate theoretical probability of $U,D$?
+\only<+->{No!}
+\item Empirical probability of $U,D$?
+\item How to determine $P\left(UU\right),P\left(UD\right),
+P\left(DD\right)$
+from $P\left(U\right),P\left(D\right)$?
+\only<+->{See \S6}
+\end{itemize}
+\includegraphics[scale=.5]{Thumbtacks}
+\end{multicols}
 \end{frame}
 
 \end{document}
