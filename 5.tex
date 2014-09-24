@@ -489,7 +489,8 @@ then expectation also zero for band
 \item How many apartment choices possible?
 \only<+->{$18=3\cdot 3\cdot 2$}
 \item How many have two bedrooms?
-\only<+->{$6$}
+\only<+->{$6=3\cdot 2$, number of feature 
+choices times number of bathroom choices }
 \item How many have hardwood floors?
 \only<+->{$6$, but how to calculate this without tree?}
 \end{itemize}
@@ -654,12 +655,15 @@ number of feature choices
 "32";(15,-9)*+!D{2}**\dir{-};
 "33";(16,-9)*+!D{1}**\dir{-};
 "33";(17,-9)*+!D{2}**\dir{-};
+(-2,-3)*+!D{\text{Bed:}};
+(-2,-6)*+!D{\text{Feature:}};
+(-2,-9)*+!D{\text{Bath:}};
 \end{xy}\]
 \end{frame}
 
 \begin{frame}{Apartments with restrictions}
 \begin{itemize}
-\item Now suppose one-bedrooms apartments with
+\item Now suppose one-bedroom apartments with
 two bathrooms not available
 \item Also, apartments with balcony and one
 bathroom not available
@@ -703,6 +707,9 @@ bathroom not available
 "32";(15,-9)*+!D{2}**\dir{-};
 %"33";(16,-9)*+!D{1}**\dir{-};
 "33";(17,-9)*+!D{2}**\dir{-};
+(-2,-3)*+!D{\text{Bed:}};
+(-2,-6)*+!D{\text{Feature:}};
+(-2,-9)*+!D{\text{Bath:}};
 \end{xy}\]
 \end{frame}
 
@@ -755,6 +762,9 @@ bathroom not available
 "32";(15,-9)*+!D{2}**\dir{-};
 %"33";(16,-9)*+!D{1}**\dir{-};
 "33";(17,-9)*+!D{2}**\dir{-};
+(-2,-3)*+!D{\text{Bed:}};
+(-2,-6)*+!D{\text{Feature:}};
+(-2,-9)*+!D{\text{Bath:}};
 \end{xy}\]
 \end{frame}
 
@@ -762,7 +772,7 @@ bathroom not available
 \begin{multicols}{2}
 \begin{itemize}
 \item Experiment: drop two thumbtacks; observe number
-landing point up ($U$) or down ($D$)
+landing point up ($U$) and point down ($D$)
 \item
 \[\begin{xy}<1cm,0cm>:
 (0,0)="0";
@@ -778,7 +788,7 @@ landing point up ($U$) or down ($D$)
 \item Is $UU$ as likely as $DD$?
 \item Can calculate theoretical probability of $U,D$?
 \only<+->{No!}
-\item Empirical probability of $U,D$?
+\item Can calculate empirical probability of $U,D$?
 \item How to determine $P\left(UU\right),P\left(UD\right),
 P\left(DD\right)$
 from $P\left(U\right),P\left(D\right)$?
