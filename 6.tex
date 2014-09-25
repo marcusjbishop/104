@@ -1,0 +1,49 @@
+\documentclass[handout]{beamer}
+\usepackage{multicol}
+\usepackage{xy}
+\everymath{\displaystyle}
+\mode<presentation>
+{\usetheme{Warsaw}\setbeamercovered{dynamic}}
+\usecolortheme{crane}
+\usepackage{beamerfoils}
+\pgfdeclareimage[height=1in]{university-logo}{ISULogo}
+\logo{\pgfuseimage{university-logo}}
+\setbeamertemplate{navigation symbols}{}
+\title[\S6]{Section 6\\{\em And} and {\em or} problems}
+\author{Dr Marcus Bishop}
+\subject{Math 104}
+\beamerdefaultoverlayspecification{<+->}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{impact}{Impact}
+\newtheorem{notation}{Notation}
+\usepackage{arev}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+\LogoOff
+
+\begin{frame}{Card problem from exam}
+\begin{itemize}
+\item How many cards either are picture cards or have
+suit \alert{$\varheart$}?
+\item Observe that thirteen cards have
+suit \alert{$\varheart$}, namely
+\[A\alert{\varheart},
+2\alert{\varheart},
+3\alert{\varheart},\ldots,
+10\alert{\varheart},
+J\alert{\varheart},
+Q\alert{\varheart},
+K\alert{\varheart}\]
+\item Observe that twelve cards are picture cards, namely
+\[J\alert{\varheart},J\alert{\vardiamond},J\clubsuit,J\spadesuit,
+Q\alert{\varheart},Q\alert{\vardiamond},Q\clubsuit,Q\spadesuit,
+K\alert{\varheart},K\alert{\vardiamond},K\clubsuit,K\spadesuit\]
+\item However, \alert{three} cards in both groups,
+namely
+\[J\alert{\varheart},Q\alert{\varheart},K\alert{\varheart}\]
+\item Thus $13+12-3=22$ cards are either picture cards or have 
+suit \alert{$\varheart$}
+\end{itemize}
+\end{frame}
+\end{document}
