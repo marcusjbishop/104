@@ -116,7 +116,7 @@ required to be in either band or orchestra
 \item How many in orchestra?
 \item Rather than drawing freshmen in circles,
 write only \alert{number} of freshman in each
-group in corresponding circle
+group in corresponding region 
 \[\begin{xy}<1cm,0cm>:
 (-1,2)*+!D{\text{Band}};
 (1,2)*+!D{\text{Orch}};
@@ -154,8 +154,25 @@ $40$ in band but not orchestra:
 (-2,0)*{40};
 (2,0)*{25};
 \end{xy}\]
-\item Thus $40+25=65$ in orchestra
+\item Thus $35+25=60$ in orchestra
 \end{itemize}
+\begin{remark}
+Solving Inclusion Exclusion Formula
+\[75+n-35=100\]
+for $n$ obviates Venn diagram
+\end{remark}
+\end{frame}
+
+\begin{frame}{More Inclusion-Exclusion}
+\begin{theorem}[Inclusion-Exclusion Formula]
+If $E,F$ events and
+\begin{itemize}
+\item $p=P\left(E\right)$
+\item $q=P\left(F\right)$
+\item $r$ the probability that \alert{both} $E$ and $F$ occur
+\end{itemize}
+then $p+q-r$ the probability that \alert{either} $E$ or $F$ occurs
+\end{theorem}
 \end{frame}
 
 \end{document}
