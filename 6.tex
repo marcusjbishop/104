@@ -116,7 +116,7 @@ required to be in either band or orchestra
 \item How many in orchestra?
 \item Rather than drawing freshmen in circles,
 write only \alert{number} of freshman in each
-group in corresponding circle
+group in corresponding region 
 \[\begin{xy}<1cm,0cm>:
 (-1,2)*+!D{\text{Band}};
 (1,2)*+!D{\text{Orch}};
@@ -154,8 +154,138 @@ $40$ in band but not orchestra:
 (-2,0)*{40};
 (2,0)*{25};
 \end{xy}\]
-\item Thus $40+25=65$ in orchestra
+\item Thus $35+25=60$ in orchestra
 \end{itemize}
+\begin{remark}
+Solving Inclusion Exclusion Formula
+\[75+n-35=100\]
+for $n$ obviates Venn diagram
+\end{remark}
+\end{frame}
+
+\begin{frame}{More Inclusion-Exclusion}
+\begin{theorem}[Inclusion-Exclusion Formula]
+If $E,F$ events and
+\begin{itemize}
+\item $p=P\left(E\right)$
+\item $q=P\left(F\right)$
+\item $r$ the probability that \alert{both} $E$ and $F$ occur
+\end{itemize}
+then $p+q-r$ the probability that \alert{either} $E$ or $F$ occurs
+\end{theorem}
+\begin{example}[Exercise 11]
+\begin{itemize}
+\item Suppose $P\left(E\right)=0.8$,
+$P\left(F\right)=0.5$, and $P\left(\text{$E$ and $F$}\right)=0.5$
+\item Then $P\left(\text{$E$ or $F$}\right)
+=0.8+0.4-0.5=0.7$
+\item Example doesn't even require context
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}{Example}
+\begin{itemize}
+\item Recall that $3,6,9,12$ divisible by $3$
+\item So if number randomly selected from
+$1,2,\ldots,12$ then $4/12$
+the probability number divisible by $3$
+\item Similarly $7,8,9,10,11,12$ greater than $6$
+\item So $6/12$ the probability number
+greater than $6$
+\item Finally, $9,12$ divisible by $3$ \alert{and}
+greater than $6$
+\item So $2/12$ the probability that number
+both divisible by $3$ and greater than $6$
+\item By Inclusion-Exclusion
+\[\frac{4}{12}+\frac{6}{12}-\frac{2}{12}=\frac{8}{12}\]
+the probability
+that number \alert{either} divisible by $3$ or greater than $6$
+\item Indeed eight numbers $3,6,7,8,9,10,11,12$ 
+divisible by $3$ or greater than $6$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mutually exclusive events}
+\begin{itemize}
+\item If Then $0=P\left(\text{$E$ and $F$}\right)$
+then $E,F$ called \alert{mutually exclusive events}
+\item Means that impossible for \alert{both} $E$ and $F$ to occur
+\end{itemize}
+\begin{example}
+\begin{itemize}
+\item Experiment: roll die
+\item $E=\left\{1,3,5\right\}$, the event
+that odd number rolled
+\item $F=\left\{2,4,6\right\}$, the event
+that even number rolled
+\item Then $E,F$ mutually exclusive
+\item Note that as sets, $E,F$ have \alert{no elements} in common
+\end{itemize}
+\end{example}
+\begin{example}
+\begin{itemize}
+\item But mutually exclusive events need not be \alert{complementary}
+\item $E=\left\{1,3,5\right\}$ and $F=\left\{2\right\}$
+mutually exclusive
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Note that if $E,F$ mutually exclusive then Inclusion-Exclusion
+formula reduces to
+\[P\left(\text{$E$ or $F$}\right)=P\left(E\right)
++P\left(F\right)\alert{-0}\]
+since $0=P\left(\text{$E$ and $F$}\right)$
+\end{itemize}
+\begin{example}
+\begin{itemize}
+\item Experiment: randomly select card
+\item $P\left(\clubsuit\right)=\frac{1}{4}=P\left(\alert{\varheart}\right)$
+\item $\clubsuit,\alert{\varheart}$ mutually exclusive
+since no card has \alert{both} suits
+\item Thus $P\left(\text{$\clubsuit$ or $\alert{\varheart}$}\right)
+=\frac{1}{4}+\frac{1}{4}=\frac{1}{2}$
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}{Independence}
+\begin{definition}
+$E,F$ called \alert{independent} if $E$
+occurring or not has no effect on $F$ occurring or not
+\end{definition}
+\begin{example}
+\begin{itemize}
+\item Experiment: flip two coins
+\item $E$: first coin lands on heads
+\item $F$: second coin lands on heads
+\item Then $E,F$ independent
+\item Note that 
+\[P\left(\text{$E$ and $F$}\right)=P\left(HH\right)
+=\frac{1}{4}=
+=\frac{1}{2}\cdot\frac{1}{2}=P\left(E\right)P\left(F\right)\]
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}
+\begin{example}
+\begin{itemize}
+\item Experiment: Draw two cards without replacement
+\item $E$: First card has suit $\clubsuit$
+\item $F$: Second card has suit $\clubsuit$
+\item Then $E,F$ \alert{not} independent!
+\item Indeed, $F$ occurring depends on whether or not
+$E$ occurred!
+\item If $E$ occurs, then $P\left(F\right)=\frac{12}{51}$
+since $12$ of the remaining $51$ cards have suit $\clubsuit$
+\item However If $E$ fails to occur, then $P\left(F\right)=\frac{13}{51}$
+since $13$ of the remaining $51$ cards have suit $\clubsuit$
+\end{itemize}
+\end{example}
 \end{frame}
 
 \end{document}
