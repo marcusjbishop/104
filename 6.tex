@@ -173,6 +173,84 @@ If $E,F$ events and
 \end{itemize}
 then $p+q-r$ the probability that \alert{either} $E$ or $F$ occurs
 \end{theorem}
+\begin{example}[Exercise 11]
+\begin{itemize}
+\item Suppose $P\left(E\right)=0.8$,
+$P\left(F\right)=0.5$, and $P\left(\text{$E$ and $F$}\right)=0.5$
+\item Then $P\left(\text{$E$ or $F$}\right)
+=0.8+0.4-0.5=0.7$
+\item Example doesn't even require context
+\end{itemize}
+\end{example}
 \end{frame}
+
+\begin{frame}{Example}
+\begin{itemize}
+\item Recall that $3,6,9,12$ divisible by $3$
+\item So if number randomly selected from
+$1,2,\ldots,12$ then $4/12$
+the probability number divisible by $3$
+\item Similarly $7,8,9,10,11,12$ greater than $6$
+\item So $6/12$ the probability number
+greater than $6$
+\item Finally, $9,12$ divisible by $3$ \alert{and}
+greater than $6$
+\item So $2/12$ the probability that number
+both divisible by $3$ and greater than $6$
+\item By Inclusion-Exclusion
+\[\frac{4}{12}+\frac{6}{12}-\frac{2}{12}=\frac{8}{12}\]
+the probability
+that number \alert{either} divisible by $3$ or greater than $6$
+\item Indeed eight numbers $3,6,7,8,9,10,11,12$ 
+divisible by $3$ or greater than $6$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mutually exclusive events}
+\begin{itemize}
+\item If Then $0=P\left(\text{$E$ and $F$}\right)$
+then $E,F$ called \alert{mutually exclusive events}
+\item Means that impossible for \alert{both} $E$ and $F$ to occur
+\end{itemize}
+\begin{example}
+\begin{itemize}
+\item Experiment: roll die
+\item $E=\left\{1,3,5\right\}$, the event
+that odd number rolled
+\item $F=\left\{2,4,6\right\}$, the event
+that even number rolled
+\item Then $E,F$ mutually exclusive
+\item Note that as sets, $E,F$ have \alert{no elements} in common
+\end{itemize}
+\end{example}
+\begin{example}
+\begin{itemize}
+\item But mutually exclusive events need not be \alert{complementary}
+\item $E=\left\{1,3,5\right\}$ and $F=\left\{2\right\}$
+mutually exclusive
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Note that if $E,F$ mutually exclusive then Inclusion-Exclusion
+formula reduces to
+\[P\left(\text{$E$ or $F$}\right)=P\left(E\right)
++P\left(F\right)\alert{-0}\]
+since $0=P\left(\text{$E$ and $F$}\right)$
+\end{itemize}
+\begin{example}
+\begin{itemize}
+\item Experiment: randomly select card
+\item $P\left(\clubsuit\right)=\frac{1}{4}=P\left(\alert{\varheart}\right)$
+\item $\clubsuit,\alert{\varheart}$ mutually exclusive
+since no card has \alert{both} suits
+\item Thus $P\left(\text{$\clubsuit$ or $\alert{\varheart}$}\right)
+=\frac{1}{4}+\frac{1}{4}=\frac{1}{2}$
+\end{itemize}
+\end{example}
+\end{frame}
+
 
 \end{document}
