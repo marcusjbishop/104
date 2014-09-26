@@ -252,5 +252,40 @@ since no card has \alert{both} suits
 \end{example}
 \end{frame}
 
+\begin{frame}{Independence}
+\begin{definition}
+$E,F$ called \alert{independent} if $E$
+occurring or not has no effect on $F$ occurring or not
+\end{definition}
+\begin{example}
+\begin{itemize}
+\item Experiment: flip two coins
+\item $E$: first coin lands on heads
+\item $F$: second coin lands on heads
+\item Then $E,F$ independent
+\item Note that 
+\[P\left(\text{$E$ and $F$}\right)=P\left(HH\right)
+=\frac{1}{4}=
+=\frac{1}{2}\cdot\frac{1}{2}=P\left(E\right)P\left(F\right)\]
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}
+\begin{example}
+\begin{itemize}
+\item Experiment: Draw two cards without replacement
+\item $E$: First card has suit $\clubsuit$
+\item $F$: Second card has suit $\clubsuit$
+\item Then $E,F$ \alert{not} independent!
+\item Indeed, $F$ occurring depends on whether or not
+$E$ occurred!
+\item If $E$ occurs, then $P\left(F\right)=\frac{12}{51}$
+since $12$ of the remaining $51$ cards have suit $\clubsuit$
+\item However If $E$ fails to occur, then $P\left(F\right)=\frac{13}{51}$
+since $13$ of the remaining $51$ cards have suit $\clubsuit$
+\end{itemize}
+\end{example}
+\end{frame}
 
 \end{document}
