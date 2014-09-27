@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -286,6 +286,122 @@ since $12$ of the remaining $51$ cards have suit $\clubsuit$
 since $13$ of the remaining $51$ cards have suit $\clubsuit$
 \end{itemize}
 \end{example}
+\end{frame}
+
+\begin{frame}{Independence and \em{and}}
+\begin{theorem}
+If $E,F$ independent, then
+$P\left(\text{$E$ and $F$}\right)=P\left(E\right)P\left(F\right)$
+\end{theorem}
+\begin{example}
+\begin{itemize}
+\item Suppose family plans to have two children
+\item Calculate probability that both children girls
+\item $E_1=\left\{\text{first child girl}\right\}$
+\item $E_2=\left\{\text{second child girl}\right\}$
+\item Then $E_1,E_2$ independent
+\item $P\left(E_1\right)=1/2=P\left(E_2\right)$ so
+\end{itemize}
+\only<+->{
+\begin{multline*}
+P\left\{\text{both children girls}\right\}
+\only<+->{=P\left(\text{$E_1$ and $E_2$}\right)\\}
+\only<+->{=P\left(E_1\right)P\left(E_2\right)}
+\only<+->{=\frac{1}{2}\cdot\frac{1}{2}}
+\only<+->{=\frac{1}{4}}
+\end{multline*}}
+\end{example}
+\end{frame}
+
+\begin{frame}{Children continued}
+\begin{itemize}
+\item Suppose family plans to have \alert{ten} children
+\item Calculate probability that all ten children girls
+\item $E_1=\left\{\text{first child girl}\right\},\ldots,
+E_{10}=\left\{\text{tenth child girl}\right\}$
+\item Then $E_1,\ldots,E_{10}$ independent
+\item $\frac{1}{2}=P\left(E_1\right)=P\left(E_2\right)=\cdots$ so
+\only<+->{
+\begin{multline*}
+P\left\{\text{all ten children girls}\right\}
+\only<+->{=P\left(\text{$E_1$ and $\cdots$ and $E_{10}$}\right)\\}
+\only<+->{=P\left(E_1\right)P\left(E_2\right)\cdots P\left(E_{10}\right)}
+\only<+->{=\left(\frac{1}{2}\right)^{10}}
+\only<+->{=\frac{1}{1024}}
+\end{multline*}}
+\end{itemize}
+\begin{remark}
+If they succeed and decide to have another child,
+$1/2$ still the probability that eleventh child a girl
+\end{remark}
+\end{frame}
+
+\begin{frame}{Same problem, different story}
+\begin{itemize}
+\item You guess on all ten questions of true-false quiz
+\item Calculate probability of answering all ten correctly
+\item $E_1=\left\{\text{first question correct}\right\},\ldots,
+E_{10}=\left\{\text{tenth question correct}\right\}$
+\item Then $E_1,\ldots,E_{10}$ independent
+\item $\frac{1}{2}=P\left(E_1\right)=P\left(E_2\right)=\cdots$ so
+\only<+->{
+\begin{multline*}
+P\left\{\text{all ten questions correct}\right\}
+\only<+->{=P\left(\text{$E_1$ and $\cdots$ and $E_{10}$}\right)\\}
+\only<+->{=P\left(E_1\right)P\left(E_2\right)\cdots P\left(E_{10}\right)}
+\only<+->{=\left(\frac{1}{2}\right)^{10}}
+\only<+->{=\frac{1}{1024}}
+\end{multline*}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Further variation}
+\begin{itemize}
+\item You guess on all ten questions of multiple choice quiz
+\item All ten questions have five choices
+\item Calculate probability of answering all ten correctly
+\item $\frac{1}{5}=P\left(E_1\right)=P\left(E_2\right)=\cdots$ so
+\only<+->{
+\begin{multline*}
+P\left\{\text{all ten questions correct}\right\}
+\only<+->{=P\left(\text{$E_1$ and $\cdots$ and $E_{10}$}\right)\\}
+\only<+->{=P\left(E_1\right)P\left(E_2\right)\cdots P\left(E_{10}\right)}
+\only<+->{=\left(\frac{1}{5}\right)^{10}}
+\only<+->{=\frac{1}{9765625}}
+\end{multline*}}
+\end{itemize}
+\begin{remark}
+\begin{itemize}
+\item Most people would be happy with seven or eight correct
+\item More difficult to compute, see \S11
+\end{itemize}
+\end{remark}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Spades again
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Birthday problem}
+\begin{itemize}
+\item $E$: Two people in room of $24$ have same birthday
+\item Calculate $P\left(E\right)$
+\item Problem very complicated
+\item Simpler to calculate $P\left(\text{not $E$}\right)$
+\item That is, calculate probability that all $24$ people
+have different birthdays
+\item Second person has probability $\frac{364}{365}$ of
+not having same birthday as first
+\item Third person has probability $\frac{363}{365}$ of
+not having same birthday as first or second
+\[\frac{364}{365}
+\cdot\frac{363}{365}
+\cdots\frac{342}{365}\approx 0.462\]
+\item So $P\left(E\right)=1-0.462=0.538$ (\alert{!})
+\end{itemize}
+
 \end{frame}
 
 \end{document}
