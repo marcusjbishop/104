@@ -378,9 +378,26 @@ P\left\{\text{all ten questions correct}\right\}
 \end{remark}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{$\clubsuit$ example revisited}
 \begin{itemize}
-\item Spades again
+\item Experiment: Draw two cards without replacement
+\item $E$: First card has suit $\clubsuit$
+\item $F$: Second card has suit $\clubsuit$
+\begin{remark}
+\begin{itemize}
+\item We interpret \alert{$E$ and $F$} to mean $E$ occurs
+\alert{and then} $F$ occurs
+\item Thus we assume $E$ has already occurred when considering $F$
+\item In this sense, $E,F$ \alert{independent} for purpose of calculating
+$P\left(\text{$E$ and $F$}\right)$, so
+$P\left(\text{$E$ and $F$}\right)=P\left(E\right)P\left(F\right)$
+\end{itemize}
+\end{remark}
+\item $P\left(E\right)=\frac{13}{52}$
+\item $E$ having occurred, $P\left(F\right)=\frac{12}{51}$
+\item Thus $P\left(\text{$E$ and $F$}\right)
+\only<+->{=\frac{13}{52}\cdot\frac{12}{51}}
+\only<+->{=\frac{156}{2652}}\only<+->{=\frac{1}{17}}$
 \end{itemize}
 \end{frame}
 
