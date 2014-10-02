@@ -441,16 +441,88 @@ of both coins landing on heads\end{example}
 \end{enumerate}
 \end{frame}
 
-\begin{frame}{Quiz instructions}
+%\begin{frame}{Quiz instructions}
+%\begin{itemize}
+%\item First submit homework \alert{without fringe}
+%\item Use number 2 pencil
+%\item No phones
+%\item Fill in student ID in \alert{first nine spaces},
+%leaving tenth space empty
+%\item Leave when finished, depositing quiz and answer sheet
+%face-down on table in back
+%\item Yellow and red forms of quiz in \alert{different piles}
+%\end{itemize}
+%\end{frame}
+
+\begin{frame}{Two dice}
 \begin{itemize}
-\item First submit homework \alert{without fringe}
-\item Use number 2 pencil
-\item No phones
-\item Fill in student ID in \alert{first nine spaces},
-leaving tenth space empty
-\item Leave when finished, depositing quiz and answer sheet
-face-down on table in back
-\item Yellow and red forms of quiz in \alert{different piles}
+\item Since rolling die has $6$ outcomes, rolling
+two die has $6\cdot 6=36$ outcomes
+\includegraphics{TwoDice}
+\item Rolling two dice and adding has $11$ outcomes,
+namely $2,3,\ldots,12$
+\item[]
+\[\begin{array}{r|c|c|c|c|c|c|c|c|c|c|c}
+\text{Sum}&2&3&4&5&6&7&8&9&10&11&12\\\hline
+\text{Frequency}&\only<+->{1}&
+\only<+->{2}& \only<+->{3}& \only<+->{4}& \only<+->{5}&
+\only<+->{6}& \only<+->{5}& \only<+->{4}& \only<+->{3}&
+\only<+->{2}& \only<+->{1} \end{array}\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Craps}
+\begin{itemize}
+\item Each player in either \alert{pass bettors}
+or \alert{don't pass bettors}
+\item Pass bettors roll two dice
+\item If $7$ or $12$ the sum (a \alert{natural}) then pass bettors win
+\item If $2$, $3$, or $12$ the sum (a \alert{craps})
+then don't pass bettors win
+\item If $4,5,6,8,9,10$ the sum then this number called the \alert{point}
+\item Pass bettors roll dice until sum is either $7$ or the point
+\item If point occurs first, then pass bettors win (\alert{point is made})
+\item If $7$ occurs first, then don't pass bettors win
+\item Game continues as above, with dice rolled by same group
+until point established and fails to be made
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Want to calculate expected proceeds for pass bettors
+\item Need to enumerate all possible outcomes and find probability of each
+\[\begin{xy}<1.4cm,0cm>:
+(4.5,0)="0";
+(1,-2)="N";
+(2,-2)="C";
+(3,-2)="4";
+(4,-2)="5";
+(5,-2)="6";
+(6,-2)="8";
+(7,-2)="9";
+(8,-2)="10";
+"0";"N"*+!D{N}**\dir{-};
+"0";"C"*+!D{C}**\dir{-};
+"0";"4"*+!D{4}**\dir{-};
+"0";"5"*+!D{5}**\dir{-};
+"0";"6"*+!D{6}**\dir{-};
+"0";"8"*+!D{8}**\dir{-};
+"0";"9"*+!D{9}**\dir{-};
+"0";"10"*+!D{10}**\dir{-};
+"4";(2.75,-4)*+!D{P}**\dir{-};
+"4";(3.25,-4)*+!D{F}**\dir{-};
+"5";(3.75,-4)*+!D{P}**\dir{-};
+"5";(4.25,-4)*+!D{F}**\dir{-};
+"6";(4.75,-4)*+!D{P}**\dir{-};
+"6";(5.25,-4)*+!D{F}**\dir{-};
+"8";(5.75,-4)*+!D{P}**\dir{-};
+"8";(6.25,-4)*+!D{F}**\dir{-};
+"9";(6.75,-4)*+!D{P}**\dir{-};
+"9";(7.25,-4)*+!D{F}**\dir{-};
+"10";(7.75,-4)*+!D{P}**\dir{-};
+"10";(8.25,-4)*+!D{F}**\dir{-};
+\end{xy}\]
 \end{itemize}
 \end{frame}
 
