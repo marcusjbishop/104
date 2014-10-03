@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer}
+\documentclass{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -473,16 +473,16 @@ namely $2,3,\ldots,12$
 
 \begin{frame}{Craps}
 \begin{itemize}
-\item Each player in either \alert{pass betters}
-or \alert{don't pass betters}
-\item Pass betters roll two dice
-\item If $7$ or $12$ the sum (a \alert{natural}) then pass betters win
+\item Each player in either \alert{pass bettors}
+or \alert{don't pass bettors}
+\item Pass bettors roll two dice
+\item If $7$ or $11$ the sum (a \alert{natural}) then pass bettors win
 \item If $2$, $3$, or $12$ the sum (a \alert{craps})
-then don't pass betters win
+then don't pass bettors win
 \item If $4,5,6,8,9,10$ the sum then this number called the \alert{point}
-\item Pass betters roll dice until sum is either $7$ or the point
-\item If point occurs first, then pass betters win (\alert{point is made})
-\item If $7$ occurs first, then don't pass betters win
+\item Pass bettors roll dice until sum is either $7$ or the point
+\item If point occurs first, then pass bettors win (\alert{point is made})
+\item If $7$ occurs first, then don't pass bettors win
 \item Game continues as above, with dice rolled by same group
 until point established and fails to be made
 \end{itemize}
@@ -490,7 +490,7 @@ until point established and fails to be made
 
 \begin{frame}
 \begin{itemize}
-\item Want to calculate expected proceeds for pass betters
+\item Want to calculate expected proceeds for pass bettors
 \item Need to enumerate all possible outcomes and find probability of each
 \[\begin{xy}<1.4cm,0cm>:
 (4.5,0)="0"; (1,-2)="N"; (2,-2)="C"; (3,-2)="4";
@@ -557,7 +557,7 @@ since $7$ and $11$ mutually exclusive
 \begin{frame}
 \begin{itemize}
 \item Want to calculate $P\left(\text{$4$ and $P$}\right)$
-\item $3$ ways to roll $4$ so $P\left(4\right)=\frac{4}{36}$
+\item $3$ ways to roll $4$ so $P\left(4\right)=\frac{3}{36}$
 \item Assume $4$ occurs
 \item $3$ ways to roll $4$ again, resulting in $P$
 \item $6$ ways to roll $7$, resulting in $F$
@@ -569,7 +569,7 @@ and $P\left(F\right)=\frac{6}{9}$
 $P\left(\text{$4$ and $P$}\right)
 =\frac{3}{36}\cdot\frac{3}{9}=\frac{1}{36}$
 \item $P\left(\text{$4$ and $F$}\right)
-=\frac{6}{36}\cdot\frac{3}{9}=\frac{1}{18}$
+=\frac{3}{36}\cdot\frac{6}{9}=\frac{1}{18}$
 \end{itemize}
 \end{frame}
 
@@ -611,8 +611,8 @@ $P\left(\text{$4$ and $P$}\right)
 writing them directly on tree
 \item Verify that $1$ the sum of probabilities
 of all outcomes
-\item Assuming that pass betters and
-don't pass betters each bet $100$,
+\item Assuming that pass bettors and
+don't pass bettors each bet $100$,
 calculate expected proceeds for both groups.
 \item Also complete exercises 15--34 of textbook
 \end{itemize}
