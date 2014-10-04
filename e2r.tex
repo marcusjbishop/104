@@ -1,6 +1,5 @@
 \documentclass[answers,addpoints,12pt]{exam}
-\usepackage{multicol}
-\usepackage{arev}
+\usepackage{multicol,xy}
 \usepackage{graphicx,multicol}
 \usepackage[euler-digits]{eulervm}
 \usepackage{charter,amsmath,amssymb}
@@ -13,6 +12,7 @@
 {\bf 8 October 2014}
 \firstpagefooter{}{}{}
 \runningfooter{}{}{}
+\everymath{\displaystyle}
 \begin{document}
 
 \begin{center}
@@ -40,7 +40,7 @@ you have not been the recipient of such communication from anyone else.
 
 \begin{questions}
 
-\question[10] Two dice are rolled and the
+\question[16] Two dice are rolled and the
 numbers on the top faces of the two dice are observed.
 Determine the odds against each of the following events.
 \begin{parts}
@@ -63,13 +63,14 @@ Determine the odds against each of the following events.
 
 \question[10]
 \begin{multicols}{2}
-When dropping a thumbtack, it either lands point down
+If you drop a thumbtack on the floor, it either lands point down
 or point up, as shown in the image at the right.
 You drop all the thumbtacks in a box on the floor, observing that
 $105$~tacks land point down while $35$ land point up.
 Based on these results, if you drop two thumbtacks, what
 is the probability that both tacks will land point up?
-\includegraphics[scale=.5]{Thumbtacks}
+\columnbreak\\
+\includegraphics[scale=.6]{Thumbtacks}
 \end{multicols}
 \begin{solution}
 $\frac{35}{35+105}=\frac{1}{4}$ the empirical probability
@@ -88,8 +89,8 @@ $2\left(\frac{1}{4}\right)+3\left(\frac{1}{4}\right)
 -4\left(\frac{1}{2}\right)=-\frac{3}{4}=-0.75$
 \end{solution}
 
-\question[10] Suppose $E$ and $F$ are events
-and $P\left(E\right)=.75$ and $P\left(F\right)=.25$.
+\question[15] Suppose $E$ and $F$ are events
+and $P\left(E\right)=0.75$ and $P\left(F\right)=0.25$.
 \begin{parts}
 \part Calculate $P\left(\text{$E$ or $F$}\right)$
 assuming that $E$ and $F$ are mutually exclusive.
@@ -98,28 +99,55 @@ assuming $E$ and $F$ are independent.
 \part Calculate $P\left(\text{$E$ or $F$}\right)$
 assuming $E$ and $F$ are independent.
 \end{parts}
+\begin{solution}
+\begin{parts}
+\part $0.75+0.25=1.0$
+\part $0.75\cdot 0.25=0.1875$
+\part $0.75+0.25-0.1875=0.8125$
+\end{parts}
+\end{solution}
 
-\question Ames High School has $1422$ students.
-If $102$ students in band but not chorus and
+\question[12] Ames High School has $1422$ students.
+$102$ students in band but not chorus and
 $176$ students in chorus but not band.
 If $1093$ students are in neither band nor chorus,
 then how many students are in both band and chorus?
+\begin{solution}
+\[\begin{xy}<.5cm,0cm>:
+(-1,2)*+!D{\text{B}};
+(1,2)*+!D{\text{C}};
+(-1,0)*\cir<1cm>{};
+(1,0)*\cir<1cm>{};
+(0,0)*{51};
+(-2,0)*{102};
+(2,0)*{176};
+(4,0)*{1093};
+\end{xy}\]
+\end{solution}
 
-\question[10] Your itinerary for Saturday should
+\question[15] Your itinerary for Saturday should
 include a trip to Target, Staples, Hy-Vee, and the bank.
 However, since Target is across the street from Staples,
 you should visit those two stores consecutively. In other
-words, Target should be right after Staples, or else
-Staples should be right after Target. In how many ways
+words, you should visit Target should be right after Staples, or else
+Staples right after Target. In how many ways
 can you plan your itinerary?
+\begin{solution}12\end{solution}
 
 \question[10] If two cards are randomly selected from a deck
 of playing cards without replacement, what is the probability that both cards
 will be picture cards?  A {\em picture card} is either a Jack, Queen, or King.
+\begin{solution}
+$\frac{12}{52}\cdot\frac{11}{51}=\frac{11}{121}\approx 0.0498$
+\end{solution}
 
-\question[10] To raise money the volleyball team sells 500~raffle tickets
-for $\$3$ each. They will randomly select a ticket holder to receive
-a prize. If the fair ticket price is $0.30$, how much is the prize?
+\question[12] A Math~104 quiz has ten multiple-choice
+questions, each with five answer choices. If you guess on all
+ten questions, what is the probability that you will answer at
+least one question correctly?
+\begin{solution}
+$1-\left(\frac{4}{5}\right)^{10}\approx 0.8926$
+\end{solution}
 
 \end{questions}
 
