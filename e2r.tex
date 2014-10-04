@@ -1,4 +1,4 @@
-\documentclass[addpoints,12pt]{exam}
+\documentclass[answers,addpoints,12pt]{exam}
 \usepackage{multicol}
 \usepackage{arev}
 \usepackage{graphicx,multicol}
@@ -17,7 +17,7 @@
 
 \begin{center}
 \fbox{\fbox{\parbox{5.5in}{
-This section has \numquestions~questions.
+This exam has \numquestions~questions.
 It has been printed on \numpages~pages and is worth \numpoints~points.
 Answer all the questions below in the spaces provided.
 In order to receive maximum credit, you must
@@ -50,20 +50,43 @@ Determine the odds against each of the following events.
 \vspace{.25in}
 \part The sum of the two numbers is even.
 \vspace{.25in}
+\part At least one of the numbers is $3$.
 \end{parts}
+\begin{solution}
+\begin{parts}
+\part Can occur in $6$ ways, so $30:6$ or $5:1$ the odds against
+\part Can occur in $4$ ways, so $32:4$ or $8:1$ the odds against
+\part Can occur in $18$ ways, so $18:18$ or $1:1$ the odds against
+\part Can occur in $11$ ways, so $25:11$ the odds against
+\end{parts}
+\end{solution}
 
 \question[10]
 \begin{multicols}{2}
 When dropping a thumbtack, it either lands point down
 or point up, as shown in the image at the right.
-Alex drops all the thumbtacks in a box on the floor.
-$106$~tacks land point down, while $35$ land point up.
-Based on these results, if he drops two thumbtacks, what
+You drop all the thumbtacks in a box on the floor, observing that
+$105$~tacks land point down while $35$ land point up.
+Based on these results, if you drop two thumbtacks, what
 is the probability that both tacks will land point up?
 \includegraphics[scale=.5]{Thumbtacks}
 \end{multicols}
+\begin{solution}
+$\frac{35}{35+105}=\frac{1}{4}$ the empirical probability
+of point up, so $\left(\frac{1}{4}\right)^2=\frac{1}{16}$
+the probability of both points up.
+\end{solution}
 
-\question[10] Expectation of new game
+\question[10] A game is played as follows.
+Two coins are flipped. If both coins come up
+heads, then you win $\$2$. If both coins come
+up tails, then you win $\$3$. 
+Otherwise you lose $\$4$. What are your expected proceeds
+of this game?
+\begin{solution}
+$2\left(\frac{1}{4}\right)+3\left(\frac{1}{4}\right)
+-4\left(\frac{1}{2}\right)=-\frac{3}{4}=-0.75$
+\end{solution}
 
 \question[10] Suppose $E$ and $F$ are events
 and $P\left(E\right)=.75$ and $P\left(F\right)=.25$.
