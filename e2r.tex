@@ -1,4 +1,4 @@
-\documentclass[answers,addpoints,12pt]{exam}
+\documentclass[addpoints,12pt]{exam}
 \usepackage{multicol,xy}
 \usepackage{graphicx,multicol}
 \usepackage[euler-digits]{eulervm}
@@ -45,11 +45,11 @@ numbers showing on the top faces are observed.
 Determine the odds against each of the following events.
 \begin{parts}
 \part Both numbers are the same
-\vspace{.25in}
+\vspace{.5in}
 \part The sum of the two numbers is $5$
-\vspace{.25in}
+\vspace{.5in}
 \part The sum of the two numbers is even
-\vspace{.25in}
+\vspace{.5in}
 \part At least one of the numbers is $3$
 \end{parts}
 \begin{solution}
@@ -60,6 +60,7 @@ Determine the odds against each of the following events.
 \part Can occur in $11$ ways, so $25:11$ the odds against
 \end{parts}
 \end{solution}
+\newpage
 
 \question[10]
 \begin{multicols}{2}
@@ -77,6 +78,7 @@ $\frac{35}{35+105}=\frac{1}{4}$ the empirical probability
 of point up, so $\left(\frac{1}{4}\right)^2=\frac{1}{16}$
 the probability of both points up
 \end{solution}
+\vspace{1.75in}
 
 \question[10] A game is played as follows.
 Two coins are flipped. If both coins come up
@@ -88,17 +90,30 @@ of this game?
 $2\left(\frac{1}{4}\right)+3\left(\frac{1}{4}\right)
 -4\left(\frac{1}{2}\right)=-\frac{3}{4}=\$-0.75$
 \end{solution}
+\vspace{1.75in}
+
+\question[10] If two cards are randomly selected from a deck
+of playing cards without replacement,
+then what is the probability that both cards
+will be picture cards?  A {\em picture card} is either a Jack, Queen, or King.
+\begin{solution}
+$\frac{12}{52}\cdot\frac{11}{51}=\frac{11}{121}\approx 0.0498$
+\end{solution}
+\newpage
 
 \question[15] Suppose $E$ and $F$ are events
 and $P\left(E\right)=0.75$ and $P\left(F\right)=0.25$.
 \begin{parts}
 \part Calculate $P\left(\text{$E$ or $F$}\right)$
 assuming that $E$ and $F$ are mutually exclusive.
+\vspace{.5in}
 \part Calculate $P\left(\text{$E$ and $F$}\right)$
 assuming $E$ and $F$ are independent.
+\vspace{.5in}
 \part Calculate $P\left(\text{$E$ or $F$}\right)$
 assuming $E$ and $F$ are independent.
 \end{parts}
+\vspace{.5in}
 \begin{solution}
 \begin{parts}
 \part $0.75+0.25=1.0$
@@ -124,6 +139,16 @@ then how many students are in both band and chorus?
 (4,0)*{1093};
 \end{xy}\]
 \end{solution}
+\vspace{3in}
+
+\question[12] A Math~104 quiz has ten multiple-choice
+questions, each with five answer choices. If you guess on all
+ten questions, then what is the probability that you will answer at
+least one question correctly?
+\begin{solution}
+$1-\left(\frac{4}{5}\right)^{10}\approx 0.8926$
+\end{solution}
+\newpage
 
 \question[15] Your itinerary for Saturday should
 include a trip to Target, Staples, Hy-Vee, and the bank.
@@ -133,22 +158,6 @@ words, you should visit Target right after Staples, or else
 Staples right after Target. In how many ways
 can you plan your itinerary?
 \begin{solution}12\end{solution}
-
-\question[10] If two cards are randomly selected from a deck
-of playing cards without replacement,
-then what is the probability that both cards
-will be picture cards?  A {\em picture card} is either a Jack, Queen, or King.
-\begin{solution}
-$\frac{12}{52}\cdot\frac{11}{51}=\frac{11}{121}\approx 0.0498$
-\end{solution}
-
-\question[12] A Math~104 quiz has ten multiple-choice
-questions, each with five answer choices. If you guess on all
-ten questions, then what is the probability that you will answer at
-least one question correctly?
-\begin{solution}
-$1-\left(\frac{4}{5}\right)^{10}\approx 0.8926$
-\end{solution}
 
 \end{questions}
 
