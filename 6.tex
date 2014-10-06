@@ -652,7 +652,7 @@ calculate expected proceeds for both groups.
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Conclusion}
+\begin{frame}{Craps expectation}
 \begin{itemize}
 \item Observe that $\frac{244}{495}+\frac{251}{495}=1$
 \item Expected proceeds for pass bettors:
@@ -661,6 +661,55 @@ calculate expected proceeds for both groups.
 \item Expected proceeds for don't pass bettors:
 \[-100\left(\frac{244}{495}\right)+100\left(\frac{251}{495}\right)
 =\frac{140}{99}\approx \$1.41\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Casino craps}
+\begin{itemize}
+\item In casino, payouts for pass bettors the same as on street
+for favorable outcomes $N$,
+$\left(\text{$4$ and $P$}\right)$,\dots,
+$\left(\text{$12$ and $P$}\right)$
+\item Thus $\$-1.41$ the expectation for pass bettors
+for every $\$100$ bet
+\item However, if initial roll results in $12$, don't pass bettors
+neither win nor lose
+\item Thus outcome $C$ splits into two outcomes:
+\begin{itemize}
+\item Don't pass bettors win amount bet if first roll $2$ or $3$
+\item Don't pass bettors win $0$ if first roll $12$
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Expected proceeds for don't pass bettors
+in \alert{street} version:
+\[-100\left(\frac{244}{495}\right)+100\left(\alert{\frac{251}{495}}\right)
+=\frac{140}{99}\approx \$1.41\]
+\item Here
+\[\frac{251}{495}
+=\alert{\frac{1}{9}}+2\left(\frac{1}{18}\right)
++2\left(\frac{1}{15}\right)+2\left(\frac{5}{66}\right)\]
+\item Here $\frac{1}{9}=\frac{4}{36}$ the probability of $C$
+\item In \alert{casino} version, change $\frac{1}{9}$ to
+$\frac{3}{36}=\frac{1}{12}$, the probability of $2$ or $3$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Thus outcome $\$100$ occurs with probability
+\[\alert{\frac{1}{12}}+2\left(\frac{1}{18}\right)
++2\left(\frac{1}{15}\right)+2\left(\frac{5}{66}\right)
+=\frac{949}{1980}\approx 0.4793\]
+\item Thus expectation for don't pass bettors
+\[-100\left(\frac{244}{495}\right)+100\left(\alert{\frac{949}{1980}}\right)
++\alert{0\left(\frac{1}{36}\right)}
+=-\frac{15}{11}\approx \$-1.37\]
+\item Thus expectation for pass bettors $\$-1.41$
+close to expectation for don't pass bettors
 \end{itemize}
 \end{frame}
 
