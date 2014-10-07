@@ -17,6 +17,7 @@
 \newtheorem{remark}{Remark}
 \newtheorem{impact}{Impact}
 \newtheorem{notation}{Notation}
+\newtheorem{argument}{Argument}
 \usepackage{arev}
 \begin{document}
 \begin{frame}\titlepage\end{frame}
@@ -710,6 +711,87 @@ $\frac{3}{36}=\frac{1}{12}$, the probability of $2$ or $3$
 =-\frac{15}{11}\approx \$-1.37\]
 \item Thus expectation for pass bettors $\$-1.41$
 close to expectation for don't pass bettors
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Chuck-a-luck}
+\begin{multicols}{2}
+\begin{itemize}
+\item Chuck-a-luck popular in carnivals, less
+popular in casinos
+played with three regular dice
+\item Players bet on one of $1,2,\ldots,6$
+\item Dealer rolls three dice
+\item House pays player amount bet for every
+die showing chosen number
+\item However, if no die shows chosen number,
+house keeps bet
+\end{itemize}
+\includegraphics[scale=.35]{Chuck}
+\end{multicols}
+\end{frame}
+
+\begin{frame}
+\begin{example}
+\begin{itemize}
+\item Suppose player bets $\$1$ on number $3$
+\item If dice show $3,1,6$ player wins $\$1$
+\item If dice show $1,3,3$ player wins $\$2$
+\item If dice show $1,5,2$ player loses $\$1$
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}
+Chuck-a-luck seems attractive by following \alert{incorrect} argument
+\begin{argument}
+\begin{itemize}
+\item Suppose $1$ the chosen number (for concreteness)
+\item Let $E_1$ be event that first die shows $1$
+\item Let $E_1,E_2$ be events that second and third dice show $1$
+\item Then $P\left(E_1\right)=P\left(E_2\right)=P\left(E_3\right)
+=\frac{1}{6}$
+\item So $\frac{1}{6}+\frac{1}{6}+\frac{1}{6}=\frac{1}{2}$
+the probability that at least one die shows $1$
+\item Thus game is at least fair
+\item Furthermore, possibility of \alert{multiple} dice
+showing $1$ further increases chances of winning
+\end{itemize}
+\end{argument}
+But $E_1,E_2,E_3$ \alert{not mutually exclusive}!
+\end{frame}
+
+\begin{frame}{Chuck-a-luck probabilities}
+\begin{itemize}
+\item $216=6^3$ the number of possible outcomes
+\item $1,1,1$ occurs in only one way, so $\frac{1}{36}$
+the probability of $1,1,1$
+\item Two $1$'s occurs in five ways as $1,1,x$
+where $x\ne 1$
+\item Can also occur in further five ways as $1,x,1$
+and still further five ways as $x,1,1$
+\item So $\frac{15}{36}$ the probability of two $1$'s
+\item Single $1$ occurs as $1,x,y$ where $x,y\ne 1$
+\item Occurs in $5\cdot 5=25$ ways
+\item Single $1$ occurs in further $25$ ways as $x,1,y$
+and still further $25$ ways as $x,y,1$
+\item Thus $\frac{75}{216}$ the probability of single $1$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Note that $\frac{1}{216}+\frac{15}{216}+\frac{75}{216}
+=\frac{91}{216}\approx 0.4213$ the probability of winning
+\item If player bets $1$ then expectation
+\begin{multline*}
+3\left(\frac{1}{216}\right)
++2\left(\frac{15}{216}\right)+1\left(\frac{75}{216}\right)
+-1\left(\frac{125}{216}\right)\\
+=-\frac{17}{216}\approx -0.0787
+\end{multline*}
+\item So player expected to lose $7.87$ cents per dollar spent
+in long run
 \end{itemize}
 \end{frame}
 
