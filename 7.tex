@@ -1,0 +1,96 @@
+\documentclass[handout]{beamer}
+\usepackage{multicol}
+\usepackage{xy}
+\everymath{\displaystyle}
+\mode<presentation>
+{\usetheme{Warsaw}\setbeamercovered{dynamic}}
+\usecolortheme{crane}
+\usepackage{beamerfoils}
+\pgfdeclareimage[height=1in]{university-logo}{ISULogo}
+\logo{\pgfuseimage{university-logo}}
+\setbeamertemplate{navigation symbols}{}
+\title[\S7]{Section 7\\Conditional probability}
+\author{Dr Marcus Bishop}
+\subject{Math 104}
+\beamerdefaultoverlayspecification{<+->}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{impact}{Impact}
+\newtheorem{notation}{Notation}
+\newtheorem{argument}{Argument}
+\usepackage{arev}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+\LogoOff
+
+\begin{frame}{Union, intersection, size}
+\begin{itemize}
+\item Suppose $E,F$ are sets
+\item $E\cup F$ denotes set of all elements of either
+$E$ or $F$
+\item $E\cup F$ called the \alert{union} of $E$ and $F$
+\item $E\cap F$ denotes set of all elements in both
+$E$ and $F$
+\item $E\cap F$ called the \alert{intersection} of $E$ and $F$
+\item $\left|E\right|$ denotes number of elements
+or \alert{size} of $E$
+\end{itemize}
+\begin{example}
+\begin{itemize}
+\item Suppose $E=\left\{1,2,4\right\}$
+\item Suppose $F=\left\{1,3,4\right\}$
+\item Then $\left|E\right|=3=\left|F\right|$
+\item $E\cup F=\left\{1,2,3,4\right\}$
+\item $F\cap F=\left\{1,4\right\}$
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}{Remarks}
+\begin{itemize}
+\item Order that elements listed unimportant
+\begin{example}
+$\left\{1,2,4\right\}=\left\{4,2,1\right\}=\left\{2,1,4\right\}$
+\end{example}
+\item Size refers to number of \alert{distinct} elements
+of set
+\item If an element listed more than once, duplicates can be eliminated
+\begin{example}
+\begin{itemize}
+\item Suppose $E=\left\{1,1,2,4,1\right\}$
+\item Then $E$ the same set as $\left\{1,2,4\right\}$
+\item So $\left|E\right|=3$, not $5$
+\end{itemize}
+\end{example}
+\item Of course, would be inefficient to list
+an element more than once
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Now suppose $E,F$ events
+\item Since events are sets of outcomes
+$E\cup F$ the same event as $\alert{\text{$E$ or $F$}}$
+\item Similarly
+$E\cap F$ the same event as $\alert{\text{$E$ and $F$}}$
+\item Thus Inclusion-Exclusion Theorem reads:
+\[P\left(E\cup F\right)=P\left(E\right)
++P\left(F\right)-P\left(E\cap F\right)\]
+\item Set form reads:
+\[\left|E\cup F\right|=\left|E\right|
++\left|F\right|-\left|E\cap F\right|\]
+\end{itemize}
+\begin{example}
+\begin{itemize}
+\item Suppose $E=\left\{1,2,4\right\}$
+\item Suppose $F=\left\{1,3,4\right\}$
+\item Then $\left|E\right|
++\left|F\right|-\left|E\cap F\right|
+\only<+->{=3+3-2=4}
+\only<+->{=\left|E\cup F\right|}$
+\end{itemize}
+\end{example}
+\end{frame}
+
+\end{document}
