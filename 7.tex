@@ -105,7 +105,7 @@ might help in estimating probability
 \begin{itemize}
 \item Should I study for a possible pop quiz in Math~104 or not?
 \item Hard to calculate probability of pop quiz
-\item However, if regular quiz occured in class yesterday,
+\item However, if regular quiz occurred in class yesterday,
 probability of pop quiz tomorrow reduced
 \end{itemize}
 \end{example}
@@ -138,15 +138,48 @@ in parking meter, regardless of rain
 \end{itemize}
 \end{definition}
 \begin{itemize}
-\item Normally regard $E$ as occuring
+\item Normally regard $E$ as occurring
 \alert{after} $F$ when considering $P\left(E\mid F\right)$
 \item $P\left(E\mid F\right)$ gives probability that $E$ occurs,
-under further assumption that $F$ already occured
-\item Assuming $F$ occured, only possible outcomes in $F$
+under further assumption that $F$ already occurred
+\item Assuming $F$ occurred, only possible outcomes in $F$
 \item So $P\left(F\right)$ the denominator of $P\left(E\mid F\right)$
 \item Further, any outcome in $E$
 also in $F$, so in $E\cap F$ the numerator of
 $P\left(E\mid F\right)$
 \end{itemize}
 \end{frame}
+
+\begin{frame}
+\[\begin{xy}<1cm,0cm>:
+(-1,2)*+!D{\text{E}};
+(1,2)*+!D{\text{F}};
+(-1,0)*\cir<2cm>{};
+(1,0)*\cir<2cm>{};
+(0,0)*{E\cap F};
+\end{xy}\]
+\begin{itemize}
+\item We imagine all outcomes lying inside
+or outside of circles above
+\item Knowing that outcome lies in $F$
+eliminates all outcomes lying outside circle $F$
+\item Now for outcome to be in $E$, has to be in $E\cap F$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example}
+\begin{itemize}
+\item Calculate probability of drawing $\alert{\varheart}$ given
+that card is red
+\item Take $E=\left\{\text{suit is $\alert{\varheart}$}\right\}$
+and $F=\left\{\text{card is red}\right\}$
+\item Then question asks for $P\left(E\mid F\right)$
+\item $P\left(E\right)=\frac{1}{4}$
+\item $P\left(F\right)=\frac{1}{2}$
+\item $P\left(E\cap F\right)=\frac{1}{4}$
+\item So $P\left(E\mid F\right)
+=\frac{P\left(E\cap F\right)}{P\left(F\right)}=\frac{1/4}{1/2}=\frac{1}{2}$
+\end{itemize}
+\end{frame}
+
 \end{document}
