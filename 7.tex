@@ -182,4 +182,50 @@ and $F=\left\{\text{card is red}\right\}$
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\begin{remark}
+\begin{itemize}
+\item Suppose $S$ the sample space of experiment
+\item Then
+$P\left(E\mid F\right)=\frac{P\left(E\cap F\right)}{P\left(E\right)}
+\only<+->{=\frac{\left|E\cap F\right|/\left|S\right|}
+{\left|F\right|/\left|S\right|}}
+\only<+->{=\frac{\left|E\cap F\right|}{\left|F\right|}}$
+\item Generally easier to calculate
+$\frac{\left|E\cap F\right|}{\left|F\right|}$
+\end{itemize}
+\end{remark}
+\begin{example}
+\begin{itemize}
+\item Calculate probability of drawing $\alert{\varheart}$ given
+that card is red
+\item $13$ cards are red and $\alert{\varheart}$
+\item $26$ cards are red
+\item Thus $P\left(\alert{\varheart}\mid\text{red}\right)
+=\frac{13}{26}\only<+->{=\frac{1}{2}}$
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}{Exercise 53}
+\[\begin{array}{r|llll|l}
+&\text{same}&\text{same}&\text{different}&&\\
+\text{education}&\text{county}
+&\text{state}&\text{state}&\text{abroad}&\text{total}\\\hline
+\text{no degree}&2247&470&254&98&3069\\
+\text{high school}&3842&1074&712&145&5773\\
+\text{some college}&3319&1020&707&112&5158\\
+\text{bachelor's}&2072&760&667&182&3681\\
+\text{graduate}&913&383&461&118&1875\\\hline
+\text{total}&12,393&3707&2801&655&19,556
+\end{array}\]
+\begin{itemize}
+\item Table shows where people who moved in 2008
+moved to, organized by educational attainment
+\item If someone who moved selected at random, find probability
+that he/she moved within same county
+\item $\frac{12,393}{19,556}\only<+->{\approx 0.63}$
+\end{itemize}
+\end{frame}
+
 \end{document}
