@@ -46,9 +46,39 @@ or \alert{size} of $E$
 \end{example}
 \end{frame}
 
+\begin{frame}{Example}
+\begin{align*}
+\only<+->{
+\text{Suppose}\qquad E&=\left\{a,b,e,f\right\}\\
+F&=\left\{b,c,d,f,g\right\}\\
+G&=\left\{a,c,f,g\right\}\\}
+\only<+->{
+\text{Then}\qquad\left(E\cap F\right)\cup G}
+\only<+->{
+&=\left\{b,f\right\}\cup G\\}
+\only<+->{
+&=\left\{a,b,c,f,g\right\}\\}
+\only<+->{
+\left(E\cup G\right)\cap\left(F\cup G\right)}
+\only<+->{
+&=\left\{a,b,c,e,f,g\right\}\cap\left(F\cup G\right)\\}
+\only<+->{
+&=\left\{a,b,c,e,f,g\right\}\cap\left\{a,b,c,d,f,g\right\}\\}
+\only<+->{
+&=\left\{a,b,c,f,g\right\}}
+\end{align*}
+\only<+->{
+\begin{remark}
+In general $\left(E\cap F\right)\cup G
+=\left(E\cup G\right)\cap\left(F\cup G\right)$
+for any sets $E,F,G$
+\end{remark}}
+\end{frame}
+
+
 \begin{frame}{Remarks}
 \begin{itemize}
-\item Order that elements listed unimportant
+\item Order that elements \alert{of set} listed unimportant
 \begin{example}
 $\left\{1,2,4\right\}=\left\{4,2,1\right\}=\left\{2,1,4\right\}$
 \end{example}
@@ -70,7 +100,7 @@ an element more than once
 \begin{frame}
 \begin{itemize}
 \item Now suppose $E,F$ events
-\item Since events are sets of outcomes
+\item Since events are sets of outcomes,
 $E\cup F$ the same event as $\alert{\text{$E$ or $F$}}$
 \item Similarly
 $E\cap F$ the same event as $\alert{\text{$E$ and $F$}}$
@@ -100,6 +130,7 @@ $E\cap F$ the same event as $\alert{\text{$E$ and $F$}}$
 that changes probability of certain events
 \item Taking new information into account
 might help in estimating probability
+\item In turn, new information might influence decisions made
 \end{itemize}
 \begin{example}
 \begin{itemize}
@@ -151,12 +182,21 @@ under further assumption that $F$ already occurred
 that card is red
 \item Take $E=\left\{\text{suit is $\alert{\varheart}$}\right\}$
 and $F=\left\{\text{card is red}\right\}$
-\item Then question asks for $P\left(E\mid F\right)$
-\item $P\left(E\right)=\frac{1}{4}$
-\item $P\left(F\right)=\frac{1}{2}$
-\item $P\left(E\cap F\right)=\frac{1}{4}$
+\item Then question asks for $P\left(E\mid F\right)
+=\frac{P\left(E\cap F\right)}{P\left(F\right)}$
+\item $P\left(E\right)=\frac{1}{4}$\qquad
+\only<+->{$P\left(F\right)=\frac{1}{2}$}
+\item $P\left(E\cap F\right)=\frac{1}{4}$\qquad
+($E\cap F=E$ since all $\alert{\varheart}$ are red)
+\begin{remark}
+Note that $P\left(E\right)\cdot P\left(F\right)\alert{\ne}
+P\left(E\cap F\right)$
+since $E,F$ not independent
+\end{remark}
 \item So $P\left(E\mid F\right)
-=\frac{P\left(E\cap F\right)}{P\left(F\right)}=\frac{1/4}{1/2}=\frac{1}{2}$
+=\frac{P\left(E\cap F\right)}{P\left(F\right)}
+\only<+->{=\frac{1/4}{1/2}}
+\only<+->{=\frac{1}{2}}$
 \end{itemize}
 \end{frame}
 
