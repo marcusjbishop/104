@@ -269,7 +269,8 @@ that card is red
 moved to, organized by educational attainment
 \item If someone who moved selected at random, find probability
 that he/she moved within same county
-\item $\frac{12,393}{19,556}\only<+->{\approx 0.63}$
+\item $\frac{\text{same county total}}{\text{grand total}}
+\only<+->{\frac{12,393}{19,556}}\only<+->{\approx 0.63}$
 \item Not a conditional probability problem
 \end{itemize}
 \end{frame}
@@ -289,7 +290,8 @@ that he/she moved within same county
 \begin{itemize}
 \item If someone who moved selected at random, find probability
 that he/she moved within same county given that he/she has bachelor's
-\item $\frac{2072}{3681}\only<+->{\approx 0.56}$
+\item $\frac{\text{same county and bachelor's}}{\text{bachelor's}}
+\only<+->{=\frac{2072}{3681}}\only<+->{\approx 0.56}$
 \end{itemize}
 \end{frame}
 
@@ -309,6 +311,39 @@ that he/she moved within same county given that he/she has bachelor's
 \item If someone who moved selected at random, find probability
 that he/she has graduate degree, given that he/she moved abroad
 \item $\frac{118}{655}\only<+->{\approx 0.18}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Marble example}
+\begin{itemize}
+\item Bag contains $5$~red and $7$~blue marbles
+\item Two marbles drawn without replacement
+\item Calculate probability that second marble red
+given that first marble blue
+\item No need to use use formula
+$\frac{P\left(E\cap F\right)}{P\left(F\right)}$ here
+\item Can argue directly:
+\begin{itemize}
+\item Since first marble was blue, $5$~red and $6$~blue remain
+\item Thus probability of red on second draw $\frac{5}{11}$
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Spanish and Physics Example}
+\begin{itemize}
+\item Ames High School has $245$ students enrolled in Spanish
+\item Has $131$ students in physics
+\item Has $29$ students enrolled in both Spanish and physics
+\item Calculate probability that randomly selected student
+enrolled in physics, given that that student enroled in Spanish
+\item $\frac{\left|\text{Spanish and physics}\right|}
+{\left|\text{Spanish}\right|}
+=\frac{29}{245}\approx 0.118$
+\item Probability that student in Spanish given that student in physics
+\item $\frac{\left|\text{Spanish and physics}\right|}
+{\left|\text{physics}\right|}
+=\frac{29}{131}\approx 0.221$
 \end{itemize}
 \end{frame}
 
