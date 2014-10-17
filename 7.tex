@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer}
+\documentclass{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -335,6 +335,23 @@ $\frac{P\left(E\cap F\right)}{P\left(F\right)}$ here
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\begin{itemize}
+\item Using formula
+$\frac{P\left(E\cap F\right)}{P\left(F\right)}$ instead:
+\item $P\left(\text{blue first and red second}\right)
+=\frac{7}{12}\cdot\frac{5}{11}$
+\item $P\left(\text{blue first}\right)=\frac{7}{12}$
+\item So $P\left(\text{red second given blue first}\right)
+=\frac{\frac{7}{12}\cdot\frac{5}{11}}{\frac{7}{12}}
+\only<+->{=\frac{5}{11}}$
+\item Same answer because $\frac{7}{12}$ cancels
+\item But $\frac{5}{11}$ arises in same way as in previous slide
+\item Thus easier to argue as in previous slide
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{Spanish and physics}
 \begin{itemize}
 \item Ames High School has $245$ students enrolled in Spanish
@@ -388,7 +405,7 @@ enrolled in physics, given that student \alert{not} enrolled in Spanish
 \begin{frame}
 \begin{itemize}
 \item Question asks for $P\left(\text{physics}\mid
-\text{not Spanish}\right)$
+\text{\alert{not} Spanish}\right)$
 \[\begin{xy}<1cm,0cm>:
 (-1,2)*+!D{\text{S}};
 (1,2)*+!D{\text{P}};
@@ -400,12 +417,12 @@ enrolled in physics, given that student \alert{not} enrolled in Spanish
 (4,0)*{1075};
 \end{xy}\]
 \item $\left|\text{not Spanish}\right|
-=102+1075\only<+->{=1177}$
+\only<+->{=102+1075}\only<+->{=1177}$
 \item $\left|\text{physics and not Spanish}\right|
 \only<+->{=102}$
 \item Thus
 $P\left(\text{physics}\mid
-\text{not Spanish}\right)=\frac{102}{1177}
+\text{not Spanish}\right)\only<+->{=\frac{102}{1177}}
 \only<+->{\approx 0.086}$
 \end{itemize}
 \end{frame}
