@@ -269,8 +269,9 @@ that card is red
 moved to, organized by educational attainment
 \item If someone who moved selected at random, find probability
 that he/she moved within same county
-\item $\frac{\text{same county total}}{\text{grand total}}
-\only<+->{\frac{12,393}{19,556}}\only<+->{\approx 0.63}$
+\item $\frac{\left\{\text{same county total}\right\}}
+{\left\{\text{grand total}\right\}}
+\only<+->{=\frac{12,393}{19,556}}\only<+->{\approx 0.63}$
 \item Not a conditional probability problem
 \end{itemize}
 \end{frame}
@@ -290,7 +291,8 @@ that he/she moved within same county
 \begin{itemize}
 \item If someone who moved selected at random, find probability
 that he/she moved within same county given that he/she has bachelor's
-\item $\frac{\text{same county and bachelor's}}{\text{bachelor's}}
+\item $\frac{\left\{\text{same county and bachelor's}\right\}}
+{\left\{\text{bachelor's}\right\}}
 \only<+->{=\frac{2072}{3681}}\only<+->{\approx 0.56}$
 \end{itemize}
 \end{frame}
@@ -310,7 +312,9 @@ that he/she moved within same county given that he/she has bachelor's
 \begin{itemize}
 \item If someone who moved selected at random, find probability
 that he/she has graduate degree, given that he/she moved abroad
-\item $\frac{118}{655}\only<+->{\approx 0.18}$
+\item $\frac{\left\{\text{graduate and abroad}\right\}}
+{\left\{\text{abroad}\right\}}
+\only<+->{=\frac{118}{655}}\only<+->{\approx 0.18}$
 \end{itemize}
 \end{frame}
 
@@ -324,19 +328,20 @@ given that first marble blue
 $\frac{P\left(E\cap F\right)}{P\left(F\right)}$ here
 \item Can argue directly:
 \begin{itemize}
-\item Since first marble was blue, $5$~red and $6$~blue remain
-\item Thus probability of red on second draw $\frac{5}{11}$
+\item Since first marble was blue, $5$~red and \alert{$6$~blue} remain
+\item Thus probability of red on second draw $\frac{5}{5+6}
+\only<+->{=\frac{5}{11}}$
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Spanish and Physics Example}
+\begin{frame}{Spanish and physics}
 \begin{itemize}
 \item Ames High School has $245$ students enrolled in Spanish
 \item Has $131$ students in physics
 \item Has $29$ students enrolled in both Spanish and physics
 \item Calculate probability that randomly selected student
-enrolled in physics, given that that student enroled in Spanish
+enrolled in physics, given that student enrolled in Spanish
 \item $\frac{\left|\text{Spanish and physics}\right|}
 {\left|\text{Spanish}\right|}
 =\frac{29}{245}\approx 0.118$
@@ -346,5 +351,64 @@ enrolled in physics, given that that student enroled in Spanish
 =\frac{29}{131}\approx 0.221$
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Spanish and physics revisited}
+\begin{itemize}
+\item Ames High School has 1422 students
+\item Has $245$ students enrolled in Spanish
+\item Has $131$ students in physics
+\item Has $29$ students enrolled in both Spanish and physics
+\item Calculate probability that randomly selected student
+enrolled in physics, given that student \alert{not} enrolled in Spanish
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Ames High School has 1422 students
+\item Has $245$ students enrolled in Spanish
+\item Has $131$ students in physics
+\item Has $29$ students enrolled in both Spanish and physics
+\item So $245-29=216$ in Spanish but not physics
+\item $131-29=102$ in physics but not Spanish
+\item $1422-216-29-102=1075$ in neither
+\end{itemize}
+\[\begin{xy}<1cm,0cm>:
+(-1,2)*+!D{\text{S}};
+(1,2)*+!D{\text{P}};
+(-1,0)*\cir<2cm>{};
+(1,0)*\cir<2cm>{};
+(0,0)*{29};
+(-2,0)*{216};
+(2,0)*{102};
+(4,0)*{1075};
+\end{xy}\]
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Question asks for $P\left(\text{physics}\mid
+\text{not Spanish}\right)$
+\[\begin{xy}<1cm,0cm>:
+(-1,2)*+!D{\text{S}};
+(1,2)*+!D{\text{P}};
+(-1,0)*\cir<2cm>{};
+(1,0)*\cir<2cm>{};
+(0,0)*{29};
+(-2,0)*{216};
+(2,0)*{102};
+(4,0)*{1075};
+\end{xy}\]
+\item $\left|\text{not Spanish}\right|
+=102+1075\only<+->{=1177}$
+\item $\left|\text{physics and not Spanish}\right|
+\only<+->{=102}$
+\item Thus
+$P\left(\text{physics}\mid
+\text{not Spanish}\right)=\frac{102}{1177}
+\only<+->{\approx 0.086}$
+\end{itemize}
+\end{frame}
+
 
 \end{document}
