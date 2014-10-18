@@ -16,7 +16,8 @@ This quiz has \numquestions~questions printed on \numpages~pages.
 }}}
 \end{center}
 
-The table below shows the place of birth of residents of Iowa
+Questions~\ref{FirstIowa}--\ref{LastIowa} deal with
+the table below, which shows the place of birth of residents of Iowa
 in 2013 by educational attainment.\footnote{Source: \tt www.census.gov}
 \[\begin{array}{r|rrrrr|r}
 &\text{No}&\text{High}&\text{Some}&\text{Bachelor's}&\text{Graduate}\\
@@ -36,7 +37,7 @@ in 2013 by educational attainment.\footnote{Source: \tt www.census.gov}
 \end{array}\]
 \begin{questions}
 
-\question What is the probability that a randomly selected
+\question\label{FirstIowa} What is the probability that a randomly selected
 resident was born outside Iowa?\\
 \begin{oneparchoices}
 \choice $0.076$ % no degree given outside Iowa
@@ -129,6 +130,60 @@ outside of Iowa?
 \choice $0.768$ % outside / HS 
 \end{oneparchoices}
 
-\question How many residents of Iowa were there in 2013?
+\question What is the probability that a randomly selected
+resident was foreign born and has a graduate degree?\\
+\begin{oneparchoices}
+\correctchoice $0.009$
+\choice $0.083$ % graduate
+\choice $0.106$ % foreign given graduate
+\choice $0.163$ % graduate given foreign
+\choice $0.648$ % foreign / graduate
+\end{oneparchoices}
+
+\question\label{LastIowa} How many residents of Iowa were there in 2013?
+\begin{oneparchoices}
+\choice $97,526$
+\choice $1,411,607$
+\choice $172,313$
+\correctchoice $2,048,270$
+\choice $4,096,540$ % twice the total
+\end{oneparchoices}
+
+\question Suppose that $E=\left\{2,4,6\right\}$,
+$F=\left\{1,2,4\right\}$, and $G=\left\{1,3,5,6\right\}$.
+Calculate $\left|E\cap\left(F\cup G\right)\right|$
+\begin{oneparchoices}
+\choice $1$
+\choice $2$
+\correctchoice $3$
+\choice $4$
+\choice $6$
+\end{oneparchoices}
+
+\question Suppose that $E=\left\{2,4,6\right\}$,
+$F=\left\{1,2,4\right\}$, and $G=\left\{1,3,5,6\right\}$.
+Calculate $\left|\left(E\cap F\right)\cup G\right|$
+\begin{oneparchoices}
+\choice $1$
+\choice $2$
+\choice $3$
+\choice $4$
+\correctchoice $6$
+\end{oneparchoices}
+
+\uplevel{Questions~\ref{FirstAmes}--\ref{LastAmes} deal
+with Ames High school, which has 1422~students.
+$142$~students are in band and $168$~students are in chorus,
+while $29$ students are in both band and chorus.}
+
+\question\label{FirstAmes} What is the probability that a randomly selected
+student is in band given that that student is in chorus?
+\question\label{LastAmes} What is the probability that a randomly selected
+student is in band given that that student is not in chorus?
+\question Two cards are drawn from a deck of playing cards
+without replacement. What is the probability that
+the second card has suit $\clubsuit$ given that the
+first card has suit $\spadesuit$?
+
 \end{questions}
 \end{document}
