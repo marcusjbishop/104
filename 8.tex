@@ -1,0 +1,147 @@
+\documentclass[handout]{beamer}
+\usepackage{multicol}
+\usepackage{xy}
+\everymath{\displaystyle}
+\mode<presentation>
+{\usetheme{Warsaw}\setbeamercovered{dynamic}}
+\usecolortheme{crane}
+\usepackage{beamerfoils}
+\pgfdeclareimage[height=1in]{university-logo}{ISULogo}
+\logo{\pgfuseimage{university-logo}}
+\setbeamertemplate{navigation symbols}{}
+\title[\S8]{Section 8\\The Counting Principle and permutations}
+\author{Dr Marcus Bishop}
+\subject{Math 104}
+\beamerdefaultoverlayspecification{<+->}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{impact}{Impact}
+\newtheorem{notation}{Notation}
+\newtheorem{argument}{Argument}
+\usepackage{arev}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+\LogoOff
+
+\begin{frame}
+{What I do outside of class that helps me learn}
+(Selected comments from course evaluations
+paraphrased slightly to improve humor and style)
+\begin{itemize}
+\item Homework, study guide problems, past exams, slides,
+YouTube videos
+\item Math help room, Josh's office hours, Bishop's office hours,
+private tutors
+\item Study with friends, organize or attend study groups
+\item Since the lectures are useless and demoralizing, I learn the
+material by myself. Then I tutor my friends, who
+find the instructor flippant and condescending.
+This helps me to understand the material better because
+it forces me to know it well enough to teach others.
+\item I always travel with friends at night, because I'm afraid
+Bishop will jump out from behind a tree and make me do Venn diagram
+problems
+\end{itemize}
+\end{frame}
+
+\begin{frame}{What I like about Math 104}
+\begin{itemize}
+\item Professor is funny, entertaining, energetic, upbeat
+\item Frequency, easiness, amount of homework
+\item I don't enjoy anything about Math 104
+\item I enjoy learning about casino games
+\item Math 104 lectures resemble
+getting a root canal, except that it only lasts 50 minutes, hallelujah!
+\item Material interesting, useful, applicable to real world
+\item Class might feel like sitting in a sinking ship,
+but at least my friends are all here with me. I love you guys!
+\end{itemize}
+\end{frame}
+
+\begin{frame}{What I would change about Math 104}
+\begin{itemize}
+\item The instructor; I'd say my cat could teach the
+course better, and he's actually looking for a job!
+\item Instructor better prepared, organized, competent
+\item More examples, explained slower, in greater depth
+\item Homework submission, retrieval, exam distribution
+\item Lectures too slow
+\item Lectures too fast
+\item Use Blackboard calender
+\item Exams and quizzes harder than homework
+\item Instructor reads slides aloud
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Permuations}
+\begin{itemize}
+\item Ways of arranging set of distinct objects called
+\alert{permutations}, \alert{arrangements}, or \alert{anagrams}
+\item Objects meant to be arranged linearly
+\item Order matters in listing permutations
+\begin{example} Six permutations of $\left\{1,2,3\right\}$:
+\[123\quad 132\quad 213\quad 231\quad 312\quad 321\]
+\end{example}
+\item Permutations can be generated using tree diagram:
+\[\begin{xy}<1cm,0cm>:
+(0,0)="0";
+(-3,-1)="-31";
+(0,-1)="01";
+(3,-1)="31";
+"0";"-31"*+!D{1}**\dir{-};
+"0";"01"*+!D{2}**\dir{-};
+"0";"31"*+!D{3}**\dir{-};
+"-31";(-4,-2)*+!D{2}**\dir{-};
+(-4,-3)*+!D{3}**\dir{-};
+"-31";(-2,-2)*+!D{3}**\dir{-};
+(-2,-3)*+!D{2}**\dir{-};
+"01";(-1,-2)*+!D{1}**\dir{-};
+(-1,-3)*+!D{3}**\dir{-};
+"01";(1,-2)*+!D{3}**\dir{-};
+(1,-3)*+!D{1}**\dir{-};
+"31";(2,-2)*+!D{1}**\dir{-};
+(2,-3)*+!D{2}**\dir{-};
+"31";(4,-2)*+!D{2}**\dir{-};
+(4,-3)*+!D{1}**\dir{-};
+\end{xy}\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item But drawing tree inefficient when only
+\alert{number} of permutations needed
+\item Observe that tree has $3$~branches,
+each with $2$~branches, each with $1$~leaf
+\item So $3\cdot 2\cdot 1=6$ leaves
+\[\begin{xy}<1cm,0cm>:
+(0,0)="0";
+(-3,-1)="-31";
+(0,-1)="01";
+(3,-1)="31";
+"0";"-31"*+!D{1}**\dir{-};
+"0";"01"*+!D{2}**\dir{-};
+"0";"31"*+!D{3}**\dir{-};
+"-31";(-4,-2)*+!D{2}**\dir{-};
+(-4,-3)*+!D{3}**\dir{-};
+"-31";(-2,-2)*+!D{3}**\dir{-};
+(-2,-3)*+!D{2}**\dir{-};
+"01";(-1,-2)*+!D{1}**\dir{-};
+(-1,-3)*+!D{3}**\dir{-};
+"01";(1,-2)*+!D{3}**\dir{-};
+(1,-3)*+!D{1}**\dir{-};
+"31";(2,-2)*+!D{1}**\dir{-};
+(2,-3)*+!D{2}**\dir{-};
+"31";(4,-2)*+!D{2}**\dir{-};
+(4,-3)*+!D{1}**\dir{-};
+\end{xy}\]
+\item Could use same mechanism to count permutations
+of $\left\{1,2,3,4\right\}$ without drawing tree
+\item Tree would have $4$~branches, each with $3$~branches,
+each with $2$~branches, each with $1$~leaf
+\item So tree would have $4\cdot 3\cdot 2\cdot 1=24$ leaves
+\item So $24$ the number of permutations of four objects
+\end{itemize}
+\end{frame}
+
+\end{document}
