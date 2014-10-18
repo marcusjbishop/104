@@ -1,11 +1,11 @@
-\documentclass[12pt]{exam}
+\documentclass[answers,12pt]{exam}
 \usepackage{color,rotating}
 \CorrectChoiceEmphasis{\color{red}\bfseries}
 \usepackage[euler-digits]{eulervm}
 \everymath{\displaystyle}
 \usepackage{amsmath,charter}
 \title{Math 104 Quiz 2\\Red Form}
-\date{Wednesday 1 October}
+\date{Wednesday 22 October}
 \begin{document}
 \maketitle
 \begin{center}
@@ -18,9 +18,9 @@ This quiz has \numquestions~questions printed on \numpages~pages.
 
 The table below shows the place of birth of residents of Iowa
 in 2013 by educational attainment.\footnote{Source: \tt www.census.gov}
-\[\begin{array}{r|lllll|l}
-&\text{No high}&\text{High}&\text{Some}&\text{Bachelor's}&\text{Graduate}\\
-\text{Place of birth}&\text{school}
+\[\begin{array}{r|rrrrr|r}
+&\text{No}&\text{High}&\text{Some}&\text{Bachelor's}&\text{Graduate}\\
+\text{Place of birth}&\text{degree}
 &\text{school}&\text{college}&\text{degree}&\text{degree}&\text{Total}
 \\\hline
 \text{In Iowa}
@@ -32,21 +32,103 @@ in 2013 by educational attainment.\footnote{Source: \tt www.census.gov}
 \text{Foreign born}
 &34,345&24,809&17,502&16,270&18,126&111,052\\\hline
 \text{Total}
-&172,313&670,345&664103&370,188&171,321&2,048,270
+&172,313&670,345&664,103&370,188&171,321&2,048,270
 \end{array}\]
 \begin{questions}
+
 \question What is the probability that a randomly selected
-resident was born outside Iowa?
+resident was born outside Iowa?\\
+\begin{oneparchoices}
+\choice $0.076$ % no degree given outside Iowa
+\correctchoice $0.251$
+\choice $0.267$ % in / (in+out)
+\choice $0.365$ % outside Iowa / in Iowa
+\choice $0.689$ % in Iowa
+\end{oneparchoices}
+
 \question What is the probability that a randomly selected
-resident completed high school?
+resident was born in Iowa?\\
+\begin{oneparchoices}
+\choice $0.069$ % no degree given in Iowa
+\choice $0.076$ % outside Iowa
+\choice $0.365$ % outside Iowa / in Iowa
+\correctchoice $0.689$
+\choice $0.733$ % in / (in+out)
+\end{oneparchoices}
+
+\question What is the probability that a randomly selected
+resident completed high school?\\
+\begin{oneparchoices}
+\correctchoice $0.327$
+\choice $0.36$ % HS given in Iowa
+\choice $0.759$ % In Iowa given HS
+\choice $0.839$ % HS / (HS + no degree)
+\end{oneparchoices}
+
+\question What is the probability that a randomly selected
+resident completed some college?\\
+\begin{oneparchoices}
+\correctchoice $0.324$
+\choice $0.336$ % some college given Iowa
+\choice $0.715$ % in Iowa given some college
+\choice $0.689$ % in Iowa
+\end{oneparchoices}
+
 \question What is the probability that a randomly selected
 resident was born outside Iowa given that
-that individual completed high school?
+that individual completed high school?\\
+\begin{oneparchoices}
+\choice $0.065$ % HS and outside
+\correctchoice $0.2$
+\choice $0.26$ % HS given outside Iowa
+\choice $0.327$ % HS
+\choice $0.768$ % outside / HS 
+\end{oneparchoices}
+
+\question What is the probability that a randomly selected
+resident was born outside Iowa given that
+that individual has a Bachelor's degree?\\
+\begin{oneparchoices}
+\choice $0.054$ % Bachelor's and outside
+\choice $0.18$ % Bachelor's
+\choice $0.215$ % Bachelor's given outside
+\correctchoice $0.299$
+\choice $0.719$ % Bachelor's / outside
+\end{oneparchoices}
+
 \question What is the probability that a randomly selected
 resident completed high school given that
-that individual was born outside Iowa?
+that individual was born outside Iowa?\\
+\begin{oneparchoices}
+\choice $0.065$ % HS and outside
+\choice $0.2$ % outside given HS
+\correctchoice $0.26$
+\choice $0.327$ % HS
+\choice $0.768$ % outside / HS 
+\end{oneparchoices}
+
+\question What is the probability that a randomly selected
+resident has a graduate degree given that
+that individual was born outside Iowa?\\
+\begin{oneparchoices}
+\choice $0.03$ % graduate and outside
+\choice $0.083$ % graduate
+\correctchoice $0.123$
+\choice $0.334$ % graduate / outside
+\choice $0.369$ % outside given graduate
+\end{oneparchoices}
+
 \question What is the probability that a randomly selected
 resident completed high school and was born
 outside of Iowa?
+\begin{oneparchoices}
+\correctchoice $0.065$
+\choice $0.2$ % outside given HS
+\choice $0.26$ % HS given outside
+\choice $0.327$ % HS
+\choice $0.768$ % outside / HS 
+\end{oneparchoices}
+
+\question How many residents of Iowa were there in 2013?
 \end{questions}
 \end{document}
