@@ -66,13 +66,13 @@ course better, and he's actually looking for a job!
 \item Homework submission, retrieval, exam distribution
 \item Lectures too slow
 \item Lectures too fast
-\item Use Blackboard calender
+\item Use Blackboard calendar
 \item Exams and quizzes harder than homework
 \item Instructor reads slides aloud
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Permuations}
+\begin{frame}{Permutations}
 \begin{itemize}
 \item Ways of arranging set of distinct objects called
 \alert{permutations}, \alert{arrangements}, or \alert{anagrams}
@@ -176,7 +176,7 @@ assortment would spring to life before him, dancing the radiant
 measure of its total permutability, edible in a hundred and twenty
 ways!\\
 \hfill
-from {\em Murphy} by Samuel Becket
+from {\em Murphy} by Samuel Beckett
 \end{frame}
 
 \begin{frame}{Partial permutations}
@@ -211,12 +211,16 @@ on shelf, taken from set of $10$~books:
 \only<+->{=\frac{10!}{4!}}
 \only<+->{=10\cdot 9\cdot 8\cdot 7\cdot 6\cdot 5}
 \only<+->{=151,200}$
+\item Observe that $\frac{10!}{4!}$ faster to type
+on calculator than 
+$10\cdot 9\cdot 8\cdot 7\cdot 6\cdot 5$, if calculator
+has $!$ button
 \end{itemize}
 \end{example}
 \begin{example}
 \begin{itemize}
 \item Number of ways to select president, vice president,
-and tresurer from among Alex, Brooke, Colby, and Denise:
+and treasurer from among Alex, Brooke, Colby, and Denise:
 \item $_4P_3
 \only<+->{=\frac{4!}{\left(4-3\right)!}}
 \only<+->{=4\cdot 3\cdot 2}
@@ -225,12 +229,37 @@ and tresurer from among Alex, Brooke, Colby, and Denise:
 \end{example}
 \end{frame}
 
+\begin{frame}{Counting principle}
+\begin{itemize}
+\item In general, to count ways task can be performed
+\begin{itemize}
+\item Organize task into stages
+\item At each stage, a single decision should be made
+\item Calculate number of ways decision can
+be made at each stage
+\item Multiply numbers
+\end{itemize}
+\item Division of task into ``stages'' sometimes unnatural
+\begin{example}
+\begin{itemize}
+\item Consider Alex, Brooke, Colby, and Denise
+\item First stage is to select president
+\item Can be done in $4$ ways
+\item Second stage is to select vice president
+\item Can be done in $3$ ways, since one person already
+chosen for president at this stage
+\item Et cetera
+\end{itemize}
+\end{example}
+\end{itemize}
+\end{frame}
+
 \begin{frame}{Iowa area codes}
 \begin{multicols}{2}
 \includegraphics[scale=.35]{Iowa}
 \begin{itemize}
 \item Before 2000 Iowa had area codes $712$, $515$, and $319$
-\item In 2000 introduced $641$ and $563$ due to increased usage
+\item In 2000 Iowa introduced $641$ and $563$ due to increased usage
 \item How many phone numbers within an area code?
 \end{itemize}
 \end{multicols}
