@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer}
+\documentclass{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -242,13 +242,34 @@ be made at each stage
 \item Division of task into ``stages'' sometimes unnatural
 \begin{example}
 \begin{itemize}
-\item Consider Alex, Brooke, Colby, and Denise
-\item First stage is to select president
+\item Consider example with Alex, Brooke, Colby, and Denise
+\item First stage: select president
 \item Can be done in $4$ ways
-\item Second stage is to select vice president
+\item Second stage: select vice president
 \item Can be done in $3$ ways, since one person already
 chosen for president at this stage
 \item Et cetera
+\end{itemize}
+\end{example}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{ATM PINs}
+\begin{itemize}
+\item An Automated Teller Machine (ATM)
+allows bank customers to withdraw money from accounts
+\item Customer must enter secret $4$-digit
+Personal Identification Number (PIN)
+\item Invenetor John Shephard-Barron of ATM envisioned $6$-digit PINs
+\item However, his wife preferred $4$-digit PINs
+\begin{example}
+\begin{itemize}
+\item How many $4$-digit PINs possible?
+\item First stage: choose first digit, \only<+->{can be done in $10$ ways}
+\item Second stage: choose second digit, \only<+->{can be done in $10$ ways}
+\item Similarly for third and fourth digits
+\item So $10\cdot 10\cdot 10\cdot 10\only<+->{=10^4}$
+\only<+->{$=10,000$ PINs possible}
 \end{itemize}
 \end{example}
 \end{itemize}
