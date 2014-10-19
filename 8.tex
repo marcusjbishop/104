@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -260,7 +260,7 @@ chosen for president at this stage
 allows bank customers to withdraw money from accounts
 \item Customer must enter secret $4$-digit
 Personal Identification Number (PIN)
-\item Invenetor John Shephard-Barron of ATM envisioned $6$-digit PINs
+\item Inventor John Shephard-Barron of ATM envisioned $6$-digit PINs
 \item However, his wife preferred $4$-digit PINs
 \begin{example}
 \begin{itemize}
@@ -273,6 +273,24 @@ Personal Identification Number (PIN)
 \end{itemize}
 \end{example}
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Iowa license plates}
+\begin{multicols}{2}
+\includegraphics[scale=.3]{LicencePlate}
+\begin{itemize}
+\item Iowa license plates have three letters
+and three digits
+\item How many possible?
+\item $26$ choices for first letter
+\columnbreak
+\item $26$ choices for second and third letters
+\item $10$ choices for each of three digits
+\item Thus $26\cdot 26\cdot 26\cdot 10\cdot 10\cdot 10$
+\only<+->{$17,576,000$ plates possible}
+\item Exceeds population of Iowa, $\approx 3,0000,000$
+\end{itemize}
+\end{multicols}
 \end{frame}
 
 \begin{frame}{Iowa area codes}
