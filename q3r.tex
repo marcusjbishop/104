@@ -1,4 +1,4 @@
-\documentclass[answers,12pt]{exam}
+\documentclass[12pt]{exam}
 \usepackage{color,rotating}
 \CorrectChoiceEmphasis{\color{red}\bfseries}
 \usepackage[euler-digits]{eulervm}
@@ -61,17 +61,6 @@ resident completed only high school?\\
 \end{oneparchoices}
 
 \question What is the probability that a randomly selected
-resident completed only high school given that
-that individual was born outside Iowa?\\
-\begin{oneparchoices}
-\choice $0.065$ % HS and outside
-\choice $0.2$ % outside given HS
-\correctchoice $0.26$
-\choice $0.327$ % HS
-\choice $0.768$ % outside / HS 
-\end{oneparchoices}
-
-\question What is the probability that a randomly selected
 resident was born outside Iowa given that
 that individual only has a Bachelor's degree?\\
 \begin{oneparchoices}
@@ -80,6 +69,17 @@ that individual only has a Bachelor's degree?\\
 \choice $0.215$ % Bachelor's given outside
 \correctchoice $0.299$
 \choice $0.719$ % Bachelor's / outside
+\end{oneparchoices}
+
+\question What is the probability that a randomly selected
+resident completed only high school given that
+that individual was born outside Iowa?\\
+\begin{oneparchoices}
+\choice $0.065$ % HS and outside
+\choice $0.2$ % outside given HS
+\correctchoice $0.26$
+\choice $0.327$ % HS
+\choice $0.768$ % outside / HS 
 \end{oneparchoices}
 
 \question What is the probability that a randomly selected
@@ -130,7 +130,7 @@ student is in chorus given that that student is in band?\\
 \end{oneparchoices}
 
 \question\label{LastAmes} What is the probability that a randomly selected
-student is in band given that that student is not in chorus?\\
+student is in band given that that student is {\bf not} in chorus?\\
 \begin{oneparchoices}
 \correctchoice $0.09$
 \choice $0.099$ % just band / neither
