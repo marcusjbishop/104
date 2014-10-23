@@ -401,11 +401,55 @@ omno &omon &onmo &onom &oomn &oonm
 \end{tabular}
 \item Observe that each anagram of moon
 appears \alert{twice} in list of anagrams of mo\alert{o}n 
-\item Why twice?
-\item Because $2=2!$ the number of ways to color the two o's
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\begin{itemize}
+\item Why twice?
+\item Because $2=2!$ the number of ways to color the two o's
+\begin{example} mono appears as anagram of mo\alert{o}n
+as mon\alert{o} and m\alert{o}no
+\end{example}
+\item Thus number $N$ of anagrams of moon satisfies
+\[24=2N\]
+since $24=4!$ anagrams of mo\alert{o}n arise as colorings of
+anagrams of moon
+\item So $N=\frac{24}{2}=12$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Anagrams of epee (sword used in fencing):\\
+\begin{tabular}{cccccc}
+peee&epee&eepe&eeep
+\end{tabular}
+\item Anagrams of ep{\color{red}e}{\color{blue}e}:\\
+\begin{tabular}{cccccc}
+pe{\color{red}e}{\color{blue}e}&pe{\color{blue}e}{\color{red}e}&p{\color{red}e}e{\color{blue}e}&p{\color{red}e}{\color{blue}e}e\\
+p{\color{blue}e}e{\color{red}e}&p{\color{blue}e}{\color{red}e}e&ep{\color{red}e}{\color{blue}e}&ep{\color{blue}e}{\color{red}e}\\
+e{\color{red}e}p{\color{blue}e}&e{\color{red}e}{\color{blue}e}p&e{\color{blue}e}p{\color{red}e}&e{\color{blue}e}{\color{red}e}p\\
+{\color{red}e}pe{\color{blue}e}&{\color{red}e}p{\color{blue}e}e&{\color{red}e}ep{\color{blue}e}&{\color{red}e}e{\color{blue}e}p\\
+{\color{red}e}{\color{blue}e}pe&{\color{red}e}{\color{blue}e}ep&{\color{blue}e}pe{\color{red}e}&{\color{blue}e}p{\color{red}e}e\\
+{\color{blue}e}ep{\color{red}e}&{\color{blue}e}e{\color{red}e}p&{\color{blue}e}{\color{red}e}pe&{\color{blue}e}{\color{red}e}ep
+\end{tabular}
+\item Each anagram of epee appears as anagram of
+ep{\color{red}e}{\color{blue}e}
+\alert{six} times
+\item Why six?
+\item Because $6=3!$ the number of ways to color the three e's
+\item Thus number $N$ of anagrams of epee satisfies $24=6N$
+\item So $N=\frac{24}{6}=4$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Anagrams of kayak}
+\begin{itemize}
+\item Observe that $120=5!$ 
+the number of anagrams of kay\alert{a}\alert{k} (not shown)
+\end{itemize}
+\end{frame}
 
 
 \end{document}
