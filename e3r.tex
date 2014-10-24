@@ -40,10 +40,27 @@ you have not been the recipient of such communication from anyone else.
 
 \begin{questions}
 
+\begin{multicols}{2}
+\question
+New Jersey license plates contain a letter,
+followed by two digits, followed by three letters,
+as illustrated in the image at the right.
+How many license plates in New Jersey are possible?\\
+\columnbreak
+\begin{center}\includegraphics[scale=.3]{NewJersy}
+\end{center}
+\end{multicols}
+\begin{solution}
+$26\cdot 10\cdot 10\cdot 26\cdot 26\cdot 26=26^4\cdot 10^2
+=45,697,600$
+\end{solution}
+\newpage
+
 \question Two cards are drawn at random from a deck of playing cards
 without replacement.
 \begin{parts}
 \part What is the probability that both cards are kings?
+\vspace{1in}
 \part What is the probability that the second card is a King
 given that the first card is a Queen?
 \end{parts}
@@ -54,7 +71,7 @@ given that the first card is a Queen?
 \part $\frac{4}{51}\approx 0.078$
 \end{parts}
 \end{solution}
-\newpage
+\vspace{1in}
 
 \question The following table lists
 the languages other than English spoken by residents
@@ -72,29 +89,16 @@ of the resident.\footnote{Source: {\tt www.census.gov}}
 \begin{parts}
 \part How many residents of age $65$ and older
 spoke a language other than English?
-\vspace{1in}
+\vspace{2cm}
 \part What is the probability that a randomly selected
 resident spoke an Asian or Pacific Island language
 given that that individual was between $18$ and $64$ years old?
-\vspace{1in}
+\vspace{2cm}
 \part What is the probability that a randomly selected
 resident that spoke a language other than English
 was between $5$ and $17$ years old?
 \end{parts}
-
-\begin{multicols}{2}
-\question
-New Jersey license plates contain a letter,
-followed by two digits, followed by three letters,
-as illustrated in the image at the right.
-How many license plates in New Jersey are possible?\\
-\columnbreak
-\includegraphics[scale=.3]{NewJersy}
-\end{multicols}
-\begin{solution}
-$26\cdot 10\cdot 10\cdot 26\cdot 26\cdot 26=26^4\cdot 10^2
-=45,697,600$
-\end{solution}
+\newpage
 
 \question How many anagrams of the word
 {\textsf{Machiavellianism}} are there?
@@ -108,30 +112,7 @@ shown in the following table.
 Thus the number of anagrams is
 \[\frac{16!}{3!3!2!2!}=145,297,152,000.\]
 \end{solution}
-
-\question In a recent survey of 884 Americans between the ages
-of $18$ and $50$, $120$ reported that they have tattoos,
-$72$ have body piercings, and $41$ have both.
-\footnote{2004, American Journal of Dermatology}
-\begin{parts}
-\part What is the probability that a randomly
-selected American has a tattoo?
-\part What is the probability that a randomly
-selected American has a piercing?
-\part What is the probability that a randomly
-selected American has a both a tattoo and a piercing?
-\part\label{Independent} According to this data do
-the decision to get a piercing and the decision
-to get a tattoo appear to be independent?
-\part Does your response to part~(\ref{Independent}) make
-sense in this context?
-\part What is the probability that a randomly
-selected American has a tattoo given that that individual
-has a piercing?
-\part What is the probability that a randomly
-selected American has a piercing given that that individual
-does {\bf not} have a piercing?
-\end{parts}
+\vspace{3in}
 
 \question Suppose $E=\left\{a,c,d,e,f\right\}$,
 $F=\left\{b,c,g,h,i\right\}$, and $G=\left\{a,b,e,h,i\right\}$.
@@ -151,5 +132,38 @@ E\cap F&=\left\{c\right\}\\
 &=\left\{a,b,c,e,h,i\right\}
 \end{align*}
 \end{solution}
+\newpage
+
+\question In a recent survey of 884 Americans between the ages
+of $18$ and $50$, $120$ reported that they have tattoos,
+$72$ have body piercings, and $41$ have both.
+\footnote{2004, American Journal of Dermatology}
+\vspace{1in}
+\begin{parts}
+\part What is the probability that a randomly
+selected American has a tattoo?
+\vspace{1.5cm}
+\part What is the probability that a randomly
+selected American has a piercing?
+\vspace{1.5cm}
+\part What is the probability that a randomly
+selected American has a both a tattoo and a piercing?
+\vspace{1.5cm}
+\part\label{Independent} According to this data do
+the decision to get a piercing and the decision
+to get a tattoo appear to be independent?
+\vspace{1.5cm}
+\part Does your response to part~(\ref{Independent}) make
+sense in this context?
+\vspace{1.5cm}
+\part What is the probability that a randomly
+selected American has a tattoo given that that individual
+has a piercing?
+\vspace{1.5cm}
+\part What is the probability that a randomly
+selected American has a piercing given that that individual
+does {\bf not} have a piercing?
+\end{parts}
+
 \end{questions}
 \end{document}
