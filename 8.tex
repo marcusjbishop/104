@@ -353,7 +353,8 @@ omno &omon &onmo &onom &oomn &oonm
 \item Why more anagrams of \alert{bird} than \alert{moon}?
 \item $24=4!$ the number of arrangements of four \alert{distinct} objects
 \item But letters of \alert{moon} not distinct!
-\item Hot to calculate number of anagrams without listing them?
+\item Hot to calculate number of anagrams?
+\item Could try to list them, but listing highly error-prone
 \end{itemize}
 \end{frame}
 
@@ -394,7 +395,7 @@ omn\alert{o}&om\alert{o}n&onm\alert{o}&on\alert{o}m\\
 o\alert{o}mn&o\alert{o}nm&\alert{o}mno&\alert{o}mon\\
 \alert{o}nmo&\alert{o}nom&\alert{o}omn&\alert{o}onm
 \end{tabular}
-\item Anagrams of word \alert{moon}:
+\item Anagrams of word moon:
 \begin{tabular}{cccccc}
 mnoo &mono &moon &nmoo &nomo &noom\\
 omno &omon &onmo &onom &oomn &oonm 
@@ -406,8 +407,8 @@ appears \alert{twice} in list of anagrams of mo\alert{o}n
 
 \begin{frame}
 \begin{itemize}
-\item Why twice?
-\item Because $2=2!$ the number of ways to color the two o's
+\item But why twice?
+\item Because $2=2!$ the number of ways to color o's
 \begin{example} mono appears as anagram of mo\alert{o}n
 as mon\alert{o} and m\alert{o}no
 \end{example}
@@ -448,8 +449,50 @@ ep{\color{red}e}{\color{blue}e}
 \begin{itemize}
 \item Observe that $120=5!$ 
 the number of anagrams of kay\alert{a}\alert{k} (not shown)
+\item First four:
+\begin{tabular}{cccc}
+a\alert{a}ky\alert{y}
+a\alert{a}k\alert{y}y
+\alert{a}aky\alert{y}
+\alert{a}ak\alert{y}y
+\end{tabular}
+\item $2=2!$ ways to color a's
+\item $2=2!$ ways to color y's
+\item So $4=2!2!$ ways to color anagram
+\item Thus number $N$ of anagrams satisfies
+$120=4N$
+\item So $N=\frac{120}{4}=30$
 \end{itemize}
 \end{frame}
 
+\begin{frame}{General rule for number of anagrams}
+\begin{itemize}
+\item Suppose word has $n$ letters
+\item But only $r$ letters $a_1,a_2,\ldots,a_r$ distinct 
+\item Let $n_1$ be number of $a_1$'s
+\item Let $n_2$ be number of $a_2$'s
+\item $\vdots$
+\item Let $n_r$ be number of $a_r$'s
+\item Then $\frac{n!}{n_1!n_2!\cdots n_r!}$
+the number of anagrams of word
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example}
+\begin{itemize}
+\item Anagrams of \alert{plenipotentiary}
+\item Count number of times each distinct letter appears:
+\begin{tabular}{c|cccccccccc}
+Letter&a&e&i&l&o&n&p&r&t&y\\\hline
+Frequency&1&2&2&1&1&2&2&1&2&1
+\end{tabular}
+\item Confirm that word has $15$ letters and
+$15=1+2+2+1+1+2+2+1+2+1$
+\item Then number of anagrams
+\[\frac{15!}{1!2!2!1!1!2!2!1!2!1!}
+\only<+->{=\frac{15!}{2^5}}
+\only<+->{=40,864,824,000}\]
+\end{itemize}
+\end{frame}
 
 \end{document}
