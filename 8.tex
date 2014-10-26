@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -17,7 +17,7 @@
 \newtheorem{remark}{Remark}
 \newtheorem{impact}{Impact}
 \newtheorem{notation}{Notation}
-\newtheorem{argument}{Argument}
+\newtheorem{question}{Question}
 \usepackage{arev}
 \begin{document}
 \begin{frame}\titlepage\end{frame}
@@ -451,10 +451,10 @@ ep{\color{red}e}{\color{blue}e}
 the number of anagrams of kay\alert{a}\alert{k} (not shown)
 \item First four:
 \begin{tabular}{cccc}
-a\alert{a}ky\alert{y}
-a\alert{a}k\alert{y}y
-\alert{a}aky\alert{y}
-\alert{a}ak\alert{y}y
+a\alert{a}k\alert{k}y
+a\alert{a}\alert{k}ky
+\alert{a}ak\alert{k}y
+\alert{a}a\alert{k}ky
 \end{tabular}
 \item $2=2!$ ways to color a's
 \item $2=2!$ ways to color y's
@@ -492,6 +492,44 @@ $15=1+2+2+1+1+2+2+1+2+1$
 \[\frac{15!}{1!2!2!1!1!2!2!1!2!1!}
 \only<+->{=\frac{15!}{2^5}}
 \only<+->{=40,864,824,000}\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{More realistic examples}
+\begin{question}
+\begin{itemize}
+\item In how many ways can $3$~sets of plates be stacked in cupboard?
+\item First set has $3$ identical plates
+\item Second set has $4$, and third has $5$
+\end{itemize}
+\end{question}
+\begin{itemize}
+\item $3+4+5=12$ plates altogether
+\item Denote a plate from first set by $A$
+\item Denote plates from second and third sets by $B$ and $C$
+\item $AAABBBBCCCCC$ and $ABABCCBCCACB$ two possible stacking is 
+\item Using this notation, question asks for anagrams of $AAABBBBCCCCC$
+\item So $\frac{12!}{3!4!5!}=27,720$ stackings
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{question}
+\begin{itemize}
+\item Bag contains $3$~red and $3$~black balls
+\item Balls drawn one at time without replacement
+\item $\bullet\bullet\alert{\bullet}\bullet\alert{\bullet}\alert{\bullet}$
+and $\alert{\bullet}\bullet\alert{\bullet}\bullet\bullet\alert{\bullet}$
+two possible outcomes
+\item How many outcomes possible?
+\end{itemize}
+\end{question}
+\begin{itemize}
+\item Question the same as previous anagram problems,
+but with 
+$\bullet\bullet\alert{\bullet}\bullet\alert{\bullet}\alert{\bullet}$
+instead of English word
+\item So $\frac{6!}{3!3!}=20$ possible outcomes
 \end{itemize}
 \end{frame}
 
