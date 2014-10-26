@@ -1,0 +1,134 @@
+\documentclass[handout]{beamer}
+\usepackage{multicol}
+\usepackage{xy}
+\everymath{\displaystyle}
+\mode<presentation>
+{\usetheme{Warsaw}\setbeamercovered{dynamic}}
+\usecolortheme{crane}
+\usepackage{beamerfoils}
+\pgfdeclareimage[height=1in]{university-logo}{ISULogo}
+\logo{\pgfuseimage{university-logo}}
+\setbeamertemplate{navigation symbols}{}
+\title[\S9]{Section 9\\Combinations}
+\author{Dr Marcus Bishop}
+\subject{Math 104}
+\beamerdefaultoverlayspecification{<+->}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{impact}{Impact}
+\newtheorem{notation}{Notation}
+\newtheorem{question}{Question}
+\usepackage{arev}
+\usepackage{tensor}
+\newcommand\npr[2]{\tensor[_{#1}]P{_{#2}}}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+\LogoOff
+
+\begin{frame}{Questions}
+\begin{question}
+How many finishes among first $3$~places
+can occur in $8$-horse race (excluding ties)?
+\end{question}
+\begin{question}
+How many different foursomes can be formed
+from among $7$~golfers?
+\end{question}
+\begin{question}
+How many different $13$-card bridge hands are there?
+\end{question}
+\begin{question}
+How many different ways to arrange a particular $13$-card
+bridge hand?
+\end{question}
+\end{frame}
+
+\begin{frame}
+\begin{question}
+How many finishes among first $3$~places
+can occur in $8$-horse race (excluding ties)?
+\end{question}
+\begin{itemize}
+\item $8$~choices for first place
+\item $7$~choices for second place
+\item $6$~choices for third place
+\item So $8\cdot 7\cdot 6=336$ possible finishes
+\item Note that $8\cdot 7\cdot 6=\npr{8}{3}$
+\item Indeed, problem asks for number of permutations
+of $8$~objects taken $3$ at a time
+\item \dots dressed up with intriguing story about horse racing
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{question}
+How many different foursomes can be formed
+from among $7$~golfers?
+\end{question}
+\begin{itemize}
+\item Members of foursome meant to sign names on scorecard
+\item More concrete to count number of ways to fill out scorecard
+\item $7$~choices for first name
+\item $6$~choices for second, $5$ for third, $4$ for fourth
+\item Thus $\npr{7}{4}=7\cdot 6\cdot 5\cdot 4=840$ ways for
+players to fill out scorecard
+\end{itemize}
+\end{frame}
+\begin{frame}
+\begin{itemize}
+\item However, if same foursome signed names in different order on scorecard,
+would be counted as \alert{different foursome}
+\item Thus $840$ includes considerable duplication
+\item In how many ways could particular foursome fill out scorecard?
+\item $4$~choices for first name, $3$ for second, etc
+\item So $4!=\npr{4}{4}=24$ ways for particular foursome to fill out scorecard
+\item Thus $840$ counts each possible foursome $24$~times 
+\item So $\frac{840}{24}=35$ possible foursomes
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{question}
+How many different ways to arrange a particular $13$-card
+bridge hand?
+\end{question}
+\begin{itemize}
+\item $13!=\npr{13}{13}=6,227,020,800$
+\begin{question}
+How many different $13$-card bridge hands are there?
+\end{question}
+\item Arranged from left to right in player's hand,
+\item $52$~choices for first card, $51$ for second, etc
+\item So $52\cdot 51\cdots 40=\npr{52}{13}$
+\item However, any particular hand counted $13!$~times (see example above)
+\item Thus $\frac{\npr{52}{13}}{13!}
+=635,013,559,600$ possible hands
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Remarks}
+\begin{itemize}
+\item All examples above involve selection \alert{without replacement}
+\item So after each selection, number of choices decreases by one
+\item Accounts for appearance of consecutive numbers decreasing
+by one, as in $8\cdot 7\cdot 6$
+\item If replacement had been possible, numbers would remain same
+instead of decrease
+\item For example, spinning American roulette wheel three times
+has $38\cdot 38\cdot 38$ possible outcomes
+\end{itemize}
+\end{frame}
+\begin{frame}
+\begin{itemize}
+\item In horse and bridge hand arrangement examples, order of choices
+significant
+\item In golf and bridge hand examples, order of choices irrelevant
+\item Determining whether order matters requires careful reading of question
+and realistic thought about problem
+\item Note that word \alert{arrangement} in bridge hand arrangement
+question a cue
+\item But no such word present in horse question
+\end{itemize}
+\end{frame}
+
+\end{document}
