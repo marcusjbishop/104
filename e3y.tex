@@ -1,4 +1,4 @@
-\documentclass[addpoints,12pt]{exam}
+\documentclass[answers,addpoints,12pt]{exam}
 \usepackage{multicol,xy}
 \usepackage{graphicx,multicol}
 \usepackage[euler-digits]{eulervm}
@@ -6,7 +6,7 @@
 \usepackage[letterpaper,margin=1in]{geometry}
 \pagestyle{headandfoot}
 \runningheadrule
-\firstpageheader{\bf Math 104}{\bf Exam 3, Red Form}{\bf 29 October 2014}
+\firstpageheader{\bf Math 104}{\bf Exam 3, Yellow Form}{\bf 29 October 2014}
 \runningheader{\bf Math 104}
 {\bf Exam Three, Page \thepage\ of \numpages}
 {\bf 29 October 2014}
@@ -43,31 +43,31 @@ you have not been the recipient of such communication from anyone else.
 \begin{multicols}{2}
 \question[10]
 As illustrated in the image at the right,
-New Jersey license plates contain a letter,
-followed by two digits, followed by three letters.
-How many New Jersey license plates are possible?\\
+California license plates contain a number,
+followed by three letters, followed by three digits.
+How many California license plates are possible?\\
 \columnbreak
-\begin{center}\includegraphics[scale=.4]{NewJersy}
+\begin{center}\includegraphics[scale=.4]{California}
 \end{center}
 \end{multicols}
 \begin{solution}{\vfill}
-$26\cdot 10\cdot 10\cdot 26\cdot 26\cdot 26=26^4\cdot 10^2
-=45,697,600$
+$10\cdot 26\cdot 26\cdot 26\cdot 10\cdot 10\cdot 10=26^3\cdot 10^4
+=175,760,000$
 \end{solution}
 \newpage
 
 \question[16] Two cards are drawn at random from a deck of playing cards
 without replacement.
 \begin{parts}
-\part What is the probability that both cards are kings?
+\part What is the probability that the second card is a Queen
+given that the first card is a Queen?
+\begin{solution}[1in]
+$\frac{3}{51}\approx 0.059$
+\end{solution}
+\part What is the probability that both cards are Queens?
 \begin{solution}[1in]
 $\frac{4}{52}\cdot\frac{3}{51}=\frac{1}{221}
 \approx 0.005$
-\end{solution}
-\part What is the probability that the second card is a King
-given that the first card is a Queen?
-\begin{solution}[1in]
-$\frac{4}{51}\approx 0.078$
 \end{solution}
 \end{parts}
 
@@ -85,22 +85,22 @@ of the resident.\footnote{Source: {\tt www.census.gov}}
 \text{Total}&49,184&140,381&13,322&202,887
 \end{array}\]
 \begin{parts}
+\part What is the probability that a randomly selected
+resident spoke Spanish or Spanish Creole
+given that that individual was between $65$ years old or older?
+\begin{solution}[2cm]
+$\frac{4114}{13322}\approx 0.309$
+\end{solution}
+\part What is the probability that a randomly selected
+resident that spoke a language other than English
+was between $18$ and $64$ years old?
+\begin{solution}[2cm]
+$\frac{140381}{202887}\approx 0.692$
+\end{solution}
 \part How many residents of age $65$ or older
 spoke a language other than English?
 \begin{solution}[2cm]
 $13,322$
-\end{solution}
-\part What is the probability that a randomly selected
-resident spoke an Asian or Pacific Island language
-given that that individual was between $18$ and $64$ years old?
-\begin{solution}[2cm]
-$\frac{27022}{140381}\approx 0.192$
-\end{solution}
-\part What is the probability that a randomly selected
-resident that spoke a language other than English
-was between $5$ and $17$ years old?
-\begin{solution}[2cm]
-$\frac{49184}{202887}\approx 0.242$
 \end{solution}
 \end{parts}
 \newpage
@@ -164,37 +164,37 @@ $\frac{31}{31+733}\approx 0.041$
 \newpage
 
 \question[16] How many anagrams of the word
-{\textsf{Machiavellianism}} are there?
+\textsf{Tintinnabulation} are there?
 \begin{solution}[3in]
 The number of times each distinct letter appears is
 shown in the following table.
-\[\begin{array}{r|cccccccccc}
-\text{letter}&a&c&e&h&i&l&m&n&s&v\\\hline
-\text{frequency}&3&1&1&1&3&2&2&1&1&1
+\[\begin{array}{r|cccccccc}
+\text{letter}&a&b&i&l&n&o&t&u\\\hline
+\text{frequency}&2&1&3&1&4&1&3&1
 \end{array}\]
 Thus the number of anagrams is
-\[\frac{16!}{3!3!2!2!}=145,297,152,000.\]
+\[\frac{16!}{2!3!4!3!}=12,108,096,000.\]
 \end{solution}
 
-\question[16] Suppose $E=\left\{a,c,d,e,f\right\}$,
-$F=\left\{b,c,g,h,i\right\}$, and $G=\left\{a,b,e,h,i\right\}$.
+\question[16] Suppose $E=\left\{r,t,u,v,w\right\}$,
+$F=\left\{s,t,x,y,z\right\}$, and $G=\left\{r,s,v,y,z\right\}$.
 \begin{parts}
 \part Calculate $\left(E\cup G\right)\cap\left(F\cup G\right)$
 \begin{solution}[1.5in]
 \begin{align*}
-E\cup G&=\left\{a,b,c,d,e,f,h,i\right\}\\
-F\cup G&=\left\{a,b,c,e,g,h,i\right\}\\
+E\cup G&=\left\{r,s,t,u,v,w,y,z\right\}\\
+F\cup G&=\left\{r,s,t,v,x,y,z\right\}\\
 \text{so}\quad
 \left(E\cup G\right)\cap\left(F\cup G\right)
-&=\left\{a,b,c,e,h,i\right\}\\
+&=\left\{r,s,t,v,y,z\right\}\\
 \end{align*}
 \end{solution}
 \part Calculate $\left(E\cap F\right)\cup G$
 \begin{solution}
 \begin{align*}
-E\cap F&=\left\{c\right\}\\
+E\cap F&=\left\{t\right\}\\
 \text{so}\quad\left(E\cap F\right)\cup G
-&=\left\{a,b,c,e,h,i\right\}
+&=\left\{r,s,t,v,y,z\right\}
 \end{align*}
 \end{solution}
 \end{parts}
