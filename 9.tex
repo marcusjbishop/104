@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer}
+\documentclass{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -21,6 +21,8 @@
 \usepackage{arev}
 \usepackage{tensor}
 \newcommand\npr[2]{\tensor[_{#1}]P{_{#2}}}
+\newcommand\ncr[2]{\tensor[_{#1}]C{_{#2}}}
+\usepackage{cancel}
 \begin{document}
 \begin{frame}\titlepage\end{frame}
 \LogoOff
@@ -67,23 +69,26 @@ from among $7$~golfers?
 \end{question}
 \begin{itemize}
 \item Members of foursome meant to sign names on scorecard
-\item More concrete to count number of ways to fill out scorecard
+\item To make problem more concrete,
+count number of ways to fill out scorecard
 \item $7$~choices for first name
 \item $6$~choices for second, $5$ for third, $4$ for fourth
-\item Thus $\npr{7}{4}=7\cdot 6\cdot 5\cdot 4=840$ ways for
-players to fill out scorecard
+\item Thus $7\cdot 6\cdot 5\cdot 4
+\only<+->{=\npr{7}{4}}$\only<+->{$=840$ ways for
+players to fill out scorecard}
 \end{itemize}
 \end{frame}
 \begin{frame}
 \begin{itemize}
-\item However, if same foursome signed names in different order on scorecard,
-would be counted as \alert{different foursome}
+\item However, suppose same foursome signed scorecard in different order
+\item Then foursome would be counted as \alert{different foursome}
 \item Thus $840$ includes considerable duplication
 \item In how many ways could particular foursome fill out scorecard?
 \item $4$~choices for first name, $3$ for second, etc
-\item So $4!=\npr{4}{4}=24$ ways for particular foursome to fill out scorecard
-\item Thus $840$ counts each possible foursome $24$~times 
-\item So $\frac{840}{24}=35$ possible foursomes
+\item So $4!\only<+->{=\npr{4}{4}}$
+\only<+->{$=24$ ways for particular foursome to fill out scorecard}
+\item So $840$ counts each possible foursome $24$~times 
+\item Thus $\frac{840}{24}=35$ possible foursomes
 \end{itemize}
 \end{frame}
 
@@ -93,14 +98,15 @@ How many different ways to arrange a particular $13$-card
 bridge hand?
 \end{question}
 \begin{itemize}
-\item $13!=\npr{13}{13}=6,227,020,800$
+\item $13!\only<+->{=\npr{13}{13}}$
+\only<+->{$=6,227,020,800$}
 \begin{question}
 How many different $13$-card bridge hands are there?
 \end{question}
-\item Arranged from left to right in player's hand,
+\item Imagine hand arranged from left to right in player's hand
 \item $52$~choices for first card, $51$ for second, etc
-\item So $52\cdot 51\cdots 40=\npr{52}{13}$
-\item However, any particular hand counted $13!$~times (see example above)
+\item So $52\cdot 51\cdots 40=\npr{52}{13}$ arrangements
+\item However, every distinct hand counted $13!$~times (see question above)
 \item Thus $\frac{\npr{52}{13}}{13!}
 =635,013,559,600$ possible hands
 \end{itemize}
@@ -108,7 +114,7 @@ How many different $13$-card bridge hands are there?
 
 \begin{frame}{Remarks}
 \begin{itemize}
-\item All examples above involve selection \alert{without replacement}
+\item All questions above involve selection \alert{without replacement}
 \item So after each selection, number of choices decreases by one
 \item Accounts for appearance of consecutive numbers decreasing
 by one, as in $8\cdot 7\cdot 6$
@@ -120,15 +126,61 @@ has $38\cdot 38\cdot 38$ possible outcomes
 \end{frame}
 \begin{frame}
 \begin{itemize}
-\item In horse and bridge hand arrangement examples, order of choices
+\item In horse and bridge hand arrangement examples, order of selections
 significant
 \item In golf and bridge hand examples, order of choices irrelevant
 \item Determining whether order matters requires careful reading of question
 and realistic thought about problem
 \item Note that word \alert{arrangement} in bridge hand arrangement
-question a cue
-\item But no such word present in horse question
+question a \alert{cue}
+\item But no such cue present in horse question
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Combinations}
+\begin{itemize}
+\item Want to count number
+of ways to select $r$~objects from set of $n$~objects
+without replacement, with order irrelevant
+\item $\npr{n}{r}=\frac{n!}{\left(n-r\right)!}$
+accomplishes selection of $r$~objects from set of $n$
+without replacement
+\item But $\npr{n}{r}$ multiply counts
+every distinct selection
+\item Each selection of $r$~objects can be arranged
+in $\npr{r}{r}=r!$ ways.
+\item Therefore number of selections
+given by $\frac{\npr{n}{r}}{r!}
+\only<+->{=\frac{n!}{\left(n-r\right)!r!}}$
+\item
+$\frac{n!}{\left(n-r\right)!r!}$ denoted by $\ncr{n}{r}$
+\item $\ncr{n}{r}$ called a \alert{binomial coefficient}
+and often pronounced \alert{$n$ choose $r$}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Examples}
+\begin{question}
+How many subsets of $\left\{a,b,c,d\right\}$ of size two?
+\end{question}
+\only<+->{
+\[\ncr{4}{2}
+\only<+->{=\frac{6!}{4!2!}}
+\only<+->{=\frac{6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}
+{4\cdot 3\cdot 2\cdot 1\cdot 2\cdot 1}}
+\only<+->{=\frac{6\cdot 5\cdot \cancel{4}
+\cdot\cancel{3}\cdot\cancel{2}\cdot\cancel{1}}
+{\cancel{4}\cdot\cancel{3}\cdot\cancel{2}\cdot\cancel{1}\cdot 2\cdot\cancel{1}}}
+\only<+->{=\frac{6\cdot 5}{2}}
+\only<+->{=15}\]}
+\begin{remark}
+As in example above, massive cancellation often occurs in binomial coefficients
+\end{remark}
+\begin{question}
+In how many ways can two-member subcommittee
+be selected from among Alex, Brooke, Colby, Denise
+\end{question}
+\only<+->{\[\ncr{4}{2}=15\]}
 \end{frame}
 
 \end{document}
