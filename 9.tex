@@ -200,7 +200,124 @@ As in example above, massive cancellation often occurs in binomial coefficients
 How many two-topping pizzas possible from Joe's Pizza, which
 offers six different toppings?
 \end{question}
-\only<+->{\[\ncr{6}{2}=15\]}
+\only<+->{$\ncr{6}{2}=15$ pizzas possible}
+\end{frame}
+
+\begin{frame}{Enumerating subsets of $\left\{1,2,3,4,5,6\right\}$ of size $2$}
+\begin{itemize}
+\item First list subsets containing $1$:
+\[\begin{array}{ccccc}
+\left\{1,2\right\}&\left\{1,3\right\}&\left\{1,4\right\}&\left\{1,5\right\}
+  &\left\{1,6\right\}\\
+\end{array}\]
+\item Note that $\left\{1,1\right\}$ not listed, since has size $1$
+\item First list subsets containing $1$:
+\[\begin{array}{ccccc}
+&\left\{2,3\right\}&\left\{2,4\right\}&\left\{2,5\right\}&\left\{2,6\right\}\\
+\end{array}\]
+\item Note that $\left\{2,1\right\}$ not listed, since $\left\{1,2\right\}$
+listed above
+\item Continuing gives final list:
+\end{itemize}
+\[\begin{array}{ccccc}
+\left\{1,2\right\}&\left\{1,3\right\}&\left\{1,4\right\}&\left\{1,5\right\}
+  &\left\{1,6\right\}\\
+&\left\{2,3\right\}&\left\{2,4\right\}&\left\{2,5\right\}&\left\{2,6\right\}\\
+&&\left\{3,4\right\}&\left\{3,5\right\}&\left\{3,6\right\}\\
+&&&\left\{4,5\right\}&\left\{4,6\right\}\\
+&&&&\left\{5,6\right\}
+\end{array}\]
+\end{frame}
+
+\begin{frame}{Comparing permutations to combinations}
+\begin{itemize}
+\item Subsets of $\left\{1,2,3,4,5,6\right\}$ of size $2$:
+\[\begin{array}{ccccc}
+\left\{1,2\right\}&\left\{1,3\right\}&\left\{1,4\right\}&\left\{1,5\right\}
+  &\left\{1,6\right\}\\
+&\left\{2,3\right\}&\left\{2,4\right\}&\left\{2,5\right\}&\left\{2,6\right\}\\
+&&\left\{3,4\right\}&\left\{3,5\right\}&\left\{3,6\right\}\\
+&&&\left\{4,5\right\}&\left\{4,6\right\}\\
+&&&&\left\{5,6\right\}\\
+\end{array}\]
+\item Outcomes of rolling two dice:
+\[\begin{array}{cccccc}
+{\color{orange}\left(1,1\right)}&\left(1,2\right)&\left(1,3\right)
+&\left(1,4\right)&\left(1,5\right)&\left(1,6\right)\\
+{\color{blue}\left(2,1\right)}&{\color{orange}\left(2,2\right)}&\left(2,3\right)
+&\left(2,4\right)&\left(2,5\right)&\left(2,6\right)\\
+{\color{blue}\left(3,1\right)}&{\color{blue}\left(3,2\right)}
+&{\color{orange}\left(3,3\right)}
+&\left(3,4\right)&\left(3,5\right)&\left(3,6\right)\\
+{\color{blue}\left(4,1\right)}&{\color{blue}\left(4,2\right)}
+&{\color{blue}\left(4,3\right)}
+&{\color{orange}\left(4,4\right)}&\left(4,5\right)&\left(4,6\right)\\
+{\color{blue}\left(5,1\right)}&{\color{blue}\left(5,2\right)}
+&{\color{blue}\left(5,3\right)}
+&{\color{blue}\left(5,4\right)}&{\color{orange}\left(5,5\right)}
+&\left(5,6\right)\\
+{\color{blue}\left(6,1\right)}&{\color{blue}\left(6,2\right)}
+&{\color{blue}\left(6,3\right)}
+&{\color{blue}\left(6,4\right)}&{\color{blue}\left(6,5\right)}
+&{\color{orange}\left(6,6\right)}
+\end{array}\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Outcomes of dice include
+$\left(1,1\right),\left(2,2\right),\left(3,3\right),
+\left(4,4\right),\left(5,5\right),\left(6,6\right)$
+\item These outcomes not possible in experiment without replacement
+\item Excluding $\left(1,1\right),\ldots,\left(6,6\right)$
+gives list of permutations of $\left\{1,2,3,4,5,6\right\}$
+taken $2$ at a time
+\item Note that $\npr{6}{2}=6\cdot 5=30$
+\item Outcomes of dice also include include $\left(i,j\right)$ with $i>j$
+\item Sets $\left\{i,j\right\}$ with $i>j$ excluded
+from list of subsets, since
+$\left\{i,j\right\}=\left\{j,i\right\}$ already listed
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{multicols}{2}
+\begin{itemize}
+\item Note that $\ncr{6}{4}
+=\frac{6!}{4!2!}=\ncr{6}{2}$
+%\item Is this coincidence?
+\item Selecting $4$ pizza toppings
+from set of $6$ the same as \alert{not}
+selecting $2$
+\item So number of $4$-topping pizzas
+the same as number of $2$-topping pizzas
+\item Can use this observation to enumerate
+subsets of size $4$
+\item Namely,
+write down elements \alert{not} in 
+each subset of size $2$
+\end{itemize}
+\columnbreak
+\[\begin{array}{cc}
+\text{Size 2}&\text{Size 4}\\\hline
+\left\{1,2\right\}&\left\{3,4,5,6\right\}\\
+\left\{1,3\right\}&\left\{2,4,5,6\right\}\\
+\left\{1,4\right\}&\left\{2,3,5,6\right\}\\
+\left\{1,5\right\}&\left\{2,3,4,6\right\}\\
+\left\{1,6\right\}&\left\{2,3,4,5\right\}\\
+\left\{2,3\right\}&\left\{1,4,5,6\right\}\\
+\left\{2,4\right\}&\left\{1,3,5,6\right\}\\
+\left\{2,5\right\}&\left\{1,3,4,6\right\}\\
+\left\{2,6\right\}&\left\{1,3,4,5\right\}\\
+\left\{3,4\right\}&\left\{1,2,5,6\right\}\\
+\left\{3,5\right\}&\left\{1,2,4,6\right\}\\
+\left\{3,6\right\}&\left\{1,2,4,5\right\}\\
+\left\{4,5\right\}&\left\{1,2,3,6\right\}\\
+\left\{4,6\right\}&\left\{1,2,3,5\right\}\\
+\left\{5,6\right\}&\left\{1,2,3,4\right\}
+\end{array}\]
+\end{multicols}
 \end{frame}
 
 \end{document}
