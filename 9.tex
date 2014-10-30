@@ -27,6 +27,26 @@
 \begin{frame}\titlepage\end{frame}
 \LogoOff
 
+\begin{frame}{Factorial}
+\begin{itemize}
+\item Denote $n\cdot\left(n-1\right)\cdots 3\cdot 2\cdot 1$
+by $n!$ for any whole number $n$
+\item By convention $0!=1$
+\item Useful since factorial often appears in denominator
+\begin{example}
+\begin{itemize}
+\item Recall that $\npr{n}{r}=\frac{n!}{\left(n-r\right)!}$
+\item $\npr{n}{r}$ gives number of permutations of $n$
+objects taken $r$ at a time
+\item So $\npr{5}{5}
+\only<+->{=\frac{5!}{\left(5-5\right)!}}
+\only<+->{=\frac{5!}{0!}}
+\only<+->{=5!}$
+\end{itemize}
+\end{example}
+\end{itemize}
+\end{frame}
+
 \begin{frame}{Questions}
 \begin{question}
 How many finishes among first $3$~places
@@ -70,7 +90,7 @@ from among $7$~golfers?
 \begin{itemize}
 \item Members of foursome meant to sign names on scorecard
 \item To make problem more concrete,
-count number of ways to fill out scorecard
+count number of ways foursome can fill out scorecard
 \item $7$~choices for first name
 \item $6$~choices for second, $5$ for third, $4$ for fourth
 \item Thus $7\cdot 6\cdot 5\cdot 4
@@ -131,7 +151,7 @@ significant
 \item In golf and bridge hand examples, order of choices irrelevant
 \item Determining whether order matters requires careful reading of question
 and realistic thought about problem
-\item Note that word \alert{arrangement} in bridge hand arrangement
+\item Note that word \alert{arrange} in bridge hand arrangement
 question a \alert{cue}
 \item But no such cue present in horse question
 \end{itemize}
@@ -150,8 +170,8 @@ every distinct selection
 \item Each selection of $r$~objects can be arranged
 in $\npr{r}{r}=r!$ ways.
 \item Therefore number of selections
-given by $\frac{\npr{n}{r}}{r!}
-\only<+->{=\frac{n!}{\left(n-r\right)!r!}}$
+given by \[\frac{\npr{n}{r}}{r!}
+\only<+->{=\frac{n!}{\left(n-r\right)!r!}}\]
 \item
 $\frac{n!}{\left(n-r\right)!r!}$ denoted by $\ncr{n}{r}$
 \item $\ncr{n}{r}$ called a \alert{binomial coefficient}
