@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -181,10 +181,10 @@ and often pronounced \alert{$n$ choose $r$}
 
 \begin{frame}{Examples}
 \begin{question}
-How many subsets of $\left\{a,b,c,d\right\}$ of size two?
+How many subsets of $\left\{a,b,c,d,e,f\right\}$ of size two?
 \end{question}
 \only<+->{
-\[\ncr{4}{2}
+\[\ncr{6}{2}
 \only<+->{=\frac{6!}{4!2!}}
 \only<+->{=\frac{6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}
 {4\cdot 3\cdot 2\cdot 1\cdot 2\cdot 1}}
@@ -197,10 +197,10 @@ How many subsets of $\left\{a,b,c,d\right\}$ of size two?
 As in example above, massive cancellation often occurs in binomial coefficients
 \end{remark}
 \begin{question}
-In how many ways can two-member subcommittee
-be selected from among Alex, Brooke, Colby, Denise
+How many two-topping pizzas possible from Joe's Pizza, which
+offers six different toppings?
 \end{question}
-\only<+->{\[\ncr{4}{2}=15\]}
+\only<+->{\[\ncr{6}{2}=15\]}
 \end{frame}
 
 \end{document}
