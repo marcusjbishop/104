@@ -27,10 +27,10 @@
 \begin{frame}\titlepage\end{frame}
 \LogoOff
 
-\begin{frame}{Factorial}
+\begin{frame}{Factorial revisited}
 \begin{itemize}
 \item Denote $n\cdot\left(n-1\right)\cdots 3\cdot 2\cdot 1$
-by $n!$ for any whole number $n$
+by \alert{$n!$} for any whole number $n$
 \item By convention $0!=1$
 \item Useful since factorial often appears in denominator
 \begin{example}
@@ -161,13 +161,13 @@ question a \alert{cue}
 \begin{itemize}
 \item Want to count number
 of ways to select $r$~objects from set of $n$~objects
-without replacement, with order irrelevant
-\item $\npr{n}{r}=\frac{n!}{\left(n-r\right)!}$
-accomplishes selection of $r$~objects from set of $n$
+without replacement, \alert{with order irrelevant}
+\item $\npr{n}{r}$
+counts selections of $r$~objects from set of~$n$
 without replacement
 \item But $\npr{n}{r}$ multiply counts
-every distinct selection
-\item Each selection of $r$~objects can be arranged
+every distinct \alert{combination}
+\item Each combination of $r$~objects can be arranged
 in $\npr{r}{r}=r!$ ways.
 \item Therefore number of selections
 given by \[\frac{\npr{n}{r}}{r!}
@@ -194,13 +194,34 @@ How many subsets of $\left\{a,b,c,d,e,f\right\}$ of size two?
 \only<+->{=\frac{6\cdot 5}{2}}
 \only<+->{=15}\]}
 \begin{remark}
-As in example above, massive cancellation often occurs in binomial coefficients
+As in example above, massive cancellation often occurs in
+binomial coefficient calculation
 \end{remark}
 \begin{question}
 How many two-topping pizzas possible from Joe's Pizza, which
 offers six different toppings?
 \end{question}
 \only<+->{$\ncr{6}{2}=15$ pizzas possible}
+\end{frame}
+
+\begin{frame}
+\begin{question}
+\begin{itemize}
+\item Radio show plans to give concert tickets
+to two callers
+\item Six people radio station
+\item In how many ways can the winners be selected?
+\end{itemize}
+\end{question}
+\only<+->{$\ncr{6}{2}=15$ ways}
+\begin{question}
+\begin{itemize}
+\item Audience of American Idol must elimininate
+two contestants from among six remaining
+\item In how many ways can two be selected?
+\end{itemize}
+\end{question}
+\only<+->{$\ncr{6}{2}=15$ ways}
 \end{frame}
 
 \begin{frame}{Enumerating subsets of $\left\{1,2,3,4,5,6\right\}$ of size $2$}
@@ -211,13 +232,13 @@ offers six different toppings?
   &\left\{1,6\right\}\\
 \end{array}\]
 \item Note that $\left\{1,1\right\}$ not listed, since has size $1$
-\item First list subsets containing $1$:
+\item Next list subsets containing $2$:
 \[\begin{array}{ccccc}
 &\left\{2,3\right\}&\left\{2,4\right\}&\left\{2,5\right\}&\left\{2,6\right\}\\
 \end{array}\]
 \item Note that $\left\{2,1\right\}$ not listed, since $\left\{1,2\right\}$
 listed above
-\item Continuing gives final list:
+\item Continuing as above:
 \end{itemize}
 \[\begin{array}{ccccc}
 \left\{1,2\right\}&\left\{1,3\right\}&\left\{1,4\right\}&\left\{1,5\right\}
@@ -267,14 +288,16 @@ listed above
 \begin{frame}
 \begin{itemize}
 \item Outcomes of dice include
-$\left(1,1\right),\left(2,2\right),\left(3,3\right),
-\left(4,4\right),\left(5,5\right),\left(6,6\right)$
-\item These outcomes not possible in experiment without replacement
+\[\left(1,1\right),\left(2,2\right),\left(3,3\right),
+\left(4,4\right),\left(5,5\right),\left(6,6\right)\]
+(shown in {\color{orange}orange})
+\item These outcomes not possible in experiments without replacement
 \item Excluding $\left(1,1\right),\ldots,\left(6,6\right)$
 gives list of permutations of $\left\{1,2,3,4,5,6\right\}$
 taken $2$ at a time
 \item Note that $\npr{6}{2}=6\cdot 5=30$
-\item Outcomes of dice also include include $\left(i,j\right)$ with $i>j$
+\item Outcomes of dice include include $\left(i,j\right)$ with $i>j$
+(shown in {\color{blue}blue})
 \item Sets $\left\{i,j\right\}$ with $i>j$ excluded
 from list of subsets, since
 $\left\{i,j\right\}=\left\{j,i\right\}$ already listed
@@ -287,8 +310,8 @@ $\left\{i,j\right\}=\left\{j,i\right\}$ already listed
 \item Note that $\ncr{6}{4}
 =\frac{6!}{4!2!}=\ncr{6}{2}$
 %\item Is this coincidence?
-\item Selecting $4$ pizza toppings
-from set of $6$ the same as \alert{not}
+\item If Joe's offers $6$ pizza toppings,
+selecting $4$ the same as \alert{not}
 selecting $2$
 \item So number of $4$-topping pizzas
 the same as number of $2$-topping pizzas
@@ -318,6 +341,24 @@ each subset of size $2$
 \left\{5,6\right\}&\left\{1,2,3,4\right\}
 \end{array}\]
 \end{multicols}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Subsets of $\left\{1,2,3,4,5,6\right\}$ of size $4$:
+\[\begin{array}{ccc}
+\left\{1,2,3,4\right\}&\left\{1,2,3,5\right\}&\left\{1,2,3,6\right\}\\
+\left\{1,2,4,5\right\}&\left\{1,2,4,6\right\}&\left\{1,2,5,6\right\}\\
+\left\{1,3,4,5\right\}&\left\{1,3,4,6\right\}&\left\{1,3,5,6\right\}\\
+\left\{1,4,5,6\right\}&\left\{2,3,4,5\right\}&\left\{2,3,4,6\right\}\\
+\left\{2,3,5,6\right\}&\left\{2,4,5,6\right\}&\left\{3,4,5,6\right\}
+\end{array}\]
+\item How many four-topping pizzas at Joe's contain bison?
+\item If bison denoted by $1$, then ten combinations contain $1$
+\item How many four-topping pizzas contain both bison and mushrooms?
+\item If bison denoted by $1$ and mushrooms by $2$, then $6$
+combinations contain both $1$ and $2$
+\end{itemize}
 \end{frame}
 
 \end{document}
