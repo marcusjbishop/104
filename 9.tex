@@ -363,4 +363,34 @@ combinations contain both $1$ and $2$
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\begin{example}[Exercise 31]
+\begin{itemize}
+\item Matthew has 10~shirts in closet
+\item Must select four to take on vacation
+\item In how many ways can he select?
+\end{itemize}
+\end{example}
+\begin{align*}
+\ncr{10}{4}
+\only<+->{&=\frac{10!}{6!4!}}\\
+\only<+->{&=\frac{10\cdot 9\cdot 8\cdot 7\cdot
+6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}
+{4\cdot 3\cdot 2\cdot 1\cdot 6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}}\\
+\only<+->{&=\frac{10\cdot 9\cdot 8\cdot 7\cdot
+\cancel{6}\cdot\cancel{5}\cdot\cancel{4}
+\cdot\cancel{3}\cdot\cancel{2}\cdot\cancel{1}}
+{4\cdot 3\cdot 2\cdot 1\cdot
+\cancel{6}\cdot\cancel{5}\cdot\cancel{4}\cdot\cancel{3}
+\cdot\cancel{2}\cdot\cancel{1}}}\\
+\only<+->{&=\frac{10\cdot 9\cdot 8\cdot 7}{4\cdot 3\cdot 2}}
+\only<+->{=\frac{10\cdot 9\cdot\cancel{8}\cdot 7}
+{\cancel{4}\cdot 3\cdot\cancel{2}}}
+\only<+->{=\frac{10\cdot 9\cdot 7}{3}}\\
+\only<+->{&=\frac{10\cdot \cancel{9}\cdot 7\cdot\alert{3}}{\cancel{3}}}
+\only<+->{=210}
+\end{align*}
+\end{frame}
+
+
 \end{document}
