@@ -1,0 +1,90 @@
+\documentclass[handout]{beamer}
+\usepackage{multicol}
+\usepackage{xy}
+\everymath{\displaystyle}
+\mode<presentation>
+{\usetheme{Warsaw}\setbeamercovered{dynamic}}
+\usecolortheme{crane}
+\usepackage{beamerfoils}
+\pgfdeclareimage[height=1in]{university-logo}{ISULogo}
+\logo{\pgfuseimage{university-logo}}
+\setbeamertemplate{navigation symbols}{}
+\title[\S10]{Section 10\\Combinatorics applications}
+\author{Dr Marcus Bishop}
+\subject{Math 104}
+\beamerdefaultoverlayspecification{<+->}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{impact}{Impact}
+\newtheorem{notation}{Notation}
+\newtheorem{question}{Question}
+\usepackage{arev}
+\usepackage{tensor}
+\newcommand\npr[2]{\tensor[_{#1}]P{_{#2}}}
+\newcommand\ncr[2]{\tensor[_{#1}]C{_{#2}}}
+\usepackage{cancel}
+\newcommand{\hs}{\alert{\varheart}}
+\newcommand{\ds}{\alert{\vardiamond}}
+\newcommand{\s}{\spadesuit}
+\newcommand{\cs}{\clubsuit}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+\LogoOff
+
+\begin{frame}{Poker gameplay}
+\begin{itemize}
+\item Dealer deals five cards from standard deck
+to each player
+\item Players make bets and/or replace cards
+\item Finally, player with best \alert{hand} wins
+\item There are nine classes of poker hands:
+\begin{tabular}{lll}
+Straight flush&Four-of-a-kind&Full house\\
+Flush&Straight&Three-of-a-kind\\
+Two pairs&One pair&High card
+\end{tabular}
+\item Best hand determined by probability
+(although listed from best to worst above)
+\item The smaller the probability, the better the hand
+\item If two players have same type of hand, way
+tie broken depends on type of hand
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Poker basics}
+\begin{itemize}
+\item Recall that deck has cards of thirteen \alert{ranks},
+$A,K,Q,J,10,9,8,7,6,5,4,3,2$
+\item Each rank has four cards, one of each suit $\hs,\ds,\cs,\s$
+\item Thus deck has $13\cdot 4=52$ cards
+\item So $\ncr{52}{5}=2,598,960$ the number of possible hands
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Four of a kind}
+\begin{itemize}
+\item Hand called \alert{four-of-a-kind} if four cards have
+same rank
+\item Fifth card and rank of other four cards unimportant
+\item However, if another player also has four-of-a-kind,
+then player with four cards of highest rank wins
+\begin{example} $8\hs,8\ds,8\cs,8\s,10\cs$ a four-of-a-kind\end{example}
+\begin{example} $9\hs,9\ds,9\cs,9\s,3\hs$ a four-of-a-kind
+and beats previous example\end{example}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Counting four-of-a-kind hands}
+\begin{itemize}
+\item How many ways to form a four-of-a-kind?
+\item Thirteen ways to choose rank of four cards of same rank
+\item $48$ cards remain after removing four cards of same rank
+\item So fifth card can be any of remaining $48$
+\item Thus $13\cdot 48=624$ possible four-of-a-kinds
+\item So $\frac{624}{2598960}=\frac{1}{4165}\approx 0.00024$
+the probability of being dealt four-of-a-kind
+\end{itemize}
+\end{frame}
+
+\end{document}
+
