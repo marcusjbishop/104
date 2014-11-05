@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -392,5 +392,75 @@ combinations contain both $1$ and $2$
 \end{align*}
 \end{frame}
 
+\begin{frame}{Remaining pizzas at Bob's}
+\begin{itemize}
+\item Have calculated $\ncr{6}{2}=\ncr{6}{4}=15$
+\item So $15$ ways to choose two or four pizza toppings
+\item What about pizzas with other numbers of toppings?
+\item $\ncr{6}{0}\only<+->{=\frac{6!}{0!6!}}\only<+->{=1}$
+\item $\ncr{6}{6}\only<+->{=\frac{6!}{6!0!}}\only<+->{=1}$
+\item Plausible, since only
+one way to choose \alert{no} toppings or \alert{all six} toppings
+\item $\ncr{6}{1}\only<+->{=\frac{6!}{5!1!}}\only<+->{=6}$
+\item Plausible, since six ways to choose a single topping
+\item $\ncr{6}{5}\only<+->{=\frac{6!}{1!5!}}\only<+->{=6}$
+\item Plausible, since choosing five the same as \alert{not choosing} one
+\end{itemize}
+\end{frame}
 
+\begin{frame}
+\begin{multline*}
+\ncr{6}{3}\only<+->{=\frac{6!}{3!3!}}
+\only<+->{=\frac{6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}
+{3\cdot 2\cdot 1\cdot 3\cdot 2\cdot 1}}\\
+\only<+->{=\frac{6\cdot 5\cdot 4\cdot\cancel{3}\cdot\cancel{2}\cdot\cancel{1}}
+{3\cdot 2\cdot\cancel{1}\cdot\cancel{3}\cdot\cancel{2}\cdot\cancel{1}}}
+\only<+->{=\frac{6\cdot 5\cdot 4}{3\cdot 2}}
+\only<+->{=\frac{\cancel{6}\cdot 5\cdot 4}{\cancel{3}\cdot\cancel{2}}}
+\only<+->{=20}
+\end{multline*}
+\begin{itemize}
+\item So $20$ different three-topping pizzas
+\item Record binomial coefficients $\ncr{6}{r}$ in table
+\[\begin{array}{c|ccccccc}
+n\setminus r&0&1&2&3&4&5&6\\\hline
+\only<+->{5&1&5&10&10&5&1\\}
+6&1&6&15&20&15&6&1
+\end{array}\]
+\item $\ncr{5}{r}$ included for comparison
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Observations}
+\[\begin{array}{c|ccccccc}
+n\setminus r&0&1&2&3&4&5&6\\\hline
+5&1&5&10&10&5&1\\
+6&1&6&15&20&15&6&1
+\end{array}\]
+\begin{itemize}
+\item Both rows palindromes
+\item True because $\ncr{n}{r}=\ncr{n}{n-r}$
+\item Indeed, choosing $r$ the same as \alert{not} choosing $n-r$
+\item Sum of $n=5$ row:
+\[1+5+10+10+5+1\only<+->{=32}\only<+->{=2^5}\]
+\item Sum of $n=6$ row:
+\[1+6+15+20+15+6+1\only<+->{=64}\only<+->{=2^6}\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item $1+6+15+20+15+6+1$ the number of pizzas possible
+\item Indeed, any pizza has \alert{some} number of toppings
+\item $1$ counts zero-topping pizzas, $6$ counts one-topping pizzas, etc.
+\item But there's another way to count possible pizzas
+\item Namely, for each topping, decide whether to include or not
+\item Two choices for first topping (include or exclude), two choices for second
+topping, etc
+\item So $2^6$ pizzas possible
+\end{itemize}
+\begin{theorem}
+\[2^n=\ncr{n}{0}+\ncr{n}{1}+\ncr{n}{2}+\cdots+\ncr{n}{n-1}+\ncr{n}{n}\]
+\end{theorem}
+\end{frame}
 \end{document}
