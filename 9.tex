@@ -1,6 +1,6 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage{multicol}
-\usepackage{xy}
+\usepackage[arrow,matrix]{xy}
 \everymath{\displaystyle}
 \mode<presentation>
 {\usetheme{Warsaw}\setbeamercovered{dynamic}}
@@ -526,6 +526,48 @@ below by adding
 1&&6&&15&&20&&15&&6&&1}
 \end{array}\]
 \item Array called \alert{Pascal's triangle}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Final example}
+\begin{question}
+If four people must each shake hands with each of others,
+how many handshakes occur?
+\end{question}
+\begin{question}
+\begin{itemize}
+\item Four friends order drinks
+\item Each person must bang glass against glass of each friend
+\item How many glass bangs occur?
+\end{itemize}
+\end{question}
+\begin{itemize}
+\item Both questions have same answer $\ncr{4}{2}=6$
+\item Reason: each pair of people must shake hands or bang glasses
+\item $6$ the number of pairs, so $6$~handshares or glass bangs occur
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Illustrate four friends with picture:
+$\vcenter{\begin{xy}\xymatrix{
+A&B\\C&D}\end{xy}}$
+\item $A$ shakes hands with $B,C,D$:
+$\vcenter{\begin{xy}\xymatrix{
+A\ar@{-}[r]\ar@{-}[d]\ar@{-}[dr]&B\\
+C&D}\end{xy}}$
+\item $B$ shakes hands with $A,C,D$,
+(handshake with $A$ already drawn):
+$\vcenter{\begin{xy}\xymatrix{
+A\ar@{-}[r]\ar@{-}[d]\ar@{-}[dr]&B\ar@{-}[dl]\ar@{-}[d]\\
+C&D}\end{xy}}$
+\item $C$ shakes hands with $A,B,D$ (handshakes with
+$A,B$ already drawn):
+$\vcenter{\begin{xy}\xymatrix{
+A\ar@{-}[r]\ar@{-}[d]\ar@{-}[dr]&B\ar@{-}[dl]\ar@{-}[d]\\
+C\ar@{-}[r]&D}\end{xy}}$
+\item All $D$'s handshakes already drawn, so six altogether
 \end{itemize}
 \end{frame}
 \end{document}
