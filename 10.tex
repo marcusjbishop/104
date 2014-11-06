@@ -16,7 +16,7 @@
 \theoremstyle{definition}
 \newtheorem{remark}{Remark}
 \newtheorem{impact}{Impact}
-\newtheorem{notation}{Notation}
+\newtheorem{situation}{Situation}
 \newtheorem{question}{Question}
 \usepackage{arev}
 \usepackage{tensor}
@@ -43,25 +43,37 @@ Straight flush&Four-of-a-kind&Full house\\
 Flush&Straight&Three-of-a-kind\\
 Two pairs&One pair&High card
 \end{tabular}
-\item Best hand determined by probability
-of each hand
-(although listed from best to worst above)
+\item Best hand determined by probability of each hand
+%(although listed from best to worst above)
 \item The smaller the probability, the better the hand
 \item If two players have same type of hand, tie
 broken in manner depending on type of hand
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Poker basics}
+\begin{frame}{Playing cards}
 \begin{itemize}
 \item Recall that deck has cards of thirteen \alert{ranks},
 $A,K,Q,J,10,9,8,7,6,5,4,3,2$
 listed from highest to lowest
 \item Each rank has four cards, one of each suit $\hs,\ds,\cs,\s$
 \item Thus deck has $13\cdot 4=52$ cards
-\item So $\ncr{52}{5}=2,598,960$ the number of possible hands
 \end{itemize}
 \includegraphics[scale=.3]{cards}
+\end{frame}
+
+\begin{frame}{Poker basics}
+\begin{itemize}
+\item So $\ncr{52}{5}=2,598,960$ the number of possible hands
+\item Will first calculate probability that player draws particular
+\alert{hand}
+\item This probability not altered by fact that other cards
+might have already been dealt to other players
+\item \dots provided that those cards \alert{not exposed to player}
+\item However, some variants of poker involve exposing cards
+\item If card of suit $\hs$ lying face up on table, affects probability
+that next card drawn will have suit $\hs$
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Four of a kind}
@@ -79,10 +91,10 @@ and beats previous example\end{example}
 
 \begin{frame}{Counting four-of-a-kinds }
 \begin{itemize}
-\item How many ways to form a four-of-a-kind?
+\item How many ways to form four-of-a-kind?
 \item Thirteen ways to choose common rank of four cards
-\item $48$ cards remain after removing four cards of same rank
-\item So fifth card can be any of remaining $48$
+\item $48$ cards have rank different from common rank
+\item So $48$ ways to choose fifth card
 \item Thus $13\cdot 48=624$ possible four-of-a-kinds
 \item So $\frac{624}{2598960}=\frac{1}{4165}\approx 0.00024$
 the probability of being dealt four-of-a-kind
@@ -114,7 +126,7 @@ and beats example above\end{example}
 \item So $\frac{3744}{2598960}=\frac{6}{4165}\approx 0.01444$
 the probability of begin dealt a full house
 \item Note that $\frac{6}{4165}>\frac{1}{4165}$,
-so four-of-a-kind ranks \alert{higher} than full house
+so four-of-a-kind beats full house
 \end{itemize}
 \end{frame}
 
@@ -133,13 +145,13 @@ different from one another (else hand is full house)
 \begin{frame}{Counting three-of-a-kinds}
 \begin{itemize}
 \item $13$ choices for common rank of three cards
-\item $\ncr{4}{3}=4$ choices for three cards of common rank
+\item $\ncr{4}{3}=4$ choices for three cards of rank chosen above
 \item $52-4=48$ cards have rank different from rank chosen above
 \item So $48$~choices for fourth card
-\item $48-4=44$~cards have suit different from two suits chosen above
+\item $48-4=44$~cards have rank different from two ranks chosen above
 \item So $44$~choices for fifth card
-\item However, each choice of fourth and fifth cards appears
-\alert{twice}
+\item However, order in which fourth and fifth cards selected unimportant
+\item $48\cdot 44$ counts each choice \alert{twice}
 \item Hence divide final answer by $2$
 \item So $\frac{13\cdot 4\cdot 48\cdot 44}{2}=54,912$ three-of-a-kinds
 \end{itemize}
@@ -147,15 +159,37 @@ different from one another (else hand is full house)
 
 \begin{frame}{Another way to count three-of-a-kinds}
 \begin{itemize}
-\item (Method courtesy of Wikipedia)
 \item $13$ choices for common rank of three cards
-\item $\ncr{4}{3}=4$ choices for three cards of common rank
+\item $\ncr{4}{3}=4$ choices for three cards of rank chosen above
 \item $\ncr{12}{2}=66$ choices for ranks of two remaining cards
 \item $4$~choices for suit of fourth card 
 \item $4$~choices for suit of fifth card 
 \item So $13\cdot 4\cdot 66\cdot 4\cdot 4=54,912$ three-of-a-kinds
 \item Agrees with previous calculation
+\item So $\frac{54912}{2598960}=\frac{88}{4165}\approx 0.02113$ the probability
+of being dealt four-of-a-kind
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{situation}
+\begin{itemize}
+\item You have $3\hs,8\hs,J\hs,Q\hs,5\s$
+\item Would like to replace $5\s$ with card of suit $\hs$ to complete flush
+\item You know your opponent has two pairs (by telepathy or otherwise)
+\item She would like to exchange fifth card to complete full house
+\end{itemize}
+\end{situation}
+\end{frame}
+
+\begin{frame}
+\begin{situation}
+\begin{itemize}
+\item You have $J\hs,J\cs,4\s,4\hs$
+\item You could draw one card, hoping to complete full house
+\item You could also discard $4$'s and draw three, hoping to draw more $J$'s
+\end{itemize}
+\end{situation}
 \end{frame}
 
 \end{document}
