@@ -35,17 +35,20 @@
 \begin{itemize}
 \item Dealer deals five cards from standard deck
 to each player
+\item Selection of five cards called a \alert{hand}
+\item For simplicity, we imagine all five cards in player's hand
+\item In reality, some cards lying face up on table
 \item Players make bets and/or replace cards
-\item Finally, player with best \alert{hand} wins
-\item There are nine classes of poker hands:
+\item Finally, player with \alert{best hand} wins
+\item Nine categories of poker hands:
 \begin{tabular}{lll}
 Straight flush&Four-of-a-kind&Full house\\
 Flush&Straight&Three-of-a-kind\\
 Two pairs&One pair&High card
 \end{tabular}
-\item Best hand determined by probability of each hand
+\item Strength of hand determined by probability
 %(although listed from best to worst above)
-\item The smaller the probability, the better the hand
+\item The smaller the probability, the stonger the hand
 \item If two players have same type of hand, tie
 broken in manner depending on type of hand
 \end{itemize}
@@ -56,7 +59,7 @@ broken in manner depending on type of hand
 \item Recall that deck has cards of thirteen \alert{ranks},
 $A,K,Q,J,10,9,8,7,6,5,4,3,2$
 listed from highest to lowest
-\item Each rank has four cards, one of each suit $\hs,\ds,\cs,\s$
+\item Each rank has four cards, one of each \alert{suit} $\hs,\ds,\cs,\s$
 \item Thus deck has $13\cdot 4=52$ cards
 \end{itemize}
 \includegraphics[scale=.3]{cards}
@@ -65,27 +68,29 @@ listed from highest to lowest
 \begin{frame}{Poker basics}
 \begin{itemize}
 \item So $\ncr{52}{5}=2,598,960$ the number of possible hands
-\item Will first calculate probability that player draws particular
-\alert{hand}
+\item Will first calculate probability that player dealt
+hand of particular type
 \item This probability not altered by fact that other cards
 might have already been dealt to other players
 \item \dots provided that those cards \alert{not exposed to player}
 \item However, some variants of poker involve exposing cards
-\item If card of suit $\hs$ lying face up on table, affects probability
-that next card drawn will have suit $\hs$
 \end{itemize}
+\begin{example}
+If card of suit $\hs$ lying face up on table, affects probability
+that next card drawn will have suit $\hs$
+\end{example}
 \end{frame}
 
 \begin{frame}{Four of a kind}
 \begin{itemize}
 \item Hand called \alert{four-of-a-kind} if four cards have
 same rank
-\item Fifth card and common rank of other four cards unimportant
+\item Fifth card and common rank of first four cards unimportant
 \item However, if another player also has four-of-a-kind,
 then player with four cards of highest rank wins
 \begin{example} $8\hs,8\ds,8\cs,8\s,10\cs$ a four-of-a-kind\end{example}
 \begin{example} $9\hs,9\ds,9\cs,9\s,3\hs$ a four-of-a-kind,
-and beats previous example\end{example}
+and beats hand above\end{example}
 \end{itemize}
 \end{frame}
 
@@ -105,18 +110,18 @@ the probability of being dealt four-of-a-kind
 \begin{itemize}
 \item Hand called a \alert{full house} if three
 cards have same rank and remaining two have same rank
-\begin{example} $8\hs,8\ds,8\cs,10\s,10\s$ a full house\end{example}
+\begin{example} $8\hs,8\ds,8\cs,10\s,10\ds$ a full house\end{example}
 \item If another player has full house, then player with
 three cards of highest rank wins
-\begin{example} $9\hs,9\ds,9\cs,7\hs,7\hs$ a full house,
-and beats example above\end{example}
+\begin{example} $9\hs,9\ds,9\cs,7\hs,7\s$ a full house,
+and beats hand above\end{example}
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Counting full houses}
 \begin{itemize}
 \item First choose two common ranks
-\item $13$~ways to choose first rank,
+\item $13$~ways to choose first rank
 \item $12$~ways to choose second rank
 \item Next, choose three cards of first rank
 \item $\ncr{4}{3}=4$ ways

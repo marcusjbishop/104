@@ -501,13 +501,13 @@ from among five remaining possibilities
 \item If does not have bison, then $\ncr{5}{r}$ ways to choose
 $r$~toppings from among five remaining possibilities
 \end{itemize}
-\item So $\ncr{6}{r-1}+\ncr{6}{r}=\ncr{6}{r}$
+\item So $\ncr{5}{r-1}+\ncr{5}{r}=\ncr{6}{r}$
 \end{itemize}
 \end{frame}
 
 \begin{frame}
+\begin{theorem}\[\ncr{n}{r}=\ncr{n-1}{r-1}+\ncr{n-1}{r}\]\end{theorem}
 \begin{itemize}
-\item In general $\ncr{n}{r}=\ncr{n-1}{r-1}+\ncr{n-1}{r}$
 \item Gives slick way to generate all binomial coefficients
 \item Namely, start with $\ncr{0}{0}=1$ and fill in numbers
 below by adding
