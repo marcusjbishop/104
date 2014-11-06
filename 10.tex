@@ -31,7 +31,7 @@
 \begin{frame}\titlepage\end{frame}
 \LogoOff
 
-\begin{frame}{Poker gameplay}
+\begin{frame}{Poker outline}
 \begin{itemize}
 \item Dealer deals five cards from standard deck
 to each player
@@ -44,10 +44,11 @@ Flush&Straight&Three-of-a-kind\\
 Two pairs&One pair&High card
 \end{tabular}
 \item Best hand determined by probability
+of each hand
 (although listed from best to worst above)
 \item The smaller the probability, the better the hand
-\item If two players have same type of hand, way
-tie broken depends on type of hand
+\item If two players have same type of hand, tie
+broken in manner depending on type of hand
 \end{itemize}
 \end{frame}
 
@@ -55,34 +56,105 @@ tie broken depends on type of hand
 \begin{itemize}
 \item Recall that deck has cards of thirteen \alert{ranks},
 $A,K,Q,J,10,9,8,7,6,5,4,3,2$
+listed from highest to lowest
 \item Each rank has four cards, one of each suit $\hs,\ds,\cs,\s$
 \item Thus deck has $13\cdot 4=52$ cards
 \item So $\ncr{52}{5}=2,598,960$ the number of possible hands
 \end{itemize}
+\includegraphics[scale=.3]{cards}
 \end{frame}
 
 \begin{frame}{Four of a kind}
 \begin{itemize}
 \item Hand called \alert{four-of-a-kind} if four cards have
 same rank
-\item Fifth card and rank of other four cards unimportant
+\item Fifth card and common rank of other four cards unimportant
 \item However, if another player also has four-of-a-kind,
 then player with four cards of highest rank wins
 \begin{example} $8\hs,8\ds,8\cs,8\s,10\cs$ a four-of-a-kind\end{example}
-\begin{example} $9\hs,9\ds,9\cs,9\s,3\hs$ a four-of-a-kind
+\begin{example} $9\hs,9\ds,9\cs,9\s,3\hs$ a four-of-a-kind,
 and beats previous example\end{example}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Counting four-of-a-kind hands}
+\begin{frame}{Counting four-of-a-kinds }
 \begin{itemize}
 \item How many ways to form a four-of-a-kind?
-\item Thirteen ways to choose rank of four cards of same rank
+\item Thirteen ways to choose common rank of four cards
 \item $48$ cards remain after removing four cards of same rank
 \item So fifth card can be any of remaining $48$
 \item Thus $13\cdot 48=624$ possible four-of-a-kinds
 \item So $\frac{624}{2598960}=\frac{1}{4165}\approx 0.00024$
 the probability of being dealt four-of-a-kind
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Full house}
+\begin{itemize}
+\item Hand called a \alert{full house} if three
+cards have same rank and remaining two have same rank
+\begin{example} $8\hs,8\ds,8\cs,10\s,10\s$ a full house\end{example}
+\item If another player has full house, then player with
+three cards of highest rank wins
+\begin{example} $9\hs,9\ds,9\cs,7\hs,7\hs$ a full house,
+and beats example above\end{example}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Counting full houses}
+\begin{itemize}
+\item First choose two common ranks
+\item $13$~ways to choose first rank,
+\item $12$~ways to choose second rank
+\item Next, choose three cards of first rank
+\item $\ncr{4}{3}=4$ ways
+\item Finally, choose two cards of second rank
+\item $\ncr{4}{2}=6$ ways
+\item So $13\cdot 12\cdot 4\cdot 6=3744$ possible full houses
+\item So $\frac{3744}{2598960}=\frac{6}{4165}\approx 0.01444$
+the probability of begin dealt a full house
+\item Note that $\frac{6}{4165}>\frac{1}{4165}$,
+so four-of-a-kind ranks \alert{higher} than full house
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Three-of-a-kind}
+\begin{itemize}
+\item Hand called \alert{three-of-a-kind} if
+three cards have same rank
+\item Remaining two cards should have rank different
+from first three (else hand is four-of-a-kind)
+\item Also, remaining cards should have rank
+different from one another (else hand is full house)
+\begin{example} $8\hs,8\ds,8\cs,Q\hs,10\cs$ a three-of-a-kind\end{example}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Counting three-of-a-kinds}
+\begin{itemize}
+\item $13$ choices for common rank of three cards
+\item $\ncr{4}{3}=4$ choices for three cards of common rank
+\item $52-4=48$ cards have rank different from rank chosen above
+\item So $48$~choices for fourth card
+\item $48-4=44$~cards have suit different from two suits chosen above
+\item So $44$~choices for fifth card
+\item However, each choice of fourth and fifth cards appears
+\alert{twice}
+\item Hence divide final answer by $2$
+\item So $\frac{13\cdot 4\cdot 48\cdot 44}{2}=54,912$ three-of-a-kinds
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Another way to count three-of-a-kinds}
+\begin{itemize}
+\item (Method courtesy of Wikipedia)
+\item $13$ choices for common rank of three cards
+\item $\ncr{4}{3}=4$ choices for three cards of common rank
+\item $\ncr{12}{2}=66$ choices for ranks of two remaining cards
+\item $4$~choices for suit of fourth card 
+\item $4$~choices for suit of fifth card 
+\item So $13\cdot 4\cdot 66\cdot 4\cdot 4=54,912$ three-of-a-kinds
+\item Agrees with previous calculation
 \end{itemize}
 \end{frame}
 
