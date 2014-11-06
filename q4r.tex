@@ -1,0 +1,60 @@
+\documentclass[answers,12pt]{exam}
+\usepackage{color,rotating}
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\usepackage[euler-digits]{eulervm}
+\everymath{\displaystyle}
+\usepackage{amsmath,charter}
+\title{Math 104 Quiz 4\\Red Form}
+\date{Wednesday 12 November}
+\usepackage{tensor}
+\newcommand\npr[2]{\tensor[_{#1}]P{_{#2}}}
+\newcommand\ncr[2]{\tensor[_{#1}]C{_{#2}}}
+\begin{document}
+\maketitle
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+Using a Number~2 pencil record your student ID on your answer sheet.
+Then answer the questions below on the answer sheet.
+This quiz has \numquestions~questions printed on \numpages~pages.
+All answer choices have been rounded to three decimal places.
+}}}
+\end{center}
+
+\begin{questions}
+
+\question A poker hand is called a {\em spade flush}
+if all five cards have suit $\spadesuit$. What is
+the number of possible spade flushes?\\
+\begin{oneparchoices}
+\correctchoice $1287$
+\choice $154,440$ % P(13,5)
+\end{oneparchoices}
+
+\question What is $\ncr{12}{5}$?\\
+\begin{oneparchoices}
+\choice $60$ % 12 * 5
+\correctchoice $792$
+\choice $95,040$ % P(12,5)
+\end{oneparchoices}
+
+\question How many subsets of size four does the set
+$\left\{a,b,c,d,e,f,g\right\}$ have?\\
+\begin{oneparchoices}
+\choice $15$ %C(6,4)
+\correctchoice $35$
+\choice $128$ % 2^7
+\choice $360$ % P(6,4)
+\choice $840$ % P(7,4)
+\end{oneparchoices}
+
+\question How many subsets does the set
+$\left\{a,b,c,d,e,f,g\right\}$ have?\\
+\begin{oneparchoices}
+\choice $7$ % size of set
+\choice $14$ % 2 * 7
+\choice $49$ % 7 * 7
+\correctchoice $128$
+\end{oneparchoices}
+
+\end{questions}
+\end{document}
