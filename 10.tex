@@ -48,7 +48,7 @@ Two pairs&One pair&High card
 \end{tabular}
 \item Strength of hand determined by probability
 %(although listed from best to worst above)
-\item The smaller the probability, the stonger the hand
+\item The smaller the probability, the stronger the hand
 \item If two players have same type of hand, tie
 broken in manner depending on type of hand
 \end{itemize}
@@ -185,6 +185,32 @@ of being dealt four-of-a-kind
 \item She would like to exchange fifth card to complete full house
 \end{itemize}
 \end{situation}
+\begin{itemize}
+\item $52-5-5=42$ cards remain in deck
+\item You have four hearts, so $13-4=9$ hearts remain in deck
+\item So you receive $\hs$ with probability $\frac{9}{42}$
+\item But $\frac{9}{42}$ not your probability of winning!
+\item Opponent must also \alert{fail} to complete her full house,
+since full house beats flush
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Opponent has two pairs
+\item For example, she might have $4\s,4\cs,5\ds,5\s$
+\item So she completes full house if she receives $4$ or $5$
+\item ($4\s,4\cs,5\ds,5\s$ introduced for concreteness; we don't
+know what cards she has)
+\item So she \alert{fails} to complete full house
+if rank of card drawn not $4$ \alert{and} not $5$
+\item Since she has two $\s$ and two $cs$, four remain
+in deck
+\item So $42-4=38$ cards in deck are not $4$ and not $5$
+\item Thus $\frac{38}{42}$ her probability of failing
+\item So $\frac{9}{42}\cdot\frac{38}{42}\approx 0.1939$
+your probability of winning
+\end{itemize}
 \end{frame}
 
 \begin{frame}
