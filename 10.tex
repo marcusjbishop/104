@@ -216,7 +216,7 @@ your probability of winning
 \begin{itemize}
 \item You have $J\hs,J\cs,4\s,4\hs,Q\cs$
 \item You could exchange one card, hoping to complete full house
-\item You could also exchange $4\s,4\hs,Q\cs$, hoping to draw more $J$'s
+\item You could also exchange $4\s,4\hs,Q\cs$, hoping to build better hand
 \end{itemize}
 \end{situation}
 \begin{itemize}
@@ -229,14 +229,17 @@ of completing full house
 \begin{frame}
 \begin{itemize}
 \item Suppose instead you exchange $4\s,4\hs,Q\cs$
-\item Want to calculate probability you receive one or two $J$'s
-\item Calculate instead probability this \alert{fails} to happen
-\item Two of 47 cards unknown to you $J$'s
-\item So $45$ cards \alert{not} $J$'s
-\item $\frac{45}{47}\cdot\frac{44}{46}\cdot\frac{43}{45}\approx 0.8777$
-the probability of \alert{not} receiving any $J$'s
-\item So $1-0.8777=0.1223$ the probability of completing
-three-of-a-kind or four-of-a-kind
+\item Want to calculate probability one of new cards $J$
+\item Then you have three-of-a-kind
+\item If by chance two remaining cards new have same rank,
+then you have full house
+\item $47$ cards remain unknown to you
+\item They include two $J$'s
+\item So $45$ unknown cards have rank other than $J$
+\item So $\frac{45}{47}\cdot\frac{44}{46}\cdot\frac{2}{45}
++\frac{45}{47}\cdot\frac{2}{46}\cdot\frac{44}{45}
++\frac{2}{47}\cdot\frac{45}{46}\cdot\frac{44}{45}\approx 0.1221$
+the probability of receiving one $J$ and two cards of rank other than $J$
 \end{itemize}
 \end{frame}
 
