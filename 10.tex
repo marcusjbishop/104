@@ -186,10 +186,10 @@ of being dealt four-of-a-kind
 \end{itemize}
 \end{situation}
 \begin{itemize}
-\item $52-5-5=42$ cards remain in deck
-\item You have four hearts, so $13-4=9$ hearts remain in deck
-\item So you receive $\hs$ with probability $\frac{9}{42}$
-\item But $\frac{9}{42}$ not your probability of winning!
+\item $52-5=47$ cards remain unknown to you
+\item You have four $\hs$'s so nine $\hs$'s remain
+\item So you receive $\hs$ with probability $\frac{9}{47}$
+\item But $\frac{9}{47}$ \alert{not} your probability of winning!
 \item Opponent must also \alert{fail} to complete her full house,
 since full house beats flush
 \end{itemize}
@@ -198,17 +198,15 @@ since full house beats flush
 \begin{frame}
 \begin{itemize}
 \item Opponent has two pairs
-\item For example, she might have $4\s,4\cs,5\ds,5\s$
+\item For concreteness, suppose she has $4\s,4\cs,5\ds,5\s$
 \item So she completes full house if she receives $4$ or $5$
-\item ($4\s,4\cs,5\ds,5\s$ introduced for concreteness; we don't
-know what cards she has)
 \item So she \alert{fails} to complete full house
-if rank of card drawn not $4$ \alert{and} not $5$
-\item Since she has two $\s$ and two $cs$, four remain
-in deck
-\item So $42-4=38$ cards in deck are not $4$ and not $5$
-\item Thus $\frac{38}{42}$ her probability of failing
-\item So $\frac{9}{42}\cdot\frac{38}{42}\approx 0.1939$
+if rank of card dealt not $4$ \alert{and} not $5$
+\item Since she has two $4$'s, two remain unknown to her
+\item Since has two $5$'s, two remain unknown to her
+\item So $47-4=43$ unknown cards are not $4$ and not $5$
+\item Thus $\frac{43}{47}$ her probability of failing
+\item So $\frac{9}{47}\cdot\frac{43}{47}\approx 0.1752$
 your probability of winning
 \end{itemize}
 \end{frame}
@@ -216,11 +214,30 @@ your probability of winning
 \begin{frame}
 \begin{situation}
 \begin{itemize}
-\item You have $J\hs,J\cs,4\s,4\hs$
-\item You could draw one card, hoping to complete full house
-\item You could also discard $4$'s and draw three, hoping to draw more $J$'s
+\item You have $J\hs,J\cs,4\s,4\hs,Q\cs$
+\item You could exchange one card, hoping to complete full house
+\item You could also exchange $4\s,4\hs,Q\cs$, hoping to draw more $J$'s
 \end{itemize}
 \end{situation}
+\begin{itemize}
+\item Two of $47$ cards unknown to you are $J's$, two are $4$'s
+\item Thus $\frac{4}{47}=\frac{1}{12}\approx 0.0851$ you probability
+of completing full house
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Suppose instead you exchange $4\s,4\hs,Q\cs$
+\item Want to calculate probability you receive one or two $J$'s
+\item Calculate instead probability this \alert{fails} to happen
+\item Two of 47 cards unknown to you $J$'s
+\item So $45$ cards \alert{not} $J$'s
+\item $\frac{45}{47}\cdot\frac{44}{46}\cdot\frac{43}{45}\approx 0.8777$
+the probability of \alert{not} receiving any $J$'s
+\item So $1-0.8777=0.1223$ the probability of completing
+three-of-a-kind or four-of-a-kind
+\end{itemize}
 \end{frame}
 
 \end{document}
