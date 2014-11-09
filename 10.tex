@@ -140,9 +140,10 @@ so four-of-a-kind beats full house
 \begin{example} $8\hs,8\ds,8\cs,10\s,10\ds$ a full house\end{example}
 \begin{itemize}
 \item $13\cdot 12\cdot\ncr{4}{3}\cdot\ncr{4}{2}$ possible full houses
-\item $13$ choices for first rank, $8$ in example
+(see previous slide)
+\item $13$ choices for first rank, $8$ in example above
 \item At this stage have chosen
-$8\bl,8\bl,8\bl,\bl\bl,\bl\bl$
+$8\bl,8\bl,8\bl,\bl\;\bl,\bl\;\bl$
 \item $12$ choices for second rank, $10$ in example
 \item At this stage have chosen
 $8\bl,8\bl,8\bl,10\bl,10\bl$
@@ -160,25 +161,25 @@ $8\hs,8\ds,8\cs,10\s,10\ds$
 \begin{frame}{Two pairs}
 \begin{itemize}
 \item Hand called \alert{two pairs} if two
-cards have same rank and two remaining have same rank
-\item Rank of second pair should be different from rank of first,
+cards have same rank and another two have same rank
+\item Rank of second pair should be different than rank of first,
 else hand a four-of-a-kind
-\item Fifth card should have rank other than ranks
-of first four, else hand a full house
+\item Fifth card should have rank different than ranks
+of remaining cards, else hand a full house
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \begin{itemize}
-\begin{example} $2\hs,2\ds,Q\cs,Q\s,10\ds$ two pairs\end{example}
+\begin{example} $2\hs,2\ds,Q\cs,Q\s,10\ds$ has two pairs\end{example}
 \item If another player has two pairs, tie broken
 by comparing highest ranking pairs
-\begin{example} $K\s,K\hs,7\ds,7\s,A\s$ two pairs,
-and beats hand above\end{example}
+\begin{example} $K\s,K\hs,7\ds,7\s,A\s$ has two pairs,
+and beats hand above, since $K$ higher than $Q$\end{example}
 \item If two players have
 highest ranking pair of same rank, then tie broken
 by comparing lowest ranking pairs
-\begin{example} $K\cs,K\ds,J\hs,J\cs,3\hs$ two pairs,
+\begin{example} $K\cs,K\ds,J\hs,J\cs,3\hs$ has two pairs,
 and beats both hands above\end{example}
 \end{itemize}
 \end{frame}
@@ -193,7 +194,7 @@ and beats both hands above\end{example}
 \item $\ncr{4}{2}=6$ ways
 \item Finally, choose fifth card
 \item $52-8=44$ remaining cards have ranks different
-from ranks chosen above
+than ranks chosen above
 \item So $78\cdot 6\cdot 6\cdot 44=123,552$ possible two pairs
 \item So $\frac{123552}{2598960}=\frac{198}{4165}\approx 0.04754$
 the probability of begin dealt two pairs
@@ -209,8 +210,18 @@ cards, while other common rank has \alert{two}
 \item In two pairs, $13\cdot 12$ would have counted
 each hand \alert{twice}
 \item So we instead used
-$\ncr{13}{2}=\frac{13\cdot 12}{2}$
-\item $2$ in denominator accounts for duplication
+$\ncr{13}{2}=\frac{13\cdot 12}{2!}$
+\item $2!$ in denominator accounts for duplication
+\item Analogous to factorials in denominator of number
+of anagrams
+\begin{example}
+\begin{itemize}
+\item Word \alert{book} has
+$\frac{4!}{2!}=12$ anagrams
+\item Role of $2!$ to eliminate duplicate anagrams
+resulting from swapping o's
+\end{itemize}
+\end{example}
 \end{itemize}
 \end{frame}
 
