@@ -90,7 +90,7 @@ same rank
 then player with four cards of highest rank wins
 \begin{example} $8\hs,8\ds,8\cs,8\s,10\cs$ a four-of-a-kind\end{example}
 \begin{example} $9\hs,9\ds,9\cs,9\s,3\hs$ a four-of-a-kind,
-and beats hand above\end{example}
+beats hand above\end{example}
 \end{itemize}
 \end{frame}
 
@@ -98,7 +98,7 @@ and beats hand above\end{example}
 \begin{itemize}
 \item How many ways to form four-of-a-kind?
 \item Thirteen ways to choose common rank of four cards
-\item $48$ cards have rank different from common rank
+\item $52-4=48$ cards remain
 \item So $48$ ways to choose fifth card
 \item Thus $13\cdot 48=624$ possible four-of-a-kinds
 \item So $\frac{624}{2598960}=\frac{1}{4165}\approx 0.00024$
@@ -110,11 +110,13 @@ the probability of being dealt four-of-a-kind
 \begin{itemize}
 \item Hand called a \alert{full house} if three
 cards have same rank and remaining two have same rank
-\begin{example} $8\hs,8\ds,8\cs,10\s,10\ds$ a full house\end{example}
+\begin{example} $8\hs,8\ds,8\cs,10\s,10\ds$ a full house,
+an \alert{eights-over-tens full house}\end{example}
 \item If another player has full house, then player with
 three cards of highest rank wins
 \begin{example} $9\hs,9\ds,9\cs,7\hs,7\s$ a full house,
-and beats hand above\end{example}
+a \alert{nines-over-sevens full house}
+beats hand above\end{example}
 \end{itemize}
 \end{frame}
 
@@ -128,7 +130,7 @@ and beats hand above\end{example}
 \item Finally, choose two cards of second rank
 \item $\ncr{4}{2}=6$ ways
 \item So $13\cdot 12\cdot 4\cdot 6=3744$ possible full houses
-\item So $\frac{3744}{2598960}=\frac{6}{4165}\approx 0.01444$
+\item So $\frac{3744}{2598960}=\frac{6}{4165}\approx 0.00144$
 the probability of begin dealt a full house
 \item Note that $\frac{6}{4165}>\frac{1}{4165}$,
 so four-of-a-kind beats full house
@@ -142,25 +144,25 @@ so four-of-a-kind beats full house
 \item $13\cdot 12\cdot\ncr{4}{3}\cdot\ncr{4}{2}$ possible full houses
 (see previous slide)
 \item $13$ choices for first rank, $8$ in example above
-\item At this stage have chosen
+\item At this stage, have chosen
 $8\bl,8\bl,8\bl,\bl\;\bl,\bl\;\bl$
 \item $12$ choices for second rank, $10$ in example
-\item At this stage have chosen
+\item At this stage, have chosen
 $8\bl,8\bl,8\bl,10\bl,10\bl$
 \item $\ncr{4}{3}$ choices of suits of cards of first
 rank, $\hs,\ds,\cs$ in example
-\item At this stage have chosen
+\item At this stage, have chosen
 $8\hs,8\ds,8\cs,10\bl,10\bl$
 \item $\ncr{4}{2}$ choices of suits of cards of second
 rank, $\s,\ds$ in example
-\item At this stage have chosen
+\item At this stage, have chosen
 $8\hs,8\ds,8\cs,10\s,10\ds$
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Two pairs}
+\begin{frame}{Two-pair}
 \begin{itemize}
-\item Hand called \alert{two pairs} if two
+\item Hand called \alert{two-pair} if two
 cards have same rank and another two have same rank
 \item Rank of second pair should be different than rank of first,
 else hand a four-of-a-kind
@@ -171,23 +173,23 @@ of remaining cards, else hand a full house
 
 \begin{frame}
 \begin{itemize}
-\begin{example} $2\hs,2\ds,Q\cs,Q\s,10\ds$ has two pairs\end{example}
-\item If another player has two pairs, tie broken
+\begin{example} $2\hs,2\ds,Q\cs,Q\s,10\ds$ a two-pair\end{example}
+\item If another player has two-pairs, tie broken
 by comparing highest ranking pairs
-\begin{example} $K\s,K\hs,7\ds,7\s,A\s$ has two pairs,
-and beats hand above, since $K$ higher than $Q$\end{example}
+\begin{example} $K\s,K\hs,7\ds,7\s,A\s$ a two-pair,
+beats hand above, since $K$ higher than $Q$\end{example}
 \item If two players have
 highest ranking pair of same rank, then tie broken
 by comparing lowest ranking pairs
-\begin{example} $K\cs,K\ds,J\hs,J\cs,3\hs$ has two pairs,
-and beats both hands above\end{example}
+\begin{example} $K\cs,K\ds,J\hs,J\cs,3\hs$ a two-pair,
+beats both hands above\end{example}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Counting two pairs}
+\begin{frame}{Counting two-pairs}
 \begin{itemize}
 \item First choose two common ranks
-\item $\ncr{13}{2}=78$~ways to choose two ranks
+\item $\ncr{13}{2}=78$~ways to choose ranks
 \item Next, choose two cards of first rank
 \item $\ncr{4}{2}=6$ ways
 \item Next, choose two cards of second rank
@@ -195,9 +197,9 @@ and beats both hands above\end{example}
 \item Finally, choose fifth card
 \item $52-8=44$ remaining cards have ranks different
 than ranks chosen above
-\item So $78\cdot 6\cdot 6\cdot 44=123,552$ possible two pairs
+\item So $78\cdot 6\cdot 6\cdot 44=123,552$ possible two-pairs
 \item So $\frac{123552}{2598960}=\frac{198}{4165}\approx 0.04754$
-the probability of begin dealt two pairs
+the probability of begin dealt two-pair
 \end{itemize}
 \end{frame}
 
@@ -207,13 +209,13 @@ the probability of begin dealt two pairs
 but with $13\cdot 12$ in full house calculation?
 \item Because in full house, one common rank has \alert{three}
 cards, while other common rank has \alert{two}
-\item In two pairs, $13\cdot 12$ would have counted
+\item In two-pair, $13\cdot 12$ would have counted
 each hand \alert{twice}
 \item So we instead used
 $\ncr{13}{2}=\frac{13\cdot 12}{2!}$
 \item $2!$ in denominator accounts for duplication
-\item Analogous to factorials in denominator of number
-of anagrams
+\item Analogous to factorials in denominator of
+anagram calculation
 \begin{example}
 \begin{itemize}
 \item Word \alert{book} has
@@ -230,9 +232,9 @@ resulting from swapping o's
 \item Hand called \alert{three-of-a-kind} if
 three cards have same rank
 \item Remaining two cards should have rank different
-from first three (else hand is four-of-a-kind)
+than first three (else hand is four-of-a-kind)
 \item Also, remaining cards should have rank
-different from one another (else hand is full house)
+different than one another (else hand is full house)
 \begin{example} $8\hs,8\ds,8\cs,Q\hs,10\cs$ a three-of-a-kind\end{example}
 \end{itemize}
 \end{frame}
@@ -241,9 +243,9 @@ different from one another (else hand is full house)
 \begin{itemize}
 \item $13$ choices for common rank of three cards
 \item $\ncr{4}{3}=4$ choices for three cards of rank chosen above
-\item $52-4=48$ cards have rank different from rank chosen above
+\item $52-4=48$ cards have rank different than rank chosen above
 \item So $48$~choices for fourth card
-\item $48-4=44$~cards have rank different from two ranks chosen above
+\item $48-4=44$~cards have rank different than two ranks chosen above
 \item So $44$~choices for fifth card
 \item However, order in which fourth and fifth cards selected unimportant
 \item $48\cdot 44$ counts each choice \alert{twice}
@@ -271,8 +273,8 @@ of being dealt four-of-a-kind
 \begin{itemize}
 \item You have $3\hs,8\hs,J\hs,Q\hs,5\s$
 \item Would like to replace $5\s$ with card of suit $\hs$ to complete flush
-\item You know your opponent has two pairs (by telepathy or otherwise)
-\item She would like to exchange fifth card to complete full house
+\item You know your opponent has two-pair (by telepathy or otherwise)
+\item You surmise she would like to exchange fifth card to complete full house
 \end{itemize}
 \end{situation}
 \begin{itemize}
@@ -305,13 +307,14 @@ your probability of winning
 \begin{situation}
 \begin{itemize}
 \item You have $J\hs,J\cs,4\s,4\hs,Q\cs$
-\item You could exchange one card, hoping to complete full house
+\item You could exchange $Q\cs$, hoping to complete full house
 \item You could also exchange $4\s,4\hs,Q\cs$, hoping to build better hand
 \end{itemize}
 \end{situation}
 \begin{itemize}
+\item Suppose you exchange $Q\cs$
 \item Two of $47$ cards unknown to you are $J's$, two are $4$'s
-\item Thus $\frac{4}{47}=\frac{1}{12}\approx 0.0851$ you probability
+\item Thus $\frac{4}{47}=\frac{1}{12}\approx 0.0851$ your probability
 of completing full house
 \end{itemize}
 \end{frame}
