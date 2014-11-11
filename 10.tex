@@ -325,15 +325,88 @@ of completing full house
 \item First calculate probability that exactly one of new cards
 has rank $J$
 \item Then you have three-of-a-kind
-\item Also, if two remaining cards have same rank,
-then you have full house
+\item Additionally, if other two cards have same rank,
+then you have full house, a \alert{jacks-over-something full house}
 \item $47$ cards remain unknown to you
-\item They include two $J$'s
-\item So $45$ unknown cards have rank other than $J$
+\item They include two jacks
+\item So $45$ unknown cards have rank other than jack
 \item So $\frac{45}{47}\cdot\frac{44}{46}\cdot\frac{2}{45}
 +\frac{45}{47}\cdot\frac{2}{46}\cdot\frac{44}{45}
 +\frac{2}{47}\cdot\frac{45}{46}\cdot\frac{44}{45}\approx 0.1221$
-the probability of receiving one $J$ and two cards other than $J$
+the probability of jacks-over-something full house
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Assuming you exchange $4\s,4\hs,Q\cs$
+might instead receive \alert{two} jacks
+\item Then you have four-of-a-kind
+\item $47$ cards remain unknown to you, two of which jacks
+\item So $45$ unknown cards have rank other than jack
+\item Then \[\frac{45}{47}\cdot\frac{2}{46}\cdot\frac{1}{45}
++\frac{2}{47}\cdot\frac{45}{46}\cdot\frac{1}{45}
++\frac{2}{47}\cdot\frac{1}{46}\cdot\frac{45}{45}
+=\frac{3}{1081}\approx 0.0028\]
+your probability of four-of-a-kind
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Assuming you exchange $4\s,4\hs,Q\cs$
+might instead receive three cards of same rank
+\item Then you have \alert{something-over-jacks full house}
+\item First choose common rank of three cards
+\item $10$ ways to choose rank other than $J,4,Q$
+\item Then choose three cards of this rank
+\item $\ncr{4}{3}=4$ ways to choose cards
+\item So $10\cdot 40$ ways to choose three cards of
+same rank other than $J,4,Q$
+\item Also, three queens remain, so $41$ ways
+to choose three cards of same rank
+\item $\ncr{47}{3}=16,215$ possible ways to
+choose three of remaining $47$ cards
+\item Thus $\frac{41}{16215}\approx 0.0025$
+your probability of something-over-jacks full house
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+An alternate something-over-jacks calculation:
+\begin{itemize}
+\item $40$ of remaining $47$ cards of rank different than $J,4,Q$
+\item So $\frac{40}{47}$ the probability of drawing
+a card of rank different than $J,4,Q$
+\item Afterwards three of remaining $46$ cards have same rank as first card
+\item Afterwards two of remaining $45$ cards have same rank
+as first two
+\item So $\frac{40}{47}\cdot\frac{3}{46}\cdot\frac{2}{45}
+=\frac{8}{3243}\approx 0.0025$ the probability
+of drawing three cards of same rank
+\item Note that calculation on previous slide includes
+possibility of receiving $Q\hs,Q\ds,Q\s$, excluded from this calculation
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Summary}
+\begin{itemize}
+\item You have $J\hs,J\cs,4\s,4\hs,Q\cs$
+\item If you discard $Q\cs$ then $0.0851$
+your probability of completing full house
+\item If you discard $4\s,4\hs,Q\cs$ then
+\begin{itemize}
+\item $0.1221$ your probability of three-of-a-kind
+(including jacks-over-something full house)
+\item $0.0028$ your probability of four-of-a-kind
+\item $0.0025$ your probability of something-over-jacks full house
+\end{itemize}
+\item So $0.1221+0.0028+0.0025=0.1274$ your probability
+of three-of-a-kind or better
+\item $0.1274$ approximately one chance in eight
+\item Thus chances of winning much better if you
+if you discard $4\s,4\hs,Q\cs$
+\item \dots unless original two-pair fairly certain to win
 \end{itemize}
 \end{frame}
 
