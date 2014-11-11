@@ -296,8 +296,8 @@ since full house beats flush
 if rank of card dealt not $4$ \alert{and} not $5$
 \item Since she has two $4$'s, two remain unknown to her
 \item Since has two $5$'s, two remain unknown to her
-\item So $47-4=43$ unknown cards are not $4$ and not $5$
-\item Thus $\frac{43}{47}$ her probability of failing
+\item So $47-2-2=43$ unknown cards are not $4$ and not $5$
+\item Thus $\frac{43}{47}$ her probability of \alert{failing}
 \item So $\frac{9}{47}\cdot\frac{43}{47}\approx 0.1752$
 your probability of winning
 \end{itemize}
@@ -313,7 +313,7 @@ your probability of winning
 \end{situation}
 \begin{itemize}
 \item Suppose you exchange $Q\cs$
-\item Two of $47$ cards unknown to you are $J's$, two are $4$'s
+\item Two of $47$ cards unknown to you are jacks, two are $4$'s
 \item Thus $\frac{4}{47}=\frac{1}{12}\approx 0.0851$ your probability
 of completing full house
 \end{itemize}
@@ -323,13 +323,15 @@ of completing full house
 \begin{itemize}
 \item Suppose instead you exchange $4\s,4\hs,Q\cs$
 \item First calculate probability that exactly one of new cards
-has rank $J$
+a jack
 \item Then you have three-of-a-kind
-\item Additionally, if other two cards have same rank,
+\item Additionally, if last two cards have same rank,
 then you have full house, a \alert{jacks-over-something full house}
-\item $47$ cards remain unknown to you
-\item They include two jacks
+\item $47$ cards remain unknown to you, two of which jacks
 \item So $45$ unknown cards have rank other than jack
+\item Want to receive one jack and two non-jacks
+\item Could happen in three ways, since jack could be
+first, second, or third card
 \item So $\frac{45}{47}\cdot\frac{44}{46}\cdot\frac{2}{45}
 +\frac{45}{47}\cdot\frac{2}{46}\cdot\frac{44}{45}
 +\frac{2}{47}\cdot\frac{45}{46}\cdot\frac{44}{45}\approx 0.1221$
@@ -349,6 +351,21 @@ might instead receive \alert{two} jacks
 +\frac{2}{47}\cdot\frac{1}{46}\cdot\frac{45}{45}
 =\frac{3}{1081}\approx 0.0028\]
 your probability of four-of-a-kind
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+An alternate four-of-a-kind calculation:
+\begin{itemize}
+\item You discard $4\s,4\hs,Q\cs$ and receive three new cards
+\item $47$ cards remain unknown to you, two of which jacks
+\item $\ncr{47}{3}=16,215$ ways to receive $3$ cards from remaining $47$
+\item How many combinations have two jacks?
+\item If two cards are jacks, then third card not a jack
+\item $45$ non-jacks remain, so $45$ combinations
+have two jacks
+\item Thus $\frac{45}{16215}=\frac{3}{1081}\approx 0.0028$
+the probability of four-of-a-kind
 \end{itemize}
 \end{frame}
 
@@ -403,10 +420,10 @@ your probability of completing full house
 \end{itemize}
 \item So $0.1221+0.0028+0.0025=0.1274$ your probability
 of three-of-a-kind or better
-\item $0.1274$ approximately one chance in eight
+\item $0.1274\approx\frac{1}{8}$
 \item Thus chances of winning much better if you
 if you discard $4\s,4\hs,Q\cs$
-\item \dots unless original two-pair fairly certain to win
+\item \dots unless original two-pair certain to win
 \end{itemize}
 \end{frame}
 
