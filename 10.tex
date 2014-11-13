@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer}
+\documentclass[handout,xcolor=dvipsnames]{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -378,7 +378,7 @@ might instead receive three cards of same rank
 \item $10$ ways to choose rank other than $J,4,Q$
 \item Then choose three cards of this rank
 \item $\ncr{4}{3}=4$ ways to choose cards
-\item So $10\cdot 40$ ways to choose three cards of
+\item So $10\cdot 4=40$ ways to choose three cards of
 same rank other than $J,4,Q$
 \item Also, three queens remain, so $41$ ways
 to choose three cards of same rank
@@ -433,7 +433,16 @@ if you discard $4\s,4\hs,Q\cs$
 \item Quickly became popular in west-coast
 saloons and cigar stores
 \item Thanks to video chip, video poker appears in late 70's
-\item Video poker increasingly popular in casinos and online
+\item More history:
+\begin{itemize}
+\item \alert{Space Invaders}, June 1978
+\item \alert{Asteroids}, November 1979, Atari's best-selling game of all time
+\item \alert{Pac-Man}, May 1980
+\item \alert{Draw Poker}, 1979
+\end{itemize}
+\item Video poker increasingly popular in casinos throughout 80's
+\item Less intimidating than casino table games
+\item Today increasingly popular online
 \end{itemize}
 \end{frame}
 
@@ -447,8 +456,10 @@ an implementation of video poker
 \item Player chooses $0$--$5$ cards to replace with new cards
 \item If hand has pair of jacks or better, machine pays
 player $\text{bet}\times\text{payoff}$, where payoff shown in
-following table:
+following schedule:
 \end{itemize}
+\setbeamercolor{mycolor}{bg=Lavender}
+\begin{beamercolorbox}{mycolor}
 \begin{tabular}{lr}
 Hand&Payoff\\\hline
 Royal flush&2500\\
@@ -461,6 +472,37 @@ Three-of-a-kind&3\\
 Two-pair&2\\
 Jacks or better&1
 \end{tabular}
+\end{beamercolorbox}
+\end{multicols}
+\end{frame}
+
+\begin{frame}{Observations}
+\begin{multicols}{2}
+\begin{itemize}
+\item Royal flush its own category
+\item Payoffs vary among implementations
+\item Payoff shows amount player receives, not net proceeds
+\item Hands listed according to increasing probability
+\item However, payoffs not proportional to probabilities
+\item Last entry refers to
+single pair of jacks, queens, or kings, no better
+\item No payoff for other pairs
+\end{itemize}
+\setbeamercolor{mycolor}{bg=Lavender}
+\begin{beamercolorbox}{mycolor}
+\begin{tabular}{lr}
+Hand&Payoff\\\hline
+Royal flush&2500\\
+Straight flush&50\\
+Four-of-a-kind&25\\
+Full house&8\\
+Flush&5\\
+Straight&4\\
+Three-of-a-kind&3\\
+Two-pair&2\\
+Jacks or better&1
+\end{tabular}
+\end{beamercolorbox}
 \end{multicols}
 \end{frame}
 
