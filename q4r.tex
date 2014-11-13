@@ -22,17 +22,6 @@ All answer choices have been rounded to three decimal places.
 
 \begin{questions}
 
-\question A poker hand is called a {\em spade flush}
-if all five cards have suit $\spadesuit$. What is
-the number of possible spade flushes?\\
-\begin{oneparchoices}
-\correctchoice $1287$
-\choice $5148$ % number of flushes
-\choice $5108$ % number of mere flushes
-\choice $154,440$ % P(13,5)
-\choice $2,598,960$ % C(52,5)
-\end{oneparchoices}
-
 \question What is $\ncr{12}{5}$?\\
 \begin{oneparchoices}
 \choice $60$ % 12 * 5
@@ -42,8 +31,8 @@ the number of possible spade flushes?\\
 \choice $3,991,680$ % P(12,7)
 \end{oneparchoices}
 
-\question How many subsets of size four does the set
-$\left\{a,b,c,d,e,f,g\right\}$ have?\\
+\question In how many ways can a four-member subcommittee
+of a seven-member committee be chosen?\\
 \begin{oneparchoices}
 \choice $4$ % duh!
 \choice $15$ %C(6,4)
@@ -62,6 +51,17 @@ $\left\{a,b,c,d,e,f,g\right\}$ have?\\
 \correctchoice $128$
 \end{oneparchoices}
 
+\question Customers order pizzas at Marcus's Pizza
+by selecting any number of five possible toppings.
+How many different ways to order a pizza are there?\\
+\begin{oneparchoices}
+\choice $5$ % number of toppings
+\choice $10$ % C(5,2) or 2*5
+\choice $20$ % P(5,2)
+\choice $25$ % 5 * 5
+\correctchoice $32$
+\end{oneparchoices}
+
 \question You have ten books, but only six
 of them will fit on your shelf. In how many 
 ways can six of the books be arranged on the shelf?\\
@@ -71,6 +71,27 @@ ways can six of the books be arranged on the shelf?\\
 \choice $5040$ % P(10,4)
 \correctchoice $151,200$
 \choice $3,628,800$ % 10!
+\end{oneparchoices}
+
+\question A poker hand is called a {\em spade flush}
+if all five cards have suit $\spadesuit$. What is
+the number of possible spade flushes?\\
+\begin{oneparchoices}
+\correctchoice $1287$
+\choice $5148$ % number of flushes
+\choice $5108$ % number of mere flushes
+\choice $154,440$ % P(13,5)
+\choice $2,598,960$ % C(52,5)
+\end{oneparchoices}
+
+\question 
+How many five-card poker hands have two-pair but nothing better?\\
+\begin{oneparchoices}
+\choice $2,808$ % didn't choose last card
+\correctchoice $123,552$
+\choice $248,832$ % used 13*12 rather than C(13,2)
+\choice $2,598,960$ % C(52,5)
+\choice $65,812,032$ % C(52,2)C(48,2)C(44,1)
 \end{oneparchoices}
 
 \question Playing poker, you have the cards
@@ -84,16 +105,6 @@ will complete your hand to a full house?\\
 \choice $\frac{2}{47}$ % counted only one of K,2
 \choice $\frac{1}{13}$ % didn't eliminate 5 known cards from total
 \correctchoice $\frac{4}{47}$
-\end{oneparchoices}
-
-\question 
-How many five-card poker hands of type two-pair are possible?\\
-\begin{oneparchoices}
-\choice $2,808$ % didn't choose last card
-\correctchoice $123,552$
-\choice $248,832$ % used 13*12 rather than C(13,2)
-\choice $2,598,960$ % C(52,5)
-\choice $65,812,032$ % C(52,2)C(48,2)C(44,1)
 \end{oneparchoices}
 
 \question Playing poker, you have the cards
