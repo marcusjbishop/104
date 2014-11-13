@@ -427,5 +427,73 @@ if you discard $4\s,4\hs,Q\cs$
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Video poker}
+\begin{itemize}
+\item Coin operated poker machines existed since 1880
+\item Quickly became popular in west-coast
+saloons and cigar stores
+\item Thanks to video chip, video poker appears in late 70's
+\item Video poker increasingly popular in casinos and online
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Jacks-or-better}
+\begin{multicols}{2}
+\begin{itemize}
+\item We consider \alert{Jacks-or-better},
+an implementation of video poker
+\item Player makes bet
+\item Machine deals five cards
+\item Player chooses $0$--$5$ cards to replace with new cards
+\item If hand has pair of jacks or better, machine pays
+player $\text{bet}\times\text{payoff}$, where payoff shown in
+following table:
+\end{itemize}
+\begin{tabular}{lr}
+Hand&Payoff\\\hline
+Royal flush&2500\\
+Straight flush&50\\
+Four-of-a-kind&25\\
+Full house&8\\
+Flush&5\\
+Straight&4\\
+Three-of-a-kind&3\\
+Two-pair&2\\
+Jacks or better&1
+\end{tabular}
+\end{multicols}
+\end{frame}
+
+\begin{frame}{Surprising example}
+\begin{itemize}
+\item Suppose original hand $9\hs,10\hs,J\hs,Q\hs,K\hs$
+\item Machine pays $50\times\text{bet}$ for straight flushes
+\item However, hand one card away from royal flush
+\item By discarding $9\hs$, might receive $A\hs$, forming royal flush
+\item Machine pays $2500\times\text{bet}$ for royal flushes!
+\item Suppose bet $\$1$
+\item Expected proceeds if no cards exchanged: $\$50$
+\item Expected proceeds if $9\hs$ discarded:
+\[\frac{1}{47}\left(2500\right)+\text{positive terms}
+\only<+->{=\$53.19}+\text{positive terms}
+\only<+->{>\$50}\]
+\item \alert{positive terms} the proceeds if
+hand not royal flush but better than pair of jacks
+\item We don't bother to calculate \alert{positive terms}
+since $53.19$ already greater than $50$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Straight flush with ranks $9$--$K$ very unlikely
+\item Can only happen in four ways, one for each suit
+\item So $\frac{4}{\ncr{52}{5}}\approx 0.00000154$ the probability
+of straight flush $9$--$K$
+\item Same probability as royal flush
+\item Nevertheless, throwing away straight flush $9$--$K$ seems foolish
+\end{itemize}
+\end{frame}
+
 \end{document}
 
