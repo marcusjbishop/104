@@ -442,7 +442,8 @@ saloons and cigar stores
 \end{itemize}
 \item Video poker increasingly popular in casinos throughout 80's
 \item Less intimidating than casino table games
-\item Today increasingly popular online
+\item Today increasingly popular online, one of most popular
+forms of gambling
 \end{itemize}
 \end{frame}
 
@@ -526,14 +527,108 @@ since $53.19$ already greater than $50$
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Remarks}
+\begin{itemize}
+\item Video poker very simple in comparison with poker
+\item Player makes single decision, namely how many
+cards to exchange
+\item Then game is over, player wins amount specified in table
+\item Game can be played in under 30 seconds,
+so players generally play many times
+\item Thus expectation helpful
+\item Indeed, expectation predicts what should
+happen, on average, if 
+experiment repeated long enough
+\end{itemize}
+\end{frame}
+
 \begin{frame}
 \begin{itemize}
-\item Straight flush with ranks $9$--$K$ very unlikely
-\item Can only happen in four ways, one for each suit
-\item So $\frac{4}{\ncr{52}{5}}\approx 0.00000154$ the probability
-of straight flush $9$--$K$
-\item Same probability as royal flush
-\item Nevertheless, throwing away straight flush $9$--$K$ seems foolish
+\item Straight flush $9$--$K$ very unlikely
+\item $\frac{4}{\ncr{52}{5}}\approx 0.00000154$ the probability
+\item However, receiving $A\hs$ needed to complete flush
+also unlikely
+\item $\frac{1}{47}\approx 0.0212$ the probability
+\item If playing only one game, player should
+keep $9\hs,10\hs,J\hs,Q\hs,K\hs$, win $\$50$
+\item However, if repeated play intended, would
+be desirable to develop \alert{strategy}, taking
+into account expectation
+\item A \alert{strategy} a systematic plan dictating
+how player should act in any possible situation
+she could encounter
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Developing video poker strategy}
+\begin{itemize}
+\item Consider each of $\ncr{52}{5}$ hands separately
+\item Given a particular hand, enumerate
+all possible ways to improve hand
+\item Organize improvements by number of cards player
+must discard
+\item For each improvement involving discarding zero cards,
+multiply payoff by probability and add
+\item Gives expected payoff if player discards zero cards
+\item Similarly calculate expected payoff
+if player discards one card
+\item Similarly for $2,3,4,5$ cards
+\item Whichever number of cards has greatest
+expectation, player should discard
+\item Repeat for remaining $\ncr{52}{5}-1$ hands
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{example}
+\begin{itemize}
+\item Suppose player receives $9\hs,10\hs,J\hs,Q\hs,K\hs$
+\item $50-1$ the expected proceeds if she discards no cards
+\item $53.19-1$ the expected proceeds if she discards
+one card, namely $9\hs$
+\item So she should discard $9\hs$
+\end{itemize}
+\end{example}
+\begin{itemize}
+\item Similar analysis should be performed for each
+of $\ncr{52}{5}$ hands
+\item So we know what action player should take in
+every possible situation
+\item Assuming player follows strategy, can calculate
+overall expected outcome of game
+\item Namely, multiply expectation by
+$\frac{1}{\ncr{52}{5}}$ and add
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item One such calculation gives $1.0239>0$(!)
+\item So video poker the first casino game seen
+yet with positive expectation
+\item \dots provided that player follows strategy
+\item Remains to teach strategy to player
+\item Impractical to ask player to look up number
+of cards to discard from long list
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example Jacks-or-Better strategy}
+\begin{itemize}
+\item Player enumerates all ways to improve hand
+\item Player looks up each possibility in list:
+\begin{enumerate}
+\item Four-of-a-kind, straight flush, royal flush
+\item Four to a royal flush
+\item Three of a kind, straight, flush, full house
+\item Four to a straight flush
+\item[]$\vdots$
+\setcounter{enumi}{15}
+\item Discard everything
+\end{enumerate}
+\item Whichever improvement appears higher in list,
+player should choose
+\item Full strategy appears at \href{http://wizardofodds.com/games/video-poker/strategy/jacks-or-better/9-6/simple}{\color{blue}\tt www.wizardofodds.com}
 \end{itemize}
 \end{frame}
 
