@@ -440,7 +440,8 @@ saloons and cigar stores
 \item \alert{Pac-Man}, May 1980
 \item \alert{Draw Poker}, 1979
 \end{itemize}
-\item Video poker increasingly popular in casinos throughout 80's
+\item Video poker increasingly popular in casinos
+throughout 80's
 \item Less intimidating than casino table games
 \item Today increasingly popular online, one of most popular
 forms of gambling
@@ -455,8 +456,9 @@ an implementation of video poker
 \item Player makes bet
 \item Machine deals five cards
 \item Player chooses $0$--$5$ cards to replace with new cards
-\item If hand has pair of jacks or better, machine pays
-player $\text{bet}\times\text{payoff}$, where payoff shown in
+\item If hand has pair of jacks or better,
+player gets $\text{bet}\times\text{payoff}$,
+where payoff shown in
 following schedule:
 \end{itemize}
 \setbeamercolor{mycolor}{bg=Lavender}
@@ -481,7 +483,7 @@ Jacks or better&1
 \begin{multicols}{2}
 \begin{itemize}
 \item Royal flush its own category
-\item Payoffs vary among implementations
+\item Payoff tables vary among implementations
 \item Payoff shows amount player receives, not net proceeds
 \item Hands listed according to increasing probability
 \item However, payoffs not proportional to probabilities
@@ -510,13 +512,14 @@ Jacks or better&1
 \begin{frame}{Surprising example}
 \begin{itemize}
 \item Suppose original hand $9\hs,10\hs,J\hs,Q\hs,K\hs$
-\item Machine pays $50\times\text{bet}$ for straight flushes
-\item However, hand one card away from royal flush
-\item By discarding $9\hs$, might receive $A\hs$, forming royal flush
-\item Machine pays $2500\times\text{bet}$ for royal flushes!
 \item Suppose bet $\$1$
-\item Expected proceeds if no cards exchanged: $\$50$
-\item Expected proceeds if $9\hs$ discarded:
+\item Payoff $\$50$ for straight flushes
+\item However, hand one card away from royal flush
+\item By discarding $9\hs$,
+might receive $A\hs$, forming royal flush
+\item Payoff $\$2500$ for royal flushes!
+\item Expected payoff if no cards exchanged: $\$50$
+\item Expected payoff if $9\hs$ discarded:
 \[\frac{1}{47}\left(2500\right)+\text{positive terms}
 \only<+->{=\$53.19}
 \only<+->{>\$50}\]
@@ -530,7 +533,7 @@ since $53.19$ already greater than $50$
 \begin{frame}{Remarks}
 \begin{itemize}
 \item Video poker very simple in comparison with poker
-\item No opponents, no bluffing, no raising bet
+\item No opponents, no bluffing, no bet raising 
 \item Player makes single decision, namely how many
 cards to exchange
 \item Player wins amount specified in table, game is over
@@ -554,9 +557,9 @@ also unlikely
 keep $9\hs,10\hs,J\hs,Q\hs,K\hs$, win $\$50$
 \item However, if repeated play intended, would
 be desirable to develop \alert{strategy}, taking
-into account expectation
+expectation into account
 \item A \alert{strategy} a systematic plan specifying 
-how player should act in any possible situation
+how player should act in every possible situation
 \end{itemize}
 \end{frame}
 
@@ -564,20 +567,23 @@ how player should act in any possible situation
 \begin{itemize}
 \item Consider each of $\ncr{52}{5}$ hands separately
 \item Given a particular hand, enumerate
-all possible ways to improve hand
-\item Organize improvements by number of cards player
-must discard
-\item For each improvement involving discarding zero cards,
-multiply payoff by probability
-\item Add numbers in previous step
-\item Gives expected payoff if player discards zero cards
-\item Similarly calculate expected payoff
-if player discards one card
-\item Similarly for $2,3,4,5$ cards
-\item Whichever number of cards has greatest
-expectation, player should discard
+all possible actions player could take
+\item Multiply payoff by probability
+\item Gives expected payoff if player chooses this action
+\item Repeat for other possible actions
+\item Whichever action has greatest
+expected payoff, player should take
 \item Repeat for remaining $\ncr{52}{5}-1$ hands
 \end{itemize}
+\begin{example}
+\begin{itemize}
+\item Suppose player receives $9\hs,10\hs,J\hs,Q\hs,K\hs$
+\item $50$ the expected payoff if she discards no cards
+\item $53.19$ the expected payoff if she discards
+one card, namely $9\hs$
+\item So she should discard $9\hs$
+\end{itemize}
+\end{example}
 \end{frame}
 
 \begin{frame}{Example}
@@ -590,7 +596,7 @@ $3\cs,3\hs,5\cs,J\cs,Q\cs$
 \item Nine remain, so $\frac{9}{47}\approx
 0.1915$ the probability
 \item Payout $\$5$ for flush
-\item Would have pair if receive jack or queen
+\item Would have pair if you receive jack or queen
 \item Six remain, so $\frac{6}{47}\approx 0.1277$
 the probability
 \item Payout $\$1$ for pair
@@ -602,17 +608,20 @@ the probability
 
 \begin{frame}
 \begin{itemize}
-\item Plan B: keep $3\cs,3\hs$
+\item Plan B: keep $3\cs,3\hs$, discard rest
 \item Would have three-of-a-kind if you receive
 a three and two cards of different ranks
-\item Can happen in $3\left(2\cdot 45\cdot 41\right)
-=11070$ ways,
-so probability $\frac{11070}{\ncr{47}{3}}\approx 0.6827$
+\item Can happen in $\left(2\cdot 45\cdot 41\right)\frac{1}{2}
+=1845$ ways,
+so probability $\frac{11070}{\ncr{47}{3}}\approx 0.1138$
+\item Alternate calculation:
+$3\left(\frac{2}{47}\cdot\frac{45}{46}
+\cdot\frac{41}{45}\right)$
 \item Payout $\$3$ for three-of-a-kind
 \item Would have threes-over-something full house if
 you receive one three and two cards of same rank
 \item Payout $\$8$ for full house
-\item Can happen in $2\cdot 10\ncr{4}{2}=120$ ways
+\item Can happen in $2\cdot 10\cdot\ncr{4}{2}=120$ ways
 so probability $\frac{120}{\ncr{47}{3}}\approx 0.0074$
 \end{itemize}
 \end{frame}
@@ -621,16 +630,16 @@ so probability $\frac{120}{\ncr{47}{3}}\approx 0.0074$
 \begin{itemize}
 \item Would have four-of-a-kind if you receive
 two threes and one card of different rank
-\item Can happend in $45$ ways
+\item Can happen in $45$ ways
 so probability $\frac{45}{\ncr{47}{3}}\approx 0.0028$
 \item Payout $\$25$ for four-of-a-kind
 \item Would have something-over-threes full house
 if you receive three cards of same rank
 \item Can happen in $10\cdot\ncr{4}{3}+3=43$ ways
 so probability $\frac{43}{\ncr{47}{3}}\approx 0.0027$
-\item Thus $3\left(0.6827\right)+8\left(0.0074\right)
-+25\left(0.0028\right)+8\left(0.0028\right)
-\approx 2.1997$ the expectated proceeds for Plan B
+\item Thus $3\left(0.1138\right)+8\left(0.0074\right)
++25\left(0.0028\right)+8\left(0.0027\right)
+\approx 0.4922$ the expected payoff for Plan B
 \end{itemize}
 \end{frame}
 
@@ -639,15 +648,6 @@ so probability $\frac{43}{\ncr{47}{3}}\approx 0.0027$
 %\item Plan C: keep $J\cs,Q\cs$
 
 \begin{frame}
-\begin{example}
-\begin{itemize}
-\item Suppose player receives $9\hs,10\hs,J\hs,Q\hs,K\hs$
-\item $50-1=49$ the expected proceeds if she discards no cards
-\item $53.19-1$ the expected proceeds if she discards
-one card, namely $9\hs$
-\item So she should discard $9\hs$
-\end{itemize}
-\end{example}
 \begin{itemize}
 \item Similar calculation should be performed for each
 of $\ncr{52}{5}$ hands
@@ -655,7 +655,7 @@ of $\ncr{52}{5}$ hands
 every possible situation
 \item Assuming player follows strategy, can calculate
 overall expectation of game
-\item Namely, multiply expectation for each hand by
+\item Namely, multiply expected payoff for each hand by
 $\frac{1}{\ncr{52}{5}}$ and add
 \end{itemize}
 \end{frame}
@@ -675,8 +675,7 @@ in long list
 
 \begin{frame}{Example Jacks-or-Better strategy}
 \begin{itemize}
-\item Player enumerates all ways to improve hand
-\item Player looks up each possibility in list:
+\item Player memorizes following list:
 \begin{enumerate}
 \item Four-of-a-kind, straight flush, royal flush
 \item Four to a royal flush
@@ -686,10 +685,11 @@ in long list
 \setcounter{enumi}{15}
 \item Discard everything
 \end{enumerate}
+\item Full list appears at \href{http://wizardofodds.com/games/video-poker/strategy/jacks-or-better/9-6/simple}{\color{blue}\tt www.wizardofodds.com}
+\item Player mentally enumerates all ways to improve hand
 \item Whichever improvement appears higher in list,
 player should choose
-\item Full strategy appears at \href{http://wizardofodds.com/games/video-poker/strategy/jacks-or-better/9-6/simple}{\color{blue}\tt www.wizardofodds.com}
-\item Note that any stragegy highly dependent
+\item Note that any strategy highly dependent
 on payoff table
 \end{itemize}
 \end{frame}
