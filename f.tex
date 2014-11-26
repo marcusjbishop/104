@@ -25,7 +25,7 @@ All answer choices have been rounded to four decimal places.
 
 \begin{questions}
 \question Math~104 currently has 89~women and 95~men enrolled.
-If a student is selected at random, what is the probability
+If a student is selected at random, then what is the probability
 that the student will be a woman?\\
 \begin{oneparchoices}
 \choice $\frac{1}{89}$
@@ -36,7 +36,7 @@ that the student will be a woman?\\
 \end{oneparchoices}
 
 \question If an event has probability $\frac{3}{5}$
-then what is the probability that the event will {\em not} occur?\\
+then what is the probability that the event will {\bf not} occur?\\
 \begin{oneparchoices}
 \choice $0$
 \choice $\frac{3}{8}$
@@ -131,11 +131,12 @@ showing on the dice?
 
 
 \uplevel{Questions~\ref{FirstColor}--\ref{LastColor}
-deal with the following situation.
+deal with the following dilemma.
 You need to select two different colors to paint your bedroom and bathroom.
 You have narrowed the selection down to four colors, namely,
-aqua sparkle, battleship grey, coral, and deep carmine.
-However, if aqua sparkle is used in one room, deep carmine orange should not
+aqua sparkle, battleship grey, coral, and dark green.
+However, if aqua sparkle is used in one room,
+then dark green, then should not
 be used in the other room, since the two colors don't match.}
 
 \question\label{FirstColor}
@@ -164,7 +165,7 @@ for one room or the other?\\
 % Alex's president branch once instead of twice
 % Some students were looking for this answer choice
 In how many choices is aqua sparkle chosen for
-one or the other room?\\
+one room or the other?\\
 \begin{oneparchoices}
 \choice $3$
 \correctchoice $4$
@@ -174,7 +175,7 @@ one or the other room?\\
 \end{oneparchoices}
 
 \question\label{LastColor}
-What is the probability that deep carmine will be selected
+What is the probability that dark green will be selected
 for the bathroom?\\
 \begin{oneparchoices}
 \correctchoice $\frac{1}{5}$
@@ -197,8 +198,8 @@ is $P\left(F\right)$?\\
 \correctchoice $0.75$
 \end{oneparchoices}
 
-\question An octahedral die has eight sides labeled $1,2,\ldots,8$.
-If an experiment consists of rolling four such dice, how
+\question An octahedral die has eight faces labeled $1,2,\ldots,8$.
+If an experiment consists of rolling four such dice, then how
 many outcomes are in the sample space of the experiment?\\
 \begin{oneparchoices}
 \choice $8$ % faces on one die
@@ -256,6 +257,105 @@ first card has suit $\spadesuit$?\\
 \correctchoice $\frac{13}{51}$
 \end{oneparchoices}
 
+\question What is $\ncr{12}{5}$?\\
+\begin{oneparchoices}
+\choice $60$ % 12 * 5
+\correctchoice $792$
+\choice $248,832$ % 12^5
+\choice $95,040$ % P(12,5)
+\choice $3,991,680$ % P(12,7)
+\end{oneparchoices}
+
+\question In how many ways can a four-member subcommittee
+of a eight-member committee be chosen?\\
+\begin{oneparchoices}
+\choice $4$ % duh!
+\choice $24$ % 4!
+\correctchoice $70$
+\choice $256$ % 2^8
+\choice $1680$ % P(8,4)
+\end{oneparchoices}
+
+\question How many subsets does the set
+$\left\{a,b,c,d,e,f,g\right\}$ have?\\
+\begin{oneparchoices}
+\choice $7$ % size of set
+\choice $21$ % C(7,2)
+\choice $14$ % 2 * 7
+\choice $49$ % 7 * 7
+\correctchoice $128$
+\end{oneparchoices}
+
+\question Customers order pizzas at Joe's Pizza
+by selecting any number of seven possible toppings.
+How many different ways to order a pizza are there?\\
+\begin{oneparchoices}
+\choice $7$ % number of toppings
+\choice $21$ % C(7,2)
+\choice $42$ % P(7,2)
+\choice $49$ % 7 * 7
+\correctchoice $128$
+\end{oneparchoices}
+
+\question A poker hand is called a {\em heart flush}
+if all five cards have suit $\heartsuit$. What is
+the number of possible heart flushes?\\
+\begin{oneparchoices}
+\correctchoice $1287$
+\choice $5108$ % number of mere flushes
+\choice $5148$ % number of flushes
+\choice $154,440$ % P(13,5)
+\choice $2,598,960$ % C(52,5)
+\end{oneparchoices}
+
+\uplevel{In questions~\ref{FirstPoker}--\ref{LastPoker}
+you're playing poker. You have the cards
+$K\heartsuit,K\clubsuit,2\diamondsuit,2\clubsuit,8\heartsuit$.}
+
+\question\label{FirstPoker} 
+If you exchange $8\heartsuit$ for a new card,
+then what is the probability that new card
+will complete your hand to a full house?\\
+\begin{oneparchoices}
+\choice $\frac{1}{52}$
+\choice $\frac{1}{26}$ % only one of K,2 and didn't eliminate
+\choice $\frac{2}{47}$ % counted only one of K,2
+\choice $\frac{1}{13}$ % didn't eliminate 5 known cards from total
+\correctchoice $\frac{4}{47}$
+\end{oneparchoices}
+
+\question\label{LastPoker}
+If you exchange $4\heartsuit,4\spadesuit,10\diamondsuit$ for three
+new cards, then what is the probability that the new hand
+will have four-of-a-kind?\\
+\begin{oneparchoices}
+\choice $0.0025$ % something-over-aces full house
+\correctchoice $0.0028$
+\choice $0.0851$ % aces-over-fours full house
+\choice $0.1221$ % exactly one ace 
+\choice $0.1274$ % three-of-a-kind or better
+\end{oneparchoices}
+
+\question Two of the $25$ scratchcards for sale at the gas station
+will win prizes. If you randomly select two
+scratchcards, then what is the probability that at least one scratchcard 
+will be a winner?\\
+\begin{oneparchoices}
+\choice $0.0034$ % exactly two winners
+\choice $0.1534$ % exactly one winner
+\correctchoice $0.1567$
+\choice $0.04$ % 1/25
+\choice $0.8434$ % no winners
+\end{oneparchoices}
+
+\question If an event $E$ has probability $\frac{1}{3}$
+of occuring, then what are the odds {\bf against} $E$?
+\begin{oneparchoices}
+\choice $1:1$
+\choice $1:2$
+\choice $1:3$
+\correctchoice $2:1$
+\choice $3:1$
 
 \end{questions}
 \end{document}
