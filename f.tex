@@ -18,28 +18,28 @@
 \maketitle
 \begin{center}
 \fbox{\fbox{\parbox{5.5in}{\centering
-Using a Number~2 pencil record your student ID on your answer sheet.
+Using a Number~2 pencil record your student ID and name
+on your answer sheet.
 Then answer the questions below on the answer sheet.
 This exam has \numquestions~questions printed on \numpages~pages.
-All answer choices have been rounded to four decimal places.
 }}}
 \end{center}
 
 \begin{questions}
 \question Math~104 currently has 89~women and 95~men enrolled.
 If a student is selected at random, then what is the probability
-that the student will be a woman?\\
+that the student is a woman?\\
 \begin{oneparchoices}
 \choice $\frac{1}{89}$
 \choice $\frac{95}{184}$
-\correctchoice\choice $\frac{89}{184}$
+\correctchoice$\frac{89}{184}$
 \choice $\frac{89}{95}$
 \choice $\frac{89}{104}$
 \end{oneparchoices}
 
-\question If a card is selected at random from a deck of
-playing cards, what is the probability that
-the card will have suit $\clubsuit$?\\
+\question A card is selected at random from a deck of
+playing cards. What is the probability that
+the card has suit $\clubsuit$?\\
 \begin{oneparchoices}
 \choice $\frac{1}{52}$
 \choice $\frac{1}{13}$
@@ -73,8 +73,9 @@ then what is the probability that the event will {\bf not} occur?\\
 \question In how many ways can a four-member subcommittee
 of a eight-member committee be chosen?\\
 \begin{oneparchoices}
-\choice $4$ % duh!
+%\choice $4$ % duh!
 \choice $24$ % 4!
+\choice $32$ % 4 x 8
 \correctchoice $70$
 \choice $256$ % 2^8
 \choice $1680$ % P(8,4)
@@ -98,7 +99,7 @@ the possible outcomes of an experiment is called \dots\\
 \choice conditional.
 \choice empirical.
 \choice relative.
-\choice theoretical.
+\correctchoice theoretical.
 \end{oneparchoices}
 
 \question If an event $E$ has probability $\frac{1}{3}$
@@ -124,23 +125,14 @@ is $P\left(F\right)$?\\
 \correctchoice $0.75$
 \end{oneparchoices}
 
-\question An event which cannot occur has probability \dots\\
-\begin{oneparchoices}
-\choice $0.0$.
-\choice $0.1$.
-\choice $0.25$.
-\choice $0.5$.
-\choice $1.0$.
-\end{oneparchoices}
-
-\question If an event $E$ has probability $0.55$
-calculate $P\left(E\right)+P\left(\text{not $E$}\right)$.\\
+\question What is the probability
+of an event which cannot occur?
 \begin{oneparchoices}
 \choice $0.0$
-\choice $0.45$
+\choice $0.1$
+\choice $0.25$
 \choice $0.5$
-\choice $0.55$
-\correctchoice $1.0$
+\choice $1.0$
 \end{oneparchoices}
 
 \question Suppose that $E=\left\{2,4,6\right\}$,
@@ -163,8 +155,18 @@ What is $\left|E\cap\left(F\cup G\right)\right|$?\\
 \choice $3,991,680$ % P(12,7)
 \end{oneparchoices}
 
+\question If you flip three coins, then what is the probability
+that exactly two heads come up?\\
+\begin{oneparchoices}
+\choice $\frac{1}{8}$
+\choice $\frac{1}{4}$
+\choice $\frac{3}{8}$
+\choice $\frac{1}{2}$
+\choice $1$
+\end{oneparchoices}
+
 \question How many subsets does the set
-$\left\{a,b,c,d,e,f,g\right\}$ have?\\
+$\left\{1,2,3,4,5,6,7\right\}$ have?\\
 \begin{oneparchoices}
 \choice $7$ % size of set
 \choice $21$ % C(7,2)
@@ -193,16 +195,6 @@ many outcomes are in the sample space of the experiment?\\
 \choice $32$ % number of faces
 \choice $64$ % two instead of four dice
 \correctchoice $4096$
-\end{oneparchoices}
-
-\question If you three coins, then what is the probability
-that exactly two heads come up?\\
-\begin{oneparchoices}
-\choice $\frac{1}{8}$
-\choice $\frac{1}{4}$
-\choice $\frac{3}{8}$
-\choice $\frac{1}{2}$
-\choice $1$
 \end{oneparchoices}
 
 \uplevel{Questions~\ref{FirstDice}--\ref{LastDice}
@@ -251,8 +243,8 @@ showing on the dice?\\
 
 \uplevel{Questions~\ref{FirstColor}--\ref{LastColor}
 deal with the following dilemma.
-You need to select two different colors to paint your bedroom and bathroom.
-You have narrowed the selection down to four colors, namely,
+You need to paint your bedroom and bathroom two different colors.
+You have narrowed the color selection down to four colors, namely,
 aqua sparkle, battleship grey, coral, and dark green.
 However, if aqua sparkle is used in one room,
 then dark green, then should not
@@ -305,11 +297,11 @@ for the bathroom?\\
 \end{oneparchoices}
 
 \uplevel{Questions~\ref{FirstAmes}--\ref{LastAmes} deal
-with a recent survey of $1422$~students about the apartments
-they live in. $142$~students reported that their
-apartments had dishwashers and $168$~reported that
+with a recent survey of 1422~students about the apartments
+they live in. 142~students reported that their
+apartments had dishwashers and 168~reported that
 their apartments had washer-dryers,
-while $29$~students reported that they had both.}
+while 29~students reported that they had both.}
 
 \question\label{FirstAmes} What is the probability that a randomly selected
 student has a washer-dryer given that that student has a dishwasher?\\
@@ -349,7 +341,7 @@ will complete your hand to a full house?\\
 \end{oneparchoices}
 
 \question\label{LastPoker}
-If you exchange $4\heartsuit,4\spadesuit,10\diamondsuit$ for three
+If you exchange $2\diamondsuit,2\clubsuit,8\heartsuit$ for three
 new cards, then what is the probability that your new hand
 will have four-of-a-kind?\\
 \begin{oneparchoices}
@@ -423,8 +415,9 @@ then what is the probability that you will win the game?\\
 \uplevel{Questions~\ref{FirstWalk}--\ref{LastWalk}
 deal with the following table, which give the percentage
 of US residents between 2008 and 2012 who walk or bike to work,
-organized by age.\footnote{Source: US Census Bureau, American
-Community Survey, 2008-2012}
+organized by age.
+%\footnote{Source: US Census Bureau, American
+%Community Survey, 2008-2012}
 \[\begin{array}{r||r|r|r|r|r|r}
 \text{Age}&16-24&25-29&30-34&35-44&45-54&\ge 55\\\hline\hline
 \text{Walk}&6.8&3.1&2.4&1.9&1.9&2.3\\
@@ -457,7 +450,7 @@ What is the probability that a randomly selected US resident
 is between the ages of 25 and 29, given that that individual
 walks to work?\\
 \begin{oneparchoices}
-\choice $0.1403$ walks and 25-29 / grand total
+\choice $0.1403$ % walks and 25-29 / grand total
 \correctchoice $0.1685$
 \choice $0.184$ % walks
 \choice $.031$ % walks and 25-29
@@ -468,7 +461,7 @@ walks to work?\\
 What percent of all US residents between the ages
 of 45 and 54 bike to work?\\
 \begin{oneparchoices}
-\choice $0.4$
+\correctchoice $0.4$
 \choice $0.1081$ % 45-54 given bikes
 \choice $0.1739$ % bikes given 45-54
 \choice $1.9$ % walks and 45-54
