@@ -74,6 +74,31 @@ in fourth row of Pascal's triangle
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\begin{itemize}
+\item Recall Pascal's triangle:
+\[\begin{array}{ccccccccccccc}
+&&&&&&1\\
+&&&&&1&&1\\
+\only<+->{
+&&&&1&&2&&1\\}
+\only<+->{
+&&&1&&3&&3&&1\\}
+\only<+->{
+&&1&&4&&6&&4&&1\\}
+\only<+->{
+&1&&5&&10&&10&&5&&1\\}
+\only<+->{
+1&&6&&15&&20&&15&&6&&1}
+\end{array}\]
+\item $\ncr{n}{r}=\frac{n!}{\left(n-r\right)!r!}$ the
+number in row $n$~position~$r$
+\item $\ncr{n}{r}$ also the coefficient
+of $x^ry^{n-r}$ in expansion of $\left(x+y\right)^n$
+\item Thus $\ncr{n}{r}$ called a \alert{binomial coefficient}
+\end{itemize}
+\end{frame}
+
 
 
 \end{document}
