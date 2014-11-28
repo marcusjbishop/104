@@ -99,6 +99,132 @@ of $x^ry^{n-r}$ in expansion of $\left(x+y\right)^n$
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Connection to probability}
+\begin{itemize}
+\item You flip coin three times
+\item Want to calculate probability of \alert{exactly} two heads
+\item Could successfully happen in several ways
+\item But how to count them?
+\item Start by listing all outcomes:
+\[HHH\quad HHT\quad HTH\quad HTT\quad THH\quad THT\quad TTH\quad TTT\]
+\item Note that \alert{three} outcomes have exactly two heads:
+\[HHH\quad\alert{HHT}\quad\alert{HTH}
+\quad HTT\quad\alert{THH}\quad THT\quad TTH\quad TTT\]
+\item So $\frac{3}{8}$ the probability of rolling exactly two heads
+\end{itemize}
+\end{frame}
 
+\begin{frame}
+\begin{itemize}
+\item But how to calculate without listing outcomes?
+\item Two choices ($H$ or $T$) for first flip
+\item Two choices for second, two for third
+\item So $2\cdot 2\cdot 2=2^3=8$ possible outcomes
+\item How many have exactly two heads?
+\item Need to select two of three flips to be heads
+\item Can choose heads in $\ncr{3}{2}=3$ ways
+\item Recall that $HHT,HTH,THH$ the three ways
+(not strictly necessary to enumerate)
+\item Each of eight outcomes equally likely
+\item So $\frac{3}{8}$ the probability of exactly two heads
+\end{itemize}
+\end{frame}
 
+\begin{frame}{Harder example}
+\begin{itemize}
+\item Calculate probability of exactly five heads in eight coin tosses
+\item Too difficult to enumerate all outcomes
+\item Only need \alert{number} of possible outcomes
+\item Two choices for first toss, two for second, etc.
+\item So $2\cdot 2\cdots 2=2^8=256$ possible outcomes
+\item How many have exactly five heads?
+\item Need to select five of eight flips to be heads
+\item Can be chosen in $\ncr{8}{5}=56$ ways
+\item Thus $\frac{56}{256}=\frac{7}{32}$ the probability
+of exactly five heads
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item More generally $\frac{\ncr{n}{r}}{2^n}$ the probability
+of exactly $r$~heads in $n$~coin tosses
+\item \dots since $2^n$ possible outcomes, $\ncr{n}{r}$
+of which have exactly $r$~heads
+\begin{example}
+\begin{itemize}
+\item You don't know any answers to ten-question true/false quiz
+\item Calculate probability of correct guessing exactly eight
+\item $2^{10}=1024$ ways to guess
+\item $\ncr{10}{8}=45$ ways have exactly eight correct
+\item So $\frac{45}{1024}\approx 0.044$ the probability
+of exactly eight correct
+\end{itemize}
+\end{example}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Similarly
+$\frac{\ncr{10}{10}}{2^{10}}\approx 0.0001$
+the probability of correctly guessing ten
+\item $\frac{\ncr{10}{9}}{2^{10}}\approx 0.0098$
+the probability of correctly guessing nine
+\item $\frac{\ncr{10}{8}}{2^{10}}\approx 0.044$
+the probability of correctly guessing eight (see previous slide)
+\item $\frac{\ncr{10}{7}}{2^{10}}\approx 0.1172$
+the probability of correctly guessing seven
+\item So $0.0001+0.0098+0.44+0.1172=0.1719$
+the probability of correctly guessing $7$ or $8$ or $9$ or $10$
+\item So $P\left(\text{seven or more correct}\right)=0.1719$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Multiple choice quiz}
+\begin{itemize}
+\item However, life not so simple if quiz questions have
+more than two answer choices
+\item Suppose quiz has three questions, each with five answer choices
+\item Thus, each guess much more likely to be incorrect than correct
+\item In contrast, on true/false quiz, each guess as likely
+to be correct as incorrect
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Each question has two outcomes:
+\begin{itemize}
+\item Right (R) with probability $\frac{1}{5}$, or
+\item Wring (W) with probability $\frac{4}{5}$
+\end{itemize}
+\item Possible outcomes of quiz:
+\[RRR\quad RRW\quad RWR\quad RWW\quad WRR\quad WRW\quad WWR\quad WWW\]
+\item In contrast with true/false quiz, outcomes above not equally likely
+\item $P\left(RRR\right)=\frac{1}{5}\cdot\frac{1}{5}\cdot\frac{1}{5}
+=\frac{1}{125}$
+\item $P\left(RRW\right)=\frac{1}{5}\cdot\frac{1}{5}\cdot\frac{4}{5}
+=\frac{4}{125}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item However, $P\left(RRW\right)=\frac{4}{125}$
+\alert{not} the probability of correctly guessing two
+\item \dots because correctly guessing two can also happen
+in other ways, namely $RWR$ and $WRR$
+\item $P\left(RWR\right)=\frac{1}{5}\cdot\frac{4}{5}\cdot\frac{1}{5}
+=\frac{4}{125}$
+\item $P\left(WRR\right)=\frac{4}{5}\cdot\frac{1}{5}\cdot\frac{1}{5}
+=\frac{4}{125}$
+\item Note that each way to correctly guess two has probability
+$\frac{4}{125}$
+\item So $P\left(\text{two correct}\right)=3\cdot\frac{4}{125}
+=\frac{12}{125}$
+\end{itemize}
+\end{frame}
 \end{document}
+
+
