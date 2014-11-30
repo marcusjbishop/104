@@ -244,12 +244,12 @@ $\frac{4}{125}$
 \end{itemize}
 \item Want to calculate probability of exactly $r$~successes
 \item Two choices ($S$ or $F$) for first trial, two for second, etc.
-\item So $2\cdot 2\cdots 2=2^n$ possible outcomes?
+\item So $2\cdot 2\cdots 2=2^n$ possible outcomes
 \item How many have exactly $r$~successes?
 \item Need to choose $r$ trials to be $S$
-\item Then remaining trials $F$
-\item $\ncr{n}{r}$ ways to choose $r$, so $\ncr{n}{r}$ outcomes have
-exactly $r$~successes
+\item Then remaining trials must be $F$
+\item $\ncr{n}{r}$ ways to choose $r$ successes,
+so $\ncr{n}{r}$ outcomes have exactly $r$~successes
 \item Each outcome with $r$~successes has probability
 $p^r\left(1-p\right)^{n-r}$
 \item So $P\left(\text{exactly $r$ successes}\right)
@@ -286,8 +286,8 @@ so $p=\frac{1}{5}$
 \begin{itemize}
 \item Kevin Durant made 679 of 750 attempted free-throws
 in 2012--2013 season with Oklahoma City Thunder
-\item Supose Durant awarded three free-throws
-\item Calcaulte probability he makes exactly two
+\item Suppose Durant awarded three free-throws
+\item Calculate probability he makes exactly two
 \item $p=\frac{679}{750}\approx 0.9053$ the probability
 each time
 \item So $P\left(\text{exactly two}\right)
@@ -307,6 +307,8 @@ each time
 =\ncr{3}{1}\left(0.9053\right)^1\left(0.0947\right)^2=0.0244$
 \item $P\left(\text{exactly zero}\right)
 =\ncr{3}{0}\left(0.9053\right)^0\left(0.0947\right)^3=0.0008$
+\item More realistic question: probability he makes two or more?
+\item $P\left(\text{at least two}\right)=0.742+0.2328=0.9748$
 \item Note that $0.0742+0.2328+0.244+0.0008=1$
 \item Indeed, $1=\left(p+\left(1-p\right)\right)^3$
 \end{itemize}
