@@ -280,6 +280,38 @@ so $p=\frac{1}{5}$
 \end{example}
 \end{frame}
 
+\begin{frame}{Basketball example}
+\begin{multicols}{2}
+\includegraphics[scale=.75]{KevinDurant}
+\begin{itemize}
+\item Kevin Durant made 679 of 750 attempted free-throws
+in 2012--2013 season with Oklahoma City Thunder
+\item Supose Durant awarded three free-throws
+\item Calcaulte probability he makes exactly two
+\item $p=\frac{679}{750}\approx 0.9053$ the probability
+each time
+\item So $P\left(\text{exactly two}\right)
+=\ncr{3}{2}\left(0.9053\right)^2\left(0.0947\right)^1=0.2328$
+\end{itemize}
+\end{multicols}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item $P\left(\text{exactly three}\right)
+=\ncr{3}{3}\left(0.9053\right)^3\left(0.0947\right)^0=0.742$
+\item $P\left(\text{exactly two}\right)
+=\ncr{3}{2}\left(0.9053\right)^2\left(0.0947\right)^1=0.2328$
+(see previous slide)
+\item $P\left(\text{exactly one}\right)
+=\ncr{3}{1}\left(0.9053\right)^1\left(0.0947\right)^2=0.0244$
+\item $P\left(\text{exactly zero}\right)
+=\ncr{3}{0}\left(0.9053\right)^0\left(0.0947\right)^3=0.0008$
+\item Note that $0.0742+0.2328+0.244+0.0008=1$
+\item Indeed, $1=\left(p+\left(1-p\right)\right)^3$
+\end{itemize}
+\end{frame}
+
 \end{document}
 
 
