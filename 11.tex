@@ -9,7 +9,7 @@
 \pgfdeclareimage[height=1in]{university-logo}{ISULogo}
 \logo{\pgfuseimage{university-logo}}
 \setbeamertemplate{navigation symbols}{}
-\title[\S10]{Section 11\\Binomial Probability}
+\title[\S10]{Section 11\\Binomial probability}
 \author{Dr Marcus Bishop}
 \subject{Math 104}
 \beamerdefaultoverlayspecification{<+->}
@@ -36,7 +36,7 @@
 \item Recall FOIL method:
 \begin{align*}
 \left(x+y\right)^2
-&=\left(x+y\right)\left(x+y\right)\\
+\only<+->{&=\left(x+y\right)\left(x+y\right)\\}
 \only<+->{&=x^2+xy+yx+y^2\\}
 \only<+->{&=x^2+2xy+y^2}
 \end{align*}
@@ -48,6 +48,13 @@ as commonly mistaken
 as shown above
 \end{itemize}
 \end{remark}
+\begin{remark}
+\begin{itemize}
+\item Order of factors in monomials not important
+\item $x^2y=xyx=yx^2$, for example
+\item However, numbers of $x$'s and $y$'s important
+\end{itemize}
+\end{remark}
 \end{itemize}
 \end{frame}
 
@@ -56,7 +63,7 @@ as shown above
 \item Similarly for third power:
 \begin{align*}
 \left(x+y\right)^3
-&=\left(x+y\right)\left(x+y\right)\left(x+y\right)\\
+\only<+->{&=\left(x+y\right)\left(x+y\right)\left(x+y\right)\\}
 \only<+->{&=\left(x+y\right)^2\left(x+y\right)\\}
 \only<+->{&=\left(x^2+2xy+y^2\right)\left(x+y\right)\\}
 \only<+->{&=x^3+x^2y+2xyx+2xy^2+y^2x+y^3\\}
@@ -93,6 +100,7 @@ in fourth row of Pascal's triangle
 \end{array}\]
 \item $\ncr{n}{r}=\frac{n!}{\left(n-r\right)!r!}$ the
 number in row $n$~position~$r$
+(counting from zero)
 \item $\ncr{n}{r}$ also the coefficient
 of $x^ry^{n-r}$ in expansion of $\left(x+y\right)^n$
 \item Thus $\ncr{n}{r}$ called a \alert{binomial coefficient}
@@ -153,8 +161,8 @@ of exactly $r$~heads in $n$~coin tosses
 of which have exactly $r$~heads
 \begin{example}
 \begin{itemize}
-\item You don't know any answers to ten-question true/false quiz
-\item Calculate probability of correct guessing exactly eight
+\item You don't know answers to ten-question true/false quiz
+\item Calculate probability of correctly guessing exactly eight
 \item $2^{10}=1024$ ways to guess
 \item $\ncr{10}{8}=45$ ways have exactly eight correct
 \item So $\frac{45}{1024}\approx 0.044$ the probability
@@ -175,7 +183,7 @@ the probability of correctly guessing nine
 the probability of correctly guessing eight (see previous slide)
 \item $\frac{\ncr{10}{7}}{2^{10}}\approx 0.1172$
 the probability of correctly guessing seven
-\item So $0.0001+0.0098+0.44+0.1172=0.1719$
+\item So $0.0001+0.0098+0.044+0.1172=0.1719$
 the probability of correctly guessing $7$ or $8$ or $9$ or $10$
 \item So $P\left(\text{seven or more correct}\right)=0.1719$
 \end{itemize}
@@ -196,8 +204,8 @@ to be correct as incorrect
 \begin{itemize}
 \item Each question has two outcomes:
 \begin{itemize}
-\item Right (R) with probability $\frac{1}{5}$, or
-\item Wring (W) with probability $\frac{4}{5}$
+\item Right (R) with probability $\frac{1}{5}$
+\item Wrong (W) with probability $\frac{4}{5}$
 \end{itemize}
 \item Possible outcomes of quiz:
 \[RRR\quad RRW\quad RWR\quad RWW\quad WRR\quad WRW\quad WWR\quad WWW\]
@@ -221,10 +229,57 @@ in other ways, namely $RWR$ and $WRR$
 =\frac{4}{125}$
 \item Note that each way to correctly guess two has probability
 $\frac{4}{125}$
-\item So $P\left(\text{two correct}\right)=3\cdot\frac{4}{125}
+\item So $P\left(\text{exactly two correct}\right)=3\cdot\frac{4}{125}
 =\frac{12}{125}$
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Binomial probability}
+\begin{itemize}
+\item Suppose same experiment repeated $n$ times
+\item Experiment has exactly two outcomes:
+\begin{itemize}
+\item Success ($S$) with probability $p$
+\item Failure ($F$) with probability $1-p$
+\end{itemize}
+\item Want to calculate probability of exactly $r$~successes
+\item Two choices ($S$ or $F$) for first trial, two for second, etc.
+\item So $2\cdot 2\cdots 2=2^n$ possible outcomes?
+\item How many have exactly $r$~successes?
+\item Need to choose $r$ trials to be $S$
+\item Then remaining trials $F$
+\item $\ncr{n}{r}$ ways to choose $r$, so $\ncr{n}{r}$ outcomes have
+exactly $r$~successes
+\item Each outcome with $r$~successes has probability
+$p^r\left(1-p\right)^{n-r}$
+\item So $P\left(\text{exactly $r$ successes}\right)
+=\ncr{n}{r}p^r\left(1-p\right)^{n-r}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{example}
+\begin{itemize}
+\item Probability of correctly guessing exactly seven answers
+on ten-question quiz
+\item Each question has five answer choices,
+so $p=\frac{1}{5}$
+\item So $P\left(\text{exactly $7$ correct}\right)
+=\ncr{10}{7}\left(\frac{1}{5}\right)^7\left(\frac{4}{5}\right)^3$
+\end{itemize}
+\end{example}
+\begin{example}
+\begin{itemize}
+\item Probability of exactly $r$~heads in $n$~coin tosses
+\item $P\left(H\right)=\frac{1}{2}=P\left(T\right)$
+\item So $P\left(\text{exactly $r$ heads}\right)
+=\ncr{n}{r}\left(\frac{1}{2}\right)^r\left(\frac{1}{2}\right)^{n-r}
+=\frac{\ncr{n}{r}}{2^n}$
+\item Agrees with calculation above
+\end{itemize}
+\end{example}
+\end{frame}
+
 \end{document}
 
 
