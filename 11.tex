@@ -347,9 +347,34 @@ defective
 \item If package contains ten batteries, calculate probability
 distribution of number of defective batteries
 \item $p=0.004$ the probabiliy random battery defective
+\item So $P\left(\text{exactly $0$ defective}\right)
+=\ncr{10}{0}\left(0.004\right)^0\left(0.996\right)^{10}\approx 0.9607$
+\item So $P\left(\text{exactly $1$ defective}\right)
+=\ncr{10}{1}\left(0.004\right)^1\left(0.996\right)^9\approx 0.0389$
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\begin{itemize}
+\item Probability distribution for number of defective batteries:
+\[\begin{array}{rr}
+r&P\left(\text{Exactly $r$ defective}\right)\\
+0&0.9607\\
+1&0.0389\\
+2&0.0007\\
+3&0.000007\\
+4&0.00000005\\
+5&0.0000000002\\
+6&0.0000000000008\\
+7&0.000000000000001\\
+8&0.000000000000000002\\
+9&0.000000000000000000002\\
+10&0.000000000000000000000001
+\end{array}\]
+\item Want to calculate $P\left(\text{One or more defective}\right)$
+\item Too cumbersome to add $0.0389+0.0007+\cdots$
+\item Easier: $P\left(\text{One or more defective}\right)=
+1-0.960712373502810=0.0392876264971900$
+\end{itemize}
+\end{frame}
 \end{document}
-
-
