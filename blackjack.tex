@@ -1,5 +1,7 @@
-\documentclass{beamer}
+\documentclass[handout,xcolor=dvipsnames]{beamer}
 \usepackage{multicol}
+\usepackage{xy}
+\everymath{\displaystyle}
 \mode<presentation>
 {\usetheme{Warsaw}\setbeamercovered{dynamic}}
 \usecolortheme{crane}
@@ -8,15 +10,23 @@
 \logo{\pgfuseimage{university-logo}}
 \setbeamertemplate{navigation symbols}{}
 \title[Blackjack]{Blackjack}
-\author{Marcus Bishop}
-\subject{Calculus II}
+\author{Dr Marcus Bishop}
+\subject{Math 104}
 \beamerdefaultoverlayspecification{<+->}
 \theoremstyle{definition}
 \newtheorem{remark}{Remark}
 \newtheorem{impact}{Impact}
-\newtheorem{notation}{Notation}
-\newtheorem{strategy}{Strategy}
-\newtheorem{suggestion}{Suggestion}
+\newtheorem{situation}{Situation}
+\newtheorem{question}{Question}
+\usepackage{arev}
+\usepackage{tensor}
+\newcommand\npr[2]{\tensor[_{#1}]P{_{#2}}}
+\newcommand\ncr[2]{\tensor[_{#1}]C{_{#2}}}
+\usepackage{cancel}
+\newcommand{\hs}{\alert{\varheart}}
+\newcommand{\ds}{\alert{\vardiamond}}
+\newcommand{\s}{\spadesuit}
+\newcommand{\cs}{\clubsuit}
 \begin{document}
 \begin{frame}\titlepage\end{frame}
 \LogoOff
@@ -68,4 +78,80 @@ as player to arrive at sum closest to $21$
 \item If she does hit and busts, players who bust earlier still lose
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Probability of blackjack}
+\begin{itemize}
+\item Two cards whose sum $21$ called a \alert{blackjack}
+\item If player receives blackjack on first two cards,
+wins unless dealer also has blackjack
+\item Calculate probability of receiving blackjack on first two cards
+\item Can only happen if one card is $A$ and other
+has value $10$
+\item So other card must be $10$, $J$, $Q$, or $K$
+\item Four choices for $A$
+\item $16$~choices for other card
+\item So $4\cdot 16=64$ blackjacks possible
+\item $\ncr{52}{2}=1326$ possible two-card hands
+\item So $\frac{64}{1326}\approx 0.0483$ the probability of blackjack
+\item We'll round answer to $\frac{1}{20}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Remarks}
+\begin{itemize}
+\item All our blackjack calculations only approximate
+\item One issue: dealer often uses several decks of cards, rather than one
+\item So $\approx\frac{1}{52}$ the
+probability of receiving any particular card
+\item \dots even though card might already appear on table
+\item $\frac{1}{13}$ the probability of receiving any particular
+\item Casino's use of several decks probably intended to foil
+intentions of \alert{card counters} (discussed later)
+\item Blackjack can be played virtually at
+\href{http://wizardofodds.com/play/blackjack}{\color{blue}\tt wizardofodds}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Probability of winning with blackjack}
+\begin{itemize}
+\item If player receives blackjack
+%(with probability $\approx\frac{1}{20}$
+what is probability he wins?
+\item Player fails to win only if dealer also has blackjack
+\item Dealer has blackjack with probability $\textstyle\frac{1}{20}$
+\item So player wins with probability $\textstyle\frac{19}{20}$
+\item So $\frac{1}{20}\cdot\frac{19}{20}
+\approx\frac{1}{20}$ the probability of getting blackjack and winning
+\end{itemize}
+\begin{remark}
+\begin{itemize}
+\item Player receiving blackjack and dealer not receiving blackjack
+not independent
+\item So strictly speaking 
+$\frac{1}{20}\cdot\frac{19}{20}$ incorrect
+\item However, $\textstyle\frac{1}{20}$
+only an approximation
+\end{itemize}
+\end{remark}
+\end{frame}
+
+\begin{frame}{Probability of busting if hit}
+\begin{itemize}
+\item Most important question: should player take another card?
+\item Want to calculate probability that player busts
+if hit
+\item Depends on cards player has
+\item Will assume several decks being used
+\end{itemize}
+\begin{example}
+\begin{itemize}
+\item Suppose player has $J\hs,5\cs$
+\item Ranks that \alert{won't} bust player:
+$A,2,3,4,5,6$
+\item $\frac{6}{13}$ the probability player won't bust if hit
+\item So $\frac{7}{13}$ the probability player busts if hit
+\end{itemize}
+\end{example}
+\end{frame}
+
 \end{document}
