@@ -62,7 +62,7 @@ dealer hits herself as needed
 player loses bet
 \item If player's sum closer to $21$ than dealer's sum,
 player wins amount bet
-\item \dots unless player's sum $21$ (a \alert{blackjack}
+\item \dots unless player's sum $21$ (a \alert{blackjack})
 \item Then player wins $\frac{3}{2}$ amount bet
 \item If dealer's sum equals player's sum, no money exchanged
 \end{itemize}
@@ -101,10 +101,11 @@ has value $10$
 \begin{itemize}
 \item All our blackjack calculations only approximate
 \item One issue: dealer often uses several decks of cards, rather than one
-\item So $\approx\frac{1}{52}$ the
-probability of receiving any particular card
+\item So $\frac{1}{52}$ the
+approximate probability of receiving any particular card
 \item \dots even though card might already appear on table
-\item $\frac{1}{13}$ the probability of receiving any particular
+\item $\frac{1}{13}$ the probability of receiving card
+of any particular rank
 \item Casino's use of several decks probably intended to foil
 intentions of \alert{card counters} (discussed later)
 \item Blackjack can be played virtually at
@@ -117,7 +118,7 @@ intentions of \alert{card counters} (discussed later)
 \item If player receives blackjack
 %(with probability $\approx\frac{1}{20}$
 what is probability he wins?
-\item Player fails to win only if dealer also has blackjack
+\item Player loses only if dealer also has blackjack
 \item Dealer has blackjack with probability $\textstyle\frac{1}{20}$
 \item So player wins with probability $\textstyle\frac{19}{20}$
 \item So $\frac{1}{20}\cdot\frac{19}{20}
@@ -129,8 +130,7 @@ what is probability he wins?
 not independent
 \item So strictly speaking 
 $\frac{1}{20}\cdot\frac{19}{20}$ incorrect
-\item However, $\textstyle\frac{1}{20}$
-only an approximation
+\item However, suffices for purpose of approximation
 \end{itemize}
 \end{remark}
 \end{frame}
@@ -152,6 +152,29 @@ $A,2,3,4,5,6$
 \item So $\frac{7}{13}$ the probability player busts if hit
 \end{itemize}
 \end{example}
+\end{frame}
+
+\begin{frame}{Probability distribution of blackjack}
+\begin{itemize}
+\item Want to calculate probability player winds up with particular sum
+\item To simplify problem, suppose player follows dealer's rule
+\item Namely, he hits if his sum $\le 16$, stands if $\ge 17$
+\item So possible outcomes $17,18,19,20,21$ or blackjack or bust
+\item Have already calculated probability of blackjack
+\item Remaining outcomes too difficult to calculate,
+since each outcome can happen in many ways
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item List shows all ways to get sum of $17$
+\item List has $267$ entries
+\item \alert{T} denotes $10$, $J$, $Q$, or $K$
+\item So each entry containing \alert{T}
+represents $4$ outcomes
+\end{itemize}
+\input{17}
 \end{frame}
 
 \end{document}
