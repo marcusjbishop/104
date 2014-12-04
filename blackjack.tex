@@ -177,4 +177,47 @@ represents $4$ outcomes
 \input{17}
 \end{frame}
 
+\begin{frame}
+Nevertheless, can use computer to calculate
+distribution:\footnote{Source:
+\href{http://www.wiley.com/WileyCDA/WileyTitle/productCd-0470624450.html}
+{\color{blue}
+{\em Probabilities: the Little Numbers that Rule Our Lives},
+by Peter Olofsson}}
+\[\begin{array}{r|lllllll}
+r&17&18&19&20&21&\text{Blackjack}&\text{Bust}\\\hline
+P\left(r\right)&0.15&0.15&0.14&0.18&0.05&0.05&0.28
+\end{array}\]
+\begin{example}
+\begin{itemize}
+\item Suppose you wind up with $17$
+\item Calculate probability that you win
+\item You lose if dealer has $18,19,20,21$ or blackjack, with
+probability $0.15+0.14+0.18+0.05+0.05=0.57$
+\item You tie if dealer has $17$, with probability $0.15$
+\item So only way to win if she busts, with probability $0.28$
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}{One strategy}
+\begin{itemize}
+\item One possible strategy from
+\href{http://www.wiley.com/WileyCDA/WileyTitle/productCd-0470624450.html}
+{\color{blue}Olofsson}:
+\begin{itemize}
+\item If sum $\le 11$ hit (can't possibly exceed $21$ by hitting)
+\item If dealer has $7$ or greater face-up, continue hitting until
+sum $\ge 17$
+\item If dealer has $2,3,4,5$ or $6$ face-up, continue hitting
+until sum $\ge 12$
+\item \dots unless sum exactly $12$ and dealer has $2$ or $3$
+face-up; then hit
+\end{itemize}
+\item Strategy comes with no guarantee
+\item More complicated strategies exist, often resulting
+from computer simulation involving millions of games
+\end{itemize}
+\end{frame}
+
 \end{document}
