@@ -1,4 +1,4 @@
-\documentclass[handout,xcolor=dvipsnames]{beamer}
+\documentclass{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -44,15 +44,15 @@
 \item Remaining cards worth value shown on card
 \item Players can request further cards, as many as desired
 \item Accomplished by saying \alert{hit me}
-\item Sum of player's cards should be as close to $21$ as possible,
-but not $>21$
-\item If sum $>21$ player loses bet (a \alert{bust})
+\item Sum of player's cards should be as close to $21$ as possible
+without exceeding $21$
+\item If sum exceeds $21$ player loses bet (a \alert{bust})
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \begin{itemize}
-\item When remaining players (if any) happy with their sums,
+\item When remaining players (if any) satisfied with their sums,
 dealer hits herself as needed
 \item Dealer \alert{must} hit herself if her sum $\le 16$
 \item However, she must stop hitting herself when her sum $\ge 17$
@@ -74,16 +74,16 @@ player wins amount bet
 as player to arrive at sum closest to $21$
 \item Why does game favor casino?
 \item If player busts, player loses automatically
-\item Dealer doesn't need to hit herself if all players bust
-\item If she does hit and busts, players who bust earlier still lose
+\item Dealer doesn't even need to hit herself if player busts
+\item If she does hit and busts, player still loses
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Probability of blackjack}
 \begin{itemize}
 \item Two cards whose sum $21$ called a \alert{blackjack}
-\item If player receives blackjack on first two cards,
-wins unless dealer also has blackjack
+\item If player receives blackjack in first two cards,
+he wins unless dealer also has blackjack
 \item Calculate probability of receiving blackjack on first two cards
 \item Can only happen if one card is $A$ and other
 has value $10$
@@ -91,7 +91,7 @@ has value $10$
 \item Four choices for $A$
 \item $16$~choices for other card
 \item So $4\cdot 16=64$ blackjacks possible
-\item $\ncr{52}{2}=1326$ possible two-card hands
+\item $\ncr{52}{2}=1326$ two-card hands possible 
 \item So $\frac{64}{1326}\approx 0.0483$ the probability of blackjack
 \item We'll round answer to $\frac{1}{20}$
 \end{itemize}
@@ -130,7 +130,7 @@ what is probability he wins?
 not independent
 \item So strictly speaking 
 $\frac{1}{20}\cdot\frac{19}{20}$ incorrect
-\item However, suffices for purpose of approximation
+\item However, suffices for approximate calculation
 \end{itemize}
 \end{remark}
 \end{frame}
@@ -194,8 +194,9 @@ P\left(r\right)&0.15&0.15&0.14&0.18&0.05&0.05&0.28
 \item Calculate probability that you win
 \item You lose if dealer has $18,19,20,21$ or blackjack, with
 probability $0.15+0.14+0.18+0.05+0.05=0.57$
-\item You tie if dealer has $17$, with probability $0.15$
-\item So only way to win if she busts, with probability $0.28$
+\item You tie (or \alert{push})
+if dealer has $17$, with probability $0.15$
+\item You win if she busts, with probability $0.28$
 \end{itemize}
 \end{example}
 \end{frame}
@@ -225,6 +226,36 @@ from computer simulation involving millions of games
 \item Listen to
 \href{http://www.thisamericanlife.org/radio-archives/episode/466/blackjack}
 {\color{blue}This American Life} episode on card counting
+\item Observe that deck rich in high cards favors player because
+\begin{itemize}
+\item Dealer must hit until her sum $\ge 17$
+\item \dots but higher cards more likely to bust her
+\item Also, blackjacks more likely if deck has many higher cards
+\item However, she pays you $\frac{3}{2}$ amount bet
+if you receive blackjack
+\item \dots but she only receives your bet if she receives blackjack
+\end{itemize}
+\item Conversely deck rich in low cards favors dealer
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item But how to know if deck rich in high cards?
+\item By keeping track!
+\item Hi-lo method:
+\begin{itemize}
+\item When dealer shuffles, player keeps running tally,
+beginning with zero
+\item Player adds one every time dealer deals $2,3,4,5,6$
+\item Player subtracts one every time dealer deals $J,K,Q,A$
+\item When tally reaches $+10$, say, player should bet more
+\item When tally negative, player should bet less
+\end{itemize}
+\item Players began card counting in 1960's with publication
+of Edward O. Thorp's 1962 book {\em Beat the Dealer}
+\item Casinos responded to card counters by using several decks,
+shuffling more often, harassing suspected counters, etc.
 \end{itemize}
 \end{frame}
 
