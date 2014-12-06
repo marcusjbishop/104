@@ -1,4 +1,4 @@
-\documentclass[answers,12pt]{exam}
+\documentclass[12pt]{exam}
 \usepackage{color,rotating}
 \CorrectChoiceEmphasis{\color{red}\bfseries}
 \usepackage[euler-digits]{eulervm}
@@ -25,7 +25,7 @@ This exam has \numquestions~questions printed on \numpages~pages.
 }}}
 \end{center}
 
-\begin{questions}
+\begin{questions}\itemsep.25in
 \question Math~104 currently has 89~women and 95~men enrolled.
 If a student is selected at random, then what is the probability
 that the student is a woman?\\
@@ -92,16 +92,6 @@ the number of possible heart flushes?\\
 \choice $2,598,960$ % C(52,5)
 \end{oneparchoices}
 
-\question Probability computed by studying
-the possible outcomes of an experiment is called \dots\\
-\begin{oneparchoices}
-\choice computational.
-\choice conditional.
-\choice empirical.
-\choice relative.
-\correctchoice theoretical.
-\end{oneparchoices}
-
 \question If an event $E$ has probability $\frac{1}{3}$
 of occurring, then what are the {\bf odds against} $E$?\\
 \begin{oneparchoices}
@@ -110,6 +100,19 @@ of occurring, then what are the {\bf odds against} $E$?\\
 \choice $1:3$
 \correctchoice $2:1$
 \choice $3:1$
+\end{oneparchoices}
+
+\question What is the probability of correctly guessing
+exactly seven answers on a multliple-choice quiz
+in which every question has five answer choices?\\
+\begin{oneparchoices}
+\choice $\ncr{10}{7}\left(\frac{1}{5}\right)^3
+\left(\frac{4}{5}\right)^7$
+\choice $\left(\frac{1}{5}\right)^7$
+\choice $1-\left(\frac{4}{5}\right)^3$
+\choice $\ncr{10}{7}\left(\frac{1}{5}\right)^7$
+\correctchoice $\ncr{10}{7}\left(\frac{1}{5}\right)^7
+\left(\frac{4}{5}\right)^3$
 \end{oneparchoices}
 
 \question Suppose $E$ and $F$ are events.
@@ -126,13 +129,22 @@ is $P\left(F\right)$?\\
 \end{oneparchoices}
 
 \question What is the probability
-of an event which cannot occur?
+of an event which cannot occur?\\
 \begin{oneparchoices}
 \choice $0.0$
 \choice $0.1$
 \choice $0.25$
 \choice $0.5$
 \choice $1.0$
+\end{oneparchoices}
+
+\question How many five-card poker hands are full houses?\\
+\begin{oneparchoices}
+\choice $24$ % C(4,2) * C(4,3)
+\choice $156$ % 13*12
+\correctchoice $3744$
+\choice $22,308$ % C(13,2) * C(13*3)
+\choice $267,696$ % 13 * 12 * 13 * 12 * 11
 \end{oneparchoices}
 
 \question Suppose that $E=\left\{2,4,6\right\}$,
@@ -466,6 +478,33 @@ of 45 and 54 bike to work?\\
 \choice $0.1739$ % bikes given 45-54
 \choice $1.9$ % walks and 45-54
 \choice $2.3$ % total 45-54
+\end{oneparchoices}
+
+\uplevel{Questions~\ref{FirstBJ}--\ref{LastBJ}
+deal with the game of blackjack. You may assume
+that the dealer is dealing cards from several decks
+of cards, all shuffled together.}
+
+\question If you receive the cards $6\heartsuit,9\clubsuit$
+initially, what is the probability you will bust if you
+request another card?\\
+\begin{oneparchoices}
+\choice $\frac{4}{13}$
+\choice $\frac{5}{13}$
+\choice $\frac{6}{13}$ % not busting
+\correctchoice $\frac{7}{13}$
+\choice $\frac{8}{13}$ % counted A as 10
+\end{oneparchoices}
+
+\question If the dealer has the card $A\diamondsuit$
+face-up and another card face-down, what is the probability
+that she has blackjack?\\
+\begin{oneparchoices}
+\choice $\frac{1}{20}$ % getting a blackjack
+\choice $\frac{3}{13}$ % didn't count 10
+\correctchoice $\frac{4}{13}$
+\choice $\frac{10}{13}$
+\choice $\frac{19}{20}$ % not getting a blackjack
 \end{oneparchoices}
 
 \end{questions}
