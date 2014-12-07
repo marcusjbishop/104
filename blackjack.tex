@@ -354,5 +354,118 @@ we don't need the world's highest IQ propagating more. Shame!''
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\begin{itemize}
+\item Tree diagram for Monty Hall problem:
+\item \alert{$C$} denotes car
+\item \alert{$G_1,G_2$} denote goats
+\end{itemize}
+\[\begin{xy}<1cm,0cm>:
+(-6,-1)*{\text{You choose:}};
+(-6,-2)*{\text{Host shows you:}};
+(0,0)="0";
+(-3,-1)="-31";
+(0,-1)="01";
+(3,-1)="31";
+"0";"-31"*+!D{C}**\dir{-};
+"0";"01"*+!D{G_1}**\dir{-};
+"0";"31"*+!D{G_2}**\dir{-};
+"-31";(-4,-2)*{G_1}**\dir{-};
+"-31";(-2,-2)*{G_2}**\dir{-};
+"01";(0,-2)*{G_2}**\dir{-};
+"31";(3,-2)*{G_1}**\dir{-};
+\end{xy}\]
+\end{frame}
 
-\end{document}
+\begin{frame}
+\[\begin{xy}<1cm,0cm>:
+(-6,-1)*{\text{You choose:}};
+(-6,-2)*{\text{Host shows you:}};
+(-6,-5)*{\text{Probability:}};
+(0,0)="0";
+(-3,-1)="-31";
+(0,-1)="01";
+(3,-1)="31";
+"0";"-31"*+!D{C}**\dir{-}?*+!D{\frac{1}{3}};
+"0";"01"*+!D{G_1}**\dir{-}?*+!DL{\frac{1}{3}};
+"0";"31"*+!D{G_2}**\dir{-}?*+!D{\frac{1}{3}};
+"-31";(-4,-2)*{G_1}**\dir{-}?*+!R{\frac{1}{2}};
+"-31";(-2,-2)*{G_2}**\dir{-}?*+!L{\frac{1}{2}};
+"01";(0,-2)*{G_2}**\dir{-};
+"31";(3,-2)*{G_1}**\dir{-};
+(-4,-5)*{\frac{1}{6}};(-2,-5)*{\frac{1}{6}};
+(0,-5)*{\frac{1}{3}};(3,-5)*{\frac{1}{3}};
+\end{xy}\]
+\end{frame}
+
+\begin{frame}
+\[\begin{xy}<1cm,0cm>:
+(-6,-1)*{\text{You choose:}};
+(-6,-2)*{\text{Host shows you:}};
+(-6,-3)*{\text{If you switch:}};
+(-6,-5)*{\text{Probability:}};
+(0,0)="0";
+(-3,-1)="-31";
+(0,-1)="01";
+(3,-1)="31";
+"0";"-31"*+!D{C}**\dir{-}?*+!D{\frac{1}{3}};
+"0";"01"*+!D{G_1}**\dir{-}?*+!DL{\frac{1}{3}};
+"0";"31"*+!D{G_2}**\dir{-}?*+!D{\frac{1}{3}};
+"-31";(-4,-2)*{G_1}**\dir{-}?*+!R{\frac{1}{2}};
+"-31";(-2,-2)*{G_2}**\dir{-}?*+!L{\frac{1}{2}};
+"01";(0,-2)*{G_2}**\dir{-};
+"31";(3,-2)*{G_1}**\dir{-};
+(-4,-3)*{L};(-2,-3)*{L};(0,-3)*{W};(3,-3)*{W};
+(-4,-5)*{\frac{1}{6}};(-2,-5)*{\frac{1}{6}};
+(0,-5)*{\frac{1}{3}};(3,-5)*{\frac{1}{3}};
+\end{xy}\]
+So $\frac{1}{3}+\frac{1}{3}=\frac{2}{3}$ the
+probability of winning if you switch
+\end{frame}
+
+\begin{frame}
+\[\begin{xy}<1cm,0cm>:
+(-6,-1)*{\text{You choose:}};
+(-6,-2)*{\text{Host shows you:}};
+(-6,-3)*{\text{If you switch:}};
+(-6,-4)*{\text{If you stay:}};
+(-6,-5)*{\text{Probability:}};
+(0,0)="0";
+(-3,-1)="-31";
+(0,-1)="01";
+(3,-1)="31";
+"0";"-31"*+!D{C}**\dir{-}?*+!D{\frac{1}{3}};
+"0";"01"*+!D{G_1}**\dir{-}?*+!DL{\frac{1}{3}};
+"0";"31"*+!D{G_2}**\dir{-}?*+!D{\frac{1}{3}};
+"-31";(-4,-2)*{G_1}**\dir{-}?*+!R{\frac{1}{2}};
+"-31";(-2,-2)*{G_2}**\dir{-}?*+!L{\frac{1}{2}};
+"01";(0,-2)*{G_2}**\dir{-};
+"31";(3,-2)*{G_1}**\dir{-};
+(-4,-3)*{L};(-2,-3)*{L};(0,-3)*{W};(3,-3)*{W};
+(-4,-4)*{W};(-2,-4)*{W};(0,-4)*{L};(3,-4)*{L};
+(-4,-5)*{\frac{1}{6}};(-2,-5)*{\frac{1}{6}};
+(0,-5)*{\frac{1}{3}};(3,-5)*{\frac{1}{3}};
+\end{xy}\]
+So $\frac{1}{6}+\frac{1}{6}=\frac{1}{3}$ the
+probability of winning if you stay
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Alternate explanation:
+\item You choose door 1
+\item $\frac{1}{3}$ the probability that car behind door 1
+\item So $\frac{2}{3}$ the probability that car behind
+door 2 or 3
+\item Subsequent events don't chanage these facts
+\item Host shows you goat behind door 3
+\item $\frac{2}{3}$ still the probability that car behind
+door 2 or 3
+\item \dots but now we know that car \alert{not} behind
+door 3
+\item So car behind door 2 with probability $\frac{2}{3}$
+\item Conclusion: should switch to door 2
+\end{itemize}
+\end{frame}
+
+\end{document} 
