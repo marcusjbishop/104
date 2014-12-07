@@ -1,4 +1,4 @@
-\documentclass[12pt]{exam}
+\documentclass[answers,12pt]{exam}
 \usepackage{color,rotating}
 \CorrectChoiceEmphasis{\color{red}\bfseries}
 \usepackage[euler-digits]{eulervm}
@@ -18,10 +18,11 @@
 \maketitle
 \begin{center}
 \fbox{\fbox{\parbox{5.5in}{\centering
-Using a Number~2 pencil record your student ID and name
+Using a Number~2 pencil record your student ID and your name
 on your answer sheet.
 Then answer the questions below on the answer sheet.
 This exam has \numquestions~questions printed on \numpages~pages.
+The last page has been left blank for your calculations.
 }}}
 \end{center}
 
@@ -106,12 +107,12 @@ of occurring, then what are the {\bf odds against} $E$?\\
 exactly seven answers on a multliple-choice quiz
 in which every question has five answer choices?\\
 \begin{oneparchoices}
-\choice $\ncr{10}{7}\left(\frac{1}{5}\right)^3
+\choice $\textstyle\ncr{10}{7}\left(\frac{1}{5}\right)^3
 \left(\frac{4}{5}\right)^7$
-\choice $\left(\frac{1}{5}\right)^7$
-\choice $1-\left(\frac{4}{5}\right)^3$
-\choice $\ncr{10}{7}\left(\frac{1}{5}\right)^7$
-\correctchoice $\ncr{10}{7}\left(\frac{1}{5}\right)^7
+\choice $\textstyle\left(\frac{1}{5}\right)^7$
+\choice $\textstyle 1-\left(\frac{4}{5}\right)^3$
+\choice $\textstyle\ncr{10}{7}\left(\frac{1}{5}\right)^7$
+\correctchoice $\textstyle\ncr{10}{7}\left(\frac{1}{5}\right)^7
 \left(\frac{4}{5}\right)^3$
 \end{oneparchoices}
 
@@ -129,9 +130,9 @@ is $P\left(F\right)$?\\
 \end{oneparchoices}
 
 \question What is the probability
-of an event which cannot occur?\\
+of an event that cannot occur?\\
 \begin{oneparchoices}
-\choice $0.0$
+\correctchoice $0.0$
 \choice $0.1$
 \choice $0.25$
 \choice $0.5$
@@ -172,19 +173,19 @@ that exactly two heads come up?\\
 \begin{oneparchoices}
 \choice $\frac{1}{8}$
 \choice $\frac{1}{4}$
-\choice $\frac{3}{8}$
+\correctchoice $\frac{3}{8}$
 \choice $\frac{1}{2}$
-\choice $1$
+\choice $\frac{2}{3}$
 \end{oneparchoices}
 
 \question How many subsets does the set
-$\left\{1,2,3,4,5,6,7\right\}$ have?\\
+$\left\{1,2,3,4,5,6,7,8\right\}$ have?\\
 \begin{oneparchoices}
-\choice $7$ % size of set
-\choice $21$ % C(7,2)
-\choice $14$ % 2 * 7
-\choice $49$ % 7 * 7
-\correctchoice $128$
+\choice $8$ % size of set
+\choice $16$ % 2 * 8
+\choice $28$ % C(8,2)
+\choice $64$ % 8 * 8
+\correctchoice $256$
 \end{oneparchoices}
 
 \question Customers order pizzas at Joe's Pizza
@@ -237,8 +238,8 @@ What is the probability that at least one die shows six?\\
 \begin{oneparchoices}
 \choice $\frac{1}{36}$
 \choice $\frac{1}{6}$
-\choice $\frac{1}{5}$ % number from stem
 \correctchoice $\frac{11}{36}$
+\choice $\frac{1}{3}$ % double-counted (6,6)
 \choice $\frac{25}{36}$ % complement
 \end{oneparchoices}
 
@@ -259,7 +260,7 @@ You need to paint your bedroom and bathroom two different colors.
 You have narrowed the color selection down to four colors, namely,
 aqua sparkle, battleship grey, coral, and dark green.
 However, if aqua sparkle is used in one room,
-then dark green, then should not
+then dark green should not
 be used in the other room, since the two colors don't match.}
 
 \question\label{FirstColor}
@@ -309,31 +310,32 @@ for the bathroom?\\
 \end{oneparchoices}
 
 \uplevel{Questions~\ref{FirstAmes}--\ref{LastAmes} deal
-with a recent survey of 1422~students about the apartments
-they live in. 142~students reported that their
+with a recent survey of 1422~students who live in apartments
+142~students reported that their
 apartments had dishwashers and 168~reported that
 their apartments had washer-dryers,
-while 29~students reported that they had both.}
+while 29~students reported that their
+apartments had both.}
 
 \question\label{FirstAmes} What is the probability that a randomly selected
 student has a washer-dryer given that that student has a dishwasher?\\
 \begin{oneparchoices}
-\choice $0.173$ % D given WD
-\correctchoice $0.204$
-\choice $0.209$ % both : WD
-\choice $0.257$ % both : D
-\choice $0.845$ % D / WD 
+\choice $0.1726$ % D given WD
+\correctchoice $0.2042$
+\choice $0.2086$ % both : WD
+\choice $0.2566$ % both : D
+\choice $0.8452$ % D / WD 
 \end{oneparchoices}
 
 \question\label{LastAmes} What is the probability that a randomly selected
 student has a dishwasher given that that student does {\bf not}
 have a washer-dryer?\\
 \begin{oneparchoices}
-\correctchoice $0.09$
+\correctchoice $0.0901$
 \choice $0.099$ % just D / neither
-\choice $0.124$ % D / neither
-\choice $0.109$ % WD given not D 
-\choice $0.173$ % D given WD
+\choice $0.1245$ % D / neither
+\choice $0.1086$ % WD given not D 
+\choice $0.1726$ % D given WD
 \end{oneparchoices}
 
 \uplevel{Questions~\ref{FirstPoker}--\ref{LastPoker}
@@ -398,9 +400,9 @@ would do you the most good?\\
 \begin{oneparchoices}
 \choice $\left(1,1\right)$ % lowest sum
 \correctchoice $\left(1,6\right)$
-\choice $\left(5,5\right)$ % highest double
+\choice $\left(5,5\right)$
 \choice $\left(4,6\right)$
-\choice $\left(5,6\right)$ % highest sum
+\choice $\left(6,6\right)$ % highest sum
 \end{oneparchoices}
 
 \question\label{FirstCraps}
@@ -410,7 +412,8 @@ of nine on your first roll?\\
 \choice $\frac{1}{12}$ % 3/36
 \correctchoice $\frac{1}{9}$
 \choice $\frac{5}{36}$
-\choice $\frac{1}{6}$ % 9/36, numerator from stem
+\choice $\frac{1}{6}$
+\choice $\frac{1}{4}$ % 9/36, numerator from stem
 \end{oneparchoices}
 
 \question\label{LastCraps}
@@ -448,7 +451,7 @@ What percent of all US residents walk to work?\\
 
 \question
 What percent of all US residents who walk or bike to work
-are between the ages of $35$ and $45$?\\
+are between the ages of $35$ and $44$?\\
 \begin{oneparchoices}
 \choice $1.9$ % walk and 35-44
 \correctchoice $2.4$
@@ -482,11 +485,12 @@ of 45 and 54 bike to work?\\
 
 \uplevel{Questions~\ref{FirstBJ}--\ref{LastBJ}
 deal with the game of blackjack. You may assume
-that the dealer is dealing cards from several decks
-of cards, all shuffled together.}
+that the dealer is dealing cards from several decks,
+all shuffled together.}
 
-\question If you receive the cards $6\heartsuit,9\clubsuit$
-initially, what is the probability you will bust if you
+\question\label{FirstBJ}
+If you receive the cards $6\heartsuit,9\clubsuit$
+initially, then what is the probability that you will bust if you
 request another card?\\
 \begin{oneparchoices}
 \choice $\frac{4}{13}$
@@ -496,8 +500,9 @@ request another card?\\
 \choice $\frac{8}{13}$ % counted A as 10
 \end{oneparchoices}
 
-\question If the dealer has the card $A\diamondsuit$
-face-up and another card face-down, what is the probability
+\question\label{LastBJ}
+If the dealer has the card $A\diamondsuit$
+face-up and another card face-down, then what is the probability
 that she has blackjack?\\
 \begin{oneparchoices}
 \choice $\frac{1}{20}$ % getting a blackjack
