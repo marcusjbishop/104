@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer}
+\documentclass{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -54,14 +54,19 @@ $\frac{3}{2}$ amount bet
 \item Sum of player's cards should be as close to $21$ as possible
 without exceeding $21$
 \item If sum exceeds $21$ player loses bet (a \alert{bust})
+\item When remaining players (if any) satisfied with their sums
+(they \alert{stand}) dealer reveals her
+face-down card
+\item If she has blackjack, remaining players lose bets
+\item \dots unless they also have blackjack
+\item No money exchanged if player and dealer both have blackjack
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \begin{itemize}
-\item When remaining players (if any) satisfied with their sums,
-dealer hits herself as needed
-\item Dealer \alert{must} hit herself if her sum $\le 16$
+\item Dealer hits herself as needed
+\item She \alert{must} hit herself if her sum $\le 16$
 \item However, she must stop hitting herself when her sum $\ge 17$
 \item If her sum $>21$ (she \alert{busts}), player wins amount bet
 \item Suppose her sum $\le 21$
@@ -255,7 +260,7 @@ if you receive blackjack
 \item When dealer shuffles, player keeps running tally,
 beginning with zero
 \item Player adds one every time dealer deals $2,3,4,5,6$
-\item Player subtracts one every time dealer deals $J,K,Q,A$
+\item Player subtracts one every time dealer deals $10,J,K,Q,A$
 \item When tally reaches $+10$, say, player should bet more
 \item When tally negative, player should bet less
 \end{itemize}
@@ -271,7 +276,7 @@ shuffling more often, harassing suspected counters, etc.
 \begin{frame}{Monty Hall Problem}
 \begin{center}\includegraphics[scale=.5]{LetsMakeDeal}\end{center}
 \begin{itemize}
-\item \alert{Let's make a deal} a TV game show
+\item \alert{Let's Make a Deal} a TV game show
 initiated in 1963
 \item Monty Hall the original host
 \item Content of game varies, but essentially
@@ -307,7 +312,7 @@ column in \alert{Parade} magazine
 \item Column initiated in 1986, consists of solutions
 to readers' puzzles, dilemmas, etc
 \item vos Savant the holder of \alert{Guinness Book of World Records}
-highest IQ record 1968--1989
+highest IQ record 1986--1989
 \item Link to \alert{Ask Marilyn} featured prominently on
 \href{http://parade.com}{\color{blue}Parade webpage}
 \end{itemize}
@@ -358,14 +363,13 @@ we don't need the world's highest IQ propagating more. Shame!''
 \end{itemize}
 \begin{remark}
 \begin{itemize}
-\item Also in 1990 HTTP introduced (WWW)
+\item Also in 1990 HTTP introduced (i.e. the WWW)
 \item Smith couldn't have known in 1990 his comments
 would be preserved for all time on web
 \item Thus ``flaming'' someone not advisable
 \end{itemize}
 \end{remark}
 \end{frame}
-
 
 \begin{frame}
 \begin{itemize}
