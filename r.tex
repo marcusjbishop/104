@@ -1,0 +1,66 @@
+\documentclass[answers,12pt]{exam}
+\usepackage{mdwlist}
+\usepackage[euler-digits]{eulervm}
+\usepackage{charter,amsmath,amssymb,breakurl}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{multicol}
+\author{}\date{}
+\title{Review problems}
+\begin{document}
+\maketitle
+\pagestyle{empty}
+\begin{questions}
+\uplevel{Basic properties of probability}
+\uplevel{Empirical probability}
+\uplevel{Probabilities and sample spaces of simple events (coin tosses, dice rolls, drawing particular combinations of cards from deck, etc)}
+\uplevel{Odds in favor of and against an event}
+\uplevel{Calculation of expection}
+
+\uplevel{Fair ticket price}
+\question (From exam 1)
+To raise money the marching band sells 500~raffle tickets
+for $\$3$ each. They will randomly select a ticket holder to receive
+a prize of $\$200$.
+\begin{parts}
+\part Calculate the fair ticket price.
+\part Calculate the expected proceeds for the band.
+\end{parts}
+\begin{solution}
+The fair price $P$ is the price for which the expectation
+for the ticket holder is $0$. This can be found by solving
+$\left(200-P\right)\frac{1}{500}-P\left(\frac{499}{500}\right)=0$
+for $P$, which gives $P=\frac{2}{5}$, or 40~cents.
+Another way to calculate the fair price
+is to add the actual ticket price $\$3$
+to the actual expectation $-\$2.60$, which also gives $\$0.40$.
+The proceeds for the band are $3\left(\$500\right)-\$200=\$1300$
+\end{solution}
+
+\uplevel{Tree diagrams}
+\question You need to hire a database administrator
+(DBM) and two programmers. You would like to offer the DBM
+position to either Alice, Barrett, or Carl and the programming
+positions to two of Quinn, Riley, Steven, or Tamara.
+However Alice is married to Quinn and the two can only accept
+jobs if they are {\em both} offered positions, since they will have
+to move if they accept new jobs.
+\begin{parts}
+\part In how many ways can the jobs be assigned?
+\part In how many ways is Alice offered a job?
+\part What is the probability that Riley will be offered a job?
+\end{parts}
+\uplevel{Counting principle}
+\uplevel{Inclusion-exclusion formula (including the form in the case of mutually exclusive events)}
+\uplevel{Venn diagrams}
+\uplevel{Independence}
+\uplevel{Craps (including the rules and the calculation of the probabilities of the various outcomes)}
+\uplevel{Union, intersection, size}
+\uplevel{Conditional probability (including the definition)}
+\uplevel{Permutations (including anagrams)}
+\uplevel{Combinations, binomial coefficients, the number of subsets of a set}
+\uplevel{Definitions of all the poker hands, and the calculation of the probabilities of receiving them}
+\uplevel{Problems involving improving poker hands by exchanging cards}
+\uplevel{Binomial probability}
+\uplevel{Blackjack, including the rules and simple problems}
+\end{questions}
+\end{document}
