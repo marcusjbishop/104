@@ -1,22 +1,22 @@
 \documentclass[answers,12pt]{exam}
 \usepackage{mdwlist}
+\usepackage{graphicx,multicol}
 \usepackage[euler-digits]{eulervm}
 \usepackage{charter,amsmath,amssymb,breakurl}
 \usepackage[letterpaper,margin=1in]{geometry}
-\usepackage{multicol}
 \author{}\date{}
 \title{Review problems}
 \begin{document}
 \maketitle
 \pagestyle{empty}
 \begin{questions}
-\uplevel{Basic properties of probability}
-\uplevel{Empirical probability}
-\uplevel{Probabilities and sample spaces of simple events (coin tosses, dice rolls, drawing particular combinations of cards from deck, etc)}
-\uplevel{Odds in favor of and against an event}
-\uplevel{Calculation of expection}
+\uplevel{\bf Basic properties of probability}
+\uplevel{\bf Empirical probability}
+\uplevel{\bf Probabilities and sample spaces of simple events (coin tosses, dice rolls, drawing particular combinations of cards from deck, etc)}
+\uplevel{\bf Odds in favor of and against an event}
+\uplevel{\bf Calculation of expection}
 
-\uplevel{Fair ticket price}
+\uplevel{\bf Fair ticket price}
 \question (From exam 1)
 To raise money the marching band sells 500~raffle tickets
 for $\$3$ each. They will randomly select a ticket holder to receive
@@ -36,7 +36,7 @@ to the actual expectation $-\$2.60$, which also gives $\$0.40$.
 The proceeds for the band are $3\left(\$500\right)-\$200=\$1300$
 \end{solution}
 
-\uplevel{Tree diagrams}
+\uplevel{\bf Tree diagrams}
 \question You need to hire a database administrator
 (DBM) and two programmers. You would like to offer the DBM
 position to either Alice, Barrett, or Carl and the programming
@@ -49,10 +49,10 @@ to move if they accept new jobs.
 \part In how many ways is Alice offered a job?
 \part What is the probability that Riley will be offered a job?
 \end{parts}
-\uplevel{Counting principle}
-\uplevel{Inclusion-exclusion formula (including the form in the case of mutually exclusive events)}
-\uplevel{Venn diagrams}
-\uplevel{Independence}
+\uplevel{\bf Counting principle}
+\uplevel{\bf Inclusion-exclusion formula (including the form in the case of mutually exclusive events)}
+\uplevel{\bf Venn diagrams}
+\uplevel{\bf Independence}
 \question You draw a card from a shuffled deck. You don't replace
 the card. Then your opponent draws a card. Are the events that
 you drew a king and that she drew a king independent?
@@ -69,14 +69,14 @@ is $\frac{4}{6}=\frac{2}{3}$.
 Since the two events are independent, the probability of both
 events occuring is $\frac{1}{3}\cdot\frac{2}{3}=\frac{2}{9}$. \end{solution}
 
-\uplevel{Craps (including the rules and the calculation
+\uplevel{\bf Craps (including the rules and the calculation
 of the probabilities of the various outcomes)}
 \question Do the pass bettors or the don't pass bettors have
 a greater probability of winning, or are the probabilities the same?
 \question Suppose you are the shooter and you roll four on your opening
 roll. What is the probability you will win the game?
 
-\uplevel{Union, intersection, size}
+\uplevel{\bf Union, intersection, size}
 \question If $E=\left\{\alpha,\gamma,\zeta\right\}$,
 $F=\left\{\alpha,\beta,\delta,\xi\right\}$, and
 $G=\left\{\beta,\zeta,\xi\right\}$, then calculate the following.
@@ -86,7 +86,7 @@ $G=\left\{\beta,\zeta,\xi\right\}$, then calculate the following.
 \part $\left|E\cup\left(F\cap G\right)\right|$
 \end{parts}
 
-\uplevel{Conditional probability (including the definition)}
+\uplevel{\bf Conditional probability}
 \question Your opponent draws a card from a shuffled deck. She doesn't
 replace the card. Then you draw a card. Calculate the following.
 \begin{parts}
@@ -99,6 +99,24 @@ replace the card. Then you draw a card. Calculate the following.
 whether she drew the card $Q\heartsuit$. \end{solution}
 \end{parts}
 
+\question\label{Spinner} Suppose the sample space of an experiment
+consists of three independent
+outcomes $\omega_1,\omega_2,\omega_3$ and that
+$P\left(\omega_1\right)=\frac{2}{7}$, $P\left(\omega_2\right)=\frac{1}{7}$,
+and $P\left(\omega_3\right)=\frac{4}{7}$. Consider the events
+$E=\left\{\omega_1,\omega_2\right\}$ and $F=\left\{\omega_2\right\}$.
+Calculate $P\left(E\mid\text{not $F$}\right)$.
+\begin{multicols}{2}
+\question A spinner for a game is shown at the left
+Calculate the probability that the spinner will stop
+on a primary color given that it does not stop on an ISU color.
+\begin{center}\includegraphics[scale=.6]{ReviewSpinner}\end{center}
+\end{multicols}
+\begin{solution} This is the same problem as Exercise~\ref{Spinner}
+with $E$ the event that the spinner lands on a primar
+color and $F$ the event that the spinner lands on an ISU color.
+\end{solution}.
+
 \question You roll two regular two-sided dice. Calculate the probability
 that the sum of the numbers showing is greater than 9 given that
 the first die shows 5.
@@ -106,36 +124,22 @@ the first die shows 5.
 shows 5 or 6. This will occur with probability $\frac{2}{6}=\frac{1}{3}$.
 \end{solution}
 
-\uplevel{Permutations (including partial permutations and anagrams)}
+\uplevel{\bf Permutations }
 \question In a swimming race involving eight swimmers, only the three
 with the fastest times are observed, namely, first, second, third places.
 How many possible outcomes of the race are there?
 \begin{solution} $8\cdot 7\cdot 6=336$ \end{solution}
+\question A {\em byte} is a sequence of eight {\em bits}, each
+of which representing either zero or one. How many bytes are possible?
+\begin{solution} $2^8=256$\end{solution}
 
-\uplevel{Combinations, binomial coefficients, the number of subsets of a set}
+\uplevel{\bf Combinations, binomial coefficients, the number of subsets of a set}
 \question How many subsets of a set of size ten are there?
 \begin{solution} $2^{10}=1024$\end{solution}
 \question 
-\uplevel{Definitions of all the poker hands, and the calculation of the probabilities of receiving them}
-\uplevel{Problems involving improving poker hands by exchanging cards}
-\uplevel{Binomial probability}
-\uplevel{Blackjack, including the rules and simple problems}
-\end{questions}
-\end{document}
-
-\uplevel{Craps (including the rules and the calculation of the probabilities of the various outcomes)}
-\question Do the pass bettors or the don't pass bettors have
-a greater probability of winning, or are the probabilities the same?
-\question Suppose you are the shooter and you roll four on your opening
-roll. What is the probability you will win the game?
-\uplevel{Union, intersection, size}
-
-\uplevel{Conditional probability (including the definition)}
-\uplevel{Permutations (including anagrams)}
-\uplevel{Combinations, binomial coefficients, the number of subsets of a set}
-\uplevel{Definitions of all the poker hands, and the calculation of the probabilities of receiving them}
-\uplevel{Problems involving improving poker hands by exchanging cards}
-\uplevel{Binomial probability}
-\uplevel{Blackjack, including the rules and simple problems}
+\uplevel{\bf Definitions of all the poker hands, and the calculation of the probabilities of receiving them}
+\uplevel{\bf Problems involving improving poker hands by exchanging cards}
+\uplevel{\bf Binomial probability}
+\uplevel{\bf Blackjack, including the rules and simple problems}
 \end{questions}
 \end{document}
