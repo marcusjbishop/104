@@ -1,4 +1,4 @@
-\documentclass[answers,12pt]{exam}
+\documentclass[12pt]{exam}
 \usepackage{mdwlist}
 \usepackage{graphicx,multicol}
 \usepackage[euler-digits]{eulervm}
@@ -155,6 +155,21 @@ shows 5 or 6.
 This will occur with probability $\frac{2}{6}=\frac{1}{3}$.
 \end{solution}
 
+\question The National Vital Statistics Report estimates
+that a US resident will live at least 80~years with probability~$.091$
+and at least 90~years with probability~$0.047$.
+What is the probability that a man lives at least 90~years
+given that he is now 80~years old?
+\begin{solution}
+Let $E$ be the event that the resident lives at least 80~years
+and $F$ the event that the resident lives at least 90~years.
+Note that $E\cap F=F$. Thus
+\[P\left(F\mid E\right)
+=\frac{P\left(F\cap E\right)}{P\left(E\right)}
+=\frac{P\left(F\right)}{P\left(E\right)}
+=\frac{0.047}{0.091}\approx 0.516.\]
+\end{solution}
+
 \uplevel{\bf Permutations.}
 \question In a swimming race involving eight swimmers, only the three
 with the fastest times are observed,
@@ -179,7 +194,21 @@ fruit to the children, leaving two without fruit?
 \begin{solution} $2^{10}=1024$\end{solution}
 \uplevel{\bf Definitions of all the poker hands, and the calculation of the probabilities of receiving them.}
 \uplevel{\bf Problems involving improving poker hands by exchanging cards.}
+
 \uplevel{\bf Binomial probability.}
+\question If a baseball player has a batting average
+of $0.350$ what is the probability that the player
+will hit the ball the following number of times in his next four
+times at bat?
+\begin{parts}
+\part Exactly twice
+\part At least twice
+\end{parts}
+
+\question If $60\%$ of the electorate supports the mayor
+what is the probability that in a random sample
+of 10~voters, fewer than half support her?
+
 \uplevel{\bf Blackjack.}
 \end{questions}
 \end{document}
