@@ -10,13 +10,13 @@
 \maketitle
 \pagestyle{empty}
 \begin{questions}
-\uplevel{\bf Basic properties of probability}
-\uplevel{\bf Empirical probability}
-\uplevel{\bf Probabilities and sample spaces of simple events (coin tosses, dice rolls, drawing particular combinations of cards from deck, etc)}
-\uplevel{\bf Odds in favor of and against an event}
-\uplevel{\bf Calculation of expectation}
+\uplevel{\bf Basic properties of probability.}
+\uplevel{\bf Empirical probability.}
+\uplevel{\bf Probabilities and sample spaces of simple events.}
+\uplevel{\bf Odds in favor of and against an event.}
+\uplevel{\bf Expectation.}
 
-\uplevel{\bf Fair ticket price}
+\uplevel{\bf Fair ticket price.}
 \question (From exam 1)
 To raise money the marching band sells 500~raffle tickets
 for $\$3$ each. They will randomly select a ticket holder to receive
@@ -32,33 +32,41 @@ $\left(200-P\right)\frac{1}{500}-P\left(\frac{499}{500}\right)=0$
 for $P$, which gives $P=\frac{2}{5}$, or 40~cents.
 Another way to calculate the fair price
 is to add the actual ticket price $\$3$
-to the actual expectation $-\$2.60$, which also gives $\$0.40$.
-The proceeds for the band are $3\left(\$500\right)-\$200=\$1300$
+to the actual expectation $\$-2.60$, which also gives $\$0.40$.
+The proceeds for the band are $3\left(\$500\right)-\$200=\$1300$.
+From their point of view this is the only outcome, so $\$1300$
+is also the expected proceeds for the band.
 \end{solution}
 
-\uplevel{\bf Tree diagrams}
+\uplevel{\bf Tree diagrams.}
 \question You need to hire a database administrator
-(DBM) and two programmers. You would like to offer the DBM
-position to either Alice, Barrett, or Carl and the programming
-positions to two of Quinn, Riley, Steven, or Tamara.
-However Alice is married to Quinn and the two can only accept
-jobs if they are {\em both} offered positions, since they will have
-to move if they accept new jobs.
+(DBA) and two programmers. You would like to offer the DBA
+position to one of Alice, Barrett, Carl and the programming
+positions to two of Quinn, Riley, Steven, Tamara.
+However Alice is married to Quinn and they can only accept
+positions if {\em both} are offered positions, since they will have
+to move.
 \begin{parts}
 \part In how many ways can the jobs be assigned?
 \part In how many ways is Alice offered a job?
 \part What is the probability that Riley will be offered a job?
 \end{parts}
-\uplevel{\bf Counting principle}
-\uplevel{\bf Inclusion-exclusion formula (including the form in the case of mutually exclusive events)}
-\uplevel{\bf Venn diagrams}
-\uplevel{\bf Independence}
+\begin{solution} $18,6,\frac{5}{9}$\end{solution}
+
+\uplevel{\bf Counting principle.}
+\uplevel{\bf Inclusion-exclusion formula.}
+\uplevel{\bf Venn diagrams.}
+\uplevel{\bf Independence.}
 \question You draw a card from a shuffled deck. You don't replace
-the card. Then your opponent draws a card. Are the events that
+the card. Then your opponent draws a card.
+\begin{parts}
+\part Are the events that
 you drew a king and that she drew a king independent?
-\question You draw a card from a shuffled deck. You don't replace
-the card. Then your opponent draws a card. Are the events that
+\part Are the events that
 you drew a king and that she drew a heart independent?
+\end{parts}
+\begin{solution} No, no\end{solution}
+
 \question You roll a regular six-sided die twice. Calculate
 the probability that you roll a 1 or 2 the first time and a
 3, 4, 5, or 6 the second time.
@@ -69,14 +77,25 @@ is $\frac{4}{6}=\frac{2}{3}$.
 Since the two events are independent, the probability of both
 events occurring is $\frac{1}{3}\cdot\frac{2}{3}=\frac{2}{9}$. \end{solution}
 
-\uplevel{\bf Craps (including the rules and the calculation
-of the probabilities of the various outcomes)}
+\uplevel{\bf Craps.}
 \question Do the pass bettors or the don't pass bettors have
-a greater probability of winning, or are the probabilities the same?
-\question Suppose you are the shooter and you roll four on your opening
-roll. What is the probability you will win the game?
+a greater probability of winning?
+\begin{solution} The pass bettors win with probability
+$\frac{244}{495}$ while the don't pass bettors win with probability
+$\frac{251}{495}$. Thus the don't pass bettors have a slight edge.
+\end{solution}
 
-\uplevel{\bf Union, intersection, size}
+\question Suppose you are the shooter and you roll 
+a sum of eight on your opening
+roll. What is the probability that you win the game?
+\begin{solution} At this stage you continue rolling until
+a sum of either seven or eight comes up, with you winning
+in the latter case. Since there are six ways for a sum of
+seven to come up and five ways for a sum of eight to come up,
+you will win the game with probability $\frac{5}{11}$.
+\end{solution}
+
+\uplevel{\bf Union, intersection, size.}
 \question If $E=\left\{\alpha,\gamma,\zeta\right\}$,
 $F=\left\{\alpha,\beta,\delta,\xi\right\}$, and
 $G=\left\{\beta,\zeta,\xi\right\}$, then calculate the following.
@@ -85,10 +104,14 @@ $G=\left\{\beta,\zeta,\xi\right\}$, then calculate the following.
 \part $E\cup G$
 \part $\left|E\cup\left(F\cap G\right)\right|$
 \end{parts}
+\begin{solution} $\left\{\alpha\right\},\left\{
+\alpha,\beta,\delta,\zeta,\xi\right\},3$
+\end{solution}
 
-\uplevel{\bf Conditional probability}
-\question Your opponent draws a card from a shuffled deck. She doesn't
-replace the card. Then you draw a card. Calculate the following.
+\uplevel{\bf Conditional probability.}
+\question Your opponent draws a card from a full shuffled deck.
+She doesn't replace the card.
+Then you draw a card. Calculate the following.
 \begin{parts}
 \part The probability that you draw a queen given that she drew a queen.
 \begin{solution} $\frac{3}{51}$ \end{solution}
@@ -106,8 +129,15 @@ $P\left(\omega_1\right)=\frac{2}{7}$, $P\left(\omega_2\right)=\frac{1}{7}$,
 and $P\left(\omega_3\right)=\frac{4}{7}$. Consider the events
 $E=\left\{\omega_1,\omega_2\right\}$ and $F=\left\{\omega_2\right\}$.
 Calculate $P\left(E\mid\text{not $F$}\right)$.
+\begin{solution}
+\[\frac{P\left(E\cap\text{not $F$}\right)}
+{P\left(\text{not $F$}\right)}
+=\frac{P\left\{\omega_1\right\}}{P\left\{\omega_1,\omega_3\right\}}
+=\frac{2/7}{2/7+4/7}=\frac{1}{3}\]
+\end{solution}
+
 \begin{multicols}{2}
-\question A spinner for a game is shown at the left
+\question A spinner for a game is shown at the left.
 Calculate the probability that the spinner will stop
 on a primary color given that it does not stop on an ISU color.
 \begin{center}\includegraphics[scale=.6]{ReviewSpinner}\end{center}
@@ -115,16 +145,17 @@ on a primary color given that it does not stop on an ISU color.
 \begin{solution} This is the same problem as Exercise~\ref{Spinner}
 with $E$ the event that the spinner lands on a primary
 color and $F$ the event that the spinner lands on an ISU color.
-\end{solution}.
+\end{solution}
 
-\question You roll two regular two-sided dice. Calculate the probability
+\question You roll two regular six-sided dice. Calculate the probability
 that the sum of the numbers showing is greater than 9 given that
 the first die shows 5.
 \begin{solution} The sum will be greater than 9 if the second die
-shows 5 or 6. This will occur with probability $\frac{2}{6}=\frac{1}{3}$.
+shows 5 or 6.
+This will occur with probability $\frac{2}{6}=\frac{1}{3}$.
 \end{solution}
 
-\uplevel{\bf Permutations }
+\uplevel{\bf Permutations.}
 \question In a swimming race involving eight swimmers, only the three
 with the fastest times are observed, namely, first, second, third places.
 How many possible outcomes of the race are there?
@@ -133,13 +164,12 @@ How many possible outcomes of the race are there?
 of which representing either zero or one. How many bytes are possible?
 \begin{solution} $2^8=256$\end{solution}
 
-\uplevel{\bf Combinations, binomial coefficients, the number of subsets of a set}
+\uplevel{\bf Combinations, binomial coefficients, number of subsets.}
 \question How many subsets of a set of size ten are there?
 \begin{solution} $2^{10}=1024$\end{solution}
-\question 
-\uplevel{\bf Definitions of all the poker hands, and the calculation of the probabilities of receiving them}
-\uplevel{\bf Problems involving improving poker hands by exchanging cards}
-\uplevel{\bf Binomial probability}
-\uplevel{\bf Blackjack, including the rules and simple problems}
+\uplevel{\bf Definitions of all the poker hands, and the calculation of the probabilities of receiving them.}
+\uplevel{\bf Problems involving improving poker hands by exchanging cards.}
+\uplevel{\bf Binomial probability.}
+\uplevel{\bf Blackjack.}
 \end{questions}
 \end{document}
