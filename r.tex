@@ -1,14 +1,13 @@
-\documentclass[answers,12pt]{exam}
-\usepackage{mdwlist}
-\usepackage{graphicx,multicol}
+\documentclass[12pt]{exam}
+\usepackage{graphicx,multicol,xy}
 \usepackage[euler-digits]{eulervm}
-\usepackage{charter,amsmath,amssymb,breakurl}
+\usepackage{charter,amsmath,amssymb,breakurl,tensor}
 \usepackage[letterpaper,margin=1in]{geometry}
 \author{}\date{}
 \title{Review problems}
+\newcommand\ncr[2]{\tensor[_{#1}]C{_{#2}}}
 \begin{document}
 \maketitle
-\pagestyle{empty}
 \begin{questions}
 \uplevel{\bf Basic properties of probability.}
 \uplevel{\bf Empirical probability.}
@@ -54,16 +53,56 @@ to move.
 \begin{solution} $18,6,\frac{5}{9}$\end{solution}
 
 \uplevel{\bf Counting principle.}
+\question A caterer offers 8~appetizers,
+10~main courses, and 7~desserts. A customer organizing
+a banquet needs to select 2~appetizers, 4~main courses,
+and 2~desserts. In how many ways can this be done?
+\begin{solution} $\left(8\cdot 7\right)\left(10\cdot
+9\cdot 8\cdot 7\right)\left(7\cdot 6\right)=11,854,080$
+\end{solution}
+
 \uplevel{\bf Inclusion-exclusion formula.}
 \uplevel{\bf Venn diagrams.}
+\question From a survey of 1000 residents of Ames, it was found that
+500 had tried a particular brand of diet cola, 600 had tried
+a particular brand of regular cola, and 200 had tried both.
+\begin{parts}
+\part What is the probability that a randomly selected resident
+has tried the diet or the regular cola?
+\part What is the probability that a randomly selected resident
+has tried either the diet or the regular cola but not both?
+\end{parts}
+\begin{solution}
+There is no reason to believe that the numbers 500 and 600
+exclude those residents who have tried both colas. Indeed,
+if this were the case, then these 1100~people alone would exceed
+the number of respondents of the survey! We construct the following
+Venn diagram.
+\[\begin{xy}<.5cm,0cm>:
+(-1,2)*+!D{\text{D}};
+(1,2)*+!D{\text{R}};
+(-1,0)*\cir<1cm>{};
+(1,0)*\cir<1cm>{};
+(0,0)*{200};
+(-2,0)*{300};
+(2,0)*{400};
+(4,0)*{100};
+\end{xy}\]
+As shown in the diagram, a resident has tried
+the diet or the regular cola with probability
+$\frac{300+200+400}{1000}=\frac{9}{10}$.
+A resident has tried the diet or the regular
+but not both with probability
+$\frac{300+400}{1000}=\frac{7}{10}$.
+\end{solution}
+
 \uplevel{\bf Independence.}
 \question You draw a card from a shuffled deck. You don't replace
-the card. Then your opponent draws a card.
+the card. Then your opponent draws a card. Are the following events
+independent?
 \begin{parts}
-\part Are the events that
-you drew a king and that she drew a king independent?
-\part Are the events that
-you drew a king and that she drew a heart independent?
+\part You drew a king and she drew a king?
+\part You drew a king and she drew a heart?
 \end{parts}
 \begin{solution} No, no\end{solution}
 
@@ -77,28 +116,50 @@ is $\frac{4}{6}=\frac{2}{3}$.
 Since the two events are independent, the probability of both
 events occurring is $\frac{1}{3}\cdot\frac{2}{3}=\frac{2}{9}$. \end{solution}
 
+\question Let $E$ be the event that all of a family's children
+have the same sex. Let $F$ be the event that the family has
+at most one boy.
+\begin{parts}
+\part Are $E$ and $F$ independent if the family has two children?
+\part Are $E$ and $F$ independent if the family has three children?
+\end{parts}
+{\bf Hint:} Recall that if $E$ and $F$ are independent then
+$P\left(E\cap F\right)=P\left(E\right)P\left(F\right)$.
+\begin{solution}
+In the case that the family has two children we calculate
+$P\left(E\right)=\frac{1}{2}$ and $P\left(F\right)=\frac{3}{4}$
+while $P\left(E\cap F\right)=\frac{1}{4}$. Then
+$P\left(E\cap F\right)\ne P\left(E\right)P\left(F\right)$
+so $E$ and $F$ are {\em not} independent.
+However, in the case that the family has three children we calculate
+$P\left(E\right)=\frac{1}{4}$ and $P\left(F\right)=\frac{1}{2}$
+while $P\left(E\cap F\right)=\frac{1}{8}$. Then
+$P\left(E\cap F\right)=P\left(E\right)P\left(F\right)$
+so $E$ and $F$ {\em are} independent.
+\end{solution}
+
 \uplevel{\bf Craps.}
 \question Do the pass bettors or the don't pass bettors have
-a greater probability of winning?
+a greater probability of winning in the game of craps?
 \begin{solution} The pass bettors win with probability
 $\frac{244}{495}$ while the don't pass bettors win with probability
 $\frac{251}{495}$. Thus the don't pass bettors have a slight edge.
 \end{solution}
 
-\question Suppose you are the shooter and you roll 
-a sum of eight on your opening
+\question Suppose that you are the shooter in a game of craps.
+You roll a sum of eight on your opening
 roll. What is the probability that you win the game?
 \begin{solution} At this stage you continue rolling until
-a sum of either seven or eight comes up, with you winning
-in the latter case. Since there are six ways for a sum of
-seven to come up and five ways for a sum of eight to come up,
+you roll a sum of either seven or eight, you winning the game
+in the latter case. Since there are six ways to roll a sum of
+seven and five ways to roll a sum of eight,
 you will win the game with probability $\frac{5}{11}$.
 \end{solution}
 
 \uplevel{\bf Union, intersection, size.}
 \question If $E=\left\{\alpha,\gamma,\zeta\right\}$,
 $F=\left\{\alpha,\beta,\delta,\xi\right\}$, and
-$G=\left\{\beta,\zeta,\xi\right\}$, then calculate the following.
+$G=\left\{\beta,\zeta,\xi\right\}$ then calculate the following.
 \begin{parts}
 \part $E\cap F$
 \part $E\cup G$
@@ -113,11 +174,11 @@ $G=\left\{\beta,\zeta,\xi\right\}$, then calculate the following.
 She doesn't replace the card.
 Then you draw a card. Calculate the following.
 \begin{parts}
-\part The probability that you draw a queen given that she drew a queen.
+\part The probability that you drew a queen given that she drew a queen.
 \begin{solution} $\frac{3}{51}$ \end{solution}
 \part The probability that she drew a queen and you drew a queen.
 \begin{solution} $\frac{4}{52}\cdot\frac{3}{51}=\frac{1}{221}$ \end{solution}
-\part The probability that you draw a heart given that she drew a queen.
+\part The probability that you drew a heart given that she drew a queen.
 \begin{solution} This is impossible to calculate without knowing
 whether she drew the card $Q\heartsuit$. \end{solution}
 \end{parts}
@@ -158,8 +219,8 @@ This will occur with probability $\frac{2}{6}=\frac{1}{3}$.
 \question The National Vital Statistics Report estimates
 that a US resident will live at least 80~years with probability~$.091$
 and at least 90~years with probability~$0.047$.
-What is the probability that a man lives at least 90~years
-given that he is now 80~years old?
+What is the probability that a resident lives at least 90~years
+given that he or she is now 80~years old?
 \begin{solution}
 Let $E$ be the event that the resident lives at least 80~years
 and $F$ the event that the resident lives at least 90~years.
@@ -176,37 +237,78 @@ with the fastest times are observed,
 namely, first, second, third places.
 How many possible outcomes of the race are there?
 \begin{solution} $8\cdot 7\cdot 6=336$ \end{solution}
-\question A {\em byte} is a sequence of eight {\em bits}, each
-of which representing either zero or one. How many bytes are possible?
-\begin{solution} $2^8=256$\end{solution}
 
 \question I have five cars, but only a two-stall garage, so I
-park three of the cars on the street. In how many
-ways can I park two of the cars in the garage?
+park three of my cars on the street. 
+The stall closest to the house is the most useful stall since
+it has a garage door opener. In how many
+ways can I park my cars in the garage?
+\begin{solution}$5\cdot 4=20$\end{solution}
+
 \question Five children arrive at my house on Halloween,
 but I only have three pieces of fruit remaining to distribute, namely
 a banana, a pear, and an apple. In how many ways can I distribute
-fruit to the children, leaving two without fruit?
+fruit to the children?
 \begin{solution} $5\cdot 4\cdot 3=60$\end{solution}
 
 \uplevel{\bf Combinations, binomial coefficients, number of subsets.}
-\question How many subsets of a set of size ten are there?
-\begin{solution} $2^{10}=1024$\end{solution}
-\uplevel{\bf Definitions of all the poker hands, and the calculation of the probabilities of receiving them.}
+\question
+\begin{parts}
+\part How many subsets of a set of size eight are there?
+\part A {\em byte} is a sequence of eight {\em bits}, each
+of which representing either zero or one. How many bytes are possible?
+\part If a pizza restaurant offers eight different toppings
+for customers to choose among, how many ways to order a pizza are there?
+\end{parts}
+\begin{solution} $2^8=256$ is the answer to all three questions.\end{solution}
+
+\question How many four-person subcommittees can be formed
+from a committee of ten people under the following circumstances?
+\begin{parts}
+\part There are no restrictions.
+\part Alice and Quinn must both be on the subcommittee.
+\part Either Alice or Quinn (but not both) must be on the subcommittee.
+\end{parts}
+\begin{solution}
+If there are no restrictions this can
+be done in $\ncr{10}{4}=210$ ways.
+However, if both Alice and Quinn must be on the subcommittee
+then there are $\ncr{8}{2}=28$ possibilities since the two remaining
+members of the subcommittee
+must be selected from among the eight remaining members of the committee.
+If Alice or Quinn but not both must be on the subcommittee,
+then there are $2\cdot\ncr{8}{3}=112$ possibilities.
+This is because either Alice or Quinn must be selected,
+after which the three remaining members of the subcommittee
+must be selected from among the eight remaining members of the committee.
+\end{solution}
+
+\question How many five-card poker hands have all picture cards?
+\begin{solution}$\ncr{12}{5}=792$\end{solution}
+
+\uplevel{\bf Definitions of all the poker hands.}
 \uplevel{\bf Problems involving improving poker hands by exchanging cards.}
 
 \uplevel{\bf Binomial probability.}
 \question If a baseball player has a batting average
-of $0.350$ what is the probability that the player
+of $0.350$ then what is the probability that he
 will hit the ball the following number of times in his next four
 times at bat?
 \begin{parts}
 \part Exactly twice
+\begin{solution}
+$\ncr{4}{2}\left(0.35\right)^2\left(0.65\right)^2\approx 0.311$
+\end{solution}
 \part At least twice
+\begin{solution}
+$\ncr{4}{2}\left(0.35\right)^2\left(0.65\right)^2
++\ncr{4}{3}\left(0.35\right)^3\left(0.65\right)^1
++\ncr{4}{4}\left(0.35\right)^4\left(0.65\right)^0\approx 0.568$
+\end{solution}
 \end{parts}
 
 \question If $60\%$ of the electorate supports the mayor
-what is the probability that in a random sample
+then what is the probability that in a random sample
 of 10~voters, fewer than half support her?
 
 \uplevel{\bf Blackjack.}
