@@ -1,4 +1,4 @@
-\documentclass[answers,12pt]{exam}
+\documentclass[12pt]{exam}
 \usepackage{graphicx,multicol,xy}
 \usepackage[euler-digits]{eulervm}
 \usepackage{charter,amsmath,amssymb,breakurl,tensor}
@@ -292,12 +292,12 @@ must be selected from among the eight remaining members of the committee.
 \question Playing poker, your receive the cards
 $2\diamondsuit,4\clubsuit,5\diamondsuit,5\spadesuit,10\diamondsuit$.
 If you exchange $4\clubsuit,5\spadesuit$ for two new cards,
-then what is the probability the new hand will be a flush?
+then what is the probability that the new hand will be a flush?
 \begin{solution}
 Since you hold three diamonds, there remain ten in the deck.
 Two of them could be dealt to you in $\ncr{10}{2}=45$ ways.
-Since $47$~cards remain, two cards could be dealt to you in
-$\ncr{47}{2}=1081$ ways. Thus your probability of completing your flush
+Now since $47$~cards remain, any two cards could be dealt to you in
+$\ncr{47}{2}=1081$ ways. So your probability of completing your flush
 is $\frac{45}{1081}\approx 0.0416$.
 \end{solution}
 
@@ -309,7 +309,7 @@ will have three-of-a-kind?
 \begin{solution}
 There remain two cards of rank five in the deck. There are two
 ways to choose one of them, and $\ncr{45}{2}=990$ ways to choose
-two other cards of rank other than five. Since the three cards
+two other cards of rank other than five. Now since any three cards
 can be dealt to you in $\ncr{47}{3}=16,215$ ways, your probability
 of receiving exactly one five is $\frac{2\cdot 990}{16215}\approx 0.1221$.
 \end{solution}
@@ -349,6 +349,24 @@ Repeating this calculation for $r=0,1,2,3,4$ and adding gives
 \approx 0.1662.
 \end{multline*}
 \end{solution}
+
 \uplevel{\bf Blackjack.}
+\question Playing blackjack with the dealer dealing
+from several decks, you receive the cards $K\spadesuit,6\heartsuit$
+initially.
+\begin{parts}
+\part What is the probability that you won't bust if you take another card?
+\begin{solution} We assume that the probability of receiving a card
+of a particular rank is $\frac{1}{13}$ since several decks of cards are
+being used. Thus the ranks that won't bust you are
+$A,2,3,4,5$ so $\frac{5}{13}$ is the probability that you won't bust.
+\end{solution}
+\part Suppose you request another card and receive $2\clubsuit$.
+What is the probability that you won't bust if you take another card?
+\begin{solution} Now your sum is 18, so the ranks that won't bust
+you are $A,2,3$. Thus the probability that you won't bust
+is $\frac{3}{13}$.
+\end{solution}
+\end{parts}
 \end{questions}
 \end{document}
