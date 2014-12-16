@@ -310,7 +310,20 @@ $\ncr{4}{2}\left(0.35\right)^2\left(0.65\right)^2
 \question If $60\%$ of the electorate supports the mayor
 then what is the probability that in a random sample
 of 10~voters, fewer than half support her?
-
+\begin{solution} Since $60\%$ of the electorate support the mayor,
+the probability that a randomly selected votor supports her
+is $p=0.6$. So the probability that exactly $r$ of the ten voters
+supports her is $\ncr{10}{r}\left(0.6\right)^r\left(0.4\right)^{10-r}$.
+Repeating this calculation for $r=0,1,2,3,4$ and adding gives
+\begin{multline*}
+\ncr{10}{0}\left(0.6\right)^0\left(0.4\right)^{10}
++\ncr{10}{1}\left(0.6\right)^1\left(0.4\right)^9
++\ncr{10}{2}\left(0.6\right)^2\left(0.4\right)^8\\
++\ncr{10}{3}\left(0.6\right)^3\left(0.4\right)^7
++\ncr{10}{4}\left(0.6\right)^4\left(0.4\right)^6
+\approx 0.1662.
+\end{multline*}
+\end{solution}
 \uplevel{\bf Blackjack.}
 \end{questions}
 \end{document}
