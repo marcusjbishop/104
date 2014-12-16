@@ -287,8 +287,32 @@ must be selected from among the eight remaining members of the committee.
 \begin{solution}$\ncr{12}{5}=792$\end{solution}
 
 \uplevel{\bf Definitions of all the poker hands.}
-\uplevel{\bf Problems involving improving poker hands by exchanging cards.}
 
+\uplevel{\bf Problems involving improving poker hands by exchanging cards.}
+\question Playing poker, your receive the cards
+$2\diamondsuit,4\clubsuit,5\diamondsuit,5\spadesuit,10\diamondsuit$.
+If you exchange $4\clubsuit,5\spadesuit$ for two new cards,
+then what is the probability the new hand will be a flush?
+\begin{solution}
+Since you hold three diamonds, there remain ten in the deck.
+Two of them could be dealt to you in $\ncr{10}{2}=45$ ways.
+Since $47$~cards remain, two cards could be dealt to you in
+$\ncr{47}{2}=1081$ ways. Thus your probability of completing your flush
+is $\frac{45}{1081}\approx 0.0416$.
+\end{solution}
+
+\question Playing poker, your receive the cards
+$2\diamondsuit,4\clubsuit,5\diamondsuit,5\spadesuit,10\diamondsuit$.
+If you exchange $2\diamondsuit,4\clubsuit,10\diamondsuit$ for
+three new cards, then what is the probability that the new hand
+will have three-of-a-kind?
+\begin{solution}
+There remain two cards of rank five in the deck. There are two
+ways to choose one of them, and $\ncr{45}{2}=990$ ways to choose
+two other cards of rank other than five. Since the three cards
+can be dealt to you in $\ncr{47}{3}=16,215$ ways, your probability
+of receiving exactly one five is $\frac{2\cdot 990}{16215}\approx 0.1221$.
+\end{solution}
 \uplevel{\bf Binomial probability.}
 \question If a baseball player has a batting average
 of $0.350$ then what is the probability that he
@@ -311,7 +335,7 @@ $\ncr{4}{2}\left(0.35\right)^2\left(0.65\right)^2
 then what is the probability that in a random sample
 of 10~voters, fewer than half support her?
 \begin{solution} Since $60\%$ of the electorate support the mayor,
-the probability that a randomly selected votor supports her
+the probability that a randomly selected voter supports her
 is $p=0.6$. So the probability that exactly $r$ of the ten voters
 supports her is $\ncr{10}{r}\left(0.6\right)^r\left(0.4\right)^{10-r}$.
 Repeating this calculation for $r=0,1,2,3,4$ and adding gives
