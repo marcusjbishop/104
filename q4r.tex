@@ -1,0 +1,136 @@
+\documentclass[answers,12pt]{exam}
+\usepackage{color,rotating}
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\usepackage[euler-digits]{eulervm}
+\everymath{\displaystyle}
+\usepackage{amsmath,charter}
+\title{Math 104 Quiz 4\\Red Form}
+\date{Wednesday 19 November}
+\usepackage{tensor}
+\newcommand\npr[2]{\tensor[_{#1}]P{_{#2}}}
+\newcommand\ncr[2]{\tensor[_{#1}]C{_{#2}}}
+\begin{document}
+\maketitle
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+Using a Number~2 pencil record your student ID on your answer sheet.
+Then answer the questions below on the answer sheet.
+This quiz has \numquestions~questions printed on \numpages~pages.
+All answer choices have been rounded to four decimal places.
+}}}
+\end{center}
+
+\begin{questions}
+
+\question What is $\ncr{12}{5}$?\\
+\begin{oneparchoices}
+\choice $60$ % 12 * 5
+\correctchoice $792$
+\choice $248,832$ % 12^5
+\choice $95,040$ % P(12,5)
+\choice $3,991,680$ % P(12,7)
+\end{oneparchoices}
+
+\question How many subsets does the set
+$\left\{a,b,c,d,e,f,g\right\}$ have?\\
+\begin{oneparchoices}
+\choice $7$ % size of set
+\choice $21$ % C(7,2)
+\choice $14$ % 2 * 7
+\choice $49$ % 7 * 7
+\correctchoice $128$
+\end{oneparchoices}
+
+\question In how many ways can a four-member subcommittee
+of a seven-member committee be chosen?\\
+\begin{oneparchoices}
+\choice $4$ % duh!
+\choice $24$ % 4!
+\correctchoice $35$
+\choice $128$ % 2^7
+\choice $840$ % P(7,4)
+\end{oneparchoices}
+
+\question Customers order pizzas at Marcus's Pizza
+by selecting any number of five possible toppings.
+How many different ways to order a pizza are there?\\
+\begin{oneparchoices}
+\choice $5$ % number of toppings
+\choice $10$ % C(5,2) or 2*5
+\choice $20$ % P(5,2)
+\choice $25$ % 5 * 5
+\correctchoice $32$
+\end{oneparchoices}
+
+\question You have ten books, but only six
+of them will fit on your shelf. In how many 
+ways can six of the books be arranged on the shelf?\\
+\begin{oneparchoices}
+\choice $210$ % C(10,6)
+\choice $720$ % 6!
+\choice $5040$ % P(10,4)
+\correctchoice $151,200$
+\choice $3,628,800$ % 10!
+\end{oneparchoices}
+
+\question A poker hand is called a {\em spade flush}
+if all five cards have suit $\spadesuit$. What is
+the number of possible spade flushes?\\
+\begin{oneparchoices}
+\correctchoice $1287$
+\choice $5108$ % number of mere flushes
+\choice $5148$ % number of flushes
+\choice $154,440$ % P(13,5)
+\choice $2,598,960$ % C(52,5)
+\end{oneparchoices}
+
+\question 
+How many five-card poker hands have two-pair but nothing better?\\
+\begin{oneparchoices}
+\choice $2808$ % didn't choose last card
+\correctchoice $123,552$
+\choice $247,104$ % used 13*12 rather than C(13,2)
+\choice $2,598,960$ % C(52,5)
+\choice $65,812,032$ % C(52,2)C(48,2)C(44,1)
+\end{oneparchoices}
+
+\question Playing poker, you have the cards
+$K\heartsuit,K\clubsuit,2\diamondsuit,2\clubsuit,8\heartsuit$.
+If you exchange $8\heartsuit$ for a new card,
+then what is the probability that new card
+will complete your hand to a full house?\\
+\begin{oneparchoices}
+\choice $\frac{1}{52}$
+\choice $\frac{1}{26}$ % only one of K,2 and didn't eliminate
+\choice $\frac{2}{47}$ % counted only one of K,2
+\choice $\frac{1}{13}$ % didn't eliminate 5 known cards from total
+\correctchoice $\frac{4}{47}$
+\end{oneparchoices}
+
+\question Playing poker, you have the cards
+$A\diamondsuit,A\spadesuit,4\heartsuit,4\spadesuit,10\diamondsuit$.
+If you exchange $4\heartsuit,4\spadesuit,10\diamondsuit$ for three
+new cards, then what is the probability that the new hand
+will have four-of-a-kind?\\
+\begin{oneparchoices}
+\choice $0.0025$ % something-over-aces full house
+\correctchoice $0.0028$
+\choice $0.0851$ % aces-over-fours full house
+\choice $0.1221$ % exactly one ace 
+\choice $0.1274$ % three-of-a-kind or better
+\end{oneparchoices}
+
+\question Two of the $24$ sodas in the refrigerator
+have winning bottlecaps. If you randomly select two
+bottles, then what is the probability that at least one bottle
+will have a winning bottlecap?\\
+\begin{oneparchoices}
+\choice $0.0036$ % exactly two winners
+\choice $0.1594$ % exactly one winner
+\correctchoice $0.163$
+\choice $0.0417$ % 1/24
+\choice $0.837$ % no winners
+\end{oneparchoices}
+
+\end{questions}
+\end{document}

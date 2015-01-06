@@ -1,0 +1,573 @@
+\documentclass[handout]{beamer}
+\usepackage{multicol}
+\usepackage[arrow,matrix]{xy}
+\everymath{\displaystyle}
+\mode<presentation>
+{\usetheme{Warsaw}\setbeamercovered{dynamic}}
+\usecolortheme{crane}
+\usepackage{beamerfoils}
+\pgfdeclareimage[height=1in]{university-logo}{ISULogo}
+\logo{\pgfuseimage{university-logo}}
+\setbeamertemplate{navigation symbols}{}
+\title[\S9]{Section 9\\Combinations}
+\author{Dr Marcus Bishop}
+\subject{Math 104}
+\beamerdefaultoverlayspecification{<+->}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{impact}{Impact}
+\newtheorem{notation}{Notation}
+\newtheorem{question}{Question}
+\usepackage{arev}
+\usepackage{tensor}
+\newcommand\npr[2]{\tensor[_{#1}]P{_{#2}}}
+\newcommand\ncr[2]{\tensor[_{#1}]C{_{#2}}}
+\usepackage{cancel}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+\LogoOff
+
+\begin{frame}{Factorial revisited}
+\begin{itemize}
+\item Denote $n\cdot\left(n-1\right)\cdots 3\cdot 2\cdot 1$
+by \alert{$n!$} for any whole number $n$
+\item By convention $0!=1$
+\item Useful since factorial often appears in denominator
+\begin{example}
+\begin{itemize}
+\item Recall that $\npr{n}{r}=\frac{n!}{\left(n-r\right)!}$
+\item $\npr{n}{r}$ gives number of permutations of $n$
+objects taken $r$ at a time
+\item So $\npr{5}{5}
+\only<+->{=\frac{5!}{\left(5-5\right)!}}
+\only<+->{=\frac{5!}{0!}}
+\only<+->{=5!}$
+\end{itemize}
+\end{example}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Questions}
+\begin{question}
+How many finishes among first $3$~places
+can occur in $8$-horse race (excluding ties)?
+\end{question}
+\begin{question}
+How many different foursomes can be formed
+from among $7$~golfers?
+\end{question}
+\begin{question}
+How many different $13$-card bridge hands are there?
+\end{question}
+\begin{question}
+How many different ways to arrange a particular $13$-card
+bridge hand?
+\end{question}
+\end{frame}
+
+\begin{frame}
+\begin{question}
+How many finishes among first $3$~places
+can occur in $8$-horse race (excluding ties)?
+\end{question}
+\begin{itemize}
+\item $8$~choices for first place
+\item $7$~choices for second place
+\item $6$~choices for third place
+\item So $8\cdot 7\cdot 6=336$ possible finishes
+\item Note that $8\cdot 7\cdot 6=\npr{8}{3}$
+\item Indeed, problem asks for number of permutations
+of $8$~objects taken $3$ at a time
+\item \dots dressed up with intriguing story about horse racing
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{question}
+How many different foursomes can be formed
+from among $7$~golfers?
+\end{question}
+\begin{itemize}
+\item Members of foursome meant to sign names on scorecard
+\item To make problem more concrete,
+count number of ways foursome can fill out scorecard
+\item $7$~choices for first name
+\item $6$~choices for second, $5$ for third, $4$ for fourth
+\item Thus $7\cdot 6\cdot 5\cdot 4
+\only<+->{=\npr{7}{4}}$\only<+->{$=840$ ways for
+players to fill out scorecard}
+\end{itemize}
+\end{frame}
+\begin{frame}
+\begin{itemize}
+\item However, suppose same foursome signed scorecard in different order
+\item Then foursome would be counted as \alert{different foursome}
+\item Thus $840$ includes considerable duplication
+\item In how many ways could particular foursome fill out scorecard?
+\item $4$~choices for first name, $3$ for second, etc
+\item So $4!\only<+->{=\npr{4}{4}}$
+\only<+->{$=24$ ways for particular foursome to fill out scorecard}
+\item So $840$ counts each possible foursome $24$~times 
+\item Thus $\frac{840}{24}=35$ possible foursomes
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{question}
+How many different ways to arrange a particular $13$-card
+bridge hand?
+\end{question}
+\begin{itemize}
+\item $13!\only<+->{=\npr{13}{13}}$
+\only<+->{$=6,227,020,800$}
+\begin{question}
+How many different $13$-card bridge hands are there?
+\end{question}
+\item Imagine hand arranged from left to right in player's hand
+\item $52$~choices for first card, $51$ for second, etc
+\item So $52\cdot 51\cdots 40=\npr{52}{13}$ arrangements
+\item However, every distinct hand counted $13!$~times (see question above)
+\item Thus $\frac{\npr{52}{13}}{13!}
+=635,013,559,600$ possible hands
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Remarks}
+\begin{itemize}
+\item All questions above involve selection \alert{without replacement}
+\item So after each selection, number of choices decreases by one
+\item Accounts for appearance of consecutive numbers decreasing
+by one, as in $8\cdot 7\cdot 6$
+\item If replacement had been possible, numbers would remain same
+instead of decrease
+\item For example, spinning American roulette wheel three times
+has $38\cdot 38\cdot 38$ possible outcomes
+\end{itemize}
+\end{frame}
+\begin{frame}
+\begin{itemize}
+\item In horse and bridge hand arrangement examples, order of selections
+significant
+\item In golf and bridge hand examples, order of choices irrelevant
+\item Determining whether order matters requires careful reading of question
+and realistic thought about problem
+\item Note that word \alert{arrange} in bridge hand arrangement
+question a \alert{cue}
+\item But no such cue present in horse question
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Combinations}
+\begin{itemize}
+\item Want to count number
+of ways to select $r$~objects from set of $n$~objects
+without replacement, \alert{with order irrelevant}
+\item $\npr{n}{r}$
+counts selections of $r$~objects from set of~$n$
+without replacement
+\item But $\npr{n}{r}$ multiply counts
+every distinct \alert{combination}
+\item Each combination of $r$~objects can be arranged
+in $\npr{r}{r}=r!$ ways.
+\item Therefore number of selections
+given by \[\frac{\npr{n}{r}}{r!}
+\only<+->{=\frac{n!}{\left(n-r\right)!r!}}\]
+\item
+$\frac{n!}{\left(n-r\right)!r!}$ denoted by $\ncr{n}{r}$
+\item $\ncr{n}{r}$ called a \alert{binomial coefficient}
+and often pronounced \alert{$n$ choose $r$}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Examples}
+\begin{question}
+How many subsets of $\left\{a,b,c,d,e,f\right\}$ of size two?
+\end{question}
+\only<+->{
+\[\ncr{6}{2}
+\only<+->{=\frac{6!}{4!2!}}
+\only<+->{=\frac{6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}
+{4\cdot 3\cdot 2\cdot 1\cdot 2\cdot 1}}
+\only<+->{=\frac{6\cdot 5\cdot \cancel{4}
+\cdot\cancel{3}\cdot\cancel{2}\cdot\cancel{1}}
+{\cancel{4}\cdot\cancel{3}\cdot\cancel{2}\cdot\cancel{1}\cdot 2\cdot\cancel{1}}}
+\only<+->{=\frac{6\cdot 5}{2}}
+\only<+->{=15}\]}
+\begin{remark}
+As in example above, massive cancellation often occurs in
+binomial coefficient calculation
+\end{remark}
+\begin{question}
+How many two-topping pizzas possible from Joe's Pizza, which
+offers six different toppings?
+\end{question}
+\only<+->{$\ncr{6}{2}=15$ pizzas possible}
+\end{frame}
+
+\begin{frame}
+\begin{question}
+\begin{itemize}
+\item Radio show plans to give concert tickets
+to two callers
+\item Six people call radio station
+\item In how many ways can the winners be selected?
+\end{itemize}
+\end{question}
+\only<+->{$\ncr{6}{2}=15$ ways}
+\begin{question}
+\begin{itemize}
+\item Audience of American Idol must eliminate
+two contestants from among six remaining
+\item In how many ways can two be selected?
+\end{itemize}
+\end{question}
+\only<+->{$\ncr{6}{2}=15$ ways}
+\end{frame}
+
+\begin{frame}{Enumerating subsets of $\left\{1,2,3,4,5,6\right\}$ of size $2$}
+\begin{itemize}
+\item First list subsets containing $1$:
+\[\begin{array}{ccccc}
+\left\{1,2\right\}&\left\{1,3\right\}&\left\{1,4\right\}&\left\{1,5\right\}
+  &\left\{1,6\right\}\\
+\end{array}\]
+\item Note that $\left\{1,1\right\}$ not listed, since has size one, not two
+\item Next list subsets containing $2$:
+\[\begin{array}{ccccc}
+&\left\{2,3\right\}&\left\{2,4\right\}&\left\{2,5\right\}&\left\{2,6\right\}\\
+\end{array}\]
+\item Note that $\left\{2,1\right\}$ not listed, since $\left\{1,2\right\}$
+listed above
+\item Continuing as above:
+\end{itemize}
+\only<+->{
+\[\begin{array}{ccccc}
+\left\{1,2\right\}&\left\{1,3\right\}&\left\{1,4\right\}&\left\{1,5\right\}
+  &\left\{1,6\right\}\\
+&\left\{2,3\right\}&\left\{2,4\right\}&\left\{2,5\right\}&\left\{2,6\right\}\\
+&&\left\{3,4\right\}&\left\{3,5\right\}&\left\{3,6\right\}\\
+&&&\left\{4,5\right\}&\left\{4,6\right\}\\
+&&&&\left\{5,6\right\}
+\end{array}\]}
+\end{frame}
+
+\begin{frame}{Comparing permutations to combinations}
+\begin{itemize}
+\item Subsets of $\left\{1,2,3,4,5,6\right\}$ of size $2$:
+\[\begin{array}{ccccc}
+\left\{1,2\right\}&\left\{1,3\right\}&\left\{1,4\right\}&\left\{1,5\right\}
+  &\left\{1,6\right\}\\
+&\left\{2,3\right\}&\left\{2,4\right\}&\left\{2,5\right\}&\left\{2,6\right\}\\
+&&\left\{3,4\right\}&\left\{3,5\right\}&\left\{3,6\right\}\\
+&&&\left\{4,5\right\}&\left\{4,6\right\}\\
+&&&&\left\{5,6\right\}\\
+\end{array}\]
+\item Outcomes of rolling two dice:
+\[\begin{array}{cccccc}
+{\color{orange}\left(1,1\right)}&\left(1,2\right)&\left(1,3\right)
+&\left(1,4\right)&\left(1,5\right)&\left(1,6\right)\\
+{\color{blue}\left(2,1\right)}&{\color{orange}\left(2,2\right)}&\left(2,3\right)
+&\left(2,4\right)&\left(2,5\right)&\left(2,6\right)\\
+{\color{blue}\left(3,1\right)}&{\color{blue}\left(3,2\right)}
+&{\color{orange}\left(3,3\right)}
+&\left(3,4\right)&\left(3,5\right)&\left(3,6\right)\\
+{\color{blue}\left(4,1\right)}&{\color{blue}\left(4,2\right)}
+&{\color{blue}\left(4,3\right)}
+&{\color{orange}\left(4,4\right)}&\left(4,5\right)&\left(4,6\right)\\
+{\color{blue}\left(5,1\right)}&{\color{blue}\left(5,2\right)}
+&{\color{blue}\left(5,3\right)}
+&{\color{blue}\left(5,4\right)}&{\color{orange}\left(5,5\right)}
+&\left(5,6\right)\\
+{\color{blue}\left(6,1\right)}&{\color{blue}\left(6,2\right)}
+&{\color{blue}\left(6,3\right)}
+&{\color{blue}\left(6,4\right)}&{\color{blue}\left(6,5\right)}
+&{\color{orange}\left(6,6\right)}
+\end{array}\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Observations}
+\begin{itemize}
+\item Outcomes of dice include
+\[\left(1,1\right),\left(2,2\right),\left(3,3\right),
+\left(4,4\right),\left(5,5\right),\left(6,6\right)\]
+(shown in {\color{orange}orange})
+\item These outcomes not possible in experiments without replacement
+\item Excluding $\left(1,1\right),\ldots,\left(6,6\right)$
+gives list of permutations of $\left\{1,2,3,4,5,6\right\}$
+taken $2$ at a time
+\item Note that $\npr{6}{2}=6\cdot 5=30$
+\item Outcomes of dice include include $\left(i,j\right)$ with $i>j$
+(shown in {\color{blue}blue})
+\item Sets $\left\{i,j\right\}$ with $i>j$ excluded
+from list of subsets, since
+$\left\{i,j\right\}=\left\{j,i\right\}$ already listed
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{multicols}{2}
+\begin{itemize}
+\item Note that $\ncr{6}{4}
+\only<+->{=\frac{6!}{4!2!}}
+\only<+->{=\frac{6!}{2!4!}}
+\only<+->{=\ncr{6}{2}}$
+%\item Is this coincidence?
+\item If Joe's offers six pizza toppings,
+selecting four the same as \alert{not}
+selecting two
+\item So number of four-topping pizzas
+the same as number of two-topping pizzas
+\item Can use this observation to enumerate
+subsets of size four
+\item Namely,
+write down elements \alert{not} in 
+each subset of size two
+\end{itemize}
+\columnbreak
+\only<+->{
+\[\begin{array}{cc}
+\text{Size 2}&\text{Size 4}\\\hline
+\left\{1,2\right\}&\left\{3,4,5,6\right\}\\
+\only<+->{\left\{1,3\right\}&\left\{2,4,5,6\right\}\\}
+\only<+->{\left\{1,4\right\}&\left\{2,3,5,6\right\}\\
+\left\{1,5\right\}&\left\{2,3,4,6\right\}\\
+\left\{1,6\right\}&\left\{2,3,4,5\right\}\\
+\left\{2,3\right\}&\left\{1,4,5,6\right\}\\
+\left\{2,4\right\}&\left\{1,3,5,6\right\}\\
+\left\{2,5\right\}&\left\{1,3,4,6\right\}\\
+\left\{2,6\right\}&\left\{1,3,4,5\right\}\\
+\left\{3,4\right\}&\left\{1,2,5,6\right\}\\
+\left\{3,5\right\}&\left\{1,2,4,6\right\}\\
+\left\{3,6\right\}&\left\{1,2,4,5\right\}\\
+\left\{4,5\right\}&\left\{1,2,3,6\right\}\\
+\left\{4,6\right\}&\left\{1,2,3,5\right\}\\
+\left\{5,6\right\}&\left\{1,2,3,4\right\}}
+\end{array}\]}
+\end{multicols}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Subsets of $\left\{1,2,3,4,5,6\right\}$ of size four:
+\[\begin{array}{ccc}
+\left\{1,2,3,4\right\}&\left\{1,2,3,5\right\}&\left\{1,2,3,6\right\}\\
+\left\{1,2,4,5\right\}&\left\{1,2,4,6\right\}&\left\{1,2,5,6\right\}\\
+\left\{1,3,4,5\right\}&\left\{1,3,4,6\right\}&\left\{1,3,5,6\right\}\\
+\left\{1,4,5,6\right\}&\left\{2,3,4,5\right\}&\left\{2,3,4,6\right\}\\
+\left\{2,3,5,6\right\}&\left\{2,4,5,6\right\}&\left\{3,4,5,6\right\}
+\end{array}\]
+\item How many four-topping pizzas at Joe's contain bison?
+\item If bison denoted by $1$, then ten combinations contain $1$
+\item How many four-topping pizzas contain both bison and mushrooms?
+\item If bison denoted by $1$ and mushrooms by $2$, then $6$
+combinations contain both $1$ and $2$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{example}[Exercise 31]
+\begin{itemize}
+\item Matthew has 10~shirts in closet
+\item Must select four to take on vacation
+\item In how many ways can he select four?
+\end{itemize}
+\end{example}
+\begin{align*}
+\ncr{10}{4}
+\only<+->{&=\frac{10!}{4!6!}}\\
+\only<+->{&=\frac{10\cdot 9\cdot 8\cdot 7\cdot
+6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}
+{4\cdot 3\cdot 2\cdot 1\cdot 6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}}\\
+\only<+->{&=\frac{10\cdot 9\cdot 8\cdot 7\cdot
+\cancel{6}\cdot\cancel{5}\cdot\cancel{4}
+\cdot\cancel{3}\cdot\cancel{2}\cdot\cancel{1}}
+{4\cdot 3\cdot 2\cdot\cancel{1}\cdot
+\cancel{6}\cdot\cancel{5}\cdot\cancel{4}\cdot\cancel{3}
+\cdot\cancel{2}\cdot\cancel{1}}}\\
+\only<+->{&=\frac{10\cdot 9\cdot 8\cdot 7}{4\cdot 3\cdot 2}}
+\only<+->{=\frac{10\cdot 9\cdot\cancel{8}\cdot 7}
+{\cancel{4}\cdot 3\cdot\cancel{2}}}
+\only<+->{=\frac{10\cdot 9\cdot 7}{3}}\\
+\only<+->{&=\frac{10\cdot \cancel{9}\cdot 7\cdot\alert{3}}{\cancel{3}}}
+\only<+->{=210}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Remaining pizzas at Bob's}
+\begin{itemize}
+\item Have calculated $\ncr{6}{2}=\ncr{6}{4}=15$
+\item Have even enumerated all 15 two-topping and all 15 four-topping pizzas
+\item What about pizzas with other numbers of toppings?
+\item $\ncr{6}{0}\only<+->{=\frac{6!}{0!6!}}\only<+->{=1}$
+\item $\ncr{6}{6}\only<+->{=\frac{6!}{6!0!}}\only<+->{=1}$
+\item Plausible, since only
+one way to choose \alert{no} toppings or \alert{all six} toppings
+\item $\ncr{6}{1}\only<+->{=\frac{6!}{5!1!}}\only<+->{=6}$
+\item Plausible, since six ways to choose a single topping
+\item $\ncr{6}{5}\only<+->{=\frac{6!}{1!5!}}\only<+->{=6}$
+\item Plausible, since choosing five the same as \alert{not choosing} one
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{multline*}
+\ncr{6}{3}\only<+->{=\frac{6!}{3!3!}}
+\only<+->{=\frac{6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}
+{3\cdot 2\cdot 1\cdot 3\cdot 2\cdot 1}}\\
+\only<+->{=\frac{6\cdot 5\cdot 4\cdot\cancel{3}\cdot\cancel{2}\cdot\cancel{1}}
+{3\cdot 2\cdot\cancel{1}\cdot\cancel{3}\cdot\cancel{2}\cdot\cancel{1}}}
+\only<+->{=\frac{6\cdot 5\cdot 4}{3\cdot 2}}
+\only<+->{=\frac{\cancel{6}\cdot 5\cdot 4}{\cancel{3}\cdot\cancel{2}}}
+\only<+->{=20}
+\end{multline*}
+\begin{itemize}
+\item So $20$ different three-topping pizzas
+\item Record binomial coefficients $\ncr{6}{r}$ in table:
+\[\begin{array}{c|ccccccc}
+n\setminus r&0&1&2&3&4&5&6\\\hline
+\only<+->{5&1&5&10&10&5&1\\}
+6&1&6&15&20&15&6&1
+\end{array}\]
+\item $\ncr{5}{r}$ included for comparison
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Observations}
+\[\begin{array}{c|ccccccc}
+n\setminus r&0&1&2&3&4&5&6\\\hline
+5&1&5&10&10&5&1\\
+6&1&6&15&20&15&6&1
+\end{array}\]
+\begin{itemize}
+\item Both rows palindromes
+\item True because $\ncr{n}{r}=\ncr{n}{n-r}$
+\item Indeed, choosing $r$ the same as \alert{not} choosing $n-r$
+\item Sum of $n=5$ row:
+\[1+5+10+10+5+1\only<+->{=32}\only<+->{=2^5}\]
+\item Sum of $n=6$ row:
+\[1+6+15+20+15+6+1\only<+->{=64}\only<+->{=2^6}\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item $1+6+15+20+15+6+1$ the number of pizzas possible
+\item Indeed, any pizza has \alert{some} number of toppings
+\item $1$ counts zero-topping pizzas, $6$ counts one-topping pizzas, etc.
+\item But there's another way to count possible pizzas
+\item Namely, for each topping, decide whether to include topping or not
+\item Two choices for first topping (include or exclude), two choices for second
+topping, etc
+\item So $2^6$ pizzas possible
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{theorem}
+\[2^n=\ncr{n}{0}+\ncr{n}{1}+\ncr{n}{2}+\cdots+\ncr{n}{n-1}+\ncr{n}{n}\]
+\end{theorem}
+\begin{itemize}
+\item Same argument shows that $2^n$ the number
+of subsets of $\left\{1,2,\ldots,n\right\}$
+\item Theorem says that
+subsets of $\left\{1,2,\ldots,n\right\}$
+can be organized by size
+\item $\ncr{n}{0}$ of size zero, $\ncr{n}{1}$ of size one, etc.
+\begin{example}
+Subsets of $\left\{1,2,3\right\}$:
+\[\left\{\right\},
+\only<+->{\left\{1\right\},\left\{2\right\},\left\{3\right\},}
+\only<+->{\left\{1,2\right\},\left\{1,3\right\},\left\{2,3\right\},}
+\only<+->{\left\{1,2,3\right\}}\]
+\end{example}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Arranging $\ncr{5}{r}$ and $\ncr{6}{r}$ differently:
+\[\begin{array}{ccccccccccccc}
+&1&&5&&10&&10&&5&&1\\
+1&&6&&15&&20&&15&&6&&1
+\end{array}\]
+\item Observe that each $\ncr{6}{r}$ the sum of two closest numbers
+in row above
+\item One possible explanation:
+\begin{itemize}
+\item Any $r$-topping pizza either has bison or not
+\item If has bison then $\ncr{5}{r-1}$ ways to choose remaining $r-1$~toppings
+from among five remaining possibilities
+\item If does not have bison, then $\ncr{5}{r}$ ways to choose
+$r$~toppings from among five remaining possibilities
+\end{itemize}
+\item So $\ncr{5}{r-1}+\ncr{5}{r}=\ncr{6}{r}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{theorem}\[\ncr{n}{r}=\ncr{n-1}{r-1}+\ncr{n-1}{r}\]\end{theorem}
+\begin{itemize}
+\item Gives slick way to generate all binomial coefficients
+\item Namely, start with $\ncr{0}{0}=1$ and fill in numbers
+below by adding
+\[\begin{array}{ccccccccccccc}
+&&&&&&1\\
+&&&&&1&&1\\
+\only<+->{
+&&&&1&&2&&1\\}
+\only<+->{
+&&&1&&3&&3&&1\\}
+\only<+->{
+&&1&&4&&6&&4&&1\\}
+\only<+->{
+&1&&5&&10&&10&&5&&1\\}
+\only<+->{
+1&&6&&15&&20&&15&&6&&1}
+\end{array}\]
+\item Array called \alert{Pascal's triangle}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Final example}
+\begin{question}
+If four people must shake hands with each other,
+how many handshakes occur?
+\end{question}
+\begin{question}
+\begin{itemize}
+\item Four friends order drinks
+\item Each person must tap glass against glass of each friend
+\item How many glass taps occur?
+\end{itemize}
+\end{question}
+\begin{itemize}
+\item Both questions have same answer $\ncr{4}{2}=6$
+\item Reason: each pair of people must shake hands or tap glasses
+\item $6$ the number of pairs, so $6$~handshakes or glass taps occur
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Illustrate four friends with picture:
+$\vcenter{\begin{xy}\xymatrix{
+A&B\\C&D}\end{xy}}$
+\item $A$ shakes hands with $B,C,D$:
+$\vcenter{\begin{xy}\xymatrix{
+A\ar@{-}[r]\ar@{-}[d]\ar@{-}[dr]&B\\
+C&D}\end{xy}}$
+\item $B$ shakes hands with $A,C,D$,
+(handshake with $A$ already drawn):
+$\vcenter{\begin{xy}\xymatrix{
+A\ar@{-}[r]\ar@{-}[d]\ar@{-}[dr]&B\ar@{-}[dl]\ar@{-}[d]\\
+C&D}\end{xy}}$
+\item $C$ shakes hands with $A,B,D$ (handshakes with
+$A,B$ already drawn):
+$\vcenter{\begin{xy}\xymatrix{
+A\ar@{-}[r]\ar@{-}[d]\ar@{-}[dr]&B\ar@{-}[dl]\ar@{-}[d]\\
+C\ar@{-}[r]&D}\end{xy}}$
+\item All $D$'s handshakes already drawn, so six altogether
+\end{itemize}
+\end{frame}
+\end{document}

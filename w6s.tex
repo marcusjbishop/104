@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\everymath{\displaystyle}
+\usepackage{mdwlist}
+\usepackage[euler-digits]{eulervm}
+\usepackage{charter,amsmath,amssymb,breakurl}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{multicol}
+\author{}\date{}
+\title{Worksheet 6 solutions}\author{}
+\begin{document}
+\maketitle
+\pagestyle{empty}
+The following questions involve the game of blackjack,
+with the dealer dealing from several decks of cards.
+You may therefore assume that $\frac{1}{52}$ is the probability
+of being dealt any particular card, irrespective of any cards
+known to have already been dealt. 
+\begin{enumerate}
+
+\item{\em You received the cards $9\clubsuit,6\diamondsuit$
+initially. What is the probability you will bust if
+you request another card?}\\
+{\bf Solution.} You will bust if you receive a card of rank
+$7,8,9,10,J,Q$ or $K$ since each of these cards will
+cause your total to exceed $21$. Since there are seven such cards,
+your probability is $\frac{7}{13}$ of busting if you take another card.
+
+\item{\em You received the cards $K\heartsuit,8\diamondsuit$
+initially. What is the probability you will bust if
+you request another card?}\\
+{\bf Solution.} You will bust if you receive a card of rank
+ $4,5,6,7,8,9,10,J,Q$ or $K$. Since there are ten such cards,
+your probability is $\frac{10}{13}$ of busting if you take another card.
+
+\item{\em Suppose your cards total $18$ and you decide to stand.
+What is the probability you will win the game?}\\
+{\bf Solution.} You will win if the dealer busts or has a total of $17$.
+Consulting the table on slide~12 of the blackjack slides, these
+two possibilities happen with probability $0.28$ and $0.15$ respectively.
+Thus you win with probability $0.28+0.15=0.43$.
+
+\item{\em Suppose your cards total $20$ and you decide to stand.
+What is the probability you will win the game?}\\
+{\bf Solution.} You will win if the dealer busts or has a total of $17,18$
+or $19$.These
+possibilities happen with probability $0.28,0.15,0.15,0.14$ respectively.
+Thus you win with probability $0.72$.
+
+\item{\em A {\em royal hand} consists of a king and a queen
+of the same suit. Compute the probability of being
+dealt a royal hand in the first two cards.}\\
+{\bf Solution.} The probability that your first card
+is a king is $\frac{1}{13}$.
+The probability that your second card is a queen of the same
+suit as the king is $\frac{1}{52}$. Since these are independent events,
+the probability of both happening is
+$\frac{1}{13}\cdot\frac{1}{52}=\frac{1}{676}$.
+On the other hand, your first card could be a queen with probability
+$\frac{1}{13}$ and your second card a king of the same suit
+with probability $\frac{1}{52}$.
+The probability of this second possibility is again $\frac{1}{676}$.
+Thus the probability of a royal pair is
+$\frac{1}{676}+\frac{1}{676}=\frac{1}{338}$.
+Bear in mind that the solution to this problem would be very
+different if the cards were coming from only one deck. However,
+as explained in the instructions above, we assume that the cards
+come from a mixture of several decks.
+
+\item{\em Calculate the probability of receiving two
+cards adding up to exactly $20$.}\\
+{\bf Solution.} This can happen in exactly two ways. Namely,
+two cards of value ten, or one ace and one $9$.
+Since there are sixteen cards of value ten, namely,
+the tens, jacks, queens, and kings, the probability of receiving
+a card of value ten is $\frac{16}{52}=\frac{4}{13}$.
+So the probability of receiving two such cards is
+$\left(\frac{4}{13}\right)^2=\frac{16}{169}$.
+The probability of receiving an ace is $\frac{1}{13}$.
+This is also the probability of receiving a nine.
+Thus $\left(\frac{1}{13}\right)^2=\frac{1}{169}$.
+Thus $\frac{17}{169}$ is the probability of receiving two
+cards adding up to $20$.
+
+\end{enumerate}
+\end{document}
