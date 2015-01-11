@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer}
+\documentclass{beamer}
 \everymath{\displaystyle}
 \mode<presentation>
 {\usetheme{Warsaw}\setbeamercovered{dynamic}}
@@ -21,18 +21,20 @@
 
 \begin{frame}{Terminology}
 \begin{itemize}
-\item An \alert{experiment} a controlled operation,
-generally in future
+\item Probability deals with \alert{experiments}
+\item An \alert{experiment} a controlled action, generally in future,
+results of which interest us
 \item Possible results of experiment called \alert{outcomes}
 \item An \alert{event} a set of outcomes of an experiment
 \item Events the basic object of study in probability
-\item Can also think of an event as incident in future
-that will either happen or not
+\item Since outcome of experiment either in event or not,
+event will either occur or not
 \item Aim: to measure the likelihood of an event
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Example}
+\begin{frame}{Examples}
+\begin{example}
 \begin{itemize}
 \item Rolling a die an experiment
 \item Possible outcomes: 1, 2, 3, 4, 5, 6
@@ -43,12 +45,11 @@ that will either happen or not
 \item Die shows 5, or $E=\left\{5\right\}$
 \end{itemize}
 \end{itemize}
-\end{frame}
-
-\begin{frame}{Example}
+\end{example}
+\begin{example}
 \begin{itemize}
 \item Rolling \alert{two} dice an experiment
-\item Possible outcomes: $\left(1,1\right),\left(1,2\right),\ldots$
+\item So possible outcomes: $\left(1,1\right),\left(1,2\right),\ldots$
 \item Examples of events:
 \begin{itemize}
 \item Both dice show even number, or $E=\left\{\left(2,2\right),
@@ -57,6 +58,7 @@ that will either happen or not
 or $E=\left\{\left(1,2\right),\left(2,1\right),\ldots\right\}$
 \end{itemize}
 \end{itemize}
+\end{example}
 \end{frame}
 
 \begin{frame}{Example}
@@ -64,19 +66,19 @@ or $E=\left\{\left(1,2\right),\left(2,1\right),\ldots\right\}$
 \item Ultimately interested in more abstract events:
 \begin{itemize}
 \item $E:$ It rains tomorrow
-\item $E:$ Co-op will be out of kale when I arrive
+\item $E:$ grocery store will be out of kale when I arrive
 \item $E:$ An insurance customer will be in a car accident in the next year
 \end{itemize}
 \item Not obvious what experiments are in these cases
-\item Math~104 focuses on simpler events
+\item Math~104 focuses on events occurring in framework of experiments
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Probability}
 \begin{itemize}
 \item \alert{Probability of event $E$}, denoted by $P\left(E\right)$,
-a number between $0$ and $1$
-\item $P\left(E\right)$ measures likelihood that $E$ occurs
+a number between $0$ and $1$ (inclusive)
+\item $P\left(E\right)$ measures likelihood that $E$ will occur
 \item The greater $P\left(E\right)$, the more likely $E$ to occur
 \item If $P\left(E\right)=0$ then $E$ will not occur
 \item If $P\left(E\right)=1$ then $E$ will occur
@@ -103,12 +105,16 @@ many times $E$ occurred
 {\text{Number of trials}}$
 \item $\frac{\text{Number of times $E$ occurred}}
 {\text{Number of trials}}$ also called
-\alert{relative frequency of~$E$}
+\alert{relative frequency}
 \item Measures the \alert{proportion} or \alert{percentage}
-of times $E$ occurs
-\item Idea: consolidate two numbers into one
-\item Neither numerator or denominator alone meaningful
+of times $E$ occurred
 \end{itemize}
+\begin{remark}
+\begin{itemize}
+\item Neither numerator or denominator alone meaningful
+\item Idea of relative frequency: consolidate two numbers into one
+\end{itemize}
+\end{remark}
 \end{frame}
 
 \begin{frame}{Example}
@@ -146,8 +152,8 @@ Totals&101,250,000
 
 \begin{frame}{Remarks}
 \begin{itemize}
-\item Empirical probability simpleminded
-\item Results vary each time $P\left(E\right)$ calculated
+\item Benefit of empirical probability: very simple
+\item Drawback: results vary each time $P\left(E\right)$ calculated
 \item Rationale in travel example:
 \begin{itemize}
 \item The travelers visiting websites in October 2010 a \alert{sample}
@@ -178,37 +184,49 @@ Number trials&Number heads&$P\left(E\right)$\\\hline
 100,000&49,770&0.4977
 \end{tabular}\end{center}
 \item Note that relative frequencies approach $0.5$
+\item Indeed, $0.5$ the theoretical probability of $E$
+(see \S2)
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Application: Mendelian Genetics}
 \begin{itemize}
-\item Mendel (1822--1884) crossed pea plants with (pure) yellow peas
-with plants with (pure) green peas
-\item Offspring all yellow (not pure)
-\item However, crossing offspring resulted in 
+\item Mendel (1822--1884) crossed pea plants 
+\item Certain plants observed to be \alert{pure}:
+\begin{itemize}
+\item When pure plants with same traits crossed,
+offspring also have same traits
+\end{itemize}
+\item Mendel crossed pure plants producing yellow peas
+with pure plants producing green peas
+\item Offspring all had yellow peas
+\item However, offspring no longer pure
+\item Indeed, crossing offspring resulted in 
 6022 yellow and 2001 green
 \item So probability that randomly chosen second generation plant green
 $\frac{6022}{6022+2001}=\frac{6022}{8023}\approx 0.75$
 \end{itemize}
 \end{frame}
+
 \begin{frame}
 \begin{itemize}
-\item Similarly Mendel crossed (pure) round peas with (pure) wrinkled peas
-\item Offspring all round (not pure)
+\item Similarly Mendel crossed pure round pea plants with pure wrinkled pea plants
+\item Offspring all round, but not pure
 \item However, in second generation 5474 round and 1850 wrinkled
 \item So probability that randomly chosen second generation plant round
 $\frac{5474}{7324}\approx 0.75$
 \end{itemize}
 \end{frame}
+
 \begin{frame}
 \begin{itemize}
 \item Appearance of $0.75$ twice can't be coincidence!
 \item Mendel's results led scientists to discover mechanism
-\item Namely, each plant has two genes controlling color, one
-from mother, one from father
-\item If one or both genes yellow, then plant is yellow
-\item But if both genes green, then plant green
+\item Namely, each plant has two \alert{genes} controlling color
+\item One gene inherited from mother, one from father
+\item If both genes green, then plant green
+\item However, if one or both genes yellow, then plant is yellow
+\item Explains possibility of green offspring of yellow plants
 \end{itemize}
 \end{frame}
 
