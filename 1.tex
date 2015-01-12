@@ -26,7 +26,8 @@
 \begin{itemize}
 \item A controlled operation
 \item Generally in future
-\item Results of interest to us
+\item Results of interest to us, but unknown until experiment
+carried out
 \item Has specific set of \alert{outcomes}, exactly
 one of which will occur
 \end{itemize}
@@ -34,9 +35,10 @@ one of which will occur
 \item Events the basic object of study in probability
 \item Since outcome of experiment either in event or not,
 event will either occur or not
-\item Question arises: how likely is event to occur?
+\item Question arises: how likely to occur is event?
 \item Aim of probability: assign number to event
 reflecting its likelihood
+\item Then people can use that number to help make decisions
 \end{itemize}
 \end{frame}
 
@@ -68,7 +70,13 @@ or $E=\left\{\left(1,2\right),\left(2,1\right),\ldots\right\}$
 \end{example}
 \end{frame}
 
-\begin{frame}{Example}
+\begin{frame}
+\begin{example}
+\begin{itemize}
+\item ISU men's basketball game against Baylor an experiment
+\item Possible outcomes: ISU wins, Baylor wins
+\end{itemize}
+\end{example}
 \begin{itemize}
 \item Ultimately interested in more abstract events:
 \begin{itemize}
@@ -169,7 +177,8 @@ of all travelers, essentially \alert{randomly} selected
 in sample same as proportion among all travelers
 \item Assumption usually reasonable
 \end{itemize}
-\item Theoretical probability better, but not always possible to calculate
+\item Theoretical probability more precice,
+but not always possible to calculate
 \end{itemize}
 \begin{theorem}[Law of Large Numbers]
 As number of trials increases, empirical probability
@@ -206,12 +215,13 @@ offspring also have same traits
 \end{itemize}
 \item Mendel crossed pure plants producing yellow peas
 with pure plants producing green peas
-\item Offspring all had yellow peas
-\item However, offspring no longer pure
-\item Indeed, crossing offspring resulted in 
-6022 yellow and 2001 green
-\item So probability that randomly chosen second generation plant green
+\item Offspring (\alert{first generation}) all had yellow peas
+\item However, first generation plants no longer pure
+\item Indeed, crossing first generation plants resulted in 
+6022 yellow and 2001 green (\alert{second generation})
+\item So 
 $\frac{6022}{6022+2001}=\frac{6022}{8023}\approx 0.75$
+the probability that randomly chosen second generation plant green
 \end{itemize}
 \end{frame}
 
@@ -232,7 +242,7 @@ $\frac{5474}{7324}\approx 0.75$
 \item Namely, each plant has two \alert{genes} controlling color
 \item One gene inherited from mother, one from father
 \item If both genes green, then plant green
-\item However, if one or both genes yellow, then plant is yellow
+\item However, if one or both genes yellow, then plant yellow
 \item Explains possibility of green offspring of yellow plants
 \end{itemize}
 \end{frame}
