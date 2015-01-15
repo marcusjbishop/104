@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer}
+\documentclass{beamer}
 \usepackage{multicol}
 \everymath{\displaystyle}
 \mode<presentation>
@@ -88,7 +88,7 @@ Outcomes H,T of flipping coin equally likely
 \item So outcome much more likely to be $7$ than $2$
 \item[]
 \begin{tabular}{c|c}
-{\bf Experiment}&{\bf Outcomes equally likely}\\\hline
+{\bf Experiment}&{\bf Equally likely?}\\\hline
 Rolling two dice&Yes\\\hline
 Rolling two dice and adding&No
 \end{tabular}
@@ -96,7 +96,8 @@ Rolling two dice and adding&No
 \end{frame}
 
 \begin{frame}{Theoretical probability}
-\begin{definition} The \alert{theoretical probability}
+\begin{definition} If experiment has equally
+likely outcomes, \alert{theoretical probability}
 of event $E$ given by
 \[P\left(E\right)
 =\frac{\text{Number of outcomes in $E$}}{\text{Number of possible outcomes}}\]
@@ -105,7 +106,7 @@ of event $E$ given by
 \begin{itemize}
 \item Experiment: roll a die
 \item $E$: Die shows $5$, or $E=\left\{5\right\}$
-\item Possible outcomes $\left\{1,2,3,4,5,6\right\}$
+\item Possible outcomes $\left\{1,2,3,4,5,6\right\}$ equally likely
 \item So $P\left(E\right)=\frac{1}{6}$
 \end{itemize}
 \end{example}
@@ -114,17 +115,26 @@ of event $E$ given by
 \begin{frame}
 \begin{example}
 \begin{itemize}
+\item Experiment: basketball game ISU vs Baylor
+\item Possible outcomes $\left\{\text{ISU wins},
+\text{Baylor wins}\right\}$ \alert{not necessarily}
+equally likely
+\item So \alert{can't} use formula above!
+\end{itemize}
+\end{example}
+\begin{example}
+\begin{itemize}
 \item Experiment: flip coin
 \item $E$: Coin shows heads, or $E=\left\{H\right\}$
-\item Possible outcomes $\left\{H,T\right\}$
-\item $P\left(E\right)=\frac{1}{2}$
+\item Possible outcomes $\left\{H,T\right\}$ equally likely
+\item So $P\left(E\right)=\frac{1}{2}$
 \end{itemize}
 \end{example}
 \end{frame}
 
 \begin{frame}{Example}
 \begin{itemize}
-\item Experiment: roll two dice and add results
+\item Experiment: roll two dice
 \item $E$: Sum is $2$
 \item So $E=\left\{\left(1,1\right)\right\}$
 \item $P\left(E\right)=\frac{1}{36}$
@@ -153,9 +163,7 @@ must occur, \alert{but not both}
 \item Then $1=P\left(E\right)+P\left(F\right)$
 \end{itemize}
 \begin{proof}
-\begin{itemize}
-\item $F$ contains all the outcomes not in $E$ (and vice-versa)
-\item[]
+$F$ contains all the outcomes not in $E$ (and vice-versa) so
 \begin{align*}
 P\left(E\right)+P\left(F\right)
 \only<+->{
@@ -167,7 +175,6 @@ P\left(E\right)+P\left(F\right)
 \only<+->{
 &=\frac{\text{outcomes}}{\text{outcomes}}=1}
 \end{align*}
-\end{itemize}
 \end{proof}
 \end{frame}
 
@@ -175,16 +182,15 @@ P\left(E\right)+P\left(F\right)
 \begin{example}
 \begin{itemize}
 \item Experiment: flip coin
-\item $E$: heads facing up
-\item $F$: tails facing up
-\item Then $P\left(E\right)+P\left(F\right)=\frac{1}{2}+\frac{1}{2}=1$
+\item $H$: heads facing up
+\item $T$: tails facing up
+\item Then $P\left(H\right)+P\left(T\right)=\frac{1}{2}+\frac{1}{2}=1$
 \end{itemize}
 \end{example}
 \begin{itemize}
 \item Suppose $E,F$ events such that \alert{one} of $E,F$
 must occur, \alert{but not both}
-\item Then $E$ also denoted \alert{not $F$}
-and $F$ denoted \alert{not $E$}
+\item Then $F$ the same as event \alert{not $E$}
 \item Then $P\left(E\right)+P\left(\text{not $E$}\right)=1$
 for any event $E$
 \item Thus \alert{$P\left(\text{not $E$}\right)=1-P\left(E\right)$}
@@ -219,7 +225,7 @@ $P\left(\text{not $E$}\right)=1-P\left(E\right)
 \end{frame}
 
 \begin{frame}{Playing cards}
-\includegraphics[scale=.34]{cards}
+\includegraphics[scale=.34]{Cards}
 \begin{itemize}
 \item Suits: $\clubsuit,\spadesuit,\alert{\vardiamond},\alert{\varheart}$
 (club, spade, diamond, heart)
@@ -232,14 +238,19 @@ $P\left(\text{not $E$}\right)=1-P\left(E\right)
 
 \begin{frame}{Card Examples}
 \begin{itemize}
-\item If randomly selected card chosen, calculate\dots
+\item If randomly selected card chosen, calculate \dots
 \item $P\left\{\text{Ace}\right\}\only<+->{=\frac{4}{52}}
 \only<+->{=\frac{1}{13}}
 \only<+->{=P\left\{2\right\}=P\left\{3\right\}
 =\cdots=P\left\{\text{King}\right\}}$
-\item Could also argue that there are $13$ values, each equally likely
-\item $P\left\{\text{not $4$}\right\}\only<+->{=\frac{48}{52}
+\item Could also argue that there are $13$ ranks, each equally likely
+\item $P\left\{\text{rank not $4$}\right\}\only<+->{=\frac{48}{52}
 \only<+->{=\frac{12}{13}}}$
+\item Could also argue that
+$P\left\{\text{rank not $4$}\right\}
+\only<+->{=1-P\left\{\text{rank is $4$}\right\}}
+\only<+->{=1-\frac{1}{13}}
+\only<+->{=\frac{12}{13}}$
 \item $P\left\{\alert{\varheart}\right\}
 \only<+->{=\frac{13}{52}}\only<+->{=\frac{1}{4}}
 \only<+->{=P\left\{\spadesuit\right\}
@@ -247,23 +258,9 @@ $P\left(\text{not $E$}\right)=1-P\left(E\right)
 =P\left\{\clubsuit\right\}}$
 \item Could also argue that there are four suits, each equally likely
 \item A \alert{picture card} a Jack, Queen, or King
-\item $P\left(\text{picture card}\right)
+\item $P\left\{\text{picture card}\right\}
 \only<+->{=\frac{12}{52}}
 \only<+->{=\frac{3}{13}}$
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Information for athletes}
-\begin{itemize}
-\item Letter from Amber Giese listing
-days of competitions does \alert{not} constitute
-written notice of absence
-\item Dates of quizzes and exams listed in syllabus
-\item \alert{Your responsibility} to determine which
-quizzes and exams will be missed
-\item If you need to miss a quiz or exam because of a game, \alert{you must}
-make special arrangements with me in advance of the game
-\item However, please discuss homework collection with Josh, not with me
 \end{itemize}
 \end{frame}
 
@@ -273,7 +270,7 @@ make special arrangements with me in advance of the game
 and $1/250000$ non-Caucasian births in North America
 \item Everyone has \alert{genotype}
 with regard to Cystic Fibrosis gene
-\item \alert{Genotype} a sequence of two elements of
+\item \alert{Genotype} a pair of elements of
 $\left\{c,C\right\}$, possibly the same
 \item So four possible genotypes $cc,cC,Cc,CC$
 \item Individuals with genotype $cc$ \alert{have} Cystic Fibrosis,
@@ -294,9 +291,9 @@ An individual with genotype $cC$ inherited
 $c$ from father and $C$ from mother
 \end{example}
 \item Child receives one gene from Father's genotype,
-both with probability $\frac{1}{2}$
+each with probability $\frac{1}{2}$
 \item Similarly child receives one gene from Mother's genotype,
-both with probability $\frac{1}{2}$
+each with probability $\frac{1}{2}$
 \end{itemize}
 \end{frame}
 
