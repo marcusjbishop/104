@@ -136,7 +136,7 @@ shown in table:
 \item So $1\cdot\frac{1}{5}+\left(-\frac{1}{2}\right)\frac{4}{5}
 \only<+->{=\frac{1}{5}-\frac{4}{10}}
 \only<+->{=\frac{1}{5}-\frac{2}{5}}
-\only<+->{=-\frac{1}{5}}$
+\only<+->{=\alert{-\frac{1}{5}}}$
 \only<+->{the expectation}
 \item Conclusion: guessing a bad idea!
 \end{itemize}
@@ -145,20 +145,22 @@ shown in table:
 \begin{frame}{Card game (Exercise 14)}
 \begin{itemize}
 \item Mike and Dave play following game:
-\item Mike randomly selects card
+\item Mike randomly selects card from standard deck
 \item If $\clubsuit$ selected Dave gives Mike $\$4$
 \item Otherwise Mike gives Dave $\$2$
 \item Mike's expected proceeds:
 \[4\left(\frac{1}{4}\right)+\left(-2\right)\left(\frac{3}{4}\right)
-=-\frac{1}{2}\]
+\only<+->{\alert{=-\frac{1}{2}}}\]
 \item Dave's expected proceeds:
 \[\left(-4\right)\left(\frac{1}{4}\right)
 +2\left(\frac{3}{4}\right)
-=\frac{1}{2}\]
-\item To make fair, change Dave's payment to $\$3$
-and Mike's payment to $\$1$
+\only<+->{\alert{=\frac{1}{2}}}\]
+\item To make \alert{fair}, change Dave's payment to
+\alert{$\$3$}
+and Mike's payment to \alert{$\$1$}
 \item Mike's new expected proceeds:
-\[3\left(\frac{1}{4}\right)+\left(-1\right)\left(\frac{3}{4}\right)=0\]
+\[3\left(\frac{1}{4}\right)
++\left(-1\right)\left(\frac{3}{4}\right)\alert{=0}\]
 \end{itemize}
 \end{frame}
 
@@ -190,7 +192,8 @@ ticket price?
 \begin{definition}
 An experiment called \alert{fair} if zero its expectation
 \end{definition}
-\item Can figure out fair price $F$ by setting expect ion equal to zero:
+\item Can figure out fair price $F$ by setting expectation
+equal to zero:
 \begin{align*}
 0&=\left(50-F\right)\left(\frac{1}{100}\right)
 -F\left(\frac{99}{100}\right)\\
@@ -284,8 +287,11 @@ premium $P$ such that company profits in long run
 \item[]
 \begin{align*}
 P\left(.97\right)+\left(P-40000\right)\left(.03\right)&>0\\
-.97P+.03P-40000\left(.03\right)&>0\\
-P&>40000\left(.03\right)=1200
+\only<+->{
+.97P+.03P-40000\left(.03\right)&>0\\}
+\only<+->{
+P&>40000\left(.03\right)}
+\only<+->{=1200}
 \end{align*}
 \item So for any $P>1200$ company expects to profit
 \item Indeed, $300$ the expectation when $P=1500$
