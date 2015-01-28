@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage{multicol}
 \everymath{\displaystyle}
 \mode<presentation>
@@ -16,6 +16,7 @@
 \newtheorem{remark}{Remark}
 \newtheorem{impact}{Impact}
 \newtheorem{notation}{Notation}
+\newtheorem{principle}{Principle}
 \usepackage{arev}
 \begin{document}
 \begin{frame}\titlepage\end{frame}
@@ -144,23 +145,41 @@ shown in table:
 
 \begin{frame}{Card game (Exercise 14)}
 \begin{itemize}
-\item Mike and Dave play following game:
-\item Mike randomly selects card from standard deck
-\item If $\clubsuit$ selected Dave gives Mike $\$4$
-\item Otherwise Mike gives Dave $\$2$
-\item Mike's expected proceeds:
+\item Marcus and Dave play following game:
+\item Marcus randomly selects card from standard deck
+\item If $\clubsuit$ selected Dave gives Marcus $\$4$
+\item Otherwise Marcus gives Dave $\$2$
+\item Marcus's expected proceeds:
 \[4\left(\frac{1}{4}\right)+\left(-2\right)\left(\frac{3}{4}\right)
 \only<+->{\alert{=-\frac{1}{2}}}\]
 \item Dave's expected proceeds:
 \[\left(-4\right)\left(\frac{1}{4}\right)
 +2\left(\frac{3}{4}\right)
 \only<+->{\alert{=\frac{1}{2}}}\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
 \item To make \alert{fair}, change Dave's payment to
 \alert{$\$3$}
-and Mike's payment to \alert{$\$1$}
-\item Mike's new expected proceeds:
+and Marcus's payment to \alert{$\$1$}
+\item Marcus's new expected proceeds:
 \[3\left(\frac{1}{4}\right)
 +\left(-1\right)\left(\frac{3}{4}\right)\alert{=0}\]
+\item Indeed, $3:1$ the odds against Marcus winning
+\item So on average, Marcus loses three times for every
+time he wins
+\item So if he pays $\$1$ when loses
+and gains $\$3$ when he wins, he breaks even
+\item Same principle used in casino games:
+\begin{principle}
+If $X:1$ the
+odds against player, prize \alert{should} be $X$ times
+amount player paid
+\end{principle}
+\item However, to give casino slight edge, prize always
+slightly less than $X$ times amount bet
 \end{itemize}
 \end{frame}
 
