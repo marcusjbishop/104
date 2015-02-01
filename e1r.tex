@@ -1,4 +1,4 @@
-\documentclass[addpoints,12pt]{exam}
+\documentclass[answers,addpoints,12pt]{exam}
 \usepackage{pgf-pie}
 \usepackage{multicol}
 \usepackage{arev}
@@ -14,6 +14,7 @@
 {\bf 17 September 2014}
 \firstpagefooter{}{}{}
 \runningfooter{}{}{}
+\everymath{\displaystyle}
 \begin{document}
 
 %\begin{center}
@@ -85,11 +86,33 @@ $\frac{1}{2}$.
 \begin{solution}$0$\end{solution}
 \end{parts}
 
-
-\question[10] If a card is randomly selected from a deck
-of playing cards, what is the probability that the card
-will either be a picture card or have suit $\varheart$?
+\question[10]
+Marcus and Alex are playing the following game repeatedly.
+Marcus selects a card at random from a deck of cards.
+If the card is a picture card, Alex pays Marcus $\$10$.
+Otherwise Marcus pays Alex $\$5$.
 A {\em picture card} is either a Jack, Queen, or King.
+\begin{parts}
+\part Calculate the probability of drawing a picture card.
+\begin{solution}$\frac{3}{13}$\end{solution}
+\part Calculate the {\bf odds against} drawing a picture card.
+\begin{solution}
+$\frac{10/13}{3/13}=\frac{10}{3}$ so the odds
+agains drawing a picture card are $10:3$.
+\end{solution}
+\part Calculate the expected proceeds for Marcus.
+\begin{solution}
+$10\left(\frac{3}{13}\right)-5\left(\frac{10}{13}\right)
+=-\frac{20}{13}\approx 1.54$
+\end{solution}
+\part How can the payments be changed so that the game
+will be fair to both players?
+\begin{solution} Change Marcus's payment to $\$3$. Then
+Marcus's expectation is
+$10\left(\frac{3}{13}\right)-3\left(\frac{10}{13}\right)=0$.
+\end{solution}
+
+\end{parts}
 
 \question[15] To raise money the volleyball team sells
 600~raffle tickets
@@ -105,7 +128,7 @@ who buys a ticket.
 
 \begin{tikzpicture}
 \pie[explode={.25,.25,.25,.5,.25,.25,.5,.25}]
-{40/O+,31/A+,8/B+,2/AB+,9/O-,7/A-,2/B-,1/AB}
+{40/O+,31/A+,8/B+,2/AB+,9/O-,7/A-,2/B-,1/AB-}
 \end{tikzpicture}
 
 \question
