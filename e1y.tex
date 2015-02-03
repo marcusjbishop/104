@@ -3,8 +3,8 @@
 \usepackage{multicol}
 \usepackage{arev}
 \usepackage{graphicx,multicol}
-\usepackage[euler-digits]{eulervm}
 \usepackage{charter,amsmath,amssymb}
+\usepackage{eulervm}
 \usepackage[letterpaper,margin=1in]{geometry}
 \pagestyle{headandfoot}
 \runningheadrule
@@ -73,25 +73,26 @@ on the first quiz.
 =\frac{56}{140}=\frac{2}{5}=0.4\]
 \end{solution}
 
-\question[15] Suppose that a woman has genotype $cC$
-and her husband has genotype $cc$ for a
+\question[15] Suppose that a woman has genotype $\mathbold{cC}$
+and her husband has genotype $\mathbold{CC}$ for a
 genetically inherited disorder.
 If they decide to become parents, calculate the
 probability that their child will
 have the following genotypes.
 \begin{parts}
-\part $cc$
+\part $\mathbold{cc}$
 \begin{solution}[1.25in]
 The Punnett square is
 $\begin{array}{c|cc}
-&c&C\\\hline c&cc&cC\\c&cc&cC\end{array}$
-so $cc$ occurs with probability
-$\frac{1}{2}$.
+&\mathbold{c}&\mathbold{C}\\\hline
+\mathbold{C}&\mathbold{Cc}&\mathbold{CC}\\
+\mathbold{C}&\mathbold{Cc}&\mathbold{CC}\end{array}$
+so $\mathbold{cc}$ occurs with probability~0.
 \end{solution}
-\part either $Cc$ or $cC$
+\part either $\mathbold{Cc}$ or $\mathbold{cC}$
 \begin{solution}[1.25in]$\frac{1}{2}$\end{solution}
-\part $CC$
-\begin{solution}[1.25in]$0$\end{solution}
+\part $\mathbold{CC}$
+\begin{solution}[1.25in]$\frac{1}{2}$\end{solution}
 \end{parts}
 \ifprintanswers\else\newpage\fi
 
