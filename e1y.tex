@@ -99,8 +99,8 @@ so $\mathbold{cc}$ occurs with probability~0.
 \question[25]
 Marcus and Alex are playing the following game repeatedly.
 Marcus selects a card at random from a deck of cards.
-If the card is a picture card, Alex pays Marcus $\$10$.
-Otherwise Marcus pays Alex $\$5$.
+If the card is a picture card, then Alex pays Marcus $\$6$.
+Otherwise Marcus pays Alex $\$3$.
 A {\em picture card} is either a Jack, Queen, or King.
 Then the card is reinserted into the deck and the
 game repeated.
@@ -114,62 +114,62 @@ against drawing a picture card are $10:3$.
 \end{solution}
 \part Calculate the expected proceeds for Marcus.
 \begin{solution}[.75in]
-$10\left(\frac{3}{13}\right)-5\left(\frac{10}{13}\right)
-=-\frac{20}{13}\approx 1.54$
+$6\left(\frac{3}{13}\right)-3\left(\frac{10}{13}\right)
+=-\frac{12}{13}\approx -0.93$
 \end{solution}
 \part How can the payments be changed so that the game
 will be fair to both players?
-\begin{solution}[1in] Change Marcus's payment to $\$3$. Then
+\begin{solution}[1in] Change Alex's payment to $\$10$. Then
 Marcus's expectation is
-$10\left(\frac{3}{13}\right)-3\left(\frac{10}{13}\right)=0$.
+\[10\left(\frac{3}{13}\right)-3\left(\frac{10}{13}\right)=0.\]
 \end{solution}
 \end{parts}
 
 \question[20] To raise money the volleyball team sells
-600~raffle tickets
-for $\$2$ each. They will randomly select
+800~raffle tickets
+for $\$3$ each. They will randomly select
 a ticket holder to receive a prize of $\$200$.
 \begin{parts}
 \part Calculate the expected proceeds for someone
 who buys a ticket.
 \begin{solution}[.75in]
-$198\left(\frac{1}{600}\right)-2\left(\frac{599}{600}\right)
-=-\frac{5}{3}\approx 1.67$
+$197\left(\frac{1}{800}\right)-3\left(\frac{799}{800}\right)
+=-\frac{2200}{800}=-\frac{11}{4}=-2.75$
 \end{solution}
 \part Calculate the expected proceeds for the volleyball team.
 \begin{solution}[.75in]
-$600\cdot 2-200=1000$
+$800\cdot 3-200=2200$
 \end{solution}
 \part Calculate the fair ticket price.
 \begin{solution}[.75in]
-$2-\frac{5}{3}=\frac{1}{3}\approx 0.34$.
+$3-\frac{11}{4}=\frac{1}{4}=0.25$
 \end{solution}
 \end{parts}
 \ifprintanswers\else\newpage\fi
 
 \begin{tikzpicture}
-\pie[explode={.25,.25,.25,.5,.25,.25,.5,.25}]
-{40/O+,31/A+,8/B+,2/AB+,9/O-,7/A-,2/B-,1/AB-}
+\pie[explode={.25,.25,.25,.5,.25,.5,.25,.75}]
+{35/O+,37/A+,8/B+,4/AB+,6/O-,7/A-,2/B-,1/AB-}
 \end{tikzpicture}
 
 \question[15]
 The chart above shows the distribution
-of blood types of residents of Australia.
+of blood types of residents of Denmark.
 \begin{parts}
-\part If an Australian is selected at random,
+\part If a Danish individual is selected at random,
 what is the probability that he or she
 does {\bf not} have blood type {A+}?
-\begin{solution}[.75in]$1-0.31=0.69$\end{solution}
+\begin{solution}[.75in]$1-0.37=0.63$\end{solution}
 \part What are the {\bf odds against} a randomly
-selected Australian having blood type {O+}?
+selected Danish individual having blood type {O+}?
 \begin{solution}[.75in]
-$\frac{0.6}{0.4}=\frac{3}{2}$ so the odds against
-{O+} are $3:2$.
+$\frac{0.65}{0.35}=\frac{13}{7}$ so the odds against
+{O+} are $13:7$.
 \end{solution}
 \part What is the probability that a randomly
-selected Australian has blood type either
+selected Danish individual has blood type either
 {O+} or {O-}?
-\begin{solution}[.75in]$0.4+0.09=0.49$\end{solution}
+\begin{solution}[.75in]$0.35+0.06=0.41$\end{solution}
 \end{parts}
 \end{questions}
 
