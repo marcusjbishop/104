@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage{multicol}
 \everymath{\displaystyle}
 \mode<presentation>
@@ -26,11 +26,14 @@
 \begin{itemize}
 \item Roulette wheel has slots numbered $1$--$36$
 \columnbreak
-\item American wheel also has slots $0$ and $00$
-\item $18$~slots red, $18$~slots black, $0,00$ green
-\item Player can bet any amount that ball stops on any chosen space
+\item American wheel also has slots {\color{green}$0$}
+and ${\color{green}00}$
+\item $18$~slots red, $18$~slots black,
+{$\color{green}0,00$} green
+\item Player can bet any amount that ball stops
+on any chosen space
 \item This type of bet called \alert{straight up}
-\item If ball stops on that number, casino pays player
+\item If ball stops on that space, casino pays player
 $35$ times bet
 \item If not, casino keeps bet
 \end{itemize}
@@ -39,8 +42,11 @@ $35$ times bet
 
 \begin{frame}{Straight up}
 \begin{itemize}
-\item Calculate expected proceeds from betting $\$1$
-on a particular number, a \alert{straight up}
+\item Can play for free online at
+\href{http://wizardofodds.com/play/roulette}
+{\color{blue}Wizard of Odds}
+\item Calculate expected proceeds of betting $\$1$
+on a particular slot, a \alert{straight up}
 \item Wheel has $38$ spaces, each equally likely
 \item So $\frac{1}{38}$ the probability of winning
 \item $\frac{37}{38}$ the probability of losing
@@ -51,6 +57,12 @@ on a particular number, a \alert{straight up}
 \only<+->{=-\frac{1}{19}}$
 \item Thus $-\frac{1}{19}\approx -0.053$ the expected proceeds
 \end{itemize}
+\begin{remark}
+\begin{itemize}
+\item Player receives chip back if wins
+\item Therefore net payoff $35$, not $34$
+\end{itemize}
+\end{remark}
 \end{frame}
 
 \begin{frame}{Street}
@@ -62,9 +74,16 @@ on a particular number, a \alert{straight up}
 pays player $11$ times bet
 \item Calculate expected proceeds from betting $\$1$ on a street
 \item $11\left(\frac{3}{38}\right)+\left(-1\right)\left(\frac{35}{38}\right)
-\only<+->{=-\frac{2}{38}}
+\only<+->{=-\frac{2}{38}=-\frac{1}{19}}
 \only<+->{\approx -0.053}$
 \end{itemize}
+\begin{remark}
+\begin{itemize}
+\item Probabilities of straight-up and street different
+\item However, expected payout the same
+\item \dots because payouts 35 and 11 carefully devised
+\end{itemize}
+\end{remark}
 \end{frame}
 
 \begin{frame}{Rule for roulette payouts} 
@@ -76,24 +95,28 @@ chosen numbers for any $n$
 bet if ball lands on one of chosen numbers
 \item For example,
 \[\begin{array}{l|c|l}
-n&\frac{36}{n}-1&\text{Name}\\\hline
+n&\frac{36}{n}-1&\text{Name of bet}\\\hline
 1&35&\text{straight up}\\
-3&11&\text{street}\\
-18&1&\text{red, black, even, odd}
+\only<+->{3&11&\text{street}\\}
+\only<+->{18&1&\text{red, black, even, odd}}
 \end{array}\]
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \begin{itemize}
-\item If $0$ and $00$ were removed, would be $36$ rather than $38$ spaces
-\item So $\frac{1}{36}$ the probability that ball stops on particular number
-\item If bet contains $n$ numbers
+\item Hypothetically \dots
+\item If ${\color{green}0}$ and ${\color{green}00}$
+were removed, would be $36$ rather than $38$ spaces
+\item So $\frac{1}{36}$ would be the probability
+that ball stops on particular number
+\item If bet contains $n$ numbers, expectation would be
 \[\left(\frac{36}{n}-1\right)\frac{n}{36}
 +\left(-1\right)\frac{36-n}{36}
 \only<+->{=1-\frac{n}{36}-1+\frac{n}{36}}
-\only<+->{=0}\]
-\item Thus roulette would be fair, if not for extra spaces $0$ and $00$!
+\only<+->{\color{red}=0}\]
+\item Thus roulette would be fair, if not for 
+${\color{green}0}$ and ${\color{green}00}$!
 \item In long run, players would win nothing and casino would not profit
 \end{itemize}
 \end{frame}
