@@ -1,0 +1,146 @@
+\documentclass[answers,12pt]{exam}
+\usepackage{color}
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\usepackage[euler-digits]{eulervm}
+\everymath{\displaystyle}
+\usepackage{amsmath,charter}
+\title{Math 104 Quiz 2\\Red Form}
+\date{Wednesday 18 February}
+\begin{document}
+\maketitle
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+Using a Number~2 pencil record your student ID on your answer sheet.
+Then answer the questions below on the answer sheet.
+This quiz has \numquestions~questions printed on \numpages~pages.
+}}}
+\end{center}
+
+\begin{questions}
+\question A {\em top line} is a roulette bet,
+only available in the US, on any of the spaces labeled by
+$0,00,1,2,3$. The payout for a $\$1$~top line bet
+is $\$6$.
+\footnote{Note that this is an {\bf exception} to the
+payout rule $\frac{36}{n}-1$.}
+Calculate the expectation on a $\$1$~top line bet.
+Round your answer to the nearest cent.\\
+\begin{oneparchoices}
+\choice $\$0$
+\choice $-\$0.01$
+\choice $-\$0.03$ % expectation for other bets in Europe
+\choice $-\$0.05$ % expectation for other bets in US
+\correctchoice $-\$0.08$
+\end{oneparchoices}
+
+\question A {\em first dozen} is a roulette bet
+on any of the spaces labeled by $1,2,\ldots,12$. What are the
+{\bf odds against} a first dozen bet in the US?\\
+\begin{oneparchoices}
+\choice $2:1$ % the payout
+\choice $12:1$ % the number from stem
+\correctchoice $13:6$
+\choice $19:1$ % the expectation
+\choice $26:1$ % the number of losing spaces
+\end{oneparchoices}
+
+\question A tetrahedral die has four sides labeled $1,2,3,4$.
+If an experiment consists of rolling four such dice, how
+many outcomes are in the sample space of the experiment?\\
+\begin{oneparchoices}
+\choice $4$ % faces on one die
+\choice $8$
+\choice $16$ % number of faces
+\choice $64$ % three instead of four dice
+\correctchoice $256$
+\end{oneparchoices}
+
+\uplevel{Questions~\ref{FirstPresident}--\ref{LastPresident}
+deal with the student council.
+Alex, Brooke, Colby, and Denise comprise the student
+council. They want to select a president and
+a vice president from among themselves. However,
+Alex and Denise cannot serve together in these roles
+because they are married to each other.}
+
+\question\label{FirstPresident}
+How many possible choices of president and vice president are there?\\
+\begin{oneparchoices}
+\choice $5$ % number of combinations
+\correctchoice $10$
+\choice $11$ % only eliminated one A/D
+\choice $12$ % 3 by 4
+\choice $14$ % replaced
+\end{oneparchoices}
+
+\question
+What is the probability that Brooke will be chosen
+as either president or vice president?\\
+\begin{oneparchoices}
+\choice $\frac{2}{5}$ % counted second branch as 1
+\correctchoice $\frac{3}{5}$
+\choice $\frac{1}{2}$ % heuristic, or didn't eliminate A/D
+\choice $\frac{7}{16}$ % replaced and didn't eliminate A/D
+\choice $\frac{5}{16}$ % replaced 
+\end{oneparchoices}
+
+\question
+% A good distractor here would be 3, counting
+% Alex's president branch once instead of twice
+% Some students were looking for this answer choice
+In how many choices does Alex appear as either president
+or vice president?\\
+\begin{oneparchoices}
+\correctchoice $4$
+\choice $5$ % heuristic, half the choices
+\choice $6$ % didn't eliminate A/D
+\choice $7$
+\choice $8$
+\end{oneparchoices}
+
+\question\label{LastPresident}
+What is the probability that Denise will be selected
+as vice president?\\
+\begin{oneparchoices}
+\correctchoice $\frac{1}{5}$
+\choice $\frac{1}{4}$ % replaced and didn't eliminate A/D
+\choice $\frac{3}{10}$ % didn't eliminate A/D
+\choice $\frac{3}{16}$ % replaced 
+\choice $\frac{1}{2}$ % heuristic
+\end{oneparchoices}
+
+\uplevel{Questions~\ref{FirstDice}--\ref{LastDice}
+involve the experiment of rolling two regular
+six-sided dice.}
+
+\question\label{FirstDice}
+How many outcomes are in the sample space of the experiment?\\
+\begin{oneparchoices}
+\choice $6$ % one die
+\choice $11$ % possible sums of two dice
+\choice $12$ % add rather than multiply
+\choice $18$
+\correctchoice $36$
+\end{oneparchoices}
+
+\question What is the probability that both dice show five?\\
+\begin{oneparchoices}
+\choice $\frac{1}{30}$ % replaced, although impossible
+\correctchoice $\frac{1}{36}$
+\choice $\frac{1}{12}$ % took 12 to be size of sample space
+\choice $\frac{1}{6}$
+\choice $\frac{1}{5}$ % number from stem
+\end{oneparchoices}
+
+\question\label{LastDice}
+What is the probability that at least one die shows five?\\
+\begin{oneparchoices}
+\choice $\frac{1}{36}$
+\choice $\frac{1}{6}$
+\choice $\frac{1}{5}$ % number from stem
+\correctchoice $\frac{11}{36}$
+\choice $\frac{25}{36}$ % complement
+\end{oneparchoices}
+
+\end{questions}
+\end{document}
