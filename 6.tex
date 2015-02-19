@@ -61,6 +61,8 @@ $E$ \alert{and} $F$
 \item $E\cap F$ called the \alert{intersection} of $E$ and $F$
 \item $\left|E\right|$ denotes number of elements,
 or \alert{size} of $E$
+\item $\left|E\right|$ denoted by \alert{$n\left(E\right)$}
+in text and ML+
 \end{itemize}
 \begin{example}
 \begin{itemize}
@@ -124,6 +126,30 @@ an element more than once
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Complement}
+\begin{itemize}
+\item In practice elements of set $E$ all come from
+some larger set $U$
+\item $U$ called the \alert{universal set}
+\item Depends on context
+\item $E$ often an event and $U$ the sample space
+\item Set of elements of $U$ not in $E$ denoted by $E'$
+\item $E'$ called the \alert{complement} of $E$
+\item Note spelling of \alert{complement}
+\end{itemize}
+\begin{example}
+\begin{itemize}
+\item $U=\left\{1,2,3,4,5,6\right\}$ the sample
+space of rolling die
+\item $E=\left\{1,3,5\right\}$
+\item Then $E'=\left\{2,4,6\right\}$
+\item Note that $\left(E'\right)'=E$
+\item Note that \alert{$\text{not $E$}$}
+the same as $E'$
+\end{itemize}
+\end{example}
+\end{frame}
+
 \begin{frame}{Inclusion-Exclusion Formula}
 \begin{theorem}[Inclusion-Exclusion Formula]
 Suppose that
@@ -133,6 +159,10 @@ Suppose that
 \item There are $p$ elements in \alert{both} $M$ and $N$
 \end{itemize}
 Then there are $m+n-p$ elements in \alert{either} $M$ or $N$
+\end{theorem}
+\begin{theorem}[Set Form of Inclusion-Exclusion Formula]
+\[\left|M\cup N\right|=\left|M\right|
++\left|N\right|-\left|M\cap N\right|\]
 \end{theorem}
 \end{frame}
 
