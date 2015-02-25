@@ -1,4 +1,4 @@
-\documentclass[addpoints,12pt]{exam}
+\documentclass[answers,addpoints,12pt]{exam}
 \usepackage{multicol,xy}
 \usepackage{graphicx,multicol}
 \usepackage[euler-digits]{eulervm}
@@ -42,6 +42,32 @@ you have not been the recipient of such communication from anyone else.
 \fi
 
 \begin{questions}
+
+\question[10] If the elements of the sets
+$E,F,G$ are as shown in the following Venn diagram,
+calculate the following sets.
+\begin{enumerate}
+\item $F\cap G$
+\item $\left(E\cup G\right)'$
+\end{enumerate}
+\[\begin{xy}<1cm,0cm>:
+(-2.5,2)*{E};
+(2.5,2)*{F};
+(-2.25,-2.5)*{G};
+(-1,0)*\cir<2cm>{};
+(1,0)*\cir<2cm>{};
+(0,-1.732)*\cir<2cm>{};
+(-1.5,1)*{a};
+(-1.5,-1)*{b};
+(0,1)*{c};
+(0,-1)*{d};
+(0,-.5)*{e};
+(1.25,1)*{f};
+(1.25,-1)*{g};
+(2,1)*{h};
+(-.5,-2.5)*{i};
+(.5,-2.5)*{j};
+\end{xy}\]
 
 \question[16] Two dice are rolled and the
 numbers showing on the top faces are observed.
@@ -152,6 +178,7 @@ can you plan your itinerary?
 
 \end{questions}
 
-\vfill\ifprintanswers\else\begin{center}\gradetable[h][questions]\end{center}\fi
+\vfill\ifprintanswers\else
+\begin{center}\gradetable[h][questions]\end{center}\fi
 
 \end{document}
