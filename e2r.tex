@@ -44,10 +44,10 @@ you have not been the recipient of such communication from anyone else.
 \begin{questions}
 
 \question[10] If the elements of the sets
-$E,F,G$ are as shown in the following Venn diagram,
-calculate the following sets.
+$E,F,G$ are as shown in the following Venn diagram, then
+list all the elements the following sets.
 \begin{enumerate}
-\item $F\cap G$
+\item $E\cup\left(F\cap G\right)$
 \item $\left(E\cup G\right)'$
 \end{enumerate}
 \[\begin{xy}<1cm,0cm>:
@@ -57,21 +57,21 @@ calculate the following sets.
 (-1,0)*\cir<2cm>{};
 (1,0)*\cir<2cm>{};
 (0,-1.732)*\cir<2cm>{};
-(-1.5,1)*{a};
-(-1.5,-1)*{b};
-(0,1)*{c};
-(0,-1)*{d};
-(0,-.5)*{e};
-(1.25,1)*{f};
-(1.25,-1)*{g};
+(-1.5,1)*{u};
+(-1.5,-1)*{i};
+(0,1)*{n};
+(0,-.5)*{t};
+(0,-1)*{v};
+(1.25,1)*{w};
+(1.25,-1)*{d};
 (2,1)*{h};
-(-.5,-2.5)*{i};
-(.5,-2.5)*{j};
+(-.5,-2.5)*{m};
+(.5,-2.5)*{p};
 \end{xy}\]
 
 \question[16] Two dice are rolled and the
 numbers showing on the top faces are observed.
-Determine the odds against each of the following events.
+Determine the probability of each of the following events.
 \begin{parts}
 \part Both numbers are the same
 \part The sum of the two numbers is $5$
@@ -80,12 +80,36 @@ Determine the odds against each of the following events.
 \end{parts}
 \begin{solution}
 \begin{parts}
-\part Can occur in $6$ ways, so $30:6$ or $5:1$ the odds against
-\part Can occur in $4$ ways, so $32:4$ or $8:1$ the odds against
-\part Can occur in $18$ ways, so $18:18$ or $1:1$ the odds against
-\part Can occur in $11$ ways, so $25:11$ the odds against
+\part Can occur in $6$ ways, so $\frac{6}{36}=\frac{1}{6}$ the probability
+\part Can occur in $4$ ways, so $\frac{4}{36}=\frac{1}{9}$ the probability
+\part Can occur in $18$ ways, so $\frac{18}{36}=\frac{1}{2}$ the probability
+\part Can occur in $11$ ways, so $\frac{11}{36}$ the probability
 \end{parts}
 \end{solution}
+
+\question[10]
+A {\em deviant septet} is a roulette bet,
+available only in the private casino located
+in your instructor's basement, on any of the spaces labeled by
+$0,00,1,2,3,4,5$. The payout for a $\$1$~deviant septet
+is $\$4$.
+Note that this is an {\bf exception} to the
+payout rule $\frac{36}{n}-1$.
+\begin{enumerate}
+\item Calculate the probability of winning a deviant septet.
+\item Calculate the {\bf odds against} winning a deviant septet.
+\item Calculate the expectation on a $\$1$~top deviant septet.
+Round your answer to the nearest cent.
+\end{enumerate}
+
+\question[15] Your itinerary for Saturday should
+include a trip to Target, Staples, Hy-Vee, and the bank.
+However, since Target is across the street from Staples,
+you should visit those two stores consecutively. In other
+words, you should visit Target immediately after Staples, or else
+Staples immediately after Target. In how many ways
+can you plan your intinerary?
+\begin{solution}12\end{solution}
 
 \question[10]
 \begin{multicols}{2}
@@ -166,15 +190,6 @@ least one question correctly?
 \begin{solution}
 $1-\left(\frac{4}{5}\right)^{10}\approx 0.8926$
 \end{solution}
-
-\question[15] Your itinerary for Saturday should
-include a trip to Target, Staples, Hy-Vee, and the bank.
-However, since Target is across the street from Staples,
-you should visit those two stores consecutively. In other
-words, you should visit Target right after Staples, or else
-Staples right after Target. In how many ways
-can you plan your itinerary?
-\begin{solution}12\end{solution}
 
 \end{questions}
 
