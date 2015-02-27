@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer}
+\documentclass{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -487,29 +487,6 @@ P\left\{\text{all ten questions correct}\right\}
 \end{remark}
 \end{frame}
 
-\begin{frame}{$\clubsuit$ example revisited}
-\begin{itemize}
-\item Experiment: Draw two cards without replacement
-\item $E$: First card has suit $\clubsuit$
-\item $F$: Second card has suit $\clubsuit$
-\begin{remark}
-\begin{itemize}
-\item We interpret \alert{$E$ and $F$} to mean $E$ occurs
-\alert{and then} $F$ occurs
-\item Thus we assume $E$ has already occurred when considering $F$
-\item In this sense, $E,F$ \alert{independent} for purpose of calculating
-$P\left(\text{$E$ and $F$}\right)$, so
-$P\left(\text{$E$ and $F$}\right)=P\left(E\right)P\left(F\right)$
-\end{itemize}
-\end{remark}
-\item $P\left(E\right)=\frac{13}{52}$
-\item $E$ having occurred, $P\left(F\right)=\frac{12}{51}$
-\item Thus $P\left(\text{$E$ and $F$}\right)
-\only<+->{=\frac{13}{52}\cdot\frac{12}{51}}
-\only<+->{=\frac{156}{2652}}\only<+->{=\frac{1}{17}}$
-\end{itemize}
-\end{frame}
-
 \begin{frame}{Birthday problem}
 \begin{itemize}
 \item $E$: Two people in room of $24$ have same birthday
@@ -528,6 +505,86 @@ not having same birthday as first or second
 \item So $P\left(E\right)=1-0.462=0.538$ (\alert{!})
 \end{itemize}
 \end{frame}
+
+\begin{frame}{$\clubsuit$ example revisited}
+\begin{itemize}
+\item Experiment: Draw two cards without replacement
+\item Want to calculate probability that
+both have suit $\clubsuit$
+\item $E$: First card has suit $\clubsuit$
+\item $F$: Second card has suit $\clubsuit$
+\begin{remark}
+\begin{itemize}
+\item We interpret \alert{$E$ and $F$} to mean $E$ occurs
+\alert{and then} $F$ occurs
+\item Thus we assume $E$ has already occurred when considering $F$
+\item In this sense, $E$
+and \alert{$F$-given-that-$E$-occurred} considered
+\alert{independent},
+for purpose of calculating
+$P\left(\text{$E$ and $F$}\right)$
+\item $F$-given-that-$E$-occurred denoted
+by $F\mid E$
+\item So
+$P\left(\text{$E$ and $F$}\right)
+=P\left(E\right)P\left(F\mid E\right)$
+\item $E\mid F$ the subject of \S7
+\end{itemize}
+\end{remark}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item $E$: First card has suit $\clubsuit$
+\item $F$: Second card has suit $\clubsuit$
+\item $P\left(E\right)=\frac{13}{52}$
+\item $E$ having occurred, $P\left(F\right)=\frac{12}{51}$
+\item Thus $P\left(\text{$E$ and $F$}\right)
+\only<+->{=\frac{13}{52}\cdot\frac{12}{51}}
+\only<+->{=\frac{156}{2652}}\only<+->{=\frac{1}{17}}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Polygenic Afflictions (Exercise 97)}
+\begin{itemize}
+\item Certain birth defects \alert{polygenic}
+\item Suppose $0.001$ the probability child has defect
+\item However, if one child has defect, then 
+$0.04$ the probability
+that future child in family has defect
+\item Suppose family has two children, Alice
+and Bob
+\item Alice oldest
+\item $E$ the event that Alice has defect
+\item $F$ the event that Bob has defect
+\item $E,F$ \alert{not independent}
+since $P\left(F\right)$ either $0.001$
+or $0.04$ depending on $E$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Probability that both Alice and Bob have defect:
+\item $P\left(\text{$E$ and $F$}\right)
+\only<+->{=0.001\cdot 0.04}
+\only<+->{=0.00004}$
+\item Probability that Alice has defect but not Bob:
+\item $P\left(\text{$E$ and not $F$}\right)
+\only<+->{=0.001\cdot 0.96}
+\only<+->{=0.00096}$
+\item Probability that Bob has defect but not Alice:
+\item $P\left(\text{not $E$ and $F$}\right)
+\only<+->{=0.999\cdot 0.001}
+\only<+->{=0.000999}$
+\item Probability that neither Alice nor Bob has defect:
+\item $P\left(\text{not $E$ and not $F$}\right)
+\only<+->{=0.999\cdot 0.999}
+\only<+->{=0.998001}$
+\end{itemize}
+\end{frame}
+
 
 \begin{frame}{Summary}
 \begin{enumerate}
