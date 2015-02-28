@@ -45,10 +45,11 @@ namely $2,3,\ldots,12$
 \item Each player chooses to be either a \alert{pass bettor}
 or a \alert{don't pass bettor}
 \item \alert{Shooter} rolls two dice
-\item If $7$ or $11$ the sum (a \alert{natural}) then pass bettors win
+\item If $7$ or $11$ the sum (a \alert{natural}) then pass bettors win (and don't pass bettors lose)
 \item If $2$, $3$, or $12$ the sum (a \alert{craps})
-then don't pass bettors win
-\item If $4,5,6,8,9,10$ the sum then this number called the \alert{point}
+then don't pass bettors win (and pass bettors lose)
+\item If $4,5,6,8,9,10$ the sum,
+then this number called \alert{the point}
 \item Shooter rolls dice until sum is either $7$ or the point
 \item If point occurs first, then pass bettors win (\alert{point is made})
 \item If $7$ occurs first, then don't pass bettors win
@@ -128,8 +129,10 @@ since $7$ and $11$ mutually exclusive
 \item Want to calculate $P\left(\text{$4$ and $P$}\right)$
 \item $3$ ways to roll $4$ so $P\left(4\right)=\frac{3}{36}$
 \item Assume $4$ occurs
-\item $3$ ways to roll $4$ again, resulting in $P$
-\item $6$ ways to roll $7$, resulting in $F$
+\item $3$ ways to roll $4$ again (point is made, pass
+bettors win, denoted by \alert{$P$} in tree)
+\item $6$ ways to roll $7$ (point not made, don't pass
+bettors win, denoted by \alert{$F$} in tree)
 \item Outcomes other than $4$ and $7$ ignored
 \item So $9$ possible outcomes
 \item Thus $P\left(P\right)=\frac{3}{9}$
@@ -172,6 +175,8 @@ $P\left(\text{$4$ and $P$}\right)
 (3.25,-4)*+!U{\alert{\frac{1}{18}}};
 \end{xy}\]
 \end{frame}
+
+\end{document}
 
 \begin{frame}{Homework for Monday 6 October}
 \begin{itemize}
