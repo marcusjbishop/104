@@ -61,7 +61,7 @@ list all the elements the following sets.
 (-1.5,-1)*{i};
 (0,1)*{n};
 (0,-.5)*{t};
-(0,-1)*{v};
+(0,-1)*{e};
 (1.25,1)*{w};
 (1.25,-1)*{d};
 (2,1)*{h};
@@ -97,9 +97,24 @@ Note that this is an {\bf exception} to the
 payout rule $\frac{36}{n}-1$.
 \begin{enumerate}
 \item Calculate the probability of winning a deviant septet.
+\begin{solution} $\frac{7}{38}$
+\end{solution}
 \item Calculate the {\bf odds against} winning a deviant septet.
-\item Calculate the expectation on a $\$1$~top deviant septet.
+\begin{solution}
+Since $38-7=31$~spaces are losing, the odds against winning
+are $31:7$.
+\end{solution}
+\item Calculate the expectation on a $\$1$~deviant septet.
 Round your answer to the nearest cent.
+\begin{solution}
+$4\left(\frac{7}{38}\right)-1\left(\frac{31}{38}\right)=-\frac{3}{38}
+\approx\$0.08$
+\end{solution}
+\item How could the $\$4$~payout
+be changed so that the bet would be fair?
+\begin{solution}
+Change the payout to $\frac{31}{7}\approx\$ 4.43$
+\end{solution}
 \end{enumerate}
 
 \question[15] Your itinerary for Saturday should
@@ -110,34 +125,6 @@ words, you should visit Target immediately after Staples, or else
 Staples immediately after Target. In how many ways
 can you plan your intinerary?
 \begin{solution}12\end{solution}
-
-\question[10]
-\begin{multicols}{2}
-If you drop a thumbtack on the floor, it either lands point down
-or point up, as shown in the image at the right.
-You drop a handful of thumbtacks on the floor, observing that
-$105$~tacks land point down while $35$ land point up.
-Based on these results, if you drop two thumbtacks on the floor, what
-is the probability that both tacks will land point up?
-\columnbreak\\
-\includegraphics[scale=.6]{Thumbtacks}
-\end{multicols}
-\begin{solution}
-$\frac{35}{35+105}=\frac{1}{4}$ the empirical probability
-of point up, so $\left(\frac{1}{4}\right)^2=\frac{1}{16}$
-the probability of both points up
-\end{solution}
-
-\question[10] A game is played as follows.
-Two coins are flipped. If both coins come up
-heads, then you win $\$2$. If both coins come
-up tails, then you win $\$3$. 
-Otherwise you lose $\$4$. What are your expected proceeds
-of this game?
-\begin{solution}
-$2\left(\frac{1}{4}\right)+3\left(\frac{1}{4}\right)
--4\left(\frac{1}{2}\right)=-\frac{3}{4}=\$-0.75$
-\end{solution}
 
 \question[10] If two cards are randomly selected from a deck
 of playing cards without replacement,
