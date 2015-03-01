@@ -1,4 +1,4 @@
-\documentclass[addpoints,12pt]{exam}
+\documentclass[answers,addpoints,12pt]{exam}
 \usepackage{multicol,xy}
 \usepackage{graphicx,multicol}
 \usepackage[euler-digits]{eulervm}
@@ -46,19 +46,20 @@ you have not been the recipient of such communication from anyone else.
 \begin{multicols}{2}
 \question[10]
 Suppose $E$, $F$, and $G$ are subsets
-of the universal set \[U=\left\{d,e,i,u,m,n,p,r,s,t\right\}.\]
+of the universal set
+\[U=\left\{a,e,i,k,l,n,r,s,x,z\right\}.\]
 The elements of
 $E,F,G$ are as shown in the Venn diagram
 at the right.
 List all the elements the following sets.
 \begin{parts}
-\part $E\cup\left(F\cap G\right)$
+\part $\left(E\cap F\right)\cup G$
 \begin{solution}[.5in]
-$\left\{u,n,i,t,e,d\right\}$
+$\left\{i,s,r,e,a,l\right\}$
 \end{solution}
-\part $\left(E\cup G\right)'$
+\part $\left(F\cup G\right)'$
 \begin{solution}[.5in]
-$\left\{r,s\right\}$
+$\left\{n,z\right\}$
 \end{solution}
 \end{parts}
 \[\begin{xy}<1cm,0cm>:
@@ -68,25 +69,25 @@ $\left\{r,s\right\}$
 (-1,0)*\cir<2cm>{};
 (1,0)*\cir<2cm>{};
 (0,-1.732)*\cir<2cm>{};
-(-1.5,1)*{u};
-(-1.5,-1)*{i};
-(0,1)*{n};
-(0,-.5)*{t};
+(-2,1)*{n};
+(-1.25,1)*{z};
+(-1.5,-1)*{s};
+(0,1)*{i};
+(0,-.5)*{r};
 (0,-1)*{e};
-(1.25,1)*{r};
-(1.25,-1)*{d};
-(2,1)*{s};
-(-.5,-2.5)*{m};
-(.5,-2.5)*{p};
+(1.25,1)*{k};
+(1.25,-1)*{a};
+(2,1)*{x};
+(0,-2.5)*{l};
 \end{xy}\]
 \end{multicols}
 
 \question[10] A Math~104 quiz has ten multiple-choice
-questions, each with five answer choices. If you guess on all
+questions, each with four answer choices. If you guess on all
 ten questions, then what is the probability that you will answer at
 least one question correctly?
 \begin{solution}[1in]
-$1-\left(\frac{4}{5}\right)^{10}\approx 0.8926$
+$1-\left(\frac{3}{4}\right)^{10}\approx 0.9437$
 \end{solution}
 \ifprintanswers\else\newpage\fi
 
@@ -99,50 +100,52 @@ Determine the probability of each of the following events.
 Can occur in $6$ ways,
 so $\frac{6}{36}=\frac{1}{6}$ the probability
 \end{solution}
-\part The sum of the two numbers is $5$
+\part The sum of the two numbers is $9$
 \begin{solution}[.5in]
 Can occur in $4$ ways,
 so $\frac{4}{36}=\frac{1}{9}$ the probability
 \end{solution}
-\part The sum of the two numbers is even
+\part The sum of the two numbers is odd 
 \begin{solution}[.5in]
 Can occur in $18$ ways,
 so $\frac{18}{36}=\frac{1}{2}$ the probability
 \end{solution}
-\part At least one of the numbers is $3$
+\part At least one of the numbers is $6$
 \begin{solution}[.5in]
 Can occur in $11$ ways, so $\frac{11}{36}$ the probability
 \end{solution}
 \end{parts}
 
 \question[15]
-A {\em deviant septet} is a roulette bet,
+A {\em G8~Summit} is a roulette bet,
 available only in the private casino located
 in your instructor's basement, on any of the spaces labeled by
-$0,00,1,2,3,4,5$. The payout for a $\$1$~deviant septet
-is $\$4$.
+$0,00,1,2,3,4,5,6$. The payout for a $\$1$~G8~Summit
+is $\$3$.
 Note that this is an {\bf exception} to the
 payout rule $\textstyle\frac{36}{n}-1$.
 \begin{parts}
-\part Calculate the probability of winning a deviant septet.
-\begin{solution}[.5in] $\frac{7}{38}$
+\part Calculate the probability of winning a G8~Summit.
+\begin{solution}[.5in] $\frac{8}{38}=\frac{4}{19}
+\approx 0.2105$
 \end{solution}
 \part Calculate the {\bf odds against}
-winning a deviant septet.
+winning a G8~Summit.
 \begin{solution}[.5in]
-Since $38-7=31$~spaces are losing, the odds against winning
-are $31:7$.
+Since $38-8=30$~spaces are losing, the odds against winning
+are $30:8$ or $15:4$.
 \end{solution}
-\part Calculate the expectation on a $\$1$~deviant septet.
+\part Calculate the expectation on a $\$1$~G8~Summit.
 Round your answer to the nearest cent.
 \begin{solution}[1in]
-$4\left(\frac{7}{38}\right)-1\left(\frac{31}{38}\right)=-\frac{3}{38}
-\approx\$0.08$
+$3\left(\frac{4}{19}\right)-
+1\left(\frac{15}{19}\right)=-\frac{3}{19}
+\approx -\$0.16$
 \end{solution}
 \part How could the $\$4$~payout
-be changed so that the deviant septet would be fair?
+be changed so that the G8~Summit would be fair?
 \begin{solution}[.5in]
-Change the payout to $\frac{31}{7}\approx\$ 4.43$
+Change the payout to $\frac{15}{4}\approx\$3.75$
 \end{solution}
 \end{parts}
 \ifprintanswers\else\newpage\fi
@@ -157,31 +160,31 @@ can you plan your itinerary?
 \begin{solution}[4in]12\end{solution}
 
 \question[12] Suppose $E$ and $F$ are events
-and $P\left(E\right)=0.65$ and $P\left(F\right)=0.25$.
+and $P\left(E\right)=0.65$ and $P\left(F\right)=0.3$.
 Do not round your answers to the following questions.
 \begin{parts}
 \part Calculate $P\left(\text{$E$ or $F$}\right)$
 assuming that $E$ and $F$ are mutually exclusive.
 \begin{solution}[.75in]
-$0.65+0.25=0.9$
+$0.65+0.3=0.95$
 \end{solution}
 \part Calculate $P\left(\text{$E$ and $F$}\right)$
 assuming $E$ and $F$ are independent.
 \begin{solution}[.75in]
-$0.65\cdot 0.25=0.1625$
+$0.65\cdot 0.3=0.195$
 \end{solution}
 \part Calculate $P\left(\text{$E$ or $F$}\right)$
 assuming $E$ and $F$ are independent.
 \begin{solution}[.75in]
-$0.65+0.25-0.1625=0.7375$
+$0.65+0.3-0.195=0.755$
 \end{solution}
 \end{parts}
 \ifprintanswers\else\newpage\fi
 
 \question[12] Ames High School has $1422$ students.
-$102$ students are in band but not chorus while
-$176$ students are in chorus but not band.
-If $1093$ students are in neither band nor chorus,
+$101$ students are in band but not chorus while
+$181$ students are in chorus but not band.
+If $993$ students are in neither band nor chorus,
 then how many students are in both band and chorus?
 \begin{solution}[4in]
 \[\begin{xy}<.5cm,0cm>:
@@ -189,19 +192,20 @@ then how many students are in both band and chorus?
 (1,2)*+!D{\text{C}};
 (-1,0)*\cir<1cm>{};
 (1,0)*\cir<1cm>{};
-(0,0)*{51};
-(-2,0)*{102};
-(2,0)*{176};
-(4,0)*{1093};
+(0,0)*{147};
+(-2,0)*{101};
+(2,0)*{181};
+(4,0)*{993};
 \end{xy}\]
 \end{solution}
 
 \question[10] If two cards are randomly selected from a deck
 of playing cards {\bf without replacement},
-then what is the probability that both cards
-will be picture cards?  A {\em picture card} is either a Jack, Queen, or King.
+then what is the probability that {\bf neither card}
+will be a picture card?
+A {\em picture card} is either a Jack, Queen, or King.
 \begin{solution}
-$\frac{12}{52}\cdot\frac{11}{51}=\frac{11}{121}\approx 0.0498$
+$\frac{40}{52}\cdot\frac{39}{51}=\frac{10}{17}\approx 0.5882$
 \end{solution}
 
 \end{questions}
