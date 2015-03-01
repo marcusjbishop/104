@@ -1,4 +1,4 @@
-\documentclass[answers,addpoints,12pt]{exam}
+\documentclass[addpoints,12pt]{exam}
 \usepackage{multicol,xy}
 \usepackage{graphicx,multicol}
 \usepackage[euler-digits]{eulervm}
@@ -7,10 +7,10 @@
 \pagestyle{headandfoot}
 \runningheadrule
 \firstpageheader{\bf Math 104}{\bf Exam 2, Red Form}
-{\bf 2 March 2015}
+{\bf 4 March 2015}
 \runningheader{\bf Math 104}
 {\bf Exam Two, Page \thepage\ of \numpages}
-{\bf 2 March 2015}
+{\bf 4 March 2015}
 \firstpagefooter{}{}{}
 \runningfooter{}{}{}
 \everymath{\displaystyle}
@@ -43,9 +43,14 @@ you have not been the recipient of such communication from anyone else.
 
 \begin{questions}
 
-\question[10] If the elements of the sets
-$E,F,G$ are as shown in the following Venn diagram, then
-list all the elements the following sets.
+\begin{multicols}{2}
+\question[10]
+Suppose $E$, $F$, and $G$ are subsets
+of the universal set $U=\left\{d,e,i,u,m,n,p,r,s,t\right\}$.
+The elements of
+$E,F,G$ are as shown in the Venn diagram
+at the right.
+List all the elements the following sets.
 \begin{enumerate}
 \item $E\cup\left(F\cap G\right)$
 \item $\left(E\cup G\right)'$
@@ -62,60 +67,85 @@ list all the elements the following sets.
 (0,1)*{n};
 (0,-.5)*{t};
 (0,-1)*{e};
-(1.25,1)*{w};
+(1.25,1)*{r};
 (1.25,-1)*{d};
-(2,1)*{h};
+(2,1)*{s};
 (-.5,-2.5)*{m};
 (.5,-2.5)*{p};
 \end{xy}\]
+\end{multicols}
+\begin{solution}
+\begin{enumerate}
+\item $\left\{u,n,i,t,e,d\right\}$
+\item $\left\{r,s\right\}$
+\end{enumerate}
+\end{solution}
+
+\question[10] A Math~104 quiz has ten multiple-choice
+questions, each with five answer choices. If you guess on all
+ten questions, then what is the probability that you will answer at
+least one question correctly?
+\begin{solution}[1in]
+$1-\left(\frac{4}{5}\right)^{10}\approx 0.8926$
+\end{solution}
+\ifprintanswers\else\newpage\fi
 
 \question[16] Two dice are rolled and the
 numbers showing on the top faces are observed.
 Determine the probability of each of the following events.
 \begin{parts}
 \part Both numbers are the same
-\part The sum of the two numbers is $5$
-\part The sum of the two numbers is even
-\part At least one of the numbers is $3$
-\end{parts}
-\begin{solution}
-\begin{parts}
-\part Can occur in $6$ ways, so $\frac{6}{36}=\frac{1}{6}$ the probability
-\part Can occur in $4$ ways, so $\frac{4}{36}=\frac{1}{9}$ the probability
-\part Can occur in $18$ ways, so $\frac{18}{36}=\frac{1}{2}$ the probability
-\part Can occur in $11$ ways, so $\frac{11}{36}$ the probability
-\end{parts}
+\begin{solution}[.5in]
+Can occur in $6$ ways,
+so $\frac{6}{36}=\frac{1}{6}$ the probability
 \end{solution}
+\part The sum of the two numbers is $5$
+\begin{solution}[.5in]
+Can occur in $4$ ways,
+so $\frac{4}{36}=\frac{1}{9}$ the probability
+\end{solution}
+\part The sum of the two numbers is even
+\begin{solution}[.5in]
+Can occur in $18$ ways,
+so $\frac{18}{36}=\frac{1}{2}$ the probability
+\end{solution}
+\part At least one of the numbers is $3$
+\begin{solution}[.5in]
+Can occur in $11$ ways, so $\frac{11}{36}$ the probability
+\end{solution}
+\end{parts}
 
-\question[10]
+\question[15]
 A {\em deviant septet} is a roulette bet,
 available only in the private casino located
 in your instructor's basement, on any of the spaces labeled by
 $0,00,1,2,3,4,5$. The payout for a $\$1$~deviant septet
 is $\$4$.
 Note that this is an {\bf exception} to the
-payout rule $\frac{36}{n}-1$.
-\begin{enumerate}
-\item Calculate the probability of winning a deviant septet.
-\begin{solution} $\frac{7}{38}$
+payout rule $\textstyle\frac{36}{n}-1$.
+\begin{parts}
+\part Calculate the probability of winning a deviant septet.
+\begin{solution}[.5in] $\frac{7}{38}$
 \end{solution}
-\item Calculate the {\bf odds against} winning a deviant septet.
-\begin{solution}
+\part Calculate the {\bf odds against}
+winning a deviant septet.
+\begin{solution}[.5in]
 Since $38-7=31$~spaces are losing, the odds against winning
 are $31:7$.
 \end{solution}
-\item Calculate the expectation on a $\$1$~deviant septet.
+\part Calculate the expectation on a $\$1$~deviant septet.
 Round your answer to the nearest cent.
-\begin{solution}
+\begin{solution}[1in]
 $4\left(\frac{7}{38}\right)-1\left(\frac{31}{38}\right)=-\frac{3}{38}
 \approx\$0.08$
 \end{solution}
-\item How could the $\$4$~payout
-be changed so that the bet would be fair?
-\begin{solution}
+\part How could the $\$4$~payout
+be changed so that the deviant septet would be fair?
+\begin{solution}[.5in]
 Change the payout to $\frac{31}{7}\approx\$ 4.43$
 \end{solution}
-\end{enumerate}
+\end{parts}
+\ifprintanswers\else\newpage\fi
 
 \question[15] Your itinerary for Saturday should
 include a trip to Target, Staples, Hy-Vee, and the bank.
@@ -123,41 +153,37 @@ However, since Target is across the street from Staples,
 you should visit those two stores consecutively. In other
 words, you should visit Target immediately after Staples, or else
 Staples immediately after Target. In how many ways
-can you plan your intinerary?
-\begin{solution}12\end{solution}
+can you plan your itinerary?
+\begin{solution}[4in]12\end{solution}
 
-\question[10] If two cards are randomly selected from a deck
-of playing cards without replacement,
-then what is the probability that both cards
-will be picture cards?  A {\em picture card} is either a Jack, Queen, or King.
-\begin{solution}
-$\frac{12}{52}\cdot\frac{11}{51}=\frac{11}{121}\approx 0.0498$
-\end{solution}
-
-\question[15] Suppose $E$ and $F$ are events
-and $P\left(E\right)=0.75$ and $P\left(F\right)=0.25$.
+\question[12] Suppose $E$ and $F$ are events
+and $P\left(E\right)=0.65$ and $P\left(F\right)=0.25$.
+Do not round your answers to the following questions.
 \begin{parts}
 \part Calculate $P\left(\text{$E$ or $F$}\right)$
 assuming that $E$ and $F$ are mutually exclusive.
+\begin{solution}[.75in]
+$0.65+0.25=0.9$
+\end{solution}
 \part Calculate $P\left(\text{$E$ and $F$}\right)$
 assuming $E$ and $F$ are independent.
+\begin{solution}[.75in]
+$0.65\cdot 0.25=0.1625$
+\end{solution}
 \part Calculate $P\left(\text{$E$ or $F$}\right)$
 assuming $E$ and $F$ are independent.
-\end{parts}
-\begin{solution}
-\begin{parts}
-\part $0.75+0.25=1.0$
-\part $0.75\cdot 0.25=0.1875$
-\part $0.75+0.25-0.1875=0.8125$
-\end{parts}
+\begin{solution}[.75in]
+$0.65+0.25-0.1625=0.7375$
 \end{solution}
+\end{parts}
+\ifprintanswers\else\newpage\fi
 
 \question[12] Ames High School has $1422$ students.
 $102$ students are in band but not chorus while
 $176$ students are in chorus but not band.
 If $1093$ students are in neither band nor chorus,
 then how many students are in both band and chorus?
-\begin{solution}
+\begin{solution}[4in]
 \[\begin{xy}<.5cm,0cm>:
 (-1,2)*+!D{\text{B}};
 (1,2)*+!D{\text{C}};
@@ -170,12 +196,12 @@ then how many students are in both band and chorus?
 \end{xy}\]
 \end{solution}
 
-\question[12] A Math~104 quiz has ten multiple-choice
-questions, each with five answer choices. If you guess on all
-ten questions, then what is the probability that you will answer at
-least one question correctly?
+\question[10] If two cards are randomly selected from a deck
+of playing cards {\bf without replacement},
+then what is the probability that both cards
+will be picture cards?  A {\em picture card} is either a Jack, Queen, or King.
 \begin{solution}
-$1-\left(\frac{4}{5}\right)^{10}\approx 0.8926$
+$\frac{12}{52}\cdot\frac{11}{51}=\frac{11}{121}\approx 0.0498$
 \end{solution}
 
 \end{questions}
