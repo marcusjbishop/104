@@ -1,0 +1,330 @@
+\documentclass{beamer}
+\usepackage{multicol}
+\usepackage{xy}
+\everymath{\displaystyle}
+\mode<presentation>
+{\usetheme{Warsaw}\setbeamercovered{dynamic}}
+\usecolortheme{crane}
+\usepackage{beamerfoils}
+\pgfdeclareimage[height=1in]{university-logo}{ISULogo}
+\logo{\pgfuseimage{university-logo}}
+\setbeamertemplate{navigation symbols}{}
+\title[\S7]{Section 7\\Conditional probability}
+\author{Dr Marcus Bishop}
+\subject{Math 104}
+\beamerdefaultoverlayspecification{<+->}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{impact}{Impact}
+\newtheorem{notation}{Notation}
+\newtheorem{argument}{Argument}
+\usepackage{arev}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+\LogoOff
+
+\begin{frame}{Conditional probability}
+\begin{itemize}
+\item Probability meant to help people make decisions
+\item New information might become available
+that changes probability of certain events
+\item Taking new information into account
+might help in estimating probability
+\item In turn, new information might influence decisions made
+\end{itemize}
+\begin{example}
+\begin{itemize}
+\item Should I study for a possible pop quiz in Math~104 or not?
+\item Hard to calculate probability of pop quiz
+\item However, if regular quiz occurred in class yesterday,
+probability of pop quiz tomorrow reduced
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}
+\begin{example}
+\begin{itemize}
+\item Have to run into store for five minutes
+\item Should I put money in parking meter?
+\item Hard to calculate probability that meter reader
+comes in next five minutes
+\item However, if it's raining, probability that meter reader
+comes reduced
+\end{itemize}
+\end{example}
+\begin{remark}
+In instructor's experience, better to always put money
+in parking meter, regardless of rain
+\end{remark}
+\end{frame}
+
+\begin{frame}
+\begin{definition}
+\begin{itemize}
+\item Define $P\left(E\mid F\right)
+=\frac{P\left(E\cap F\right)}{P\left(F\right)}$
+\item $P\left(E\mid F\right)$ called
+\alert{probability of $E$ given $F$}
+\end{itemize}
+\end{definition}
+\begin{itemize}
+\item Normally regard $E$ as occurring
+\alert{after} $F$ when considering $P\left(E\mid F\right)$
+\item $P\left(E\mid F\right)$ gives probability that $E$ occurs,
+under further assumption that $F$ already occurred
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example}
+\begin{itemize}
+\item Calculate probability of drawing $\alert{\varheart}$ given
+that card is red
+\item Take $E=\left\{\text{suit is $\alert{\varheart}$}\right\}$
+and $F=\left\{\text{card is red}\right\}$
+\item Then question asks for $P\left(E\mid F\right)
+=\frac{P\left(E\cap F\right)}{P\left(F\right)}$
+\item $P\left(E\right)=\frac{1}{4}$\qquad
+\only<+->{$P\left(F\right)=\frac{1}{2}$}
+\item $P\left(E\cap F\right)=\frac{1}{4}$\qquad
+($E\cap F=E$ since all $\alert{\varheart}$ are red)
+\begin{remark}
+Note that $P\left(E\right)\cdot P\left(F\right)\alert{\ne}
+P\left(E\cap F\right)$
+since $E,F$ not independent
+\end{remark}
+\item So $P\left(E\mid F\right)
+=\frac{P\left(E\cap F\right)}{P\left(F\right)}
+\only<+->{=\frac{1/4}{1/2}}
+\only<+->{=\frac{1}{2}}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{remark}
+\begin{itemize}
+\item Suppose $S$ the sample space of experiment
+\item Then
+$P\left(E\mid F\right)=\frac{P\left(E\cap F\right)}{P\left(F\right)}
+\only<+->{=\frac{\left|E\cap F\right|/\left|S\right|}
+{\left|F\right|/\left|S\right|}}
+\only<+->{=\alert{\frac{\left|E\cap F\right|}{\left|F\right|}}}$
+\item Generally easier to calculate
+$\frac{\left|E\cap F\right|}{\left|F\right|}$
+\item Assuming $F$ occurred, only possible outcomes in $F$
+\item So $\left|F\right|$ the denominator of $P\left(E\mid F\right)$
+\item Essentially $F$ the \alert{new sample space}
+\item Further, any outcome in $E$
+also in $F$
+\item So $\left|E\cap F\right|$ the numerator of
+$P\left(E\mid F\right)$
+\end{itemize}
+\end{remark}
+\end{frame}
+
+\begin{frame}
+\[\begin{xy}<1cm,0cm>:
+(-1,2)*+!D{\text{E}};
+(1,2)*+!D{\text{F}};
+(-1,0)*\cir<2cm>{};
+(1,0)*\cir<2cm>{};
+(0,0)*{E\cap F};
+\end{xy}\]
+\begin{itemize}
+\item We imagine all outcomes lying inside
+or outside of circles above
+\item Knowing that outcome lies in $F$
+eliminates all outcomes lying outside circle $F$
+\item Now for outcome to be in $E$, has to be in $E\cap F$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{example}
+\begin{itemize}
+\item Calculate probability of drawing $\alert{\varheart}$ given
+that card is red
+\item $13$ cards are red and $\alert{\varheart}$
+\item $26$ cards are red
+\item Thus $P\left(\alert{\varheart}\mid\text{red}\right)
+=\frac{13}{26}\only<+->{=\frac{1}{2}}$
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}{Exercise 53}
+\[\begin{array}{r|llll|l}
+&\text{same}&\text{same}&\text{different}&&\\
+\text{education}&\text{county}
+&\text{state}&\text{state}&\text{abroad}&\text{total}\\\hline
+\text{no degree}&2247&470&254&98&3069\\
+\text{high school}&3842&1074&712&145&5773\\
+\text{some college}&3319&1020&707&112&5158\\
+\text{bachelor's}&2072&760&667&182&3681\\
+\text{graduate}&913&383&461&118&1875\\\hline
+\text{total}&12,393&3707&2801&655&19,556
+\end{array}\]
+\begin{itemize}
+\item Table shows where people who moved in 2008
+moved to, organized by educational attainment
+\item If someone who moved selected at random, find probability
+that he/she moved within same county
+\item $\frac{\left\{\text{same county total}\right\}}
+{\left\{\text{grand total}\right\}}
+\only<+->{=\frac{12,393}{19,556}}\only<+->{\approx 0.63}$
+\item Not a conditional probability problem
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise 54}
+\[\begin{array}{r|llll|l}
+&\text{same}&\text{same}&\text{different}&&\\
+\text{education}&\text{county}
+&\text{state}&\text{state}&\text{abroad}&\text{total}\\\hline
+\text{no degree}&2247&470&254&98&3069\\
+\text{high school}&3842&1074&712&145&5773\\
+\text{some college}&3319&1020&707&112&5158\\
+\text{bachelor's}&2072&760&667&182&3681\\
+\text{graduate}&913&383&461&118&1875\\\hline
+\text{total}&12,393&3707&2801&655&19,556
+\end{array}\]
+\begin{itemize}
+\item If someone who moved selected at random, find probability
+that he/she moved within same county given that he/she has bachelor's
+\item $\frac{\left\{\text{same county and bachelor's}\right\}}
+{\left\{\text{bachelor's}\right\}}
+\only<+->{=\frac{2072}{3681}}\only<+->{\approx 0.56}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise 58 (modified)}
+\[\begin{array}{r|llll|l}
+&\text{same}&\text{same}&\text{different}&&\\
+\text{education}&\text{county}
+&\text{state}&\text{state}&\text{abroad}&\text{total}\\\hline
+\text{no degree}&2247&470&254&98&3069\\
+\text{high school}&3842&1074&712&145&5773\\
+\text{some college}&3319&1020&707&112&5158\\
+\text{bachelor's}&2072&760&667&182&3681\\
+\text{graduate}&913&383&461&118&1875\\\hline
+\text{total}&12,393&3707&2801&655&19,556
+\end{array}\]
+\begin{itemize}
+\item If someone who moved selected at random, find probability
+that he/she has graduate degree, given that he/she moved abroad
+\item $\frac{\left\{\text{graduate and abroad}\right\}}
+{\left\{\text{abroad}\right\}}
+\only<+->{=\frac{118}{655}}\only<+->{\approx 0.18}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Marble example}
+\begin{itemize}
+\item Bag contains $5$~red and $7$~blue marbles
+\item Two marbles drawn without replacement
+\item Calculate probability that second marble red
+given that first marble blue
+\item No need to use use formula
+$\frac{P\left(E\cap F\right)}{P\left(F\right)}$ here
+\item Can argue directly:
+\begin{itemize}
+\item Since first marble was blue, $5$~red and \alert{$6$~blue} remain
+\item Thus probability of red on second draw $\frac{5}{5+6}
+\only<+->{=\frac{5}{11}}$
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Using formula
+$\frac{P\left(E\cap F\right)}{P\left(F\right)}$ instead:
+\item $P\left(\text{blue first and red second}\right)
+=\frac{7}{12}\cdot\frac{5}{11}$
+\item $P\left(\text{blue first}\right)=\frac{7}{12}$
+\item So $P\left(\text{red second given blue first}\right)
+=\frac{\frac{7}{12}\cdot\frac{5}{11}}{\frac{7}{12}}
+\only<+->{=\frac{5}{11}}$
+\item Same answer because $\frac{7}{12}$ cancels
+\item But $\frac{5}{11}$ arises in same way as in previous slide
+\item Thus easier to argue as in previous slide
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Spanish and physics}
+\begin{itemize}
+\item Ames High School has $245$ students enrolled in Spanish
+\item Has $131$ students in physics
+\item Has $29$ students enrolled in both Spanish and physics
+\item Calculate probability that randomly selected student
+enrolled in physics, given that student enrolled in Spanish
+\item $\frac{\left|\text{Spanish and physics}\right|}
+{\left|\text{Spanish}\right|}
+=\frac{29}{245}\approx 0.118$
+\item Probability that student in Spanish given that student in physics
+\item $\frac{\left|\text{Spanish and physics}\right|}
+{\left|\text{physics}\right|}
+=\frac{29}{131}\approx 0.221$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Spanish and physics revisited}
+\begin{itemize}
+\item Ames High School has 1422 students
+\item Has $245$ students enrolled in Spanish
+\item Has $131$ students in physics
+\item Has $29$ students enrolled in both Spanish and physics
+\item Calculate probability that randomly selected student
+enrolled in physics, given that student \alert{not} enrolled in Spanish
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Ames High School has 1422 students
+\item Has $245$ students enrolled in Spanish
+\item Has $131$ students in physics
+\item Has $29$ students enrolled in both Spanish and physics
+\item So $245-29=216$ in Spanish but not physics
+\item $131-29=102$ in physics but not Spanish
+\item $1422-216-29-102=1075$ in neither
+\end{itemize}
+\[\begin{xy}<1cm,0cm>:
+(-1,2)*+!D{\text{S}};
+(1,2)*+!D{\text{P}};
+(-1,0)*\cir<2cm>{};
+(1,0)*\cir<2cm>{};
+(0,0)*{29};
+(-2,0)*{216};
+(2,0)*{102};
+(4,0)*{1075};
+\end{xy}\]
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Question asks for $P\left(\text{physics}\mid
+\text{\alert{not} Spanish}\right)$
+\[\begin{xy}<1cm,0cm>:
+(-1,2)*+!D{\text{S}};
+(1,2)*+!D{\text{P}};
+(-1,0)*\cir<2cm>{};
+(1,0)*\cir<2cm>{};
+(0,0)*{29};
+(-2,0)*{216};
+(2,0)*{102};
+(4,0)*{1075};
+\end{xy}\]
+\item $\left|\text{not Spanish}\right|
+\only<+->{=102+1075}\only<+->{=1177}$
+\item $\left|\text{physics and not Spanish}\right|
+\only<+->{=102}$
+\item Thus
+$P\left(\text{physics}\mid
+\text{not Spanish}\right)\only<+->{=\frac{102}{1177}}
+\only<+->{\approx 0.086}$
+\end{itemize}
+\end{frame}
+
+\end{document}
