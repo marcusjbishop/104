@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage{multicol}
 \usepackage{xy}
 \everymath{\displaystyle}
@@ -136,6 +136,8 @@ or outside of circles above
 \item Knowing that outcome lies in $F$
 eliminates all outcomes lying outside circle $F$
 \item Now for outcome to be in $E$, has to be in $E\cap F$
+\item Thus $P\left(E\mid F\right)=
+\frac{\left|E\cap F\right|}{\left|F\right|}$
 \end{itemize}
 \end{frame}
 
@@ -257,12 +259,12 @@ $\frac{P\left(E\cap F\right)}{P\left(F\right)}$ instead:
 \item Ames High School has $245$ students enrolled in Spanish
 \item Has $131$ students in physics
 \item Has $29$ students enrolled in both Spanish and physics
-\item Calculate probability that randomly selected student
-enrolled in physics, given that student enrolled in Spanish
+\item Probability that randomly selected student
+enrolled in physics, given that student enrolled in Spanish:
 \item $\frac{\left|\text{Spanish and physics}\right|}
 {\left|\text{Spanish}\right|}
 =\frac{29}{245}\approx 0.118$
-\item Probability that student in Spanish given that student in physics
+\item Probability that student in Spanish given that student in physics:
 \item $\frac{\left|\text{Spanish and physics}\right|}
 {\left|\text{physics}\right|}
 =\frac{29}{131}\approx 0.221$
