@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{eulervm}
+\usepackage{charter,amsmath,amssymb,breakurl}
+\usepackage[letterpaper,margin=.8in]{geometry}
+\usepackage{multicol}
+\everymath{\displaystyle}
+\author{}\date{Due in class Friday 13 March}
+\title{Math 104 Worksheet 6}\author{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+The Inclusion-Exclusion Theorem for three sets $E,F,G$ reads
+\[\left|E\cup F\cup G\right|
+=\left|E\right|+\left|F\right|+\left|G\right|
+-\left|E\cap F\right|
+-\left|E\cap G\right|
+-\left|F\cap G\right|
++\left|E\cap F\cap G\right|\]
+Use the Inclusion-Exclusion Theorem to answer the following questions.
+\begin{enumerate}
+\item Use a Venn diagram to explain why
+the Inclusion-Exclusion Theorem is true.
+\vspace{2in}
+\item The music program at Ames High School
+consists of band, orchestra, and chorus. There are
+$5$ students in all three ensembles.
+There are $5$ in both band and orchestra, $9$
+in both orchestra and chorus, and $8$ in both band
+and chorus. Finally, there are $61$ students in band,
+$72$ in orchestra, and $83$ in chorus. How many students
+altogether are in the music program at Ames High School?
+\vspace{2in}
+\item In this exercise we
+will calculate the probability of winning
+Chuck-a-luck using the Inclusion-Exclusion formula.
+Suppose you bet $\$1$ on the number 6.
+This means that you win $\$1$, $\$2$, or $\$3$ 
+if one, two, or three dice respectively show 6.
+Let $E$ be the event that the first die shows 6.
+Let $F$ and $G$ be the events that the second
+and third dice respectively show 6.
+You will want to use a Venn diagram to organize the
+information in this exercise.
+\begin{enumerate}
+\item List all the outcomes in $E\cap F\cap G$.
+\vspace{.5in}
+\item List all the outcomes in $E\cap F$.
+\vspace{.5in}
+\item How many outcomes are in $E\cap F\cap G'$?
+Write this number in the appropriate region of your
+Venn diagram.
+\item Similarly, write $\left|E\cap F'\cap G\right|$
+and $\left|E'\cap F\cap G\right|$ on your Venn diagram.
+You need not list the elements of $E\cap F'\cap G$
+or $E'\cap F\cap G$.
+\item List all the outcomes in $E\cap F'\cap G'$.
+Note that none of these elements have been listed above.
+Write $\left|E\cap F'\cap G'\right|$ on your Venn diagram.
+\vspace{2in}
+\item Similarly, write
+$\left|E'\cap F\cap G'\right|$
+and $\left|E'\cap F'\cap G\right|$ on 
+your Venn diagram. You need not list the elements of
+$E'\cap F\cap G'$ or $E'\cap F'\cap G$.
+\item Use your Venn diagram to calculate
+$\left|E\right|$. How could you have used
+the Counting Principle instead to calculate this number?
+\vspace{1in}
+\item Use the Inclusion-exclusion formula
+to calculate $\left|E\cup F\cup G\right|$.
+Confirm your answer by adding up all the numbers
+in your Venn diagram.
+\vspace{1in}
+\item Calculate the probability of winning
+Chuck-a-luck using your calculations above.
+\end{enumerate}
+\end{enumerate}
+\end{document}
