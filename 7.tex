@@ -284,10 +284,10 @@ enrolled in physics, given that student \alert{not} enrolled in Spanish
 
 \begin{frame}
 \begin{itemize}
-\item Ames High School has 1422 students
-\item Has $245$ students enrolled in Spanish
-\item Has $131$ students in physics
-\item Has $29$ students enrolled in both Spanish and physics
+\item 1422 students
+\item $245$ in Spanish
+\item $131$ in physics
+\item $29$ in both Spanish and physics
 \item So $245-29=216$ in Spanish but not physics
 \item $131-29=102$ in physics but not Spanish
 \item $1422-216-29-102=1075$ in neither
@@ -327,6 +327,29 @@ $P\left(\text{physics}\mid
 \text{not Spanish}\right)\only<+->{=\frac{102}{1177}}
 \only<+->{\approx 0.086}$
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Pop quiz}
+\[\begin{array}{r|llll|l}
+&\text{same}&\text{same}&\text{different}&&\\
+\text{education}&\text{county}
+&\text{state}&\text{state}&\text{abroad}&\text{total}\\\hline
+\text{no degree}&2247&470&254&98&3069\\
+\text{high school}&3842&1074&712&145&5773\\
+\text{some college}&3319&1020&707&112&5158\\
+\text{bachelor's}&2072&760&667&182&3681\\
+\text{graduate}&913&383&461&118&1875\\\hline
+\text{total}&12,393&3707&2801&655&19,556
+\end{array}\]
+Calculate probability that
+randomly selected individual
+\begin{enumerate}
+\item moved to different state given that she
+has only high school diploma
+\item does \alert{not} have graduate degree given that he moved
+within same state
+\item moved abroad \alert{and} has only bachlor's
+\end{enumerate}
 \end{frame}
 
 \end{document}
