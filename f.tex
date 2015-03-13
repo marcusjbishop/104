@@ -1,0 +1,156 @@
+\documentclass[handout]{beamer}
+\usepackage{multicol}
+\usepackage{xy}
+\everymath{\displaystyle}
+\mode<presentation>
+{\usetheme{Warsaw}\setbeamercovered{dynamic}}
+\usecolortheme{crane}
+\usepackage{beamerfoils}
+\pgfdeclareimage[height=1in]{university-logo}{ISULogo}
+\logo{\pgfuseimage{university-logo}}
+\setbeamertemplate{navigation symbols}{}
+\title[Farkle]{Farkle}
+\author{Dr Marcus Bishop}
+\subject{Math 104}
+\beamerdefaultoverlayspecification{<+->}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{impact}{Impact}
+\newtheorem{notation}{Notation}
+\newtheorem{argument}{Argument}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+\LogoOff
+
+\begin{frame}{Facebook rules}
+\begin{itemize}
+%\item Players do the following in turn
+\item Player rolls six dice
+\item Results of roll scored according to next slide
+\item If roll worth zero points (player \alert{farkles})
+then turn over
+\item Otherwise, dice not contributing points \alert{may}
+be rerolled
+\item Player \alert{must} reroll dice not contributing
+points unless $\ge 300$ points accumulated so far
+\begin{remark}
+This rule not present in street version of farkle
+\end{remark}
+\item Results of second roll scored according to next slide
+\item If second roll worth zero points
+(player \alert{farkles}) then turn over and
+player loses all points arising in first roll
+\item Player continues rerolling dice not contributing
+points until she farkles or has $\ge 300$ points and
+chooses to end turn, banking points accumulated
+\item Player gets another turn if all six
+dice contribute points
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Scoring first roll}
+\begin{itemize}
+\item Combination $1,2,3,4,5,6$
+(any order) called a \alert{straight}
+\item A straight worth 1500~points
+\item Combination of the form $x,x,y,y,z,z$
+(any order, $x,y,z$ distinct) called \alert{three-pair}
+\item Three~pair worth 50~points
+\item Each 1 worth 100~points, each 5 worth 50~points,
+except\dots
+\item Three 1s worth 1000~points, with each additional
+1 worth 1000~points
+\item Three $x$s worth $100x$~points ($x\ne 1$)
+with each additional $x$ worth $100x$~points
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Scoring subsequent rolls}
+\begin{itemize}
+\item Subsequent rolls scored scored in same way as first,
+except\dots
+\item Dice rolled previously and retained cannot
+contribute to combination formed by subsequent roll
+\item So straight and three-pair not possible in subsequent
+rolls, since require six dice
+\begin{example}
+\begin{itemize}
+\item Suppose first roll results in $2,2,3,4,4,6$
+\item Worth zero points, so turn over
+\end{itemize}
+\end{example}
+\begin{example}
+\begin{itemize}
+\item Suppose first roll results in $1,1,3,4,5,6$
+\item Worth 250~points, so player must reroll \alert{some}
+dice
+\item Could retain $1,1,5$ or could
+retain $1,1$ or \dots
+\end{itemize}
+\end{example}
+\item The fewer dice rerolled, the greater
+the probability of farkling
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{example}
+\begin{itemize}
+\item Suppose first roll yields $1,2,2,2,6,6$
+\item Worth 300~points
+\item Could end turn, banking 300~points
+\item Could also reroll $6,6$, hoping for more 1s and 5s
+\item \alert{Caution:}
+probability of farkling with two dice somewhat high!
+(calculated later)
+\item Could also reroll $1,6,6$
+\item Probability of farkling lower with three dice
+\item \dots but retaining three 2s 
+(worth only 200~points)
+takes them out of circulation
+\item Better to reroll $2,2,2,6,6$
+\end{itemize}
+\end{example}
+\end{frame}
+
+\begin{frame}
+\begin{example}
+\begin{itemize}
+\item Suppose first roll yields $1,1,1,1,5,6$
+\item Worth 2050~points!
+\item Player should retain $1,1,1,1$
+\item Risk-adverse players should also retain $5$ and end turn
+\item Adventurous players might reroll~$5,6$ (hoping
+for more 1s and 5s)
+\item If both dice show~$1$ or $5$ player gets another
+turn
+\item If neither die shows~$1$ or $5$ player loses everything
+\end{itemize}
+\end{example}
+
+\end{frame}
+
+\begin{frame}{Pop quiz}
+\[\begin{array}{r|llll|l}
+&\text{same}&\text{same}&\text{different}&&\\
+\text{education}&\text{county}
+&\text{state}&\text{state}&\text{abroad}&\text{total}\\\hline
+\text{no degree}&2247&470&254&98&3069\\
+\text{high school}&3842&1074&712&145&5773\\
+\text{some college}&3319&1020&707&112&5158\\
+\text{bachelor's}&2072&760&667&182&3681\\
+\text{graduate}&913&383&461&118&1875\\\hline
+\text{total}&12,393&3707&2801&655&19,556
+\end{array}\]
+Calculate probability that
+randomly selected individual
+\begin{enumerate}
+\item moved to different state given that she
+has only high school diploma
+\item does \alert{not} have graduate degree given that he moved
+within same state
+\item moved abroad \alert{and} has only bachelor's
+\end{enumerate}
+\end{frame}
+
+\end{document}
