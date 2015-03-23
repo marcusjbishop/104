@@ -29,12 +29,16 @@
 \alert{permutations}, \alert{arrangements}, or \alert{anagrams}
 %\item Objects meant to be arranged linearly
 \item Order matters in listing permutations
+\item In contrast, order irrelevant in listing sets
 \begin{example} Six permutations of $\left\{1,2,3\right\}$:
 \[123\quad 132\quad 213\quad 231\quad 312\quad 321\]
 \end{example}
-\item Permutations can be generated using tree diagram:
-\only<+->{
-\[\begin{xy}<1cm,0cm>:
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Permutations can be generated using tree diagram:
+\[\begin{xy}<1.25cm,0cm>:
 (0,0)="0";
 (-3,-1)="-31";
 (0,-1)="01";
@@ -54,8 +58,7 @@
 (2,-3)*+!D{2}**\dir{-};
 "31";(4,-2)*+!D{2}**\dir{-};
 (4,-3)*+!D{1}**\dir{-};
-\end{xy}\]}
-\end{itemize}
+\end{xy}\]
 \end{frame}
 
 \begin{frame}
