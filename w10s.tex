@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{mdwlist}
+\usepackage{tensor}
+\usepackage[euler-digits]{eulervm}
+\usepackage{charter,amsmath,amssymb,breakurl}
+\usepackage[letterpaper,margin=.75in]{geometry}
+\usepackage{multicol}
+\everymath{\displaystyle}
+\newcommand\ncr[2]{\tensor[_{#1}]C{_{#2}}}
+\author{}\date{Due in class Friday 17 April}
+\title{Worksheet 10 Solutions}\author{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{enumerate}
+
+\item A poker hand is called a {\em flush} if all five cards
+have the same suit.
+\begin{enumerate}
+\item\label{hf} Calculate the number of possible {\em heart flush}es,
+that is, the number of hands where all five cards have suit $\heartsuit$.\\
+{\bf Answer:} $\ncr{13}{5}=1287$
+\item Use your response to (\ref{hf}) to count the number of
+possible flushes.\\
+{\bf Answer:} $1287\cdot 4=5148$
+\item What is the probability of being dealt a flush?\\
+{\bf Answer:} $\frac{5148}{2598960}
+=\frac{33}{16660}\approx 0.0020$
+\end{enumerate}
+\item A hand is called a {\em straight} if the ranks of the five
+cards appear consecutively in the list
+\[A,2,3,4,5,6,7,8,9,10,J,Q,K,A.\]
+Note that $A$ appears at the beginning and at the end of the list, but
+that no other ``wrapping around'' is allowed.
+For example, $7\heartsuit,8\spadesuit,9\clubsuit,10\clubsuit,J\heartsuit$
+is a straight.
+\begin{enumerate}
+\item Calculate the number of possible straights.\\
+{\bf Answer:} $10\cdot 4^5=10240$
+\item Calculate the probability of being dealt a straight.\\
+{\bf Answer:}
+$\frac{10240}{2598960}=\frac{128}{32487}\approx 0.0040$
+\end{enumerate}
+
+\item A hand is called a {\em straight flush} if it is both
+a straight and a flush. Calculate the probability of being dealt
+a straight flush.\\
+{\bf Answer:}
+$\frac{40}{2598960}=\frac{1}{64974}\approx 0.00002$
+
+\item A flush which is not also a straight flush is called a {\em mere flush}
+(in this course only).
+Calculate the probability of being dealt a mere flush.\\
+{\bf Answer:}
+$\frac{5148-40}{2598960}
+=\frac{5108}{2598960}
+=\frac{1277}{649740}\approx 0.0020$
+
+\item A straight flush whose cards have ranks $A,K,Q,J,10$ is called
+a {\em royal flush}. 
+Calculate the probability of being dealt a royal flush.\\
+{\bf Answer:}
+$\frac{4}{2598960}=\frac{1}{649740}\approx 0.000002$
+\end{enumerate}
+\end{document}
+
