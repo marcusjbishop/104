@@ -18,13 +18,13 @@ $J\heartsuit,J\clubsuit,J\spadesuit,5\heartsuit,10\spadesuit$.
 \begin{enumerate}
 \item If you discard $5\heartsuit$ what is the probability
 that you wind up with a full house?\\
-\vspace{1cm}
+{\bf Answer:} $\frac{3}{47}\approx 0.0638$
 \item If you discard $5\heartsuit$ what is the probability
 that you wind up with four-of-a-kind?\\
-\vspace{1cm}
+{\bf Answer:} $\frac{1}{47}\approx 0.0213$
 \item If you discard both $5\heartsuit$ and $10\spadesuit$
 what is the probability that you wind up with four-of-a-kind?\\
-\vspace{1cm}
+{\bf Answer:} $\frac{46}{\ncr{47}{2}}=\frac{46}{1081}\approx 0.0426$
 \item If you discard both $5\heartsuit$ and $10\spadesuit$
 what is the probability that you wind up with a full house?
 ({\bf Hint:} Three fives and three
@@ -32,15 +32,29 @@ tens remain unknown to you, so your full house could be formed
 with two fives or two tens, although the number of ways
 to draw two fives or two tens is different than the number
 of ways to draw two of anything else.)\\
-\vspace{1cm}
+{\bf Answer:} There are $\ncr{3}{2}=3$ ways to choose
+two fives and $\ncr{3}{2}=3$ ways to choose two tens.
+For each of the ten remaining ranks ($A,2,3,4,6,7,8,9,Q,K$)
+there are $\ncr{4}{2}=6$ ways to choose two cards of that rank.
+Thus you complete your full house with probability
+$\frac{3+3+10\cdot 6}{\ncr{47}{2}}=\frac{66}{1081}\approx 0.0611$.
 \item If you discard $J\clubsuit,J\spadesuit,10\spadesuit$
 what is the probability you wind up with a flush?\\
-\vspace{1cm}
+{\bf Answer:} $\frac{\ncr{11}{3}}{\ncr{47}{3}}\approx 0.0102$
 \item Considering all the calculations above, would you be better
 off discarding
 $5\heartsuit$,
 discarding $5\heartsuit,10\spadesuit$, or
 discarding $J\clubsuit,J\spadesuit,10\spadesuit$?\\
-\vspace{1cm}
+{\bf Answer:} 
+If you discard only $5\heartsuit$ your probability
+of improving your hand is $\frac{3}{47}+\frac{1}{47}=\frac{4}{47}
+\approx 0.0851$.
+If you discard $5\heartsuit,10\spadesuit$ your probability
+of improving your hand is $\frac{46}{1081}+\frac{66}{1081}
+=\frac{112}{1081}\approx 0.0136$.
+If you discard $J\clubsuit,J\spadesuit,10\spadesuit$
+your probability of improving your hand is approximately $0.0102$.
+Therefore your best bet is to discard only $5\heartsuit$.
 \end{enumerate}
 \end{document}
