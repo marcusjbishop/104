@@ -1,0 +1,99 @@
+\documentclass[answers,12pt]{exam}
+\usepackage{color,rotating}
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\everymath{\displaystyle}
+\usepackage{amsmath,charter}
+\usepackage{eulervm}
+\title{Math 104 Outcomes Assessment}\author{}\date{Spring 2015}
+\usepackage{tensor}
+\newcommand\npr[2]{\tensor[_{#1}]P{_{#2}}}
+\newcommand\ncr[2]{\tensor[_{#1}]C{_{#2}}}
+\begin{document}
+\maketitle
+\begin{questions}
+
+\uplevel{The first question measures the students' ability
+to use binomial coefficients to solve problems.
+Correct answers are shown in red.}
+\question
+\begin{parts}
+\part What is $\ncr{12}{5}$?\\
+\begin{oneparchoices}
+\choice $60$ % 12 * 5
+\correctchoice $792$
+\choice $248,832$ % 12^5
+\choice $95,040$ % P(12,5)
+\choice $3,991,680$ % P(12,7)
+\end{oneparchoices}
+\part A poker hand is called a {\em heart flush}
+if all five cards have suit $\heartsuit$. What is
+the number of possible heart flushes?\\
+\begin{oneparchoices}
+\correctchoice $1287$
+\choice $5108$ % number of mere flushes
+\choice $5148$ % number of flushes
+\choice $154,440$ % P(13,5)
+\choice $2,598,960$ % C(52,5)
+\end{oneparchoices}
+\part In how many ways can a four-member subcommittee
+of a eight-member committee be chosen?\\
+\begin{oneparchoices}
+%\choice $4$ % duh!
+\choice $24$ % 4!
+\choice $32$ % 4 x 8
+\correctchoice $70$
+\choice $256$ % 2^8
+\choice $1680$ % P(8,4)
+\end{oneparchoices}
+\part Playing poker, you have the cards
+$K\heartsuit,K\clubsuit,2\diamondsuit,2\clubsuit,8\heartsuit$.
+If you exchange $2\diamondsuit,2\clubsuit,8\heartsuit$ for three
+new cards, then what is the probability that your new hand
+will have four-of-a-kind?\\
+\begin{oneparchoices}
+\choice $0.0025$ % something-over-aces full house
+\correctchoice $0.0028$
+\choice $0.0851$ % aces-over-fours full house
+\choice $0.1221$ % exactly one ace 
+\choice $0.1274$ % three-of-a-kind or better
+\end{oneparchoices}
+\end{parts}
+
+\uplevel{Each part worth one point, the average score
+on the question was $2.85$ out of 3 points.
+The percents of students correctly
+answering parts (a), (b), (c), and (d) were
+$94\%$, $67\%$, $75\%$, and $50\%$ respectively.}
+
+\uplevel{The second question measures the students' ability
+to calculate the expected value of a simple experiment.}
+
+\question This question deals with the game of farkle.
+You initially roll $1,2,2,2,5,6$.
+\begin{parts}
+\part What is the value of your initial roll?\\
+\begin{oneparchoices}
+\choice $150$ % didn't count 2s
+\choice $200$ % only counted 2s
+\choice $300$ % didn't count 5
+\correctchoice $350$
+\choice $1800$ % sum times 100
+\end{oneparchoices}
+\part You decide to reroll the $6$. What are your expected
+winnings for this turn? Round your answer to the nearest whole number.\\
+\begin{oneparchoices}
+\choice $50$ % didn't add previous score to outcomes
+\correctchoice $142$
+\choice $283$ % 850/3 rather than 850/6
+\choice $350$ % previous score
+\choice $450$ % outcome if 1 rolled
+\end{oneparchoices}
+\end{parts}
+
+\uplevel{Each part worth 1~point, the average score on the
+question was $0.96$ out of two~points. The percents of students
+correctly answering parts (a) and (b) were
+$75\%$ and $21\%$ respectively.}
+
+\end{questions}
+\end{document}
